@@ -1,0 +1,51 @@
+﻿<!-- $Id: order_info.htm 15544 2009-01-09 01:54:28Z zblikai $ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body{ margin:0; padding:0; color:#333; background:#ddeef2}
+.tousujianyi {
+	font-size: 12px;
+	border: 2px #bbdde5 solid;
+	line-height:20px; margin-bottom:10px; background:#fff;
+}
+.tousujianyi tr td{ border-top:1px #eef8f9 solid;border-right:1px #eef8f9 solid; padding:8px 10px;} 
+.huifu{ color:#F60;}
+.huifuneirong{ width:600px;}
+</style>
+</head>
+
+<body>
+{include file="pageheader.htm"}
+<table class="tousujianyi" width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20%">订单编号：{$complain.order_sn}</td>
+    <td width="20%">提交时间：{$complain.time}</td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td>用户名：{$complain.user_name}</td>
+    <td>类型：{$complain.type}</td>
+    <td>状态： {$complain.state}</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="left">投诉/建议内容：{$complain.content}</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="left" class="huifu"><label for="textarea">客服回复内容：{$complain.reply}</label></td>
+  </tr>
+  <tr>
+    <form method="post" name="admin_reply" action="order.php">
+		<td colspan="2" align="left"><textarea class="huifuneirong" name="complain_reply_content" cols="45" rows="5"></textarea></td>
+		<input type="hidden" name="complain_id" value="{$complain.id}"/>
+		<input type="hidden" name="act" value="complain_edit"/>
+		<td align="left"><input type="submit" value="提交" /></td>
+	</form>
+  </tr>
+</table>
+{include file="pagefooter.htm"}
+</body>
+</html>
+

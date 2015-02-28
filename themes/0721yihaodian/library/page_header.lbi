@@ -1,0 +1,302 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{if $script_name eq 'login' || $script_name eq 'register' || $script_name eq 'qpassword' || $script_name eq 'message'} 如果是注册登陆页则显示以下头部代码 -->
+
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js,jquery.SuperSlide.js,yhd_login.js'}
+{insert_scripts files='transport.js,utils.js'}
+<div id="simple_header">
+  <div class="wrap">
+    <div class="simplelogo"> <a href="./index.php" target="_blank"> <img src="images/logo.png" height="55"> </a> </div>
+    <div class="simplenav">
+      <p id="unloginP" class=""><strong>您好</strong>，欢迎光临1号店！ <a href="user.php?act=login">[请登录]</a> ，新用户？<a href="user.php?act=register">[免费注册]</a> </p>
+    </div>
+  </div>
+</div>
+
+<!--{elseif $script_name eq 'user' || $script_name eq 'article' || $script_name eq 'common_page'} 如果是会员中心页则显示以下头部代码 --> 
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js,jquery.SuperSlide.js,yhd_user.js'}
+{insert_scripts files='transport.js,utils.js'} 
+<!-- 顶部灰色 start -->
+<div id="global_top_bar" class=" hd_global_top_bar ">
+  <div class="wrap clearfix">
+    <div class=" hd_topbar_left clearfix "  id="ECS_MEMBERZONE"> {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </div>
+    <div class="hd_top_manu clearfix">
+      <ul class="clearfix">
+        <li class="hd_my_order"> <a href="user.php?act=order" target="_blank"><s></s>我的订单</a> </li>
+        <!--{if $navigator_list.top}--> 
+        <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} --> 
+        <li class="hd_menu_tit" 
+        
+        
+        
+        
+        
+        <!-- {if $smarty.foreach.nav_top_list.last} --> 
+        style="background:none;" 
+        <!-- {/if} --> 
+        > <a href="{$nav.url}" 
+        
+        
+        
+        
+        
+        <!-- {if $nav.opennew eq 1} --> 
+        target="_blank" 
+        <!-- {/if} --> 
+        >{$nav.name}</a>
+        </li>
+        <!-- {/foreach} --> 
+        <!-- {/if} -->
+      </ul>
+      <a title="加入收藏" class="favorite" href="javascript:bookmark();">加入收藏</a> <a title="关注{$shop_name}新浪微博" class="sina_weibo" href="http://weibo.com/yihaodian" id="weibo" target="_blank">关注{$shop_name}新浪微博</a> </div>
+  </div>
+</div>
+<!-- 顶部灰色导航 end --> 
+
+
+<!-- 顶部LOGO搜索 start -->
+<div id="site_header" class="wrap clearfix">
+  <div id="logo_areaID" class="hd_logo_area fl clearfix"> <a href="./index.php" class="fl"> <img src="images/logo.png"> </a> </div>
+  <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+  <div class="hd_head_search">
+    <div class="hd_search_form clearfix">
+      <div class="hd_search_wrap clearfix">
+        <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+          <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="{$search_keywords|escape}" >
+          <!--搜索提示 begin-->
+          <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
+        </form>
+      </div>
+    </div>
+    <p id="hotKeywordsShow" class="hd_hot_search"> {if $searchkeywords} <span>{$lang.hot_search} ：</span> {foreach from=$searchkeywords item=val} <a href="search.php?keywords={$val|escape:url}">{$val}</a> {/foreach}
+      {/if} </p>
+  </div>
+</div>
+<!-- 顶部LOGO搜索 end --> 
+<!--{elseif $script_name eq 'group'} 如果是团购页则显示以下头部代码 --> 
+
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js,jquery.SuperSlide.js,yhd_user.js'}
+{insert_scripts files='transport.js,utils.js'} 
+<!-- 顶部灰色 start -->
+<div id="global_top_bar" class=" hd_global_top_bar ">
+  <div class="wrap clearfix">
+    <div class=" hd_topbar_left clearfix "  id="ECS_MEMBERZONE"> {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </div>
+    <div class="hd_top_manu clearfix">
+      <ul class="clearfix">
+        <li class="hd_my_order"> <a href="user.php?act=order" tk="YHD_TOP_myorder" target="_blank"><s></s>我的订单</a> </li>
+        <li class="hd_menu_tit"> </li>
+        <li class="hd_menu_tit hd_help_center"> </li>
+        <li class="hd_top_bar_cart">
+          <div class="mini_cart clearfix" >
+            <div class="minicart_box" id="ECS_CARTINFO">{insert name='cart_flow_content'}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="hd_site_header_out ">
+  <div class="wrap hd_site_header clearfix" id="site_header">
+    <div class="hd_logo_area"> <a target="_blank" href="./index.php" class="logo"> <img src="images/group_logo.jpg" alt="1号店"> </a> <a target="_blank" href="./group_buy.php" class="subtit"> <span> <em> <ins>团购</ins> </em> </span> </a> </div>
+    <div class="hd_head_search">
+      <div class="hd_search_form clearfix">
+       <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+      <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+          <input name="keywords" id="keyword" class="fl" type="text" style="color:#333333;" value="{$search_keywords|escape}">
+        <input  value="搜 索" type="submit" class="searchBtn"> 
+        </form>
+        
+        
+       
+      </div>
+    </div>
+  </div>
+  <div id="headerNavEm"></div>
+  <div class="hd_header_nav" id="headerNav">
+    <div class="wrap hd_header_nav_con clearfix">
+      <div class="hd_header_nav_left" style="display:none;"> <a class="hd_link_home_page" href="./index.php"></a>
+        <div class="hd_nav_cat" id="allSortOuterbox" > <a href="javascript:void(0)" class="hd_link_all_sort">全部分类<i class="downTrag"></i></a>
+          <div id="allCategoryHeader" class="hd_allsort_out_box" style="display: none;">
+            <div class="hd_allsort_out">
+              <ul class="hd_allsort" id="j_allsort">
+                <li>
+                  <h3> <a title="食品饮料" target="_blank" href="#">食品饮料</a>、<a title="酒水" target="_blank" href="#">酒水</a>、<a title="年货" target="_blank" class="hilight_red" href="#">年货</a> </h3>
+                  <div class="hd_show_sort global_loading"> </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--团购主导航开始-->
+      <div class="hd_header_nav_right clearfix" id="header_nav_right">
+        <div class="wrap">
+          <div class="in navsplit" id="navsplit">
+            <div class="emailFeedPopwin" id="emailFeedPopwinId" style="display:none;"></div>
+            <div class="pop_win" id="yhd_pop_win" style="display:none;"></div>
+            <div class="grou_tips_item"> </div>
+            <ul class="link clearfix">
+              <li> <a href="./group_buy.php"> 团购首页 </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--团购主导航结束--> </div>
+  </div>
+</div>
+<!-- 顶部灰色导航 end --> 
+<!--{elseif $script_name eq 'flow'} 如果是购物流程页面则显示以下头部代码 --> 
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js,jquery.SuperSlide.js,yhd_common.js'}
+{insert_scripts files='transport.js,utils.js'} 
+<!-- 顶部灰色 start -->
+<div id="global_top_bar" class=" hd_global_top_bar ">
+  <div class="wrap clearfix">
+    <div class=" hd_topbar_left clearfix "  id="ECS_MEMBERZONE"> {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </div>
+    <div class="hd_top_manu clearfix">
+      <ul class="clearfix">
+        <li class="hd_my_order"> <a href="user.php?act=order" tk="YHD_TOP_myorder" target="_blank"><s></s>我的订单</a> </li>
+        <!--{if $navigator_list.top}--> 
+        <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} --> 
+        <li class="hd_menu_tit" 
+        
+        
+        
+        
+        
+        <!-- {if $smarty.foreach.nav_top_list.last} --> 
+        style="background:none;" 
+        <!-- {/if} --> 
+        > <a href="{$nav.url}" 
+        
+        
+        
+        
+        
+        <!-- {if $nav.opennew eq 1} --> 
+        target="_blank" 
+        <!-- {/if} --> 
+        >{$nav.name}</a>
+        </li>
+        <!-- {/foreach} --> 
+        <!-- {/if} -->
+      </ul>
+      <a title="加入收藏" class="favorite" href="javascript:bookmark();">加入收藏</a> <a title="关注{$shop_name}新浪微博" class="sina_weibo" href="http://weibo.com/yihaodian" id="weibo" target="_blank">关注{$shop_name}新浪微博</a> </div>
+  </div>
+</div>
+<!-- 顶部灰色导航 end --> 
+
+<!--{else} 如果不是登陆注册会员中心购物车页面则显示下面的头部代码 --> 
+
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js,jquery.SuperSlide.js,yhd_common.js'}
+{insert_scripts files='transport.js,utils.js'} 
+<!-- 顶部灰色 start -->
+<div id="global_top_bar" class=" hd_global_top_bar ">
+  <div class="wrap clearfix">
+    <div class=" hd_topbar_left clearfix "  id="ECS_MEMBERZONE"> {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </div>
+    <div class="hd_top_manu clearfix">
+      <ul class="clearfix">
+        <li class="hd_my_order"> <a href="user.php?act=order" target="_blank"><s></s>我的订单</a> </li>
+        <!--{if $navigator_list.top}--> 
+        <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} --> 
+        <li class="hd_menu_tit" 
+        
+        
+        
+        
+        
+        <!-- {if $smarty.foreach.nav_top_list.last} --> 
+        style="background:none;" 
+        <!-- {/if} --> 
+        > <a href="{$nav.url}" 
+        
+        
+        
+        
+        
+        <!-- {if $nav.opennew eq 1} --> 
+        target="_blank" 
+        <!-- {/if} --> 
+        >{$nav.name}</a>
+        </li>
+        <!-- {/foreach} --> 
+        <!-- {/if} -->
+      </ul>
+      <a title="加入收藏" class="favorite" href="javascript:bookmark();">加入收藏</a> <a title="关注{$shop_name}新浪微博" class="sina_weibo" href="http://weibo.com/yihaodian" id="weibo" target="_blank">关注{$shop_name}新浪微博</a> </div>
+  </div>
+</div>
+<!-- 顶部灰色导航 end --> 
+
+
+<!-- 顶部LOGO搜索 start -->
+<div id="site_header" class="wrap clearfix">
+  <div id="logo_areaID" class="hd_logo_area fl clearfix"> <a href="./index.php" class="fl"> <img src="images/logo.png"> </a> </div>
+  <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+  <div class="hd_head_search">
+    <div class="hd_search_form clearfix">
+      <div class="hd_search_wrap clearfix">
+        <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+          <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="{$search_keywords|escape}" >
+          <!--搜索提示 begin-->
+          <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
+          </input>
+        </form>
+      </div>
+    </div>
+    <p id="hotKeywordsShow" class="hd_hot_search"> {if $searchkeywords} <span>{$lang.hot_search} ：</span> {foreach from=$searchkeywords item=val} <a href="search.php?keywords={$val|escape:url}">{$val}</a> {/foreach}
+      {/if} </p>
+  </div>
+</div>
+<!-- 顶部LOGO搜索 end --> 
+<!--{/if}-->

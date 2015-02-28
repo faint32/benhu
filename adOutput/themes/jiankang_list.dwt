@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+</p>
+ <script src="http://localhost/benhushop1231/adOutput/template/jz123_33/new.js" language="JavaScript"></script>
+
+<script>
+suspendcode12="<DIV id=\"lovexin12\" style='left:22px;POSITION:absolute;TOP:69px;'><a href='http://www.jz123.cn' target='_blank'><img style='width:200px;height:300px;' alt='1211' border=0 src='http://www.benhu.com/{$goods_list.0.goods_img}'><br><a href=JavaScript:; onclick=\"lovexin12.style.visibility='hidden'\"><img border=0 src=http://ad.jz123.cn/ad/33/inc/close.gif></a></div>"
+
+suspendcode14="<DIV id=\"lovexin14\" style='right:22px;POSITION:absolute;TOP:69px;'><a href='http://www.jz123.cn' target='_blank'><img style='width:200px;height:300px;'  border=0 src='http://www.benhu.com/{$goods_list.1.goods_img}'><br><a href=JavaScript:; onclick=\"lovexin14.style.display = 'none'\"><img border=0 src=http://ad.jz123.cn/ad/33/inc/close.gif></div>"
+
+document.write(suspendcode12); 
+document.write(suspendcode14); 
+window.setInterval("heartBeat()",1);
+</script>
+
+</body>
+</html>

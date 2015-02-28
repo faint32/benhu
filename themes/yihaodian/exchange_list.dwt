@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+{insert_scripts files='jquery.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js,top.js,curvycorners.src.js'}
+{insert_scripts files='all_top_nav.js,top.js,curvycorners.src.js'}
+
+<link href="style/css/integral.css" rel="stylesheet" type="text/css" />
+</head>
+<script>				
+   function daily_attendance()
+   {
+		 $.post("exchange.php",{act:'attent'},function(result){
+		  var html="<a href=\"javascript:void(0)\">已签到</a> <span>&nbsp;&nbsp;明天可获得5积分</span>";
+		   $('#sign').html(html);
+		   html = "可用积分："+( {$info.pay_points} + parseInt(result));
+		   $('#available_integral').html(html);
+	  });
+   }
+
+   $(function(){
+			var $li = $('#tab li');
+			var $ul = $('#content .content_box');
+						
+			$li.mouseover(function(){
+				var $this = $(this);
+				var $t = $this.index();
+				$li.removeClass();
+				$this.addClass('current');
+				$ul.css('display','none');
+				$ul.eq($t).css('display','block');
+			})
+	});	
+</script>
+<body>
+  <!-- #BeginLibraryItem "/library/page_header.lbi" -->
+ <!-- #EndLibraryItem -->
+   <!-- #BeginLibraryItem "/library/jifen_category.lbi" -->
+ <!-- #EndLibraryItem -->
+
+    <div class="integral">
+<div class="integral_l">
+   	<div class="integral_l_nav">
+	    <!--{foreach from=$categories item=category}-->
+		    <h3><a href="{$category.url}">{$category.name}</a></h3>
+			<div class="product_classify">
+			    <!--{foreach from=$category.cat_id item=child_category}-->
+				   <a href="{$child_category.url}" style="width:90px;overflow:hidden;">{$child_category.name}&nbsp;</a>
+				<!--{/foreach}-->
+			</div>
+		<!--{/foreach}-->
+    </div>
+         	<div id="outer">
+    <ul id="tab">
+        <li class="current">周排行</li>
+        <li>月排行</li>
+    </ul>
+    <div id="content">
+        <ul class="content_box" style="display:block;">
+		<!--{foreach from=$weekly_rank item=good name=loop}-->
+       	  <div class="integral_hdm">
+           	<ul class="integral_hdm_1">
+           	  <li class="integral_hdm_1_a">{$smarty.foreach.loop.iteration}</li>
+              <li class="integral_hdm_1_b">已兑换<span>{$good.cnum}</span>件</li>
+            </ul>
+            <ul class="integral_hdm_2">
+            	<li class="integral_hdm_2_a">
+                	<a href="{$good.url}"><img src="{$good.goods_thumb}" /></a>
+                </li>
+              <li class="integral_hdm_2_b"><a href="{$good.url}" title="{$good.goods_name}">{$good.goods_name}</a>
+              	<span>¥{$good.needed_money}+{$good.exchange_integral}积分</span>
+                </li>
+            </ul>
+           </div>
+        <!--{/foreach}-->
+        </ul>
+        <ul class="content_box">
+           <!--{foreach from=$monthly_rank item=good name=loop}-->
+       	  <div class="integral_hdm">
+           	<ul class="integral_hdm_1">
+           	  <li class="integral_hdm_1_a">{$smarty.foreach.loop.iteration}</li>
+              <li class="integral_hdm_1_b">已兑换<span>{$good.cnum}</span>件</li>
+            </ul>
+            <ul class="integral_hdm_2">
+            	<li class="integral_hdm_2_a">
+                	<a href="{$good.url}"><img src="{$good.goods_thumb}" /></a>
+                </li>
+              <li class="integral_hdm_2_b"><a href="{$good.url}" title="{$good.goods_name}">{$good.goods_name}</a>
+              	<span>¥{$good.needed_money}+{$good.exchange_integral}积分</span>
+                </li>
+            </ul>
+           </div>
+        <!--{/foreach}-->
+        </ul>
+    </div><!-- html代码end -->
+</div>
+
+  </div>
+  <div class="integral_r">
+       	<div class="integral_r_1">
+             	<!-- #BeginLibraryItem "/library/ad_integral.lbi" -->
+				<!-- #EndLibraryItem -->
+	      <div class="integral_r_1_b">
+                	<dl class="home_left_head">
+            	<dt><span>{if $personal_pic}
+		<img src="{$personal_pic}" style="width:62px;height:62px;"/>
+		{else}
+		<img src="style/images/img/nonehead.jpg" style="width:62px;height:62px;"/>{/if}</span>
+		</dt>
+                <dd class="home_left_head_name">
+		<a href="{$staticPages.user}">{$info.username}</a>
+                <span class="home_left_head_class">
+		{if $vip_name}<img src="style/images/{$vip_pic}" width="52" height="27" />{else}游客{/if}
+		</span>
+                </dd>
+            </dl>
+            	<div class="sign" id="sign">
+				<!--{if $info.username}-->
+				    {if $user_attent==1}
+                	 <a href="javascript:void(0)">已签到</a>
+                    <span>&nbsp;&nbsp;&nbsp;明天可获得5积分</span>  
+					{else}
+					<a href="javascript:daily_attendance()">签到赚积分</a>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可获得5积分</span>
+					{/if}
+					<!--{else}-->
+					<a href="{$staticPages.user}" target="_self">未登陆</a>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;登陆可领积分</span>
+				<!--{/if}-->
+                </div>
+                <div class="number">
+                <span id="available_integral">可用积分：{if $info.pay_points}{$info.pay_points}{else}0{/if}</span><a href="{$staticPages.user-my_integral}">查看积分明细</a>
+                </div>
+                </div>
+        </div>
+            
+            	<span class="integral_goods_title">
+                	<h2>超值兑换</h2>
+                	<a href="exchange.php?type=best&act=more">更多超值兑换&nbsp;&gt;</a>
+                </span>
+            <div class="integral_goods">
+			<!--{foreach  from=$best_goods item=good name=foo}-->
+            	<dl>
+                	<dt><a href="{$good.url}"><img src="{$good.thumb}" /></a></dt>
+                    <dd class="name"><a href="{$good.url}" title="{$good.goods_style_name}">{$good.goods_style_name}</a></dd>
+					<div class="price">
+						<ul class="price_1">
+								<li class="price_1_a">原价：¥{$good.shop_price}</li>
+								<li class="price_1_b"><span>¥{$good.needed_money}</span>+<b>{$good.exchange_integral}</b>积分</li>
+						</ul>
+                    </div>
+                </dl>
+            <!--{/foreach}-->
+             
+            </div>
+        <span class="integral_goods_title">
+                	<h2>精品上新</h2>
+               	<a href="exchange.php?type=new&act=more">更多精品&nbsp;&gt;</a>
+        </span>
+        <div class="integral_goods">
+		<!--{foreach  from=$new_goods item=good name=foo}-->
+            	<dl>
+                	<dt><a href="{$good.url}"><img src="{$good.goods_img}" /></a></dt>
+                    <dd class="name"><a href="{$good.url}" title="{$good.goods_style_name}">{$good.goods_style_name}</a></dd>
+                  <div class="price">
+                   	<ul class="price_1">
+                        	<li class="price_1_a">原价：¥{$good.shop_price}</li>
+                            <li class="price_1_b"><span>¥{$good.needed_money}</span>+<b>{$good.exchange_integral}</b>积分</li>
+                        </ul>
+                    </div>
+                </dl>
+            <!--{/foreach}-->
+             
+            </div>
+    <span class="integral_goods_title">
+   	<h2>下期预告</h2>
+    </span>
+   	<div class="notice">
+		<!--{foreach from=$goods_trailer item=good}-->
+		  <dl>
+			<dt>{$good.begin_date}<br /><i>{$good.begin_hour}</i></dt>
+			  <dd>
+				 <a href="javascript:void(0)" class="img"><img src="{$good.goods_img}" /></a>
+				 <a href="javascript:void(0)" class="name" title="{$good.goods_style_name}">{$good.goods_style_name}</a>
+			  </dd>
+			</dl> 
+		<!--{/foreach}-->
+    </div>
+      </div>
+    </div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

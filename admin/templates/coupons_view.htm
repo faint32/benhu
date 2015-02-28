@@ -1,0 +1,112 @@
+<!--{if $full_page}-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="styles/bootstrap/js/jquery.min.js"></script>
+    <script src="styles/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/transport3.js"></script>
+    <script src="js/listtable.js"></script>
+   
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bootstrap/css/sundries.css">
+  </head>
+  <body>
+     <div class="row panel panel-default" style="margin:20px 10px 0px 10px;">
+      <div class="container col-md-10" >
+         <h3 style="text-align:left;"> 
+            <a href="index.php?act=main">ECSHOP 管理中心</a> - 购物券
+         </h3>
+      </div>
+      <div class="col-md-2">
+         <a style="margin:14px 8px 8px 8px;" role="button" class="btn btn-default btn-lg" href="coupons.php?act=list">
+           <span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span>&nbsp;返回列表页
+         </a>
+      </div>
+    </div>
+<!--{/if}-->
+<div id="listDiv">
+  <!--{if $coupons}-->
+      <div id="coupons_list" class="row panel panel-default" style="margin:20px 10px ">
+         <table class="table table-bordered table-hover text-center table-condensed" style="border-bottom:1px solid #ddd;">
+           <thead>
+              <tr>
+                <th class="text-center">
+                    <a href="javascript:listTable.sort('sent_coupon_id');" title="点击对列表排序">   购物券编号 {$sort_sent_coupon_id} 
+                      </span>
+                    </a>
+                </th>
+                 <th class="text-center"><a href="javascript:listTable.sort('user_id');" title="点击对列表排序">所属用户id{$sort_user_id} </a></th>
+                 <th class="text-center">
+                  <a href="javascript:listTable.sort('user_got_time');"  title="点击对列表排序">获得时间{$sort_user_got_time}</a>
+                 </th>  
+                 <th class="text-center">
+                  <a href="javascript:listTable.sort('validate_time');"  title="点击对列表排序">有效期{$sort_validate_time}</a>
+                 </th>  
+                 <th class="text-center"><a href="javascript:listTable.sort('is_used');" title="点击对列表排序">是否使用{$sort_is_used}</a></th>
+                 <th class="text-center"><a href="javascript:listTable.sort('used_time');"  title="点击对列表排序">使用时间{$sort_used_time}</a></th>
+                 <th class="text-center"><a href="javascript:listTable.sort('order_id');" title="点击对列表排序">订单号{$sort_order_id}</a></th>
+                 <th class="text-center">操作</th>
+              </tr>
+           </thead>
+           <tbody>
+            <!--{foreach from=$coupons item=item}-->
+              <tr>
+                <td>{$item.sent_coupon_id}</td>
+                <td>
+                  {$item.user_id}
+                </td>
+                <td>             
+                  {$item.user_got_time}
+                </td>
+                <td>             
+                  {$item.validate_time}
+                </td>
+                <td>                
+                   {$item.is_used}
+                </td>
+                <td>             
+                  {$item.used_time}
+                </td>
+                <td>
+                  {$item.order_id}
+                </td>
+                <td>
+                  <a href="javascript:listTable.remove({$item.sent_coupon_id}, '您确认要删除这条记录吗? \nps:删除后用户将失去该购物券！')">删除</a>
+                </td>
+              </tr>
+            <!--{/foreach}-->
+           </tbody>
+        </table>
+        {$pagination}
+      </div>
+  <!--{else}-->
+        <div id="coupons_empty" class="row panel panel-default" style="margin:20px 10px">
+          <div class="alert alert-warning" role="alert" style="margin:0px 0px;">
+            <strong>没有用户获得过该购物券！</strong> 
+          </div>
+        </div>
+  <!--{/if}-->
+</div>
+
+   
+
+<!--{if $full_page}-->
+ <script>
+        listTable.recordCount = '{$record_count}';
+        listTable.pageCount = '{$page_count}';
+        {foreach from=$filter item=item key=key}
+        listTable.filter.{$key} = '{$item}';
+        {/foreach}
+      </script>
+       <div class="row panel panel-default" style="margin:20px 10px 0px 10px;height:90px;">
+        {include file="pagefooter.htm"}
+      </div>
+  
+  </body>
+</html>
+<!--{/if}-->

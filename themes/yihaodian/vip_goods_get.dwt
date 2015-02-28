@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<link href="new_style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/integral_get.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- #BeginLibraryItem "/library/page_header.lbi" -->
+ <!-- #EndLibraryItem -->
+   <!-- #BeginLibraryItem "/library/jifen_category.lbi" -->
+ <!-- #EndLibraryItem -->
+     <div class="integral_get">
+   	  <div class="integral_get_a">
+        <dl class="home_left_head integral_get_c">
+            	<dt><span >
+				{if $personal_pic != -1}
+				<img src="{$personal_pic}" width="62px;" height="62px;"/>
+				
+				{/if}
+				</span>
+				
+				</dt>
+                <dd class="home_left_head_name"><a>{if $info.username}{$info.username}{else}&nbsp;&nbsp;&nbsp;游客{/if}</a>
+                <span class="home_left_head_class">{if $vip_name}{$vip_name}{else}请登录{/if}</span>
+                </dd>
+          </dl>
+       	<div class="integral_get_b">
+            	<div class="number">
+                <span>可用积分：{if $info.pay_points}{$info.pay_points}{else}0{/if}</span><a href="user.php?act=my_integral">查看积分明细</a>
+                </div>
+            </div>
+   	  </div>
+      <div class="integral_get_d">
+      	<dl>
+        	<dt><span>待解冻积分<strong>{$uncmpltOrdIntgr}</strong></span></dt>
+            <dd><span>完成购物</span>
+您有<b>{$uncmpltOrdCnt}</b>个订单未完成。每完成一个订单将给予积分返还，具体积分额度以订单提交时页面标的积分分数为准。		
+			<a href="user.php?act=order_list" class="integral_get_botton">查看订单</a>
+		</dd>
+        </dl>
+        <dl>
+        	<dt><span>待解冻积分<strong>{$unCmmtOrdIntgr}</strong></span></dt>
+            <dd><span>发表评论</span>
+您有<b>{$unCmmtOrdCnt}</b>个订单未评论。每件商品评论后可获得<b>{$CFG_CmmtIntgr}</b>积分；每个商品页面前5名被展示的评论，将额外获得<b>{$CFG_top5CmmtIntgr}</b>积分。
+			<a href="user.php?act=order_list&ctl=4" class="integral_get_botton">立即评论</a>
+		</dd>
+        </dl>
+        <dl>
+		{if $is_got_RgstPnt}
+		  <dt><span>已解冻积分<strong>{$CFG_RgstPnt}</strong></span></dt>
+            <dd><span>邮箱验证</span>
+您已经验证邮箱，已获得{$CFG_RgstPnt}积分！
+			<a href="javascript:void(0);" class="integral_get_botton">邮箱已验证</a>
+		</dd>
+		{else}
+        	<dt><span>待解冻积分<strong>{$CFG_RgstPnt}</strong></span></dt>
+            <dd><span>邮箱验证</span>
+验证邮箱有利用帐户安全，并且可以通过邮箱找回密码，验证邮箱将获得{$CFG_RgstPnt}积分！
+			<a href="user.php?act=security_settings" class="integral_get_botton">邮箱验证</a>
+		</dd>
+		{/if}
+        </dl>
+      </div>
+</div>
+  
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

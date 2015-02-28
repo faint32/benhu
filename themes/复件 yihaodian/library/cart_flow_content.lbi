@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<a class="mini_cart_btn" href="./flow.php">购物车<span id="in_cart_num" class="cart_num">{$number}</span></a>
+<div class="minicart_list" id="showMiniCart" style="display: none; height: auto;">
+  <div class="list_detail" id="showMiniCartDetail"> {if $number > 0}
+    <ul>
+      {foreach from=$goods item=goods}
+      <li id="mini_cart_li_{$goods.rec_id}"><a href="{$goods.url}" class="pro_img" traget="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" width="40" height="40"></a><a href="{$goods.url}" class="pro_name" traget="_blank">{$goods.short_name}</a><span class="pro_price">¥{$goods.goods_price}</span>
+        <div class="num_box"><b class="minus" onClick="onClickCartNum({$goods.rec_id},-1);"></b>
+          <input type="text" value="{$goods.goods_number}" onKeyUp="keyUpCartNum(this,{$goods.rec_id});" class="minicart_num" id="minicart_num_{$goods.rec_id}" style="margin:0; padding:0;">
+          <b class="plus" onClick="onClickCartNum({$goods.rec_id},+1);"></b><a href="javascript:void(0)" onClick="deleteCartGoods({$goods.rec_id})">删除</a></div>
+      </li>
+      {/foreach}
+    </ul>
+    <div class="checkout_box">
+      <p><span class="fl">共<strong id="totalNumber">{$number}</strong>件商品</span>合计：<strong id="totalDesc">¥{$amount}</strong></p>
+      <a class="checkout_btn" href="./flow.php">去结算</a></div>
+    {else}
+    <div class="none_tips">您的购物车里还没有1号店的商品，欢迎选购！</div>
+    {/if} </div>
+</div>
+<div class="ap_shopping_warning"></div>

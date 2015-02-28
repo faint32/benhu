@@ -1,0 +1,5 @@
+﻿<p class="integral_r_1_a">
+<a href="{$ad_integral.ad_link}">
+<img src="data/afficheimg/{$ad_integral.ad_code}" width="698" height="250" />
+</a>
+</p>

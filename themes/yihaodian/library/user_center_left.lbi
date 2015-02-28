@@ -1,0 +1,30 @@
+﻿<div class="home_left">
+        	<h3>个人中心</h3>
+            <dl class="home_left_head">
+            	<dt><span></span></dt>
+                <dd class="home_left_head_name">{$info.username}</dd>
+                <dd class="home_left_head_class">{$vip_name}</dd>
+            </dl>
+            <div class="home_nav">
+            	<p>帐户信息</p>
+				<a href="user.php?act=profile" {if $action eq 'profile'}class="selected"{/if}> 个人资料</a>
+				<a href="user.php?act=address_list" {if $action eq 'address_list'}class="selected"{/if}>{$lang.label_address}</a>
+                <a href="#">安全设置</a>
+
+                
+				<a href="#">我的积分</a>
+				<a href="#">我的等级</a>
+
+				<p>订单中心</p>
+				<a href="user.php?act=order_list" {if $action eq 'order_list'|| $action eq 'order_detail'}class="selected"{/if}>{$lang.label_order}</a>
+				<a href="user.php?act=collection_list" {if $action eq 'collection_list'}class="selected"{/if}> {$lang.label_collection}</a>
+	            <a href="user.php?act=comment_list" {if $action eq 'comment_list'}class="selected"{/if}>{$lang.label_comment}</a>
+          
+				<p>客户服务</p>
+				<a href="user.php?act=complain_list" {if $action eq 'complain_list'}class="selected"{/if}>我的投诉/建议</a>
+				<a href="user.php?act=return_goods" {if $action eq 'return_goods'}class="selected"{/if}>退换货</a>
+
+			
+		    </div>
+        </div>
+		

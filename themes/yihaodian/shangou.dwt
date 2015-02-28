@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>闪购</title>
+<script type="text/javascript" src="style/js/jquery.min.js"></script>
+<script type="text/javascript" src="style/js/left_nav_2.js"></script>
+<script type="text/javascript" src="style/js/time_count_down.js"></script>
+</head>
+
+<body>
+  <!-- #BeginLibraryItem "/library/page_header.lbi" -->
+ <!-- #EndLibraryItem -->
+   <link href="style/css/shangou.css" rel="stylesheet" type="text/css" />
+   <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+ <!-- #EndLibraryItem -->
+
+		<div class="titlebigpic">
+        </div>
+		<div class="shangoubox">
+			<!--{foreach from = $shangouActivty item = activity name = loop}-->
+				<div id="activity{$smarty.foreach.loop.iteration}">
+					<div class="shangou_time">
+						<span>{$activity.startDate}-{$activity.endDate}</span>
+					</div>
+					<div class="shangou_main">
+						<!--{foreach from = $activity.goods item = good}-->
+							<dl class="notStarted" start-time="{$good.start_time}" end-time="{$good.end_time}">
+								<div class="kaishi_time">
+									<span>开始时间<br>
+										{$good.begin_date}
+									</span>
+								</div>
+								<dt><a href="{$good.url}" target="_blank"><img src="{$good.original_img}" width="279" height="279" /></a></dt>
+								<dd>
+									<a href="{$good.url}" target="_blank" class="name">{$good.goods_name}</a>
+								</dd>
+								<dd>
+									<p>
+										<span>￥{$good.discountPrice}</span>
+										<b>￥{$good.market_price}</b>
+									</p>
+									<a href="{$good.url}" class="button" target="_blank">立即抢购</a>
+								</dd>
+							</dl>
+						<!--{/foreach}-->
+					</div>
+				</div>
+			<!--{/foreach}-->
+			<div class="main_down"></div>
+        </div>
+		
+		
+     
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

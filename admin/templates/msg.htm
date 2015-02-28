@@ -1,0 +1,53 @@
+{if $full_page}
+<!-- $Id: msg_list.htm 15616 2009-02-18 05:16:22Z sunxiaodong $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="POST" action="user_msg.php?act=batch_drop" name="listForm" onsubmit="return confirm_bath()">
+<!-- start article list -->
+<div class="list-div" id="listDiv">
+{/if}
+<table cellpadding="3" cellspacing="1">
+  <tr>
+    <th>
+      <input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox" />
+      <a href="javascript:listTable.sort('msg_id'); ">编号</a>
+    </th>
+    <th><a href="#">反馈内容</a></th>
+    <th><a href="#">反馈时间</a> </th>
+    <th><a href="javascript:listTable.sort('reply'); ">操作</a></th>
+  </tr>
+  {foreach from =$msg_list item=msg}
+  <tr>
+    <td><input type="checkbox" name="checkboxes[]" value="{$msg.msg_id}" />{$msg.msg_id}</td>
+    <td align="center">{$msg.msg_content}</td>
+    <td align="center"  nowrap="nowrap">{$msg.msg_time}</td>
+   
+    <td align="center">
+      <a href="msg.php?act=view&id={$msg.msg_id}" title="{$lang.view}">
+        <img src="images/icon_view.gif" border="0" height="16" width="16" />
+      </a>
+      <a href="javascript:;" onclick="listTable.remove({$msg.msg_id}, '{$lang.drop_confirm}')"  title="{$lang.remove}">
+        <img src="images/icon_drop.gif" border="0" height="16" width="16">
+      </a>
+    </td>
+  </tr>
+  {foreachelse}
+  <tr><td class="no-records" colspan="7">{$lang.no_records}</td></tr>
+  {/foreach}
+</table>
+<table id="page-table" cellspacing="0">
+<tr>
+  <td><div>
+      &nbsp;</div></td>
+  <td align="right" nowrap="true">
+  {include file="page.htm"}
+  </td>
+</tr>
+</table>
+{if $full_page}
+</div>
+<!-- end article list -->
+</form>
+{include file="pagefooter.htm"}
+{/if}

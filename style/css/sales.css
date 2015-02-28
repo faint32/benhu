@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*划上其他图片变暗*/
+.area01{ width:1200px; margin:0px auto;height:350px; background:#FFC; overflow:hidden;}
+.box-163css{ width:1200px; float:left;position:relative; height:350px;}
+.box-163css a{ float:left;}
+.floor-maskItem{ position:absolute; float:left;}
+.floor-maskItem img{ float:left;}
+.mask{ position:absolute; left:0; top:0;background:#000;  width:200px;height:175px; opacity:0;filter:alpha(opacity=0);}
+.hover .mask{background:#000;opacity:0.5;filter:alpha(opacity=50); cursor:pointer;}
+.hover .qq .mask{opacity:0;filter:alpha(opacity=0);}
+/**/
+
+.sales_more{ display:block; float:right; padding-top:10px;}
+.sales_1,.sales_2{width:204px; margin:10px;font-family:'微软雅黑',sans-serif;overflow:hidden;}
+.sales_1 a{ width:130px; display:block; float:left; font-size:16px;height:30px; line-height:30px; overflow:hidden;}
+.sales_1 span{ width:70px; display:block; float:right; font-size:14px; text-align:right; color:#ff4500;overflow:hidden;}
+.sales_1 span b{ font-size:24px;}
+.sales_2_a{ font-size:24px; color:#f13d6d; padding-right:10px;}
+.sales_3{width:204px; margin:0px 10px 10px 10px; font-size:14px;}
+.sales_3 span{ padding:0 10px;}
+.sales_3 b{ color:#ff875a;}

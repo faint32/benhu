@@ -1,0 +1,51 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="mod_personal_menu">
+<h3 class="big_title"><a href="user.php">我的{$shop_name}</a></h3>
+<div class="personal_user_info">
+  <blockquote class="user_img"> <a href="user.php?act=profile" style="cursor:pointer;"><img alt="用户头像" src="images/peopleicon_01.gif"> <span><u>编辑资料</u></span> </a> </blockquote>
+ 
+</div>
+<div class="trading_center">
+<dl>
+  <dt><i class="icon_img"></i><span class="tit_big">订单中心</span></dt>
+  <dd><a href="user.php?act=order_list"{if $action eq 'order_list'|| $action eq 'order_detail'}class="selected"{/if}>{$lang.label_order}</a></dd>
+  <dd><a href="user.php?act=address_list"{if $action eq 'address_list'}class="selected"{/if}>{$lang.label_address}</a></dd>
+  <dd><a href="user.php?act=booking_list"{if $action eq 'booking_list'}class="selected"{/if}>{$lang.label_booking}</a></dd>
+</dl>
+<dl style="padding:0;">
+  <dd>
+    <hr size="1">
+  </dd>
+</dl>
+<dl>
+  <dt><i class="icon_img"></i><span class="tit_big">会员中心</span></dt>
+  <dd><a href="user.php?act=profile"{if $action eq 'profile'}class="selected"{/if}> {$lang.label_profile}</a></dd>
+  <dd><a href="user.php?act=collection_list"{if $action eq 'collection_list'}class="selected"{/if}> {$lang.label_collection}</a></dd>
+  <dd><a href="user.php?act=message_list"{if $action eq 'message_list'}class="selected"{/if}> {$lang.label_message}</a></dd>
+  <dd><a href="user.php?act=tag_list"{if $action eq 'tag_list'}class="selected"{/if}> {$lang.label_tag}</a></dd>
+  <!-- {if $affiliate.on eq 1} -->
+  <dd><a href="user.php?act=affiliate"{if $action eq 'affiliate'}class="selected"{/if}>{$lang.label_affiliate}</a></dd>
+  <!-- {/if} -->
+  <dd><a href="user.php?act=comment_list"{if $action eq 'comment_list'}class="selected"{/if}>{$lang.label_comment}</a></dd>
+</dl>
+<dl style="padding:0;">
+  <dd>
+    <hr size="1">
+  </dd>
+</dl>
+<dl>
+<dl>
+  <dt><i class="icon_img"></i><span class="tit_big">账户中心</span></dt>
+  <dd><a href="user.php?act=bonus"{if $action eq 'bonus'}class="selected"{/if}>{$lang.label_bonus}</a></dd>
+
+   <dd><a href="user.php?act=track_packages"{if $action eq 'track_packages'}class="selected"{/if}>{$lang.label_track_packages}</a></dd>
+
+    <dd><a href="user.php?act=account_log"{if $action eq 'account_log'}class="selected"{/if}>{$lang.label_user_surplus}</a></dd>
+     <dd> <!--{if $show_transform_points}--> 
+        <a href="user.php?act=transform_points"{if $action eq 'transform_points'}class="selected"{/if}>{$lang.label_transform_points}</a> 
+        <!--{/if}--> 
+      </dd>
+</dl>
+</div>
+</div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/help.css" rel="stylesheet" type="text/css" />
+<link href="style/css/userComment.css" rel="stylesheet" type="text/css" />
+<link href="home.css" rel="stylesheet" type="text/css" />
+<link href="other.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="style/js/jquery.min.js"></script>
+<script type="text/javascript" src="style/js/left_nav_2.js"></script>
+<script type="text/javascript" src="style/js/category.js"></script><!--左侧分类js-->
+<script type="text/javascript" src="style/js/curvycorners.src.js"></script>
+<script type="text/javascript" src="style/home/js/lrtk.js"></script>
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}  
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> 
+<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+ {if in_array($cat_id,array(12,22,23,26,27,28,29,30,34,35))}
+    <div class="home">
+    	<div class="article">
+           <h2>{$article.title|escape:html}</h2>
+           {$article.content}
+      </div>
+      <!--{if $babyNurture}--><!--育儿知识的文章可以评论-->
+          <!-- #BeginLibraryItem "/library/article_comment.lbi" --><!-- #EndLibraryItem -->
+      <!--{/if}-->
+    </div>
+{else}
+    <div class="main middle over">
+        <div class="category_left over">
+          <!-- #BeginLibraryItem "/library/article_left.lbi" --><!-- #EndLibraryItem --> 
+        </div>
+        <div class="help">
+            <div class="help_site"><!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --></div>
+            <div class="other_title"><h1>{$article.title|escape:html}</h1></div>
+            <div class="help_main">     {$article.content}</div>
+        </div>
+    </div>
+{/if}
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

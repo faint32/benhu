@@ -1,0 +1,140 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- 样式1 开始-->
+{if $goods_cat.is_style_show > 0 AND $goods_cat.set_cat_style eq 1}
+<div class="wrap mod_index_floor global_loading floor{$goods_cat.set_style_color} floor_height1">
+  <h2>{insert name='get_ad' cat_name=$goods_cat.name type='标题广告'}
+    <p class="more_link"><!--{foreach from=$goods_cat.cat_clild item=cat name=foo}-->
+      <a target="_blank" title="{$cat.name}" href="{$cat.url}">{$cat.name}</a>
+      <!--{/foreach}--></p>
+  </h2>
+  <div class="clearfix floor_wrap">
+    <div class="left_module">
+
+      <h3 class="clearfix"><!--{foreach from=$goods_cat.cat_clild item=cat name=foo}-->
+        {if $smarty.foreach.foo.iteration < 3} <a target="_blank" title="{$cat.name}" href="{$cat.url}">{$cat.name}<i>&nbsp;</i></a> {/if}
+        <!--{/foreach}--></h3>
+
+      <div class="font_sort font_sort_higher clearfix">
+        <h4><a title="商品分类" href="javascript:void(0)">商品分类</a></h4>
+        <ul class="clearfix">
+		          <!--{foreach from=$goods_cat.cat_clild item=cat name=foo}-->
+          {if $smarty.foreach.foo.iteration > 2 AND $smarty.foreach.foo.iteration < 9}
+          <li><a target="_blank" title="{$cat.name}" href="{$cat.url}">{$cat.name}</a></li>
+          {/if}
+          <!--{/foreach}-->
+        </ul>
+      
+      </div>
+      <div class="promotion_banner"> {insert name='get_ad' cat_name=$goods_cat.name type='左侧广告'} </div>
+    </div>
+    <!--中间 beigin-->
+    <div class="middle_module">
+      <div class="mid_big_img clearfix"> {insert name='get_ad' cat_name=$goods_cat.name type='中部大块广告1'} {insert name='get_ad' cat_name=$goods_cat.name type='中部大块广告2'} </div>
+      <div class="mid_img_list clearfix"> {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告1' class='hover_show'} 
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告2' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告3' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告4' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告5' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告6' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告7' class='hover_show'}
+	  	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告8' class='hover_show'}
+	 </div>
+    </div>
+    <div class="right_module clearfix" id="tab_cat_{$goods_cat.id}">
+      <div class="right_tab">
+        <ul class="clearfix">
+		  <!--{foreach from=$goods_cat.goods_level2 item=goods_level2 name=foo}-->
+          {if $smarty.foreach.foo.iteration < 11}
+          <li {if $smarty.foreach.foo.iteration < 4}class="L_tab_trigger"{elseif $smarty.foreach.foo.iteration >3}class="L_tab_trigger higher"{/if}> <a target="_blank" title="{$goods_level2.cat_name}" href="{$goods_level2.url}">{$goods_level2.cat_name}</a><i></i></li>
+          {/if}
+          <!--{/foreach}-->
+          
+        </ul>
+        <u class="scissor_ico"></u> </div>
+
+      <div class="right_tab_content tab_big_img">
+	   <!--{foreach from=$goods_cat.goods_level2 item=goods_level2 name=foo}-->
+        <div class="tab_content_wrap block_show L_tab_panel" style="display:none;">
+          <ul class="clearfix">
+		   <!-- {foreach from=$goods_level2.goods item=goods name=foo} -->
+         
+            <li> <a class="pro_img" target="_blank" title="{$goods.goods_name}" href="{$goods.url}"><img src="{$goods.goods_thumb}"></a>
+              <p class="pro_name"><a target="_blank" title="{$goods.goods_name}" href="{$goods.url}">{$goods.short_name}</a> <p class="price_box"><span>{if $goods.promote_price > 0}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span></p>
+            </li>
+        
+			 <!-- {/foreach} -->
+          </ul>
+        </div>
+		  <!-- {/foreach} -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 样式1 结束-->
+{else}
+<!-- 样式2 开始-->
+
+<div class="wrap mod_index_floor global_loading floor{$goods_cat.set_style_color} floor_height2">
+  <h2>{insert name='get_ad' cat_name=$goods_cat.name type='标题广告'}
+    <p class="more_link">
+      <!--{foreach from=$goods_cat.cat_clild item=cat name=foo}-->
+      <a target="_blank" title="{$cat.name}" href="{$cat.url}">{$cat.name}</a>
+      <!--{/foreach}-->
+    </p>
+  </h2>
+  <div class="clearfix floor_wrap">
+    <div class="left_module">
+      <h3 class="clearfix">
+        <!--{foreach from=$goods_cat.cat_clild item=cat name=foo}-->
+        {if $smarty.foreach.foo.iteration < 3} <a target="_blank" title="{$cat.name}" href="{$cat.url}">{$cat.name}<i>&nbsp;</i></a> {/if}
+        <!--{/foreach}-->
+      </h3>
+      <div class="font_sort clearfix">
+        <h4><a title="商品分类" href="javascript:void(0)">商品分类</a></h4>
+        <ul class="clearfix">
+          <!--{foreach from=$goods_cat.cat_clild item=cat name=foo}-->
+          {if $smarty.foreach.foo.iteration > 2 AND $smarty.foreach.foo.iteration < 9}
+          <li><a target="_blank" title="{$cat.name}" href="{$cat.url}">{$cat.name}</a></li>
+          {/if}
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      <div class="promotion_banner"> {insert name='get_ad' cat_name=$goods_cat.name type='左侧广告'} </div>
+    </div>
+    <div class="middle_module">
+      <div class="mid_big_img clearfix"> {insert name='get_ad' cat_name=$goods_cat.name type='中部大块广告1'} {insert name='get_ad' cat_name=$goods_cat.name type='中部大块广告2'} </div>
+      <div class="mid_img_list clearfix"> {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告1' class='hover_show'} 
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告2' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告3' class='hover_show'}
+	  {insert name='get_ad' cat_name=$goods_cat.name type='中部小块广告4' class='hover_show'}
+ </div>
+    </div>
+    <div class="right_module clearfix"  id="tab_cat_{$goods_cat.id}">
+      <div class="right_tab">
+        <ul class="clearfix">
+          <!--{foreach from=$goods_cat.goods_level2 item=goods_level2 name=foo}-->
+          {if $smarty.foreach.foo.iteration < 8}
+          <li class="L_tab_trigger"> <a target="_blank" title="{$goods_level2.cat_name}" href="{$goods_level2.url}">{$goods_level2.cat_name}</a><i></i></li>
+          {/if}
+          <!--{/foreach}-->
+        </ul>
+        <u class="scissor_ico"></u> </div>
+      <div class="right_tab_content tab_mid_img">
+        <!--{foreach from=$goods_cat.goods_level2 item=goods_level2 name=foo}-->
+        <div class="tab_content_wrap L_tab_panel" style="display: none;">
+          <ul class="clearfix pro_list">
+            <!-- {foreach from=$goods_level2.goods item=goods} -->
+            <li> <a class="pro_img" target="_blank" title="{$goods.goods_name}" href="{$goods.url}"><img src="{$goods.goods_thumb}"><span>{if $goods.promote_price > 0}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span></a>
+              <p class="pro_name"><a target="_blank" title="{$goods.goods_name}" href="{$goods.url}">{$goods.short_name}</a></p>
+            </li>
+            <!-- {/foreach} -->
+          </ul>
+        </div>
+        <!-- {/foreach} -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 样式2 结束-->
+{/if}
+<input type="hidden" name="cat_id_ad" value="{$goods_cat.id}">

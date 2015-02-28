@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="group.css" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='jquery.min.js,common.js,grouphover.js,grouptab.js,top.js,all_top_nav.js'}
+</head>
+<body>
+  <script>
+$(function(){
+  setInterval(function(){
+      $(".countDown").each(function(){
+        var obj = $(this);
+        var endTime = new Date(parseInt(obj.attr('value')) * 1000);
+        var show_day =  obj.attr('showday');
+        var nowTime = new Date();
+      //  alert('endTime=='+endTime);
+    //    alert('nowTime=='+nowTime);
+        var nMS=endTime.getTime() - nowTime.getTime() + 28800000;
+        var myD=Math.floor(nMS/(1000 * 60 * 60 * 24));
+        var myH_show=Math.floor(nMS/(1000*60*60) % 24);
+        var myH=Math.floor(nMS/(1000*60*60));
+        var myM=Math.floor(nMS/(1000*60)) % 60;
+        var myS=Math.floor(nMS/1000) % 60;
+        var myMS=Math.floor(nMS/100) % 10;
+        if(nMS>0)
+        {
+                 if(this.className=="grouptab_time countDown notSta")   
+                {var str =  '倒计时：'+myD+'天'+myH_show+'时'+myM+'分'+myS+'秒'; }
+                else if(this.className=="grouptab_hovermain_time countDown" || this.className=="grouptab_time countDown")
+                  {var str = '剩余时间：'+myD+'天'+myH_show+'时'+myM+'分'+myS+'秒';       }                 
+        }
+        else
+        {  
+              if(this.className=="grouptab_time countDown notSta")   //到计时结束，未开始的团购活动-->开始
+              {
+                  var str = "已开始！";
+                  var _parentDiv = $(this).parent().parent(); 
+                  var notStaDiv = _parentDiv.children(".group_weikai");
+                  var aDiv = _parentDiv.find(".good_url");
+                  var url = aDiv.attr('href');
+                  notStaDiv.empty();
+                  notStaDiv.attr('class','grouptab_hovermain');
+                  var elem="<div class='grouptab_hovermain_time'>团购开始了！</div><a href='"+url+"'></a>";
+                  notStaDiv.append(elem);          
+                 
+                   this.className="grouptab_time";
+              
+              }
+              else if(this.className=="grouptab_hovermain_time countDown")                                                 //到计时结束，已开始的团购活动-->结束
+              {
+                var str = "已结束！"; 
+              //  if(this.className=="grouptab_hovermain_time countDown")
+                 //  {                      
+                    var _parentDiv = $(this).parent();      
+                    _parentDiv.attr('class','group_maiguang');
+                      _parentDiv.empty();  
+                      _parentDiv.append("<img width='118 'height='59' src='themes/yihaodian/images/group_maiguang.png'>");          
+                //   }
+               }
+                if(this.className=="grouptab_time countDown")      //无论哪种情况，都不再计时
+                   {
+                     this.className="grouptab_time";
+                   }
+        }
+    obj.html(str);
+      });
+    }, 100);  
+
+})
+function group_buy_ch( group_type)
+{
+  var param='act=change&group_type='+group_type;
+     Ajax.call( 'group_buy.php',param,group_buy_ch_callback , 'GET', 'json', true, true );
+}
+function group_buy_ch_callback(result)
+{
+
+  if ( result[0] == 'today'  )
+  {
+    change_group_buy(result[1],'#group_tab_main0');
+    change_group_buy(result[2],'#group_tab_main1');
+  }
+  else if(result[0] == 'brand')
+  {
+      change_group_buy(result[1],'#group_tab_main_a0');
+      change_group_buy(result[2],'#group_tab_main_a1');
+  }
+  else if(result[0] == 'not_start')
+  {
+      change_group_buy(result[1],'#group_tab_main_b0');
+      change_group_buy(result[2],'#group_tab_main_b1');
+  }
+  else
+  {
+    alert('false');
+  }
+}
+
+function change_group_buy(jsonData,id)
+{
+
+  var str='';
+  var ele='';
+   for (var i = 0; i < jsonData.length; i++) {
+     
+	if(id == '#group_tab_main_b0' || id ==  '#group_tab_main_b1')
+	{
+	 ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(1) > b');
+	   ele.attr('value',jsonData[i].groupStaDt);
+	}
+	else 
+	{
+	    ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(1) > div');
+	   ele.attr('value',jsonData[i].end_time);
+	   
+	   ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(1) > a');
+	   ele.attr('href',jsonData[i].url);
+	}
+	
+	 ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(2) > div');
+	if(id == '#group_tab_main_b0' || id ==  '#group_tab_main_b1')
+	{
+	 ele.attr('value',jsonData[i].groupStaDt);
+	}
+	 else
+	   {
+	       ele.attr('value',jsonData[i].end_time);
+	   }
+	   ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(2) > a');
+	   ele.attr('href',jsonData[i].url);
+	    str="<img src='"+jsonData[i].goods_thumb+"' width='165' height='198' />";
+	   ele.empty();
+	   ele.html(str);
+		
+	
+	 ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(2) > .grouptab_textwrap > a');
+	   ele.attr('href',jsonData[i].url);
+	   ele.empty();	 
+	  ele.append(jsonData[i].goods_name);
+	  
+	   ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(2) > .grouptab_jiagewrap');
+	  str="<span class='price_1'><b>￥</b>"+jsonData[i].price_ladder[0].formated_price+"</span><span class='price_2'>"+jsonData[i].cur_amount+"人已购买</span>";
+	   ele.empty();
+	   ele.html(str);
+	   
+	   
+	   ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(1) > div');
+	    if(id == '#group_tab_main_b0' || id ==  '#group_tab_main_b1')
+	   {
+	     ele.attr('value',jsonData[i].groupStaDt);
+	   }
+	   else
+	   {
+	     ele.attr('value',jsonData[i].end_time);
+	   }
+	   ele =  $(id + ' > div:nth-child('+ (i+1) +')' + ' > div:nth-child(1) > a');
+	   ele.attr('href',jsonData[i].url);
+   
+    };
+	
+}
+</script>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+    <div class="group_nav">
+      <h2>团购</h2>
+        <a href="#grouptab_1">今日团购</a><a href="#grouptab_2">品牌团购</a><a href="#grouptab_3">开团预告</a>
+    </div>
+    <div class="main over middle group_mt" style="margin-top:10px;">
+	  <p class="group_ad1"><a href="{$group_main_ad.ad_link}"><img src=" data/afficheimg/{$group_main_ad.ad_code}" /></a></p><!--主广告-->
+      <p class="group_ad2"><a href="{$group_right_ad.ad_link}"><img src=" data/afficheimg/{$group_right_ad.ad_code}" width="200" height="360" /></a></p><!--右广告-->
+	  
+    </div>
+  <div class="group">
+      <div id="group_tags" class="group_tags">
+        <ul>
+          <p><a name="grouptab_1" id="grouptab_1"></a>今日新团</p>
+          <LI class="grouptitle_tab">
+            <A onmousemove="select_zzjs('group_tab_main0',this)" href="javascript:void(0)">妈妈专区</A> 
+          </LI>
+          <LI>
+            <A onmousemove="select_zzjs('group_tab_main1',this)" href="javascript:void(0)">宝宝专区</A>
+         </LI>
+          <span>                     <!--换一批javascript:void(0)-->
+            <a href="" onclick="group_buy_ch('today');return false;"><img src="images/main_2_left_title_b.png" /></a>
+          </span>
+        </ul>
+      </div>
+      <DIV id="group_tab_main">             <!--今日新团，妈妈专区-->
+            <div class="group_tab_main group_tab" id="group_tab_main0">   
+              <!-- {if $today_mather} 如果有团购活动 --> 
+                <!-- {foreach from=$today_mather item=group_buy} 循环团购活动开始 -->
+                    <div class="grouptab_hoverbox">
+                        <div class="grouptab_hovermain">
+                            <div class="grouptab_hovermain_time countDown" value="{$group_buy.end_date}" >剩余时间：</div>
+                            <a  href="{$group_buy.url}"></a>
+                        </div>
+                        <div class="grouptab_main">
+                            <div class="grouptab_time countDown" value="{$group_buy.end_date}" >剩余时间：</div>
+                            <a  href="{$group_buy.url}" class="grouptab_imgwrap">
+                              <img  src="{$group_buy.goods_thumb}" width="165" height="198" />
+                            </a>
+                            <p class="grouptab_textwrap"> 
+                              <a  href="{$group_buy.url}" title="{$group_buy.goods_name|escape:html}">{$group_buy.goods_name|escape:html}</a>
+                            </p>
+                            <p class="grouptab_jiagewrap">
+                                <span class="price_1" >
+                                  <b>￥</b>{$group_buy.price_ladder.0.formated_price}
+                                </span>
+                                <span class="price_2" >{$group_buy.cur_amount}人已购买</span>
+                            </p>
+                        </div>
+                    </div>
+                <!--{/foreach}-->
+              <!-- {/if} -->    
+          </div>
+          <DIV class="group_tab_main" id="group_tab_main1">
+            <!-- {if $today_baby} 如果有团购活动 --> 
+              <!-- {foreach from=$today_baby item=group_buy} 循环团购活动开始 -->
+                  <div class="grouptab_hoverbox">
+                      <div class="grouptab_hovermain">
+                          <div class="grouptab_hovermain_time countDown" value="{$group_buy.end_date}">剩余时间：</div>
+                          <a href="{$group_buy.url}"></a>
+                      </div>
+                      <div class="grouptab_main">
+                        <div class="grouptab_time countDown" value="{$group_buy.end_date}">剩余时间：</div>
+                        <a href="{$group_buy.url}" class="grouptab_imgwrap">
+                          <img src="{$group_buy.goods_thumb}" width="165" height="198" />
+                        </a>
+                        <p class="grouptab_textwrap"> 
+                          <a href="{$group_buy.url}" {$group_buy.goods_name|escape:html}>{$group_buy.goods_name|escape:html}</a>
+                        </p>
+                        <p class="grouptab_jiagewrap">
+                            <span class="price_1">
+                              <b>￥</b>{$group_buy.price_ladder.0.formated_price}
+                            </span>
+                            <span class="price_2">{$group_buy.cur_amount}人已购买</span>
+                        </p>
+                      </div>
+                  </div>
+              <!--{/foreach}-->
+            <!-- {/if} -->                 
+          </DIV>
+      </DIV>
+    </div>
+    
+    <div class="group">
+        <div id="group_tags_a" class="group_tags">
+          <ul>
+            <p><a name="grouptab_2" id="grouptab_2"></a>品牌团购</p>
+            <LI class="grouptitle_tab_a"><A onmousemove="select_zzjs_a('group_tab_main_a0',this)" href="javascript:void(0)">妈妈专区</A> </LI>
+            <LI><A onmousemove="select_zzjs_a('group_tab_main_a1',this)" href="javascript:void(0)">宝宝专区</A> </LI>		
+			<span>                     <!--换一批javascript:void(0)-->
+				<a href="" onclick="group_buy_ch('brand');return false;"><img src="images/main_2_left_title_b.png" /></a>
+           </span>
+          </ul>
+        </div>
+        <DIV id="group_tab_main_a">
+            <DIV class="group_tab_main group_tab" id="group_tab_main_a0">
+              <!-- {if $brand_mum} 如果有团购活动 --> 
+                <!-- {foreach from=$brand_mum item=group_buy} 循环团购活动开始 -->
+                    <div class="grouptab_hoverbox">
+                        <div class="grouptab_hovermain">
+                            <div class="grouptab_hovermain_time countDown" value="{$group_buy.end_date}">剩余时间：</div>
+                            <a href="{$group_buy.url}"></a>
+                        </div>
+                        <div class="grouptab_main">
+                            <div class="grouptab_time countDown" value="{$group_buy.end_date}">剩余时间：</div>
+                            <a href="{$group_buy.url}" class="grouptab_imgwrap">
+                              <img src="{$group_buy.goods_thumb}" width="165" height="198" />
+                            </a>
+                            <p class="grouptab_textwrap"> 
+                              <a href="{$group_buy.url}" {$group_buy.goods_name|escape:html}>{$group_buy.goods_name|escape:html}</a>
+                            </p>
+                            <p class="grouptab_jiagewrap">
+                                <span class="price_1">
+                                  <b>￥</b>{$group_buy.price_ladder.0.formated_price}
+                                </span>
+                                <span class="price_2">{$group_buy.cur_amount}人已购买</span>
+                            </p>
+                        </div>
+                    </div>
+                <!--{/foreach}-->
+              <!-- {/if} --> 
+          </DIV>
+             <DIV class="group_tab_main" id="group_tab_main_a1">
+              <!-- {if $brand_baby} 如果有团购活动 --> 
+              <!-- {foreach from=$brand_baby item=group_buy} 循环团购活动开始 -->
+                  <div class="grouptab_hoverbox">
+                      <div class="grouptab_hovermain">
+                          <div class="grouptab_hovermain_time countDown" value="{$group_buy.end_date}">剩余时间：</div>
+                          <a href="{$group_buy.url}"></a>
+                      </div>
+                      <div class="grouptab_main">
+                        <div class="grouptab_time countDown" value="{$group_buy.end_date}">剩余时间：</div>
+                        <a href="{$group_buy.url}" class="grouptab_imgwrap">
+                          <img src="{$group_buy.goods_thumb}" width="165" height="198" />
+                        </a>
+                        <p class="grouptab_textwrap"> 
+                          <a href="{$group_buy.url}" {$group_buy.goods_name|escape:html}>{$group_buy.goods_name|escape:html}</a>
+                        </p>
+                        <p class="grouptab_jiagewrap">
+                            <span class="price_1">
+                              <b>￥</b>{$group_buy.price_ladder.0.formated_price}
+                            </span>
+                            <span class="price_2">{$group_buy.cur_amount}人已购买</span>
+                        </p>
+                      </div>
+                  </div>
+              <!--{/foreach}-->
+            <!-- {/if} -->   
+        </DIV>
+      
+      
+        </DIV>
+    </div>
+    <div class="group">
+        <div id="group_tags_b" class="group_tags">
+            <ul>
+              <p><a name="grouptab_3" id="grouptab_3"></a>开团预告</p>
+              <LI class="grouptitle_tab_b"><A onmousemove="select_zzjs_b('group_tab_main_b0',this)" href="javascript:void(0)">妈妈专区</A> </LI>
+              <LI><A onmousemove="select_zzjs_b('group_tab_main_b1',this)" href="javascript:void(0)">宝宝专区</A> </LI>
+			  <span>                     <!--换一批javascript:void(0)-->
+				<a href="" onclick="group_buy_ch('not_start');return false;"><img src="images/main_2_left_title_b.png" /></a>
+              </span>
+            </ul>
+        </div>
+        <DIV id="group_tab_main_b">
+            <DIV class="group_tab_main group_tab" id="group_tab_main_b0">
+              <!-- {if $notStart_mum} 如果有团购活动 --> 
+                <!-- {foreach from=$notStart_mum item=group_buy} 循环团购活动开始 -->
+                    <div class="grouptab_hoverbox">
+                        <div class="group_weikai">
+                           <span>开团时间</span>
+                           <b>{$group_buy.groupStaDt}</b>
+                        </div>
+                        <div class="grouptab_main">
+                            <div class="grouptab_time countDown notSta" value="{$group_buy.start_date}">开始时间：</div>
+                            <a href="{$group_buy.url}" class="grouptab_imgwrap">
+                              <img src="{$group_buy.goods_thumb}" width="165" height="198" />
+                            </a>
+                            <p class="grouptab_textwrap"> 
+                              <a class="good_url" href="{$group_buy.url}"{$group_buy.goods_name|escape:html}>{$group_buy.goods_name|escape:html}</a>
+                            </p>
+                            <p class="grouptab_jiagewrap">
+                                <span class="price_1">
+                                  <b>￥</b>{$group_buy.price_ladder.0.formated_price}
+                                </span>
+                                <span class="price_2">{$group_buy.cur_amount}人已购买</span>
+                            </p>
+                        </div>
+                    </div>
+                <!--{/foreach}-->
+              <!-- {/if} --> 
+            </DIV>
+            <DIV class="group_tab_main" id="group_tab_main_b1">
+               <!-- {if $notStart_baby} 如果有团购活动 --> 
+                  <!-- {foreach from=$notStart_baby item=group_buy} 循环团购活动开始 -->
+                       <div class="grouptab_hoverbox">
+                        <div class="group_weikai">
+                           <span>开团时间</span>    
+                           <b>{$group_buy.groupStaDt}</b>
+                        </div>
+                        <div class="grouptab_main">
+                            <div class="grouptab_time countDown notSta" value="{$group_buy.start_date}">开始时间：</div>
+                            <a href="{$group_buy.url}" class="grouptab_imgwrap">
+                              <img src="{$group_buy.goods_thumb}" width="165" height="198" />
+                            </a>
+                            <p class="grouptab_textwrap"> 
+                              <a class="good_url" href="{$group_buy.url}" {$group_buy.goods_name|escape:html}>{$group_buy.goods_name|escape:html}</a>
+                            </p>
+                            <p class="grouptab_jiagewrap">
+                                <span class="price_1">
+                                  <b>￥</b>{$group_buy.price_ladder.0.formated_price}
+                                </span>
+                                <span class="price_2">{$group_buy.cur_amount}人已购买</span>
+                            </p>
+                        </div>
+                    </div>
+                  <!--{/foreach}-->
+                <!-- {/if} --> 
+            </DIV>       
+        </DIV>
+    </div>
+    <!-- 回顶部 -->
+    <div id="tbox">
+        <a class="tbox_1" target="_blank" href="#"></a>
+        <a class="tbox_2" target="_blank" href="#"></a>
+        <a id="gotop" href="javascript:void(0)"></a>
+  </div>
+   
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> 
+</body>
+</html>

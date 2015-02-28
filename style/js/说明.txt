@@ -1,0 +1,16 @@
+left_nav   left_nav_2通用左侧弹出导航
+mytab  首页幻灯片下切换
+mytab_1 首页幻灯片下切换 划上显示按钮
+index_down_hdm首页下部分滑动切换
+right_tab 首页右侧滑动门
+huandengpian 首页幻灯片
+
+category 三级页 左导航点击弹开
+
+channel 二级页 幻灯片
+
+item_1      item_2 商品详情页放大镜效果
+item_hdm 商品详情页 商品描述
+item_size 商品详情页 选择商品规格
+
+grouptab.js  团购首页两项划动TAB  三组-

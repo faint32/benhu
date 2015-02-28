@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{if $script_name eq 'index'}
+ <!--{foreach from=$articles item=article_item}-->
+<li><a target="_blank" title="{$article_item.title|escape:html}" href="{$article_item.url}"> {$article_item.short_title} </a></li><!--{/foreach}-->
+{else}
+<div class="box">
+ <div class="box_1">
+  <h3>
+  <span><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></span>
+  <a href="{$articles_cat.url}"><img src="../images/more.gif" alt="more" /></a>
+  </h3>
+  <div class="boxCenterList RelaArticle">
+  <!--{foreach from=$articles item=article_item}-->
+  <a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a> {$article_item.add_time}<br />
+  <!--{/foreach}-->
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>
+{/if}

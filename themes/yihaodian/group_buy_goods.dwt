@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Keywords" content="{$keywords}" />
+  <meta name="Description" content="{$description}" />
+  <!-- TemplateBeginEditable name="doctitle" -->
+  <title>{$page_title}</title>
+  <!-- TemplateEndEditable -->
+  <!-- TemplateBeginEditable name="head" -->
+  <!-- TemplateEndEditable -->
+
+  <link href="style_groupBuy.css" rel="stylesheet" type="text/css" />
+<link href="style/css/item.css" rel="stylesheet" type="text/css" />
+  {insert_scripts files='jquery.min.js,item_1.js,all_top_nav.js,item_2.js,item_hdm.js,top.js,all_top_nav.js,common.js,lefttime.js'}
+ {insert_scripts files='jquery.json.js'}  
+  {insert_scripts files='transport.js,utils.js'}
+
+  <script type="text/javascript" src="style/js/left_nav_2.js"></script>
+  <script>
+    function turnoff(obj){
+    document.getElementById(obj).style.display="none";
+    }
+  </script>
+  <script type=text/javascript>
+  //商品详情页数量
+	//*
+  $(function(){
+      $("#product_amount").keyup(function(){
+    var a = $("#product_amount").val();
+    if(a < 1 && a != '')
+    {
+      alert("最小购买数量为1件");
+              $("#product_amount").val(1);  
+    }
+  })
+  //*/
+  
+      /* 鼠标移动小图，小图对应大图显示在大图上，并替换放大镜中的图*/
+      $("#specList ul li img").livequery("mouseover",function(){ 
+          var imgSrc = $(this).attr("src");
+          var i = imgSrc.lastIndexOf(".");
+          var unit = imgSrc.substring(i);
+          imgSrc = imgSrc.substring(0,i);
+          var imgSrc_small = $(this).attr("src_D");
+          var imgSrc_big = $(this).attr("src_H");
+          $("#bigImg").attr({"src": imgSrc_small ,"jqimg": imgSrc_big });
+          $(this).css({"border":"2px solid #f55a6e","padding":"1px"});
+      });
+      
+      $("#specList ul li img").livequery("mouseout",function(){ 
+          $(this).css({"border":"1px solid #efd7b4","padding":"2px"});
+      });
+      
+      //使用jqzoom
+      $(".jqzoom").jqueryzoom({
+          xzoom: 350, //放大图的宽度(默认是 200)
+          yzoom: 350, //放大图的高度(默认是 200)
+          offset: 10, //离原图的距离(默认是 10)
+          position: "right", //放大图的定位(默认是 "right")
+          preload:1   
+      });
+      
+      /*如果小图过多，则出现滚动条在一行展示*/
+      var btnNext = $('#specRight');
+      var btnPrev = $('#specLeft')
+      var ul = btnPrev.next().find('ul');
+
+      var len = ul.find('li').length;
+      var i = 0 ;
+      if (len > 4) {
+          $("#specRight").addClass("specRightF").removeClass("specRightT");
+          ul.css("width", 76 * len)
+          btnNext.click(function(e) {
+              if(i>=len-4){
+                  
+                  return;
+              }
+              i++;
+              if(i == len-4){
+                  $("#specRight").addClass("specRightT").removeClass("specRightF");
+              }
+              $("#specLeft").addClass("specLeftF").removeClass("specLeftT");
+              moveS(i);
+          })
+          btnPrev.click(function(e) {
+              if(i<=0){
+                  return;
+              }
+              i--;
+              if(i==0){
+                  $("#specLeft").addClass("specLeftT").removeClass("specLeftF");
+              }
+              $("#specRight").addClass("specRightF").removeClass("specRightT");
+              moveS(i);
+          })
+      }
+      function moveS(i) {
+          ul.animate({left:-78 * i}, 500)
+      }
+      function picAuto(){
+        if ($(".listImg li").size()<=4) {
+          $("#specLeft,#specRight").hide();
+        }
+      }
+      picAuto();
+  });
+</script>
+  <script>
+            function funnum(type,vbignum) { //类型,库存数量
+              var vnum = Number(document.getElementById("product_amount").value);
+              if (type == "down") { //减少购买数量
+                if (vnum != 1) {
+                  document.getElementById("product_amount").value = vnum - 1;
+                }
+              }
+              if (type == "up") {//增加购买数量
+             
+                if (vnum < vbignum) {
+                  if (vnum < 10) {//允许最大购买量
+                    document.getElementById("product_amount").value = vnum + 1;
+                  }
+                  else {
+                    alert("每人每次最多可购买10件商品！");
+                  }
+                }
+        else{
+          alert("库存不够");
+        }
+              }
+            }
+</script>
+  <script>
+   function selPara(flag,chclass,rdclass){
+    var  radio_id= '#' + rdclass;
+    var  inputId = '#' + chclass;
+    var dotclass = '.' + chclass;
+  var curclass = 'options '+chclass;
+      $(dotclass).each(function(){
+      if(this==flag)  
+    {
+    $(this).attr("class",curclass);
+        var selId = $(this).attr("id");
+        $(inputId).val(selId);    
+    }
+    else
+      $(this).attr("class",chclass);
+    }); 
+	 $(radio_id).attr('checked','checked');
+   }
+  </script>
+  <script>
+$(function(){
+  setInterval(function(){
+      $(".countDown").each(function(){
+        var obj = $(this);
+        var endTime = new Date(parseInt(obj.attr('value')) * 1000);
+        var nowTime = new Date();
+        var nMS=endTime.getTime() - nowTime.getTime() + 28800000;
+        var myD=Math.floor(nMS/(1000 * 60 * 60 * 24));
+        var myH_show=Math.floor(nMS/(1000*60*60) % 24);
+        var myH=Math.floor(nMS/(1000*60*60));
+        var myM=Math.floor(nMS/(1000*60)) % 60;
+        var myS=Math.floor(nMS/1000) % 60;
+        var myMS=Math.floor(nMS/100) % 10;
+        if(nMS>0)
+        {
+    var str='还剩：<span>'+myD+'</span>天<span>'+myH_show+'</span>小时<span>'+myM+'</span>分<span>'+myS+'</span>秒';              
+        }
+        else
+        {             
+                 this.className="group_item_time";
+                  var str="团购结束。";
+        }
+    obj.html(str);
+      });
+    }, 100);  
+})
+</script>
+<script type="text/javascript">
+		var goods_id = {$goods_id};
+		var goodsattr_style = {$cfg.goodsattr_style|default:1};
+		var gmt_end_time = {$promote_end_time|default:0};
+		{foreach from=$lang.goods_js item=item key=key}
+		var {$key} = "{$item}";
+		{/foreach}
+		var goodsId = {$goods_id};
+		var now_time = {$now_time};
+
+		<!-- {literal} -->
+		onload = function(){
+		  changePrice();
+		  fixpng();
+		  try { onload_leftTime(); }
+		  catch (e) {}
+		}
+
+		/**
+		 * 点选可选属性或改变数量时修改商品价格的函数
+		 */
+		function changePrice()
+		{
+		  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+		  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+		  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+		}
+
+		/**
+		 * 接收返回的信息
+		 */
+		function changePriceResponse(res)
+		{
+		  if (res.err_msg.length > 0)
+		  {
+			alert(res.err_msg);
+		  }
+		  else
+		  {
+			document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+			if (document.getElementById('ECS_GOODS_AMOUNT'))
+			  document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+			  document.getElementById('current_price').innerHTML = res.result;
+		  }
+		}
+		<!-- {/literal} -->
+</script> 
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/page_header_groupBuy.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+ 
+    <div class="main middle over item_bj">
+      <div class="item_left">
+     <!-- #BeginLibraryItem "/library/goods_gallery_groupbuy.lbi" --><!-- #EndLibraryItem --> 
+      </div>
+      <div class="item_right">
+          <h1>{$gb_goods.goods_name|escape:html}</h1>
+            <div class="group_itembox">
+                <div class="group_item">
+                    <dl class="group_item_1">
+                        <dt>团购价：</dt>
+                        <dd>¥{$group_buy.formated_cur_price}</dd>
+                    </dl>
+                    <dl class="group_item_2">
+                      <dt>参考价：<span>¥{$gb_goods.market_price}</span><br />
+                          节省：¥{$group_buy.jiesheng}
+                      </dt>
+                      <dd>{$group_buy.zhekou}折</dd>
+                    </dl>
+                    <dl class="group_item_3">
+                        <span>{$group_buy.valid_goods}</span>人已购买
+                    </dl>
+                </div>
+            </div>
+            <div class="group_item_time countDown" value="{$group_buy.end_date}">
+                  还剩：<span id="lDay">11</span>天<span id="lHour">15</span>小时<span id="lMin">20</span>分<span id="lSec">60</span>秒
+            </div>
+        <form action="javascript:addToCart({$goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">          
+	        		
+			<!-- {* 开始循环所有可选属性 *} --> 
+            <!-- {foreach from=$specification item=spec key=spec_key name=shu} --> 
+				<!-- {if $spec.attr_type eq 1} -->		
+					<dl  class="standard_{$smarty.foreach.shu.iteration}">
+							<dt>{$spec.name}</dt>
+							<!-- {foreach from=$spec.values item=value key=key} -->
+							<dd 
+							  onclick="selPara(this,'spec_{$spec_key}','spec_value_{$value.id}');" 
+							  id="{$value.id}" 
+							  {if $key eq 0}class="spec_{$spec_key} options" {else}class="spec_{$spec_key}" {/if}>  
+								  {$value.label}
+								  <input id="spec_value_{$value.id}" style="display:none;" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked='checked'{/if} />						 
+							</dd>
+							<!-- {/foreach} -->
+					</dl>
+				<!-- {else} -->				
+					<dl class="standard_{$smarty.foreach.shu.iteration}">
+					  <dt>{$spec.name}</dt>
+							<!-- {foreach from=$spec.values item=value key=key} -->
+							<dd  onclick="selPara(this,'spec_{$spec_key}','spec_value_{$value.id}');" 
+							  id="{$value.id}" 
+							  {if $key eq 0}class="spec_{$spec_key} options" {else}class="spec_{$spec_key}" {/if}>
+							  <input type="checkbox" name="spec_{$spec_key}" value="{$value.id}" id="spec_value_{$value.id}"  />
+							  {$value.label}
+							 </dd>
+							<!-- {/foreach} -->
+					</dl>          
+				<!-- {/if} -->
+            <input type="hidden" name="spec_list" value="{$key}" />
+            <!-- {/foreach} --> 
+            <!-- {* 结束循环可选属性 *} -->
+
+            <dl class="standard_3">
+                <dt>购买数量：</dt>
+                <dd class="standard_3_2">       
+					<input  value="1" type=text class="num" name="number" id="product_amount"/>
+                    <div class="standard_3_1">
+                      <a onClick="funnum('up',{$goods_number})"></a>
+                      <a onClick="funnum('down',{$goods_number})"></a>
+                    </div>
+                	<script type="text/javascript">
+						var goods_id = {$goods_id};
+						var goodsattr_style = {$cfg.goodsattr_style|default:1};
+						var gmt_end_time = {$end_time|default:0};
+						
+						{foreach from=$lang.goods_js item=item key=key}
+						var {$key} = "{$item}";
+						{/foreach}
+						var goodsId = {$goods_id};
+						var now_time = {$now_time};
+
+						<!-- {literal} -->
+						onload = function(){
+						  changePrice();
+						  fixpng();
+						try { onload_leftTime(); }
+						  catch (e) {}
+						}
+
+						/**
+						 * 点选可选属性或改变数量时修改商品价格的函数
+						 */
+						function changePrice()
+						{
+						  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+						  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+						  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+						}
+
+						/**
+						 * 接收返回的信息
+							 */
+							function changePriceResponse(res)
+							{
+							  if (res.err_msg.length > 0)
+							  {
+								alert(res.err_msg);
+							  }
+							  else
+							  {
+								document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+								if (document.getElementById('ECS_GOODS_AMOUNT'))
+								  document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+								  document.getElementById('current_price').innerHTML = res.result;
+							  }
+							}
+							<!-- {/literal} -->
+						</script> 
+					</dd>
+				<dd>库存{$goods_number}件</dd>
+            </dl>
+           
+ 
+          <div class="item_buy">
+              <!-- #BeginLibraryItem "/library/cart_or_buy.lbi" --><!-- #EndLibraryItem -->		   
+            	<a href="javascript:add_mark(1);addToCart({$goods.goods_id});" id="addCart"><input class="item_buy_a" name="" type="button" /></a>
+                <a href="javascript:add_mark(0);addToCart({$goods.goods_id});" id="addCart"><input class="item_buy_b" name="" type="button" /></a>
+          
+            </div>
+      </form>
+    </div>
+    <div class="main middle over item_pt20">   
+        <div class="main_1_right_1 item_2_left">
+                  <h3>购买过该商品的人还购买过</h3>
+      <!--{foreach from=$bought_goods item=bought_goods_data}-->
+                <dl>
+                  <dt><a href="{$bought_goods_data.url}"><img src="{$bought_goods_data.goods_thumb}" width="178" height="178" /></a></dt>
+                  <dd><a class="main_1_right_1_a" href="{$bought_goods_data.url}">{$bought_goods_data.goods_name}</a><span class="main_1_right_1_b">¥{$bought_goods_data.shop_price}</span><span class="main_1_right_1_c">已售<b>{$bought_goods_data.goods_num}</b>件</span></dd>
+                </dl>
+      <!-- {/foreach} -->                  
+                   
+      </div>  
+      <div class="item_2_right">
+        <DIV id=item_con>
+          <div id=item_tags>
+            <ul>
+              <LI class=zzjs_net><A onClick="select_zzjs('wwwzzjsnet0',this)" href="javascript:void(0)">商品详情</A> </LI>
+              <LI><A onClick="select_zzjs('wwwzzjsnet1',this)" href="javascript:void(0)">购买评价</A> </LI>
+              <LI><A onClick="select_zzjs('wwwzzjsnet2',this)" href="javascript:void(0)">销售记录</A> </LI>
+              <LI><A onClick="select_zzjs('wwwzzjsnet3',this)" href="javascript:void(0)">服务承诺</A> </LI>
+            </ul>
+          </div>
+                    <div id='wwwzzjsnet'>
+                <div class="wwwzzjsnet zzjs_net" id='wwwzzjsnet0'>
+                       {$gb_goods.goods_desc}
+                </div>
+                <div class='wwwzzjsnet' id='wwwzzjsnet1'>
+                    <div class="description_2">
+                        <div class="description_2_a">
+                          <span>{$comment_percent.haoping_percent}%</span>&nbsp;&nbsp;<b>用户满意</b><br />
+                          共有{if $pager.record_count}{$pager.record_count}{else}0{/if}人参与评价
+                        </div>
+                        <div class="description_2_b">
+                          <dl>
+                              <dt>满意</dt>
+                                <div class="a"><p style="width:{$comment_percent.haoping_percent}%"></p></div>
+                                <dd>{$comment_percent.haoping_percent}%</dd>
+                          </dl>
+                          <dl>
+                            <dt>一般</dt>
+                              <div class="b"><p style="width:{$comment_percent.zhongping_percent}%"></p></div>
+                              <dd>{$comment_percent.zhongping_percent}%</dd>
+                          </dl>
+                          <dl>
+                            <dt>不满意</dt>
+                              <div class="c"><p style="width:{$comment_percent.chaping_percent}%"></p></div>
+                              <dd>{$comment_percent.chaping_percent}%</dd>
+                          </dl>
+                        </div>
+                    </div>
+				    {if !$comments}
+						<div class="item_nothing">还没人来评论噢！ </div>
+					{/if}
+				   <!-- #BeginLibraryItem "/library/comments.lbi" --> {insert_scripts files='transport.js,utils.js'}
+				  {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}
+				  <!-- #EndLibraryItem -->
+            
+                </div>
+                <div class='wwwzzjsnet' id='wwwzzjsnet2'>
+                    <div class="description_1">
+                      30天内：交易中{$recently_buy.trading}笔，交易成功{$recently_buy.traded}笔！
+                    </div>
+                    <table class="item_sales" width="960" border="0" cellspacing="0" cellpadding="0">
+                        <tr class="title">
+                          <td width="260">买家</td>
+                          <td width="130">购买价格</td>
+                          <td width="130">数量</td>
+                          <td>付款时间</td>
+                          <td>款式和型号</td>
+                        </tr>
+			   <!--{foreach from=$sale_history item=saleItme}-->
+                        <tr>						  
+						
+                                  <td class="name">{$saleItme.consignee}<span>（匿名）</span></td>
+								  <td class="price">¥{$saleItme.pay_fee}</td>
+								  <td>{$saleItme.goods_number}</td>
+								  <td>{$saleItme.add_time}</td>
+								  <td>{$saleItme.goods_attr}</td>   
+                             
+						  
+                        </tr>   
+			  <!-- {/foreach} --> 
+                    </table>
+                </div>
+                <div class="wwwzzjsnet" id='wwwzzjsnet3'>
+				{$fuwu}
+				<!--
+                  <p class="item_service">
+                      <span>服务承诺</span>                  
+                      <span>温馨提示</span>
+                  </p>
+				  -->
+                </div>
+            </div>
+        </div>
+      </DIV>
+    </DIV>
+     </div>
+   
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cart_goods_added.lbi" --><!-- #EndLibraryItem -->
+
+
+</body>
+</html>

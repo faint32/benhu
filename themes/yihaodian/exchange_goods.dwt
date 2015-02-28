@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Keywords" content="{$keywords}" />
+  <meta name="Description" content="{$description}" />
+  <!-- TemplateBeginEditable name="doctitle" -->
+  <title>{$page_title}</title>
+  
+<link href="new_style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/item.css" rel="stylesheet" type="text/css" />
+<link href="style/css/group.css" rel="stylesheet" type="text/css" />
+  {insert_scripts files='jquery.min.js,item_1.js,item_2.js,item_hdm.js,top.js,all_top_nav.js,common.js,lefttime.js'}
+ {insert_scripts files='jquery.json.js'}  
+  {insert_scripts files='transport.js,utils.js'}
+  <script type="text/javascript" src="style/js/product_amount.js"></script>
+  <script type="text/javascript" src="style/js/left_nav_2.js"></script>
+<script type="text/javascript" src="js/all_top_nav.js"></script>
+ <script>
+function turnoff(obj){
+document.getElementById(obj).style.display="none";
+}
+</script>
+<script type=text/javascript>
+$(function(){
+    
+    /* 鼠标移动小图，小图对应大图显示在大图上，并替换放大镜中的图*/
+    $("#specList ul li img").livequery("mouseover",function(){ 
+        var imgSrc = $(this).attr("src");
+        var i = imgSrc.lastIndexOf(".");
+        var unit = imgSrc.substring(i);
+        imgSrc = imgSrc.substring(0,i);
+        var imgSrc_small = $(this).attr("src_D");
+        var imgSrc_big = $(this).attr("src_H");
+        $("#bigImg").attr({"src": imgSrc_small ,"jqimg": imgSrc_big });
+        $(this).css({"border":"2px solid #f13d6d ","padding":"1px"});
+    });
+    
+    $("#specList ul li img").livequery("mouseout",function(){ 
+        $(this).css({"border":"1px solid #e6e6e6","padding":"2px"});
+    });
+    
+    //使用jqzoom
+    $(".jqzoom").jqueryzoom({
+        xzoom: 350, //放大图的宽度(默认是 200)
+        yzoom: 350, //放大图的高度(默认是 200)
+        offset: 10, //离原图的距离(默认是 10)
+        position: "right", //放大图的定位(默认是 "right")
+        preload:1   
+    });
+    
+    /*如果小图过多，则出现滚动条在一行展示*/
+    var btnNext = $('#specRight');
+    var btnPrev = $('#specLeft')
+    var ul = btnPrev.next().find('ul');
+
+    var len = ul.find('li').length;
+    var i = 0 ;
+    if (len > 4) {
+        $("#specRight").addClass("specRightF").removeClass("specRightT");
+        ul.css("width", 76 * len)
+        btnNext.click(function(e) {
+            if(i>=len-4){
+                
+                return;
+            }
+            i++;
+            if(i == len-4){
+                $("#specRight").addClass("specRightT").removeClass("specRightF");
+            }
+            $("#specLeft").addClass("specLeftF").removeClass("specLeftT");
+            moveS(i);
+        })
+        btnPrev.click(function(e) {
+            if(i<=0){
+                return;
+            }
+            i--;
+            if(i==0){
+                $("#specLeft").addClass("specLeftT").removeClass("specLeftF");
+            }
+            $("#specRight").addClass("specRightF").removeClass("specRightT");
+            moveS(i);
+        })
+    }
+    function moveS(i) {
+        ul.animate({left:-78 * i}, 500)
+    }
+    function picAuto(){
+      if ($(".listImg li").size()<=4) {
+        $("#specLeft,#specRight").hide();
+      }
+    }
+    picAuto();
+});
+</script>
+
+</head>
+
+<body>
+	<!-- #BeginLibraryItem "/library/page_header_groupBuy.lbi" --><!-- #EndLibraryItem -->
+    <!-- #BeginLibraryItem "/library/jifen_category.lbi" --><!-- #EndLibraryItem -->
+	<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+    <div class="main middle over item_bj">
+    	<div class="item_left">
+		   <!-- #BeginLibraryItem "/library/goods_gallery_groupbuy.lbi" --><!-- #EndLibraryItem --> 
+        </div>
+    	<div class="item_right">
+        	<h1>{$goods.goods_style_name}</h1>
+            <div class="group_itembox">
+            <div class="group_item">
+            	<div class="integral_item">
+            	
+                <dl class="integral_item_2">
+               		 <!--
+			 <dt>
+			 <input  type="checkbox" value="" 
+			 id='integral_buy' onclick="integral_buy()"
+			 checked='checked'/>
+			 </dt>
+			 -->
+					 <script>
+					   function integral_buy()
+					   {
+					     var flag=$('#integral_buy').attr('checked');
+						  $('#buy_1').hide();$('#buy_2').hide();
+						 if(flag)
+						   $('#buy_1').show();
+						 else
+						   $('#buy_2').show();
+					   }
+					 </script>
+                    <dd>积分购：¥<b>{$goods.needed_money}</b>+<b>{$goods.exchange_integral}积分</b></dd>
+                </dl>
+		<dl class="integral_item_1">
+                	<dt>原价：</dt>
+                    <dd>¥{$goods.shop_price}</dd>
+                </dl>
+                </div>
+                <dl class="group_item_3">
+                	<span>{$goods.bought_number}</span>人已购买
+                </dl>
+            </div>
+            </div>
+			{if $goods.goods_yh}
+			<dl class="message">
+            	<dt>优惠信息：</dt>
+               <dd>{$goods.goods_yh}</dd>           
+		   </dl>
+		   {/if}
+		  <form action="exchange.php?act=buy" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY"> 
+            <!-- {* 开始循环所有可选属性 *} --> 
+            <!-- {foreach from=$specification item=spec key=spec_key name=shu} --> 
+				<!-- {if $spec.attr_type eq 1} -->		
+					<dl  class="standard_1">
+							<dt>{$spec.name}</dt>
+							<!-- {foreach from=$spec.values item=value key=key} -->
+							<dd 
+							  onclick="selPara(this,'spec_{$spec_key}','spec_value_{$value.id}');" 
+							  id="{$value.id}" 
+							  {if $key eq 0}class="spec_{$spec_key} options" {else}class="spec_{$spec_key}" {/if}>  
+								  {$value.label}
+								  <input id="spec_value_{$value.id}" style="display:none;" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked='checked'{/if} />						 
+							</dd>
+							<!-- {/foreach} -->
+					</dl>       
+				<!-- {/if} -->
+                <input type="hidden" name="spec_list" value="{$key}" />
+				
+            <!-- {/foreach} --> 
+            <!-- {* 结束循环可选属性 *} -->
+			
+            <dl class="standard_3">
+                <dt>购买数量：</dt>
+                <dd class="standard_3_2">	
+					<input id="product_amount" value="1" name="number" type=text />
+					<div class="standard_3_1">
+					<a onClick="funnum('up')"></a>
+					<a onClick="funnum('down')"></a>
+					</div>
+                </dd>
+	<dd>库存{$goods.goods_number}件</dd>
+            </dl>
+            <div class="item_buy">
+			    <input type="hidden" name="needed_money" value="{$goods.needed_money}"/>
+				<input type="hidden" name="needed_integral" value="{$goods.exchange_integral}"/>
+			    <input type="hidden" name="goods_id" value="{$goods.goods_id}" />
+            	<input class="item_buy_a" id='buy_1' type="submit" value=''/>
+            </div>
+        </div>
+	  </form>
+    </div>
+  
+  <!-- #BeginLibraryItem "/library/goods_descr.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+
+
+</body>
+</html>

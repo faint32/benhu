@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+  <link href="style/css/style_groupBuy.css" rel="stylesheet" type="text/css" />
+  <link href="style/css/item.css" rel="stylesheet" type="text/css" />
+   {insert_scripts files='jquery.min.js,item_1.js,all_top_nav.js,item_2.js,item_hdm.js,top.js,all_top_nav.js,common.js,lefttime.js'}
+ {insert_scripts files='jquery.json.js'}  
+  {insert_scripts files='transport.js,utils.js'}
+
+  <script type="text/javascript" src="style/js/left_nav_2.js"></script>
+  <script type="text/javascript" src="style/js/product_amount.js"></script>
+  <script type="text/javascript" src="style/js/home_tab.js"></script>
+
+<script type=text/javascript>
+function turnoff(obj){
+document.getElementById(obj).style.display="none";
+}
+$(function(){
+    /* 鼠标移动小图，小图对应大图显示在大图上，并替换放大镜中的图*/
+    $("#specList ul li img").livequery("mouseover",function(){ 
+        var imgSrc = $(this).attr("src");
+        var i = imgSrc.lastIndexOf(".");
+        var unit = imgSrc.substring(i);
+        imgSrc = imgSrc.substring(0,i);
+        var imgSrc_small = $(this).attr("src_D");
+        var imgSrc_big = $(this).attr("src_H");
+        $("#bigImg").attr({"src": imgSrc_small ,"jqimg": imgSrc_big });
+        $(this).css({"border":"2px solid #f13d6d","padding":"1px"});
+    });
+    
+    $("#specList ul li img").livequery("mouseout",function(){ 
+        $(this).css({"border":"1px solid #e6e6e6","padding":"2px"});
+    });
+    
+    //使用jqzoom
+    $(".jqzoom").jqueryzoom({
+        xzoom: 350, //放大图的宽度(默认是 200)
+        yzoom: 350, //放大图的高度(默认是 200)
+        offset: 10, //离原图的距离(默认是 10)
+        position: "right", //放大图的定位(默认是 "right")
+        preload:1   
+    });
+    
+    /*如果小图过多，则出现滚动条在一行展示*/
+    var btnNext = $('#specRight');
+    var btnPrev = $('#specLeft')
+    var ul = btnPrev.next().find('ul');
+
+    var len = ul.find('li').length;
+    var i = 0 ;
+    if (len > 4) {
+        $("#specRight").addClass("specRightF").removeClass("specRightT");
+        ul.css("width", 76 * len)
+        btnNext.click(function(e) {
+            if(i>=len-4){
+                
+                return;
+            }
+            i++;
+            if(i == len-4){
+                $("#specRight").addClass("specRightT").removeClass("specRightF");
+            }
+            $("#specLeft").addClass("specLeftF").removeClass("specLeftT");
+            moveS(i);
+        })
+        btnPrev.click(function(e) {
+            if(i<=0){
+                return;
+            }
+            i--;
+            if(i==0){
+                $("#specLeft").addClass("specLeftT").removeClass("specLeftF");
+            }
+            $("#specRight").addClass("specRightF").removeClass("specRightT");
+            moveS(i);
+        })
+    }
+    function moveS(i) {
+        ul.animate({left:-78 * i}, 500)
+    }
+    function picAuto(){
+      if ($(".listImg li").size()<=4) {
+        $("#specLeft,#specRight").hide();
+      }
+    }
+    picAuto();
+});
+
+
+    
+        
+</script>
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header_groupBuy.lbi" --><!-- #EndLibraryItem -->
+<!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+
+    <div class="item_site">
+        <!-- #BeginLibraryItem "/library/ur_here1.lbi" --><!-- #EndLibraryItem -->
+          
+        </div>
+<form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+    <div class="main middle over item_bj">
+      <div class="item_left">
+
+            <!-- #BeginLibraryItem "/library/goods_gallery_groupbuy.lbi" --><!-- #EndLibraryItem --> 
+        </div>
+      <div class="item_right">
+          <h1>{$goods.goods_style_name}</h1>
+            <div class="tag">
+              <!--
+    <span class="tag_1">{if rank_name}{rank_name}{else}游客{/if}</span>
+    -->
+    <span class="tag_2" id="current_price">
+      ￥ <!--{if $goods.activity_price} 优惠活动-->{$goods.activity_price_formated}
+        <!--{elseif $goods.is_promote and $goods.gmt_end_time } 促销-->{$goods.promote_price}
+        <!--{else}-->{$goods.shop_price_formated}
+        <!--{/if}-->
+    </span>
+    <span class="tag_3">原价：￥{$goods.market_price}</span>
+    <!--{if $promotion}--><span style="float:right;"> 本商品正在进行<font color="#f13d6d"><a href="{$promotion.0.url}" target="_blank" style="color:#f13d6d">{$promotion.0.act_name}</a></font>活动</span><!--{/if}-->
+    {if $exchangePromotion}
+    <span class="tag_4">
+      <a href="exchange.php?id={$exchangePromotion.goods_id}&act=view" target="_blank"></a><b>￥{$exchangePromotion.needed_money}+{$exchangePromotion.exchange_integral}积分</b>
+    
+    </span>
+    {/if}
+    {if $vipPromotion}
+           <span class="tag_4">
+      <a style="background: url('style/images/buy_3.jpg')" href="vip_goods.php?id={$vipPromotion.goods_id}&act=view" target="_blank"></a><b>￥{$vipPromotion.user_price}+{$vipPromotion.user_integral}积分</b>
+    
+    </span>
+    {/if}
+      </div>
+            {if $goodsyh }
+            <dl class="message">
+              <dt>优惠信息：</dt>
+                <dd>{$goodsyh}</dd>
+            </dl>
+          {/if}
+          <!-- {if $goods.give_integral > 0} 购买此商品赠送积分-->
+          <dl class="sku_unit mod_integral_buy clearfix" id="pointExchange" style="display: block;">
+            <dt><strong>{$lang.goods_give_integral}</strong></dt>
+            <dd class="options">{$goods.give_integral} {$points_name}</dd>
+          </dl>
+          <!-- {/if} -->
+           <!-- #BeginLibraryItem "/library/sale_info.lbi" --><!-- #EndLibraryItem -->
+            <!-- {* 开始循环所有可选属性 *} --> 
+            <!-- {foreach from=$specification item=spec key=spec_key name=shu} --> 
+       
+       <!-- {if $spec.attr_type eq 1} -->
+             <dl id="tasteList" class="standard_1">
+              <dt id="tasteAttrName">{$spec.name}</dt>
+                    <!-- {foreach from=$spec.values item=value key=key} -->
+                    <dd  onclick="selPara(this,'spec_{$spec_key}','spec_value_{$value.id}'); changePrice();" 
+            id="{$value.id}" {if $key eq 0} class="spec_{$spec_key} options" {else}class="spec_{$spec_key}" {/if}>
+            {$value.label}
+                      <input id="spec_value_{$value.id}"  style="display:none;"  type="radio"  name="spec_{$spec_key}" 
+            value="{$value.id}" {if $key eq 0}checked{/if} />
+                    </dd>
+                    <!-- {/foreach} -->
+            </dl>
+            <!--{/if}-->
+      
+            <input type="hidden" name="spec_list" value="{$key}" />
+            <!-- {/foreach} --> 
+            <!-- {* 结束循环可选属性 *} -->
+            
+            <dl class="standard_3">
+                <dt>购买数量：</dt>
+                <dd class="standard_3_2" data-sel="num" id="computing_item">
+                 <input  value="1" type=text class="num" name="number" id="product_amount" />
+         <div class="standard_3_1">
+           <a onClick="funnum('up')"></a>
+           <a onClick="funnum('down')"></a>
+         </div>
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 点选可选属性或改变数量时修改商品价格的函数
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+ 
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+    $('#product_num').html( '库存' + res.stock + '件');
+  document.getElementById('current_price').innerHTML = '¥'+res.result;
+  }
+}
+
+<!-- {/literal} -->
+</script> 
+    
+
+</dd>
+  <dd id='product_num'>库存{$nums}件</dd>
+            </dl>
+            <div class="item_buy">
+        <!--chen-1009-->
+          <!-- #BeginLibraryItem "/library/cart_or_buy.lbi" --><!-- #EndLibraryItem -->    
+              <a href="javascript:void(0)" onclick="add_mark(1);addToCart({$goods.goods_id});" >
+    <input class="item_buy_a" name="" type="button" />
+    </a>
+                <a href="javascript:void(0)" onclick="add_mark(0);addToCart({$goods.goods_id});">
+    <input class="item_buy_b" name="" type="button" />
+    </a>
+                </div>
+        </div>
+    </div>
+</form>
+
+{if $related_goods}
+ <link href="style/css/attr_mask.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="style/js/package_buy.js"></script>
+
+ <div id="fixedLayer" ><!--显示商品名--></div>
+  <div id="attrSelect" style="display: none;">
+  <div id="TB_window" style="margin-left: -465px; width: 1090px; margin-top: -220px; display: block;">
+  <div id="TB_ajaxContent" class="TB_modal">
+  
+    <br/>
+          <h1 id="attrSelectGoodName"  data-good-id=''></h1>
+          <br/>
+          <div class="tag">
+                <!--
+            <span class="tag_1">{rank_name}</span>
+            -->
+            <span class="tag_2" id="attrSelectGoodPrice">¥0.00</span>
+            <span class="tag_3" id="attrSelectMarketPrice">原价：￥0.00</span>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;库存<b style="color:red" id="attrSelectGoodNum"></b>件
+                    </div>  
+              <div id="packageAttrList"></div>    
+            <br/>
+            <p>
+            <a class="select_c" href="javascript:void(0)" onclick="confirm_attr_mask();elem_hide('attrSelect');">确定</a>
+              
+            <a class="select_d" href="javascript:void(0)" onclick="elem_hide('attrSelect')">取消</a>
+              
+            </p>
+    
+  </div>
+  </div>          
+  </div>
+
+<div class="dapeitaocan">
+      <div class="dapeitaocan_title"><span>搭配套餐</span></div>
+        <div class="dapeitaocan_main">
+          <dl class="dapeitaocan_itself" id="good{$goods.goods_id}">
+                      <dt class="xuanzhong" data-shop-price="{$goods.shop_price_formated}" data-good-id="{$goods.goods_id}" data-good-attr="">
+              <a href="javascript:void(0)">
+              <img src="{$goods.goods_thumb}">
+              <span><img width="20" height="20" src="style/images/hook.png"></span>
+              </a>
+            </dt>     
+                        <dd>
+              <a href="javascript:void(0)" class="show_full_name">{$goods.goods_style_name}</a>
+              <div class="jiage_xz_1">
+                <b>¥{$goods.shop_price_formated}</b>
+                <input name="" type="button" value="修改属性" onclick="choose_attr('{$goods.goods_id}')"/>
+              </div>
+            </dd>
+                    </dl>
+                    <span class="dapeitaocan_jia">
+                    </span>
+                    <div class="dapeitaocan_box">
+                    
+                    <div class="lunbo-recommend_1">
+    <div id="banner-slide_1" class="slide-pics_1">
+      <div class="scrollable_1">
+        <ul class="items_1">
+      {foreach from=$related_goods item=good name=loop}
+      {if $smarty.foreach.loop.index % 5 == 0}
+    <li class="item_1"> 
+    {/if}
+    <dl class="dapeitaocan_itself" id="good{$good.goods_id}">
+                      <dt class="related" data-shop-price="{$good.shop_price}" data-market-price="{$good.market_price}" data-good-id="{$good.goods_id}" data-good-attr="{$good.attrList}">
+              <a href="{$good.url}">
+                <img src="{$good.goods_thumb}">
+                <span><img width="20" height="20" src="images/hook.png"></span>
+              </a>
+            </dt>
+                        <dd>
+              <a class="show_full_name" href="{$good.url}">{$good.goods_name}<!--{if $good.attr}-->(<!--{foreach from=$good.attr item=attr}{if !$smarty.foreach.loop.last} {$attr.attr_value},{else}{$attr.attr_value} {/if}{/foreach}-->)<!--{/if}--></a>
+              <div class="jiage_xz">
+                <b>¥{$good.shop_price}</b>
+                <input name="" type="button" value="搭配" data-good-id="{$good.goods_id}"/>
+              </div>
+            </dd>
+         </dl>
+                    
+         {if $smarty.foreach.loop.index % 5 == 4 || $smarty.foreach.loop.last}     
+          </li>
+      {else}
+       <span class="dapeitaocan_jia">
+                    </span>   
+     {/if}
+  {/foreach}
+   </div>
+      <div class="prev_1 prev-next_1 s-index-icon_1"> 上一张</div>
+      <div class="next_1 prev-next_1 s-index-icon_1"> 下一张</div>
+    </div>
+</div>
+                    </div>
+          <span class="dapeitaocan_deng">
+                    </span>
+          <div class="dapeitaocan_zongjia">
+                   <span class="zongjia_4">购买<input type="text" id="packageBuyNum" data-discount="{$package_buy_discount}" name="" value="1" onblur="reCaculatePackagePrice()">套</span>
+                      <span class="zongjia_1">套餐价：<b id="package_price">¥{$goods.shop_price_formated}</b></span>
+                        <span class="zongjia_2">原总价：<b id="initial_price">¥{$goods.shop_price_formated}</b></span>
+            <span class="zongjia_1">优惠金额：<b id="discount_price">¥0.00</b></span>  
+            <span class="zongjia_3"><input type="button" value="立即购买" name=""  onclick="add_mark(1);addToCart_packageBuy();"></span>
+                       <span class="zongjia_5"><input type="button" value="加入购物车" name="" onclick="add_mark(0);addToCart_packageBuy();"></span>
+            
+          </div>
+        </div>
+    
+    
+    </div>
+  
+{/if}
+<!-- #BeginLibraryItem "/library/goods_descr.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<!--chen-1009-->
+<!-- #BeginLibraryItem "/library/cart_goods_added.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+

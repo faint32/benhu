@@ -1,0 +1,1715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="style/home/css/home.css" rel="stylesheet" type="text/css" />
+
+<link href="style_groupBuy.css" rel="stylesheet" type="text/css" />
+<link href="other.css" rel="stylesheet" type="text/css" />
+<link href="orders.css" rel="stylesheet" type="text/css" />
+{insert_scripts files='jquery.min.js,zxxFile.js,zxxHtml5UpLoad.js,transport.js,jquery.json.js,common.js,left_nav_2.js,curvycorners.src.js,home_tab.js,lrtk.js'}
+</head>
+
+<script>
+
+/*chen 0903*/
+	function turnoff(obj){
+	document.getElementById(obj).style.display="none";
+	}
+	function show_complain(order_sn,order_id){
+	     $('#complain').show();
+		 $('#complain_order_sn').html(order_sn);
+		 $('#complain_order_id').val(order_id);
+	}
+       $(function(){		
+				$('.title-list li').mouseover(function(){
+					var liindex = $('.title-list li').index(this);
+					$(this).addClass('on').siblings().removeClass('on');
+					$('.orders_tab_box div.orders_tab_main').eq(liindex).fadeIn(150).siblings('div.orders_tab_main').hide();
+					var liWidth = $('.title-list li').width();
+					$('.orders_tab .title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);	
+				});
+				
+				$('.title-list li').each(function(index){
+					$(this).css('width','130px')
+					if(index=='{$ctl}')
+					{
+						$(this).addClass('on')
+					}
+				});
+
+		              $('#tab li').mouseover(function(){//chen 0905
+				var t = $(this).index();
+				var ul = $('#content ul');
+				$('#tab li').removeClass();
+				$(this).addClass('current');
+				ul.css('display','none');
+				ul.eq(t).css('display','block');
+				});
+			});
+</script>
+<script> //图片上传		
+$(document).ready(function(){
+   var params = {
+	fileInput: $("#fileImage").get(0),
+	url: "",
+	filter: function(files) {
+		var arrFiles = [];
+		for (var i = 0, file; file = files[i]; i++) {
+			if (file.type.indexOf("image") == 0) {
+				if (file.size >= 5120000) {
+					alert('您这张"'+ file.name +'"图片大小过大，应小于5000k');	
+				} else {
+					arrFiles.push(file);	
+				}			
+			} else {
+				alert('文件"' + file.name + '"不是图片。');	
+			}
+		}
+		return arrFiles;
+	},
+	onSelect: function(files) {
+		var html = '', i = 0;
+		$("#preview").html('<td>&nbsp;</td>');
+		var funAppendImage = function() {
+			file = files[i];
+			if (file) {
+				var reader = new FileReader()
+				reader.onload = function(e) {
+				 html = html + '<dl class="uploadimg" id="uploadimg_'+i+'">'
+									+'<dt><img src="'+e.target.result+'" width="50" height="50" /></dt>'
+									+'<dd><a class="upload_delete" href="javascript:" data-index="'+ i +'">删除</a></dd>'
+								+'</dl>';			
+					
+					i++;
+					funAppendImage();
+				}
+				reader.readAsDataURL(file);
+			} else {
+				$("#preview").html(html);
+				if (html)
+				{
+					//删除方法
+					$(".upload_delete").click(function() {
+						ZXXFILE.funDeleteFile(files[parseInt($(this).attr("data-index"))]);
+						return false;	
+					});
+					
+				}
+			}
+		};
+		funAppendImage();		
+	},
+	onDelete: function(file) {
+		$("#uploadimg_" + file.index).fadeOut();
+	},
+	onFailure:function(file, respText){
+	alert(file.name+"上传失败");
+	},
+	onComplete:function(){
+	  document.getElementById('return_goods_form').submit();
+	}
+};
+ZXXFILE = $.extend(ZXXFILE, params);
+ZXXFILE.init();
+});
+
+function return_goods_before_submit()
+{
+ var order_id=$('#order_id').val();
+	var rand_num=$('#rand_num').val();
+ZXXFILE.url = 'user.php?act=up_load&order_id='+order_id+'&rand_num='+rand_num;
+ZXXFILE.funUploadFile();
+}
+
+
+
+
+//修改文件上传 chen-0914
+$(document).ready(function(){
+var len=$('.shaidan').size();
+  var succ_times = 0; //记录每个商品晒单图片上传成功的次数
+ shaidan = new Array(len);
+ shaidan_nums = 0; 
+for(var i=0; i <len; i++)
+shaidan[i]=new Html5UpLoad();
+
+   $('.shaidan').each(function(index){
+       var params = {
+	   fileInput: $("#fileImage"+index).get(0),
+	
+	 //   url: "comment.php?order_id='{$order_id}'",
+	filter: function(files) {
+		var arrFiles = [];
+		for (var i = 0, file; file = files[i]; i++) {
+			if (file.type.indexOf("image") == 0) {
+				if (file.size >= 5120000) {
+					alert('您这张"'+ file.name +'"图片大小过大，应小于5000k');	
+				} else {
+					arrFiles.push(file);	
+				}			
+			} else {
+				alert('文件"' + file.name + '"不是图片。');	
+			}
+		}
+		return arrFiles;
+	},
+	onSelect: function(files) {
+		var html = '', i = 0;
+		$("#preview"+index).html('');
+		var funAppendImage = function() {
+			file = files[i];
+			if (file) {
+		
+				var reader = new FileReader()
+				
+				reader.onload = function(e) 
+				{
+				 html = html + '<li id="uploadimg_'+index+'_'+i+'"><span><a href="javascript:void(0)"><img width="100" height="100" src="'+e.target.result+'"></a></span><a href="javascript:void(0)" data-index="'+ i +'" class="caozuo_'+index+'">删除</a>';			
+					i++;
+					funAppendImage();
+				}
+				reader.readAsDataURL(file);
+			} else {
+				$("#preview"+index).html(html);
+				if (html)
+				{
+					//删除方法
+					$(".caozuo_"+index).click(function() {
+						shaidan[index].funDeleteFile(files[parseInt($(this).attr("data-index"))]);
+						
+						return false;	
+					});
+					
+				}
+			}
+		};
+		funAppendImage();		
+	},
+	onDelete: function(file) {
+		$("#uploadimg_"+ index + '_' + file.index).fadeOut();
+	},
+	onFailure:function(file, respText){
+	alert(file.name+"上传失败");
+	},
+	onComplete:function(){
+	   succ_times++;
+	if(succ_times == shaidan_nums)
+	do_submit();
+	}
+};
+
+shaidan[index] = $.extend(shaidan[index], params);
+shaidan[index].init();
+});
+});
+   //chen-0914
+function commentForm_on_submit()
+{
+var len=$('.shaidan').size();
+shaidan_nums = 0; //记录有多少个商品进行了晒单
+for(var i = 0; i < len; i++)
+{
+var goods_id = $('#goods_id'+i).val();
+var order_id = $('#order_id').val();
+shaidan[i].url = "comment.php?order_id="+order_id+"&goods_id="+goods_id+'&type=upload_file'; 
+    shaidan[i].funUploadFile();
+  if(shaidan[i].fileFilter.length !=0 ) shaidan_nums++;
+}
+if(shaidan_nums==0)  do_submit();
+}
+function do_submit()
+{
+$('#comment_form').submit();
+}
+ 
+</script>
+<script>
+   function you_may_love()
+   {
+  var param='act=you_may_love';
+     Ajax.call( 'user.php',param,you_may_love_callback , 'GET', 'json', true, true );
+   }
+   function you_may_love_callback(result)
+  {
+   var ele=$('#you_may_love');
+   var str='';
+   for(var i=0; i < result.length; i ++)
+   {
+   if(i==(result.length - 1))
+         str += '<dl>';
+	else str += '<dl class="home_m_2_mr10">';
+	str+='<dt><a href="goods.php?id='+result[i].goods_id+'"><img src="'+result[i].goods_thumb+'" /></a></dt><dd><a href="goods.php?id='+result[i].goods_id+'">'+result[i].goods_name.substr(0,20)+'</a><span>¥'+result[i].shop_price+'</span></dd></dl>';
+   }
+    ele.empty();
+	ele.html(str);
+  }
+  function delete_complain(id)
+  {
+     var param='act=delete_complain&id='+id;
+     Ajax.call( 'user.php',param,delete_complain_callback , 'GET', 'json', true, true );
+  }
+   function delete_complain_callback(result)
+  {
+   if(result[1]==1)//删除成功
+   {
+     $('#complain'+result[0]).empty();
+   }
+   else if(result[1]==0)//删除失败
+   {
+     alert('删除失败');
+   }
+  }
+   function cancle_back_order(id)
+   {
+    var param='act=cancle_back_order&id='+id;
+     Ajax.call( 'user.php',param,cancle_back_order_callback , 'GET', 'json', true, true );
+   }
+   function cancle_back_order_callback(result)
+  {
+    if(result[1]==1)//取消申请成功
+   {
+     $('#return_goods_'+result[0]).empty();
+   }
+   else if(result[1]==0)//取消申请失败
+   {
+     alert('删除失败');
+   }
+  }
+  //删除订单 chen 0903
+  function on_delete(order_id)
+  {
+     $('#delete_order').show();
+	 $('#del_order_id').val(order_id);
+  }
+   function delete_order()
+  {
+  var order_id=$('#del_order_id').val();
+     var param='act=delete_order&order_id='+order_id;
+     Ajax.call( 'user.php',param,delete_order_callback , 'GET', 'json', true, true );
+  }
+   function delete_order_callback(result)
+  {
+  
+    if(result != "failed")
+	{
+	  $('.order_id_'+result).remove();//css('display','none');
+	}
+  }
+  
+  //评论已完成的订单  chen-0909
+  function on_comment(goods_id_list)
+  {
+    window.location.href='user.php?act=comment_goods&goods_id_list='+goods_id_list;
+  }
+
+   function cancle_back_order(id)
+   {
+    var param='act=cancle_back_order&id='+id;
+     Ajax.call( 'user.php',param,cancle_back_order_callback , 'GET', 'json', true, true );
+   }
+   function cancle_back_order_callback(result)
+  {
+    if(result[1]==1)//取消申请成功
+   {
+     $('#return_goods_'+result[0]).empty();
+   }
+   else if(result[1]==0)//取消申请失败
+   {
+     alert('删除失败');
+   }
+  }
+	$(document).ready(function(){
+	textCounter();
+	});
+  function textCounter()    //描述，剩余多少个字
+  {
+  var descrip_ele=$('#pro_descrip');
+   maxlimit= descrip_ele.attr('maxlength');
+   var len = descrip_ele.val().length;
+   var str='还可以写'+(maxlimit-len)+'个字。';
+   $('#limit_count').html(str);
+  }
+</script>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+<div id="Lists"></div>
+<div class="home">
+	
+    <!--left start-->
+        <!-- #BeginLibraryItem "/library/user_left.lbi" --><!-- #EndLibraryItem -->
+    <!--left end--> 
+
+      <!-- *用户中心默认显示页面 chen-0915 start--> 
+    <!-- {if $action eq 'default'} -->   
+	<script>
+	  function show_orders(id)
+	  {
+	  var tmp = '.slide-pics';
+	     $(tmp).each(function(){
+		   $(this).hide();
+		 });
+		 $(id).show();
+	  }
+	</script>	
+	   <div class="home_middle">
+        	<div class="home_m_1">
+            	<div class="home_m_1_p">
+					<h3 class="home_column_title">交易提醒</h3>
+					<a href="javascript:show_orders('#banner-slide')">待付款<span>{$unpaid_count}</span></a>
+					<a href="javascript:show_orders('#banner-slide1')">待收货<span>{$unrecieved_count}</span></a>
+					<a href="javascript:show_orders('#banner-slide2')">待评论<span>{$uncommented_count}</span></a>
+				</div>
+                <div class="lunbo-recommend">
+					<div class="slide-pics" id="banner-slide">
+						<div class="scrollable">
+								<ul class="items" >
+								
+								  {if !$unpaid_orders}
+								    <li class="item"> 
+											<div class="home_m_2 home_m_2_mr10">
+												<span class="home_m_2_title"><a href="javascript:void(0)">您没有待付款的商品 </a></span>
+											</div>
+									 
+											<div class="home_m_2">
+												<span class="home_m_2_title"><a href="javascript:void(0)">您没有待付款的商品 </a></span>
+											</div>
+									</li>
+								  {/if}
+								<!--{foreach from=$unpaid_orders name=unpaid item=order}-->
+									 {if $smarty.foreach.unpaid.index % 2 == 0}
+									<li class="item"> 
+											<div class="home_m_2 home_m_2_mr10">
+												<span class="home_m_2_title"><a href="javascript:void(0)">待付款 </a></span>
+												<dl>
+													<dt><a href="goods.php?id={$order.one_goods_id}"><img src="{$order.one_goods_thumb}" /></a></dt>
+													<dd><a href="goods.php?id={$order.one_goods_id}">{$order.one_goods_name}</a><span>¥{$order.total_fee}</span></dd>
+												</dl>
+												<a href="user.php?act=order_list&ctl=1" class="home_m_2_button">去付款</a>
+											</div>
+											 {if $smarty.foreach.unpaid.last} 
+											 <div class="home_m_2">
+												<span class="home_m_2_title"></span>												
+											</div>
+											 </li>
+											 {/if}
+											{else }
+											<div class="home_m_2">
+												<span class="home_m_2_title"><a href="javascript:void(0)">待付款 </a></span>
+												<dl>
+													<dt><a href="goods.php?id={$order.one_goods_id}"><img src="{$order.one_goods_thumb}" /></a></dt>
+													<dd><a href="goods.php?id={$order.one_goods_id}">{$order.one_goods_name}</a><span>¥{$order.total_fee}</span></dd>
+									            </dl>
+												<a href="user.php?act=order_list&ctl=1" class="home_m_2_button">去付款</a>
+											</div>
+									</li>
+								  {/if}								
+								<!--{/foreach}-->
+								
+								</ul>											
+					    </div> 
+					  <div class="prev prev-next s-index-icon"> 上一张</div>
+					  <div class="next prev-next s-index-icon"> 下一张</div>
+					</div>
+					<div class="slide-pics" id="banner-slide1" style="display:none">
+										<div class="scrollable" >
+													<ul class="items" >
+								  {if !$unrecieved_orders}
+								    <li class="item"> 
+											<div class="home_m_2 home_m_2_mr10">
+												<span class="home_m_2_title"><a href="javascript:void(0)">您没有待收货的商品 </a></span>
+											</div>
+									 
+											<div class="home_m_2">
+												<span class="home_m_2_title"><a href="javascript:void(0)">您没有待收货的商品 </a></span>
+											</div>
+									</li>
+								  {/if}
+								<!--{foreach from=$unrecieved_orders name=unrecieved item=order}-->
+									 {if $smarty.foreach.unrecieved.index % 2 == 0}
+									<li class="item"> 
+											<div class="home_m_2 home_m_2_mr10">
+												<span class="home_m_2_title"><a href="javascript:void(0)">待收货 </a></span>
+												<dl>
+													<dt><a href="goods.php?id={$order.one_goods_id}"><img src="{$order.one_goods_thumb}" /></a></dt>
+													<dd><a href="goods.php?id={$order.one_goods_id}">{$order.one_goods_name}</a><span>¥{$order.total_fee}</span></dd>
+												</dl>
+												<a href="user.php?act=order_list&ctl=3" class="home_m_2_button">去收货</a>
+											</div>
+											 {if $smarty.foreach.unrecieved.last} 
+											 <div class="home_m_2">
+												<span class="home_m_2_title"></span>												
+											</div>
+											 </li>
+											 {/if}
+											{else }
+											<div class="home_m_2">
+												<span class="home_m_2_title"><a href="javascript:void(0)">待收货 </a></span>
+												<dl>
+													<dt><a href="goods.php?id={$order.one_goods_id}"><img src="{$order.one_goods_thumb}" /></a></dt>
+													<dd><a href="goods.php?id={$order.one_goods_id}">{$order.one_goods_name}</a><span>¥{$order.total_fee}</span></dd>
+									            </dl>
+												<a href="user.php?act=order_list&ctl=3" class="home_m_2_button">去收货</a>
+											</div>
+									</li>
+								  {/if}								
+								<!--{/foreach}-->
+												</ul>		
+									  </div>
+						  <div class="prev prev-next s-index-icon"> 上一张</div>
+						  <div class="next prev-next s-index-icon"> 下一张</div>
+			     	</div>   
+                     <div class="slide-pics" id="banner-slide2" style="display:none">
+										<div class="scrollable" >
+													<ul class="items" >
+								  {if !$uncommented_orders}
+								    <li class="item"> 
+											<div class="home_m_2 home_m_2_mr10">
+												<span class="home_m_2_title"><a href="javascript:void(0)">您没有待评价的商品 </a></span>
+											</div>
+									 
+											<div class="home_m_2">
+												<span class="home_m_2_title"><a href="javascript:void(0)">您没有待评价的商品 </a></span>
+											</div>
+									</li>
+								  {/if}
+								<!--{foreach from=$uncommented_orders name=uncommented item=order}-->
+									 {if $smarty.foreach.uncommented.index % 2 == 0}
+									<li class="item"> 
+											<div class="home_m_2 home_m_2_mr10">
+												<span class="home_m_2_title"><a href="javascript:void(0)">待评价 </a></span>
+												<dl>
+													<dt><a href="goods.php?id={$order.one_goods_id}"><img src="{$order.one_goods_thumb}" /></a></dt>
+													<dd><a href="goods.php?id={$order.one_goods_id}">{$order.one_goods_name}</a><span>¥{$order.total_fee}</span></dd>
+												</dl>
+												<a href="user.php?act=order_list&ctl=4" class="home_m_2_button">去评价</a>
+											</div>
+											 {if $smarty.foreach.uncommented.last} 
+											 <div class="home_m_2">
+												<span class="home_m_2_title"></span>												
+											</div>
+											 </li>
+											 {/if}
+											{else }
+											<div class="home_m_2">
+												<span class="home_m_2_title"><a href="javascript:void(0)">待评价 </a></span>
+												<dl>
+													<dt><a href="goods.php?id={$order.one_goods_id}"><img src="{$order.one_goods_thumb}" /></a></dt>
+													<dd><a href="goods.php?id={$order.one_goods_id}">{$order.one_goods_name}</a><span>¥{$order.total_fee}</span></dd>
+									            </dl>
+												<a href="user.php?act=order_list&ctl=4" class="home_m_2_button">去评价</a>
+											</div>
+									</li>
+								  {/if}								
+								<!--{/foreach}-->
+												</ul>		
+									  </div>
+						  <div class="prev prev-next s-index-icon"> 上一张</div>
+						  <div class="next prev-next s-index-icon"> 下一张</div>
+			     	</div> 
+			   </div>		
+            </div>
+            <div class="home_m_3">
+             	<div class="home_m_1_p">
+					<h3 class="home_column_title">商品收藏</h3>
+					<span class="home_m_3_a">
+						<a href="#">全部商品<b>{$record_count}</b></a>
+					</span>
+				</div>
+                <div class="lunbo-recommend_1">
+						<div class="slide-pics_1" id="banner-slide_1">
+						  <div class="scrollable_1">
+							<ul class="items_1 home_m_4">
+							<!-- {if $collection_goods} --> 
+								  <!--{foreach from=$collection_goods name=loop item=goods}--> 
+								   	{if $smarty.foreach.loop.index%4 == 0}<li class="item_1">{/if}
+										{if $smarty.foreach.loop.index%4==3}<dl>{else}<dl class="home_m_2_mr10"> {/if}
+											<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" /></a></dt>
+											<dd><a href="{$goods.url}">{$goods.goods_name|escape:html}</a>
+											    <span>¥<!-- {if $goods.promote_price neq ""} --> 
+												       {$goods.promote_price}
+													   <!-- {else}--> 
+													   {$goods.shop_price}
+													   <!--{/if}-->
+											    </span>
+											</dd>
+										</dl>
+									{if $smarty.foreach.loop.index%4 == 3 || $smarty.foreach.loop.last}</li>{/if}				
+								  <!--{/foreach}--> 
+								  <!-- {else}--> 
+								  <br/> &nbsp;&nbsp;&nbsp;您没有收藏过商品！<br/><br/><br/><br/><br/><br/>	<br/><br/>	<br/><br/>	<br/><br/>	<br/><br/>									
+							<!-- {/if} --> 
+							</ul>
+						  </div>
+						  <div class="prev_1 prev-next_1 s-index-icon_1"> 上一张</div>
+						  <div class="next_1 prev-next_1 s-index-icon_1"> 下一张</div>
+						</div>
+				</div>
+            </div>
+            <div class="home_m_3">
+             	<div class="home_m_1_p">
+				    <h3 class="home_column_title">猜你喜欢</h3>
+					<span class="home_m_3_a">
+					  <a href="javascript:void(0)" onclick="you_may_love();return false;"><img src="../images/main_2_left_title_b.png" width="65" height="20" /></a>
+					</span>
+				</div>
+            	<div id="you_may_love" class="home_m_4">
+				<!--{if $you_may_favorite}-->
+				     <!-- {foreach from=$you_may_favorite item=fav name=loop} -->
+					          {if $smarty.foreach.loop.last}
+							    <dl>
+								{else}
+								<dl class="home_m_2_mr10">
+							  {/if}
+							  <dt><a href="goods.php?id={$fav.goods_id}"><img src="{$fav.goods_thumb}" /></a></dt>
+                              <dd><a href="goods.php?id={$fav.goods_id}">{$fav.goods_name}</a><span>¥{$fav.shop_price}</span></dd>
+							  </dl>
+					  <!-- {/foreach} --> 
+				<!--{/if}-->
+                </div>
+            </div>
+        </div>
+      
+    	  <div class="home_right">
+        	<p class="home_right_1"><span>帐户余额：</span><b>{$info.surplus}</b><a href="#">充值</a></p>
+            <div class="home_right_2">
+            	<h3>帐户安全：</h3>
+                <dl>
+                	<dt>{if $info.chat_validated==3}高{elseif $info.chat_validated==0}低{else}中{/if}</dt>
+                    <dd class="a"><p style="width:{if $info.chat_validated==3}100%{elseif $info.chat_validated==0}20%{else}60%{/if}"></p></dd>
+                    <dd><a href="user.php?act=security_settings">提升></a></dd>
+                </dl>
+                <div class="home_right_2_bangding">
+                	<span>邮箱：{if $info.chat_validated==0 || $info.chat_validated==2 }<a href="user.php?act=security_edit_psd&type=email&email={$info.email}&validate=2">立即绑定</a>{else}<b>已绑定</b>{/if}</span>
+                    <span>手机：{if $info.chat_validated==0 || $info.chat_validated==1 }<a href="user.php?act=security_edit_psd&type=phone&phone={$info.mobile_phone}&validate=0">立即绑定</a>{else}<b>已绑定</b>{/if}</span>
+                </div>
+            </div>
+          <div class="home_right_3">
+            	<div class="home_right_3_title">
+                	<h3>购物车</h3><a href="flow.php">查看购物车详情</a>
+                </div>
+					<!-- {if $cart_goods} --> 
+					   <!--{foreach from=$cart_goods name=loop item=goods}--> 
+                         			   
+						 <dl>
+							<dt><a href="javascript:void(0)"><img src="{$goods.goods_thumb}" /></a></dt>
+							<dd class="name"><a href="javascript:void(0)">{$goods.goods_name}</a></dd>
+							<dd class="price"><span>¥{$goods.goods_price}</span><b>¥{$goods.market_price}</b></dd>
+						</dl>
+             
+					    <!--{/foreach}--> 
+						<!--{else}-->
+						<br/>&nbsp;&nbsp;购物车是空的！赶紧去购物吧。
+					<!--{/if}--> 
+            </div>
+            <div class="home_right_3">
+            	<div class="home_right_3_title">
+                	<h3>浏览记录</h3>
+                </div>
+                <div class="lunbo-recommend_2">
+				<div class="slide-pics_2" id="banner-slide_2">
+				  <div class="scrollable_2">
+								<ul class="items_2 home_m_4">
+								 <!--{if $visit_history}-->
+								     {$visit_history}
+									  <!--{else}-->
+									    您最近没有浏览过商品！
+								  <!--{/if}-->
+								</ul>
+				  </div>
+				  <div class="qiehuanbox">
+				  <div class="prev_2 prev-next_2 s-index-icon_2"> 上一张</div>
+				  <div class="next_2 prev-next_2 s-index-icon_2"> 下一张</div>
+				  </div>
+				</div>
+                </div>
+                
+            </div>
+        </div>
+    <!-- {/if} --> 
+    <!-- #用户中心默认显示页面 end--> 
+
+<!-- *安全设置chen-0912 start--> 
+        <!-- {if $action eq 'security_settings'} -->
+			   <div class="orders">
+       	  <div class="other_title">
+            	<h3>安全中心</h3>
+            </div>
+            <dl class="safe_1">
+            	<dt><img {if $personal_pic} src="{$personal_pic}" {else} src="images/headimg.gif" {/if} /></dt>
+                <dd>
+                	<span>{$info.username}</span>
+                    <table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="122">您的安全评分为：</td>
+    <td width="115"><div><p style="width:{if $info.chat_validated==3}100%{elseif $info.chat_validated==0}20%{else}60%{/if}"></p></div></td>
+    <td width="463">{if $info.chat_validated==3}100{elseif $info.chat_validated==0}20{else}60{/if}分</td>
+  </tr>
+</table>
+					<span>{if $info.chat_validated==3}您已启动全部安全设置！{else}建议您启动全部安全设置，保障账户及资金安全！{/if}</span>
+
+                </dd>
+            </dl>
+            <table width="900" border="0" align="center" cellpadding="0" cellspacing="0" class="safe_2">
+  <tr>
+    <td width="108"><p class="a"></p></td>
+    <td width="110"><span>修改密码</span></td>
+    <td width="480">安全性高的密码可以使帐号更安全。建议您定期更换密码，且设置一个包含数字和字母，总长度超过6位以上的密码。</td>
+    <td width="200" align="center"><a class="other_botton" href="user.php?act=security_edit_psd&type=pwd">立即修改</a></td>
+  </tr>
+  <tr>
+    <td><p {if $info_validate.chat_validated == '0' || $info_validate.chat_validated == '2'}class="b"{else} class="a"{/if}></p></td>
+    <td><span>验证邮箱</span></td>
+    <td>邮箱将是您的有效身份证，是您找回登录密码的方式之一。</td>
+    <td align="center"><a class="other_botton" href="user.php?act=security_edit_psd&type=email&email={$info_validate.email}&validate={$info_validate.chat_validated}">{if $info_validate.chat_validated == '0' || $info_validate.chat_validated == '2'}立即绑定{else} 解除绑定{/if}</a></td>
+  </tr>
+  <tr>
+    <td><p {if $info_validate.chat_validated == '0' || $info_validate.chat_validated == '1'}class="b"{else} class="a"{/if}></p></td>
+    <td><span>绑定手机</span></td>
+    <td>绑定手机后，修改密码将必须通过手机验证，避免他人恶意修改您的密码。</td>
+    <td align="center"><a class="other_botton" href="user.php?act=security_edit_psd&type=phone&phone={$info_validate.mobile_phone}&validate={$info_validate.chat_validated}">{if $info_validate.chat_validated == '0' || $info_validate.chat_validated == '1'}立即绑定{else} 立即修改{/if}</a></td>
+  </tr>
+</table>
+        </div>
+		<!--{/if} --> 
+    <!--#安全设置 end--> 
+	
+	<!-- *安全设置,修改密码 chen-0912 start--> 
+        <!-- {if $action eq 'security_edit_psd'} -->
+		{insert_scripts files='user.js'}
+		<script>
+		   function send_verify_email(validate,eindex)
+				{
+				var email = $('#user_email'+eindex).val();
+				  if(!reg_email.test(email))
+                {
+				  alert('邮箱格式不正确');
+				  return false;
+			   }		                                                               //is_validate=1 验证邮箱  =0 取消邮箱绑定
+					$.post("user.php",{act:"set_user_contact",type:"email",value:email,is_validate:validate},function(result)
+					{
+						// alert(result);
+						if(result=='0')
+						{
+						  alert("这个邮箱已经被其他人使用了");
+						}
+						else if(result=='1')
+						{
+						 alert("请先解除该验证邮箱的绑定");
+						}
+						else
+						{
+						 sendHashMail(validate);
+						 $("#goto_email"+eindex).attr('href',"javascript:window.location.href="+result);
+						 }
+					});
+				}
+			function send_verify_SMS(eindex,validate)
+		   {
+		    var phone = $('#mobilePhone'+eindex).val(); 
+            if(!reg_phone.test(phone))
+            {
+			  alert('手机号码格式不正确');
+			  return false;
+			}			
+		   	$.post("user.php",{act:"set_user_contact",type:"phone",value:phone,is_validate:validate},function(result)
+					{
+					
+					if(result=='0')
+						{
+						  alert("这个手机已经被其他人使用了");
+						}
+						else if(result=='1')
+						{
+						 alert("请先解除该手机号的绑定");
+						}
+						else
+						{
+						 sendSMS(eindex,validate,{$user_id});
+						 }
+						
+					});	   
+		   }
+		   
+				function before_edit_pwd()  //chen-0911
+				{
+								var new_pwd = $('#new_pwd').val();
+								var confirm_pwd = $('#confirm_pwd').val();
+								if(new_pwd != confirm_pwd || new_pwd.length < 6)
+								{
+								alert("修改密码失败！请检查密码是否大于6位，新密码和确认密码是否一致。");
+								  return false;
+								}
+								$('#edit_pwd').submit();
+				}
+		</script>
+		{if $type=="edit_pwd"}
+			<div class="orders">
+			  <div class="other_title">
+					<h3>修改密码</h3>
+				</div> 
+				<form id="edit_pwd" method="post" action="user.php?act=security_edit_psd&edit=1">
+					<table class="safe_3" width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="103" align="right">旧密码：</td>
+							<td width="320">
+							  <label for="textfield"></label>
+							  <span class="select_b">
+								   <input type="password" name="old_pwd" />
+								</span></td>
+							<td width="477">&nbsp;</td>
+						</tr>
+						<tr>
+							<td width="103" align="right">新密码：</td>
+							<td width="320">
+							  <label for="textfield"></label>
+							  <span class="select_b">
+								<input type="password" name="new_pwd" id="new_pwd"/></span></td>
+							<td width="477">不少于6位</td>
+						</tr>
+						  <tr>
+							<td width="103" align="right">确认密码：</td>
+							<td width="320">
+							  <label for="textfield"></label>
+							  <span class="select_b">
+								<input type="password" name="confirm_pwd" id="confirm_pwd"/></span></td>
+							<td width="477">&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td height="50" align="right">&nbsp;</td>
+							<td><a class="select_c" href="javascript:before_edit_pwd();">提交</a><a class="select_d" href="javascript:document.getElementById('edit_pwd').reset()">重置</a></td>
+							<td>&nbsp;</td>
+						  </tr>
+					</table>
+				</form>
+			</div>
+		{/if}
+		{if $type=="validate_email"}
+		    <div class="orders">
+       	  <div class="other_title">
+            	<h3>绑定邮箱</h3>
+            </div>
+          <table width="900" align="center" cellspacing="0" cellpadding="0" border="0" class="safe_3">
+  <tbody><tr>
+    <td width="103" align="right"> Email： </td>
+    <td width="320">
+      <label for="textfield"></label>
+      <span class="select_b"><input type="text" id="user_email_index0" name="email" value="{$email}"></span></td>
+    <td width="477">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="103" align="right">&nbsp;</td>
+    <td width="320"><a href="javascript:void(0)" onclick="send_verify_email(1,'_index0');" class="select_c">发送验证邮件</a>
+      </td>
+    <td width="477">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="103" align="right">&nbsp;</td>
+    <td width="320"><a href="javascript:void(0)" id="goto_email_index0">登录邮箱查看</a>
+     </td>
+    <td width="477">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="50" align="right">&nbsp;</td>
+    <td colspan="2"> <span class="tishi"><strong>提示:</strong>
+      不同邮箱的收信方法可能不同，点击"发送认证"后登录您的邮箱，请注意查看"收件箱"或"垃圾箱"， 我们会发送电子邮件到您Email，请根据邮件内容提示进行E_mail认证！</span></td>
+    </tr>
+ 
+  </tbody></table>
+        </div>
+		{/if}
+		{if $type=="edit_email"}
+		<div class="orders">
+       	  <div class="other_title">
+            	<h3>解除绑定邮箱</h3>
+            </div>
+           
+        <table width="900" align="center" cellspacing="0" cellpadding="0" border="0" class="safe_3">
+  <tbody>
+  <tr>
+    <td width="158" align="right">原邮箱地址： </td>
+    <td width="232">
+      <label for="textfield"></label>
+      <span class="select_b"><input type="text" id="user_email_index1"  name="old_email" value="{$email}" readonly></span></td>
+	  <td width="150"><a href="javascript:send_verify_email(0,'_index1');" class="select_c">解除绑定</a></td>
+	   <td width="510"><a href="javascript:void(0)" id="goto_email_index1" class="select_c">登陆邮箱</a></td>
+  </tr>
+
+  <!--<tr>
+    <td width="158" align="right">输入新邮箱地址：</td>
+    <td width="232"><span class="select_b"><input type="text" id="user_email_index2"  ></span>
+     </td>
+	 <td width="510"><a href="javascript:send_verify_email(1,'_index2');"  class="select_c">重新绑定</a></td>
+	   <td width="510"><a href="javascript:void(0)" id="goto_email_index2" class="select_c">登陆邮箱</a></td>
+  </tr>-->
+
+<!--<tr>
+    <td width="158" align="right">&nbsp;</td>
+    <td width="232"><a href="#" class="select_c">验证邮箱</a>
+     </td>
+    <td width="510">&nbsp;</td>
+  </tr>
+  -->
+  </tbody></table>
+        </div>   
+		{/if}
+		{if $type=="validate_phone"}
+		   <div class="orders">
+       	  <div class="other_title">
+            	<h3>绑定手机</h3>
+            </div>
+			<form method="post" action="user.php" id="verify_phone">
+			<input type="hidden" name="act" value="about_verify_phone">
+			<input type="hidden" name="type" value="verify">
+          <table width="900" align="center" cellspacing="0" cellpadding="0" border="0" class="safe_3">
+  <tbody><tr>
+    <td width="120" align="right"> 手机号码： </td>
+    <td width="229">
+      <label for="textfield"></label>
+      <span class="select_b"><input type="text" name="phone" id="mobilePhone_index0" value="{$phone}"></span></td>
+    <td width="551"><a href="javascript:send_verify_SMS('_index0',1)" class="select_c">发送验证码</a></td>
+  </tr>
+  <tr>
+    <td align="right">输入验证码：</td>
+    <td><span class="select_b">
+      <input type="text"  name="validator">
+    </span></td>
+    <td width="551"><span class="tishi"><strong>提示:</strong>
+      若收不到请59秒后再次点击发送验证码！</span></td>
+  </tr>
+ 
+<tr>
+    <td width="120" align="right">&nbsp;</td>
+    <td width="229"><a href="javascript:document.getElementById('verify_phone').submit()" class="select_c">提交</a>
+     </td>
+    <td width="551">&nbsp;</td>
+  </tr>
+  </tbody></table>
+  </form>
+        </div>
+		{/if}
+		{if $type=="edit_phone"}
+		   <div class="orders">
+       	  <div class="other_title">
+            	<h3>绑定手机</h3>
+            </div>
+<form method="post" id="edit_phone_form" action="user.php">
+	<input type="hidden" name="act" value="about_verify_phone">
+			<input type="hidden" name="type" value="edit">
+          <table width="900" align="center" cellspacing="0" cellpadding="0" border="0" class="safe_3">
+  <tbody><tr>
+    <td width="158" align="right">原手机号码： </td>
+    <td width="232">
+      <label for="textfield"></label>
+      <span class="select_b"><input type="text" id="mobilePhone_indexOld" name="old_phone" value="{$phone}" readonly></span></td>
+    <td width="510"><a href="javascript:send_verify_SMS('_indexOld',1)" class="select_c">发送验证码</a></td>
+  </tr>
+  <tr>
+    <td align="right">输入验证码：</td>
+    <td><span class="select_b">
+      <input type="text"  name="old_capthcha">
+    </span></td>
+    <td width="510"><span class="tishi"><strong>提示:</strong>
+      若收不到请59秒后再次点击发送验证码！若手机丢失请拨打人工客服：0573-56885896</span></td>
+  </tr>
+  <tr>
+    <td width="158" align="right">输入新手机号码：</td>
+    <td width="232"><span class="select_b"><input type="text" id="mobilePhone_indexNew" name="new_phone"></span>
+     </td>
+    <td width="510"><a href="javascript:send_verify_SMS('_indexNew',2)" class="select_c">发送验证码</a></td>
+  </tr>
+<tr>
+    <td align="right">输入验证码：</td>
+    <td><span class="select_b">
+      <input type="text"  name="new_capthcha">
+    </span></td>
+    <td width="510"><span class="tishi"><strong>提示:</strong>
+      若收不到请59秒后再次点击发送验证码！</span></td>
+  </tr>
+<tr>
+    <td width="158" align="right">&nbsp;</td>
+    <td width="232"><a href="javascript:document.getElementById('edit_phone_form').submit()" class="select_c">提交</a>
+     </td>
+    <td width="510">&nbsp;</td>
+  </tr>
+  </tbody></table>
+  </form>
+        </div>
+		{/if}
+		<!--{/if} --> 
+    <!--#安全设置,修改密码 end--> 
+	
+
+<!-- *我的等级 start--> 
+        <!-- {if $action eq 'my_rank'} -->
+		    <div class="orders">
+				<div class="other_title">
+					<h3>我的等级</h3>
+				</div>		
+				<div class="dengji_1 dengji_1_{$progress_bar}">
+				</div>
+				<div class="dengji_2">
+					我当前的等级是：<span>{$vip_name}</span>我目前的成长值是：<b>{$info.rank_points}</b>
+				</div>
+				<div class="dengji_3">
+						<h2>1、什么是笨虎之家成长值？</h2>
+							成长值是笨虎之家会员通过购物所获得的经验值，由累积金额计算获得，它标志着您在笨虎之家累积的网购经验值，成长值越高会员等级越高，享受更多的会员服务哦！<br /><br />
+						<h2>2、成长值如何计算？</h2>
+							会员成长值=累积购物金额(不含运费)
+							成长值按照交易金额的个位数取整计算，如，购买88.2元的商品，则确认收货后可以得到88分。<br /><br />
+						<h2>3、如何查看笨虎之家VIP成长值？</h2>
+							会员可进入我的笨虎之家查看自己当前的会员成长值<br /><br />
+						<h2>4、笨虎之家VIP成长值的获取来源？</h2>
+							成长值只通过交易累积获得，购买越多累积的成长值越高，且确认收货后成长值才会增加，成长值不衰减。
+				</div>
+			</div>                                                    
+		<!--{/if} --> 
+    <!--#我的等级 end--> 	
+		
+     <!-- *我的积分chen-0909 start--> 
+       <!-- {if $action eq 'my_integral'} -->
+	    <div class="orders">
+			<div class="other_title">
+				<h3>我的积分</h3>
+			</div>
+                <table class="jifen_1" width="900" border="0" cellspacing="0" cellpadding="0">
+				    <tr class="jifen_1_a">
+						<td>积分明细</td>
+						<td>&nbsp;</td>
+						<td align="right"><a href="#">积分规则</a></td>
+				    </tr>
+				    <tr>
+						<td>可用积分</td>
+						<td>冻结积分</td>
+						<td>即将过期的积分</td>
+				    </tr>
+				    <tr>
+						<td><span class="jifen_1_c">{if $info.pay_points}{$info.pay_points}{else}0{/if}</span><a class="home_m_2_button" href="exchange.php">去兑换商品</a></td>
+						<td> {$frozen_integral}<!--（<a href="#">何时冻结</a>）--></td>
+						<td> 0<!--552（2014-9-30<a href="#">过期</a>）--></td>
+				    </tr>
+                </table>
+            <div class="jifen_2">
+				<span class="jifen_2_a">积分获取</span>
+						
+				<div id="outer">
+					<ul id="tab">
+						<li class="current">全部</li>		
+						<li>订单相关</li>
+						<li>商品评论</li>
+						<li>积分签到</li>
+					</ul>
+					<div id="content">
+						<ul style="display:block;">
+							<table width="880" border="0" cellspacing="0" cellpadding="0">
+								  <tr class="title">
+									<td width="150">获取积分</td>
+									<td width="150">冻结积分</td>
+									<td width="200">积分类型</td>
+									<td width="200">积分详情</td>
+									<td>日期</td>
+								  </tr>
+								 <!--{foreach from=$integral_records item=record}-->							      
+							  <tr>
+									<td>{$record.integral}</td>
+									<td>{if $record.is_frozen == '1'}{$record.integral}{else}0{/if}</td>
+									<td>{$record.type}</td>
+									<td>{$record.detail}</td>
+									<td>{$record.got_time}</td>
+								  </tr>
+								<!--{/foreach}-->
+						
+							</table>
+						</ul>
+					
+						<ul>
+						   <table width="880" border="0" cellspacing="0" cellpadding="0">
+								  <tr class="title">
+									<td width="150">获取积分</td>
+									<td width="150">冻结积分</td>
+									<td width="200">积分类型</td>
+									<td width="200">积分详情</td>
+									<td>日期</td>
+								  </tr>
+								 <!--{foreach from=$integral_records item=record}-->	
+                                  {if $record.type=='新订单'}								 
+							     <tr>
+									<td>{$record.integral}</td>
+									<td>{if $record.is_frozen == '1'}{$record.integral}{else}0{/if}</td>
+									<td>{$record.type}</td>
+									<td>{$record.detail}</td>
+									<td>{$record.got_time}</td>
+								  </tr>
+								  {/if}
+								<!--{/foreach}-->
+							</table>
+						</ul>
+						<ul>
+						   <table width="880" border="0" cellspacing="0" cellpadding="0">
+							  <tr class="title">
+								<td width="150">获取积分</td>
+								<td width="150">冻结积分</td>
+								<td width="200">积分类型</td>
+								<td width="200">积分详情</td>
+								<td>日期</td>
+							  </tr>
+							 	 <!--{foreach from=$integral_records item=record}-->	
+                                  {if $record.type=='评论'}								 
+							     <tr>
+									<td>{$record.integral}</td>
+									<td>{if $record.is_frozen == '1'}{$record.integral}{else}0{/if}</td>
+									<td>{$record.type}</td>
+									<td>{$record.detail}</td>
+									<td>{$record.got_time}</td>
+								  </tr>
+								  {/if}
+								<!--{/foreach}-->
+							</table>
+						</ul>
+						<ul>
+							<table width="880" border="0" cellspacing="0" cellpadding="0">
+							  <tr class="title">
+							   <td width="150">获取积分</td>
+								<td width="150">冻结积分</td>
+								<td width="200">积分类型</td>
+								<td width="200">积分详情</td>
+								<td>日期</td>
+							  </tr>
+							   <!--{foreach from=$integral_records item=record}-->	
+                                  {if $record.type=='签到'}								 
+							     <tr>
+									<td>{$record.integral}</td>
+									<td>{if $record.is_frozen == '1'}{$record.integral}{else}0{/if}</td>
+									<td>{$record.type}</td>
+									<td>{$record.detail}</td>
+									<td>{$record.got_time}</td>
+								  </tr>
+								  {/if}
+								<!--{/foreach}-->
+							</table>
+						</ul>
+					</div>
+				</div>
+            </div>
+        </div>
+	   <!--{/if} --> 
+    <!--#我的积分 end--> 
+
+    <!-- *对购买的商品进行评论 chen-0914 start--> 
+        <!-- {if $action eq 'comment_goods'} -->
+		<div class="orders">
+		<form action="comment.php" method="post" id="comment_form">
+		   <input type="hidden" name="order_id" id="order_id" value="{$order_id}">
+		   <input type="hidden" name="goods_num" value="{$goods_num}">
+		   <input type="hidden" name="type" value="comment">
+			<div class="other_title">
+				<h3>商品评论</h3>
+			</div>
+          <!--{foreach from=$goods_list item=good name=loop}-->
+		    <div class="pinglun_1_box">
+			    <input type="hidden"  name="goods_id{$smarty.foreach.loop.index}" id="goods_id{$smarty.foreach.loop.index}" value='{$good.goods_id}'/>
+				<input type="hidden" id='comment_rate{$smarty.foreach.loop.index}' name="comment_rate{$smarty.foreach.loop.index}" value=''/>
+				<dl class="pinglun_1_shangpin">
+					<dt><img src="{$good.goods_thumb}" /></dt>
+					<dd class="datum_l_a_pinglun"><a href="goods.php?id={$good.goods_id}">{$good.goods_name}</a></dd>
+					<dd class="datum_l_b_pinglun">价格：{$good.shop_price}</dd>
+				</dl>
+				<div class="pingjia_sp">
+					<div id="xzw_starSys">
+						<h3>满意程度：</h3>
+							<div id="xzw_starBox">
+								<ul class="star">
+									<li><a href="javascript:void(0)" class="one-star">1</a></li>
+									<li><a href="javascript:void(0)" class="two-stars">2</a></li>
+									<li><a href="javascript:void(0)" class="three-stars">3</a></li>
+									<li><a href="javascript:void(0)" class="four-stars">4</a></li>
+									<li><a href="javascript:void(0)" class="five-stars">5</a></li>
+								</ul>
+								<div class="current-rating" id="showb{$smarty.foreach.loop.index}"></div>
+							</div>
+						<div id="description{$smarty.foreach.loop.index}"></div>
+					</div>
+					<div class="orders_review_a">
+						<span>评论内容：</span>
+						<textarea class="orders_review_a_textarea" name="comment_content{$smarty.foreach.loop.index}" cols="" rows=""></textarea>
+					</div>
+					<div class="shaidan">
+						<ul id="preview{$smarty.foreach.loop.index}">
+						</ul>
+						<input type="file" value="上传买家秀…" class="shaidan_botton" id="fileImage{$smarty.foreach.loop.index}" multiple name="saidan{$smarty.foreach.loop.index}[]"/>
+					</div>
+				</div>
+		    </div> 
+		  <!--{/foreach}-->
+
+			<div class="pingjia_sp_bottom">
+				<table width="95" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="22"><input type="checkbox" name="anonymity" />
+						  <label for="checkbox"></label></td>
+						<td width="53">是否匿名</td>
+						<!--<td width="60" align="right">验证码：</td>
+						<td width="168"><label  for="textfield"></label>
+						  <input class="orders_review_a_input" type="text" name="captcha" id="textfield" size='5'/>
+						</td>
+						<td width="147">
+							<img src="captcha.php?{$rand}" alt="captcha" onClick="this.src='captcha.php?'+Math.random()" class="captcha" height="30px" width="80px">
+						</td>-->
+					</tr>
+				</table>
+				<p class="orders_review_b"><a class="home_m_2_button" href="javascript:commentForm_on_submit();">提交评论</a></p>
+			</div>
+		</form>
+        </div>
+	    <!--{/if} --> 
+    <!--#对购买的商品进行评论 end--> 
+
+     <!-- *我的评论 start--> 
+        <!-- {if $action eq 'comment_list'} -->
+			  <div class="orders">
+				  <div class="other_title">
+						<h3>{$lang.label_comment}</h3>
+				  </div>
+			
+			  <div class="pinglun">
+				<!--{foreach from=$comment_list item=comment} -->
+						<dl>
+							<dt><a href="goods.php?id={$comment.goods_id}"> <img src="{$comment.goods_thumb}" /></a></dt>
+							<dd class="pinglunmain">{$comment.content}</dd>
+							<dd class="pingluntime">{$comment.formated_add_time}</dd>
+						</dl>
+				<!-- {/foreach} -->    
+			  </div>
+			  <!-- {if $comment_list}--> 
+			     <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem --> 
+			  <!-- {else}--> 
+				<br/>&nbsp;&nbsp;&nbsp;您没有对商品进行过评价！
+			  <!-- {/if}--> 
+			</div>		
+		<!--{/if} --> 
+    <!--#我的评论 end--> 
+	
+	
+	<!-- *我的投诉/建议 start--> 
+       <!-- {if $action eq 'complain_list'} -->
+			 <div class="orders">
+				<div class="other_title">
+						<h3>我的投诉/建议</h3>
+				</div>			
+					<table class="jianyi" width="1000" border="0" cellspacing="0" cellpadding="0">
+						  <tr class="jianyi_1">
+						    <td width="337">内容</td>
+							<td width="72">类型</td>
+							<td width="115">发表时间</td>
+							<td width="360">状态</td>
+							<td width="55">操作</td>
+							</tr>
+					  <!--{foreach from=$complain_list item=complain} -->
+						  <tr id="complain{$complain.id}">
+							<td>{$complain.content}</td>
+							<td>{$complain.type}</td>
+							<td>{$complain.complain_time}</td>
+							<td><span>{$complain.state}</span></td>
+							<td><a href="javascript:void(0)" onclick="delete_complain({$complain.id});return false;">删除</a></td>
+						  </tr>
+					    <!-- {/foreach} -->    
+		            </table>
+			  <!-- {if $complain_list}--> 
+			     <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem --> 
+			  <!-- {else}--> 
+				<br/>&nbsp;&nbsp;&nbsp;您没有对商品进行过建议或投诉！
+			  <!-- {/if}--> 
+		    </div>
+	   <!--{/if} --> 
+    <!--#我的投诉/建议 end-->
+	
+	
+	<!-- *我的订单 chen-0910 start--> 
+	<!-- {if $action eq 'order_list'} -->
+	    <div class="orders">
+			<div class="orders_tab">
+				<div class="title cf">
+					<ul class="title-list cf ">
+					  <li>所有订单</li>
+					  <li>待付款</li>
+					  <li>待发货</li>
+					  <li>待收货</li>
+					  <li>待评价</li>
+					  <li>已完成</li>
+					 <!-- <li>已取消</li>-->
+					  <p style="left:{$left}px"><b></b></p>
+					</ul>
+				</div>
+				<div class="orders_tab_box">		
+					<!--{foreach from=$all_orders item=orders name=all}-->
+						<div class="orders_tab_main show" {if $ctl==$smarty.foreach.all.index} class="on" style="display:block" {else} style="display:none"{/if}>
+							<!--{if $orders}-->
+								<!--{foreach from=$orders item=order} -->
+									 <!-- #BeginLibraryItem "/library/order_list_com.lbi" --><!-- #EndLibraryItem --> 
+								<!--{/foreach} -->  
+								<div class="page_box">
+									 <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem --> 
+								</div>
+							<!--{else}-->
+								您没有{$all_infos[$smarty.foreach.all.index]}的订单！
+							<!--{/if}-->
+						</div>
+					<!--{/foreach}-->		
+			    </div>
+			</div>
+        </div> 
+	<!--{/if} --> 
+    <!--#我的订单 end-->
+	
+	
+	
+	
+	<!-- *我的收藏 start--> 
+	<!-- {if $action eq 'collection_list'} -->
+	{insert_scripts files='utils.js'}
+		<div class="orders">
+			<div class="other_title">
+				<h3>我的收藏</h3>
+			</div>
+			<!-- {if $goods_list} -->  <!-- if 1 eq 0 -->
+				<div class="favorite">
+					<table width="926" border="0" align="center" cellpadding="0" cellspacing="0" class="favorite_1">
+						<tr>
+							<td width="21">
+							  <input type="checkbox" name="select_all"  id="select_all" onclick="select_all_goods(this.checked)">
+							  <script>
+							     function select_all_goods(flag)
+								 {
+									  if(flag)
+									  {
+									   $('.collection_goods_list').prop('checked',true);
+									   $('.goods_list').attr('value',1);
+									   }
+									  else  
+									   {
+										   $('.collection_goods_list').prop('checked',false);
+										    $('.goods_list').attr('value',0);
+									   }
+								 }
+								 function select_one(flag,id)
+								 {
+									 if(flag)
+									  {
+									   $('#goods_'+id).prop('checked',true);
+									   $('#goodslist_'+id).attr('value',1);
+									   }
+									  else  
+									   {
+										  $('#goods_'+id).prop('checked',false);
+										    $('#goodslist_'+id).attr('value',0);
+									   }
+								 }
+								 
+								 function delete_select()
+								 {
+								 var arr = new Array();
+								    $('.goods_list').each(function(){
+									    if($(this).attr('value')=='1')
+									     {
+										   var str=$(this).attr('id');
+										   var pos=str.indexOf('_')+1;
+										    arr.push(str.substr(pos));
+										 }
+									});
+									
+									var id_arr= arr;
+									Ajax.call('user.php?act=del_collected','rec_id_list=' + id_arr+'&type=del_sel', del_call_back , 'GET', 'TEXT', true, true );										
+								 }
+								function delete_one(id)
+								{
+								var id_arr=new Array();
+								id_arr[0]=id;
+								   Ajax.call('user.php?act=del_collected','rec_id_list=' + id_arr+'&type=del_one', del_call_back , 'GET', 'TEXT', true, true );
+								}
+								function del_call_back(obj)
+								{
+									if(obj=='failed')
+									{
+									   alert("删除失败！请刷新后重试，或联系管理员。");
+									  return ;
+									}
+								 var result =  JSON.parse(obj);
+								 
+									 if(result.type=="del_sel")
+									 {
+									
+										var arr=result.id_list.split(",");
+										for(var i = 0; i<arr.length;i++)
+										  {
+												$('#goodslist_'+arr[i]).remove();
+										  }
+									 }
+									 else
+									 {
+									    $('#goodslist_'+result.id_list).remove();
+									 }
+								}
+							  </script>
+							  <label for="checkbox"></label>
+							</td>
+							<td width="57">
+								全选
+						    </td>
+							<td width="396">
+								<a class="operate_2" href="javascript:void(0)" onclick="delete_select();return false;">删除</a>
+							</td>
+							<td width="472" align="right" class="favorite_1_a">
+							    <!-- #BeginLibraryItem "/library/pages_pre_next.lbi" --><!-- #EndLibraryItem -->  
+							</td>
+						</tr>
+		            </table>
+					<!--{foreach from=$goods_list item=good}-->
+						<dl id='goodslist_{$good.rec_id}' class="goods_list" value='0'>
+							<dt>
+							    <a href="{$good.url}"><img src="{$good.goods_thumb}" /></a>
+							</dt>
+							<dd>
+							    <span class="name_1">
+								    <input id="good_{$good.rec_id}" class="collection_goods_list" name="input"  type="checkbox" value="" onclick="select_one(this.checked,{$good.rec_id})"/>
+							    </span>
+								<span class="name_2">
+								     <a href="{$good.url}">{$good.goods_name}</a>
+							    </span>
+							</dd>
+							<dd class="price">¥{$good.shop_price}</dd>
+							<dd>
+							<script>
+				   function add_mark(val)
+				   {
+					 $('#mark_info').val(val);
+				   }
+				</script>
+			<input type="hidden" value='null' id="mark_info"/>
+							    <a class="operate_1" href="javascript:add_mark(0);addToCart({$good.goods_id});">加入购物车</a>
+								<a class="operate_2" href="javascript:void(0)" onclick="delete_one({$good.rec_id})">删除</a>
+							</dd>
+						</dl>
+				    <!--{/foreach}-->
+				</div>		
+				 <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem --> 
+			<!--{else}-->
+			    <table class="address_2" width="900" border="0" cellpadding="0" cellspacing="0">
+				  <tr>
+					<td height="100" align="center">暂无收藏的商品</td>
+				  </tr>
+				  <tr>
+					<td><a href="index.php" class="other_botton">现在就去逛</a></td>
+				  </tr>
+				</table> 
+			<!--{/if} --> 
+		</div>
+		<script language="JavaScript">	
+		  $('.collection_goods_list').attr('checked',false);$('#select_all').attr('checked',false);
+		  var url = '{$url}';
+		  var u   = '{$user_id}';
+		  var compare_no_goods = "{$lang.compare_no_goods}";
+		  var btn_buy = "{$lang.btn_buy}";
+		  var is_cancel = "{$lang.is_cancel}";
+		  var select_spe = "{$lang.select_spe}";
+	    </script> 
+       <!--{/if} --> 
+    <!--#我的收藏 end-->	
+	
+	<!-- *退货 start--> 
+        <!-- {if $action eq 'return_goods'} -->
+	    <div class="orders">
+			<div class="orders_tab">
+				<script>
+					$(function(){		
+						$('.title-list li').mouseover(function(){
+							var liindex = $('.title-list li').index(this);
+							$(this).addClass('on').siblings().removeClass('on');
+							$('.orders_tab_box div.orders_tab_main').eq(liindex).fadeIn(150).siblings('div.orders_tab_main').hide();
+							var liWidth = $('.title-list li').width();
+							$('.orders_tab .title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+						});
+					});
+				</script>
+			<div class="title cf">
+				<ul class="title-list cf ">
+				  <li class="on">申请退换货</li>
+				  <li>我的退换货记录</li>
+				  <p><b></b></p>
+				</ul>
+			</div>
+			<div class="orders_tab_box">
+				<!--案例1-->
+				<div class="orders_tab_main show">
+				    <form name="return_goods_form" enctype="multipart/form-data" method="post" id="return_goods_form" action="user.php" >
+					    <input type="hidden" name="act" value="sub_return_goods" />
+						<input type="hidden" name="current_time" value="{$current_time}" id="rand_num"/>
+						<table class="return_main" width="946" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+							<td>申请退/换货的订单：</td>
+							<td>
+							 {if $user_order_list}
+								   <select class="return_select_1" id="order_id" name="wanted_return_order"  > 
+										 <option style="width:100px" value="0">请选择...</option>		
+										  <!--{foreach from=$user_order_list item=order name="order_list"} -->
+										     <option value="{$order.order_id}">
+											    订单编号：{$order.order_sn}
+												   <!--{foreach from=$order.goods item=good} -->
+												      	   &nbsp;&nbsp; {$good.goods_name}
+												   <!-- {/foreach} -->  
+											 </option>
+										  <!-- {/foreach} -->    										  
+								  </select>
+							  {else}
+								    您最近没买过东西，无法进行退换货!
+							  {/if}
+							</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td width="81">申请理由：</td>
+							<td width="682">
+							  <select class="return_select_1" name="back_reason" id="select">
+							    <option value="0">请选择...</option>
+								<option value="1">7天无理由退换货</option>
+								<option value="2">商品存在质量问题</option>
+								<option value="3">商品与实际不符</option>
+								<option value="4">因物流导致商品损坏，残缺，无法正常使用</option>
+							  </select>
+							</td>
+							<td width="183">&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>申请类型：</td>
+							<td>
+							   <select class="return_select_1" name="back_type"  id="select2" onchange="choose_type(this.options[this.options.selectedIndex].value)">
+							    <option value="0">请选择...</option>
+								<option value="1">退货</option>
+								<option value="2">换货</option>
+							  </select>
+							  <script>
+							   function choose_type(val)
+							   {		  
+							     if(val == '1')
+								  $('#return_money').show();
+								 else
+							       $('#return_money').hide();
+							   }
+							  </script>
+							</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr id='return_money' style="display:none">
+						     <td align="right">退款金额：</td>
+							 <td>
+							    ¥<input type='text' name="return_money"/>
+							 </td>
+							 <td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>问题描述：</td>
+							<td>
+							   <label for="textarea"></label>
+							   <textarea class="return_select_2" name="pro_descrip" id="pro_descrip" cols="45" rows="5"  maxlength="200" onpropertychange="textCounter()" oninput="textCounter()">						   
+							   </textarea>
+							 </td>
+							<td valign="bottom" id="limit_count">还可以写200个字。</td>
+						  </tr>
+						  <tr>
+							<td>&nbsp;</td>
+							<td>上传凭证：每张图片大小不超过5M，支持JPG、GIF、PNG格式，最多上传5张。</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>&nbsp;</td>
+							<td ><input type="file" multiple name="fileselect[]" size="5" id="fileImage" /></td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>	
+						     <td align="right">&nbsp;</td>
+							 <td id="preview">
+							 </td>
+							 <td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>退回方式：</td>
+							<td>自行寄回</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>&nbsp;</td>
+							<td><span class="return_select_3">由您自行寄回仓库，然后为您退款，申请核实后会告知您退货地址，仓库无法接收平邮与到付件，寄回产生的费用处理可查看帮助中心。</span></td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td align="right"><input type="checkbox" name="return_principle" id="checkbox2" />
+							  <label for="checkbox2"></label>
+							</td>
+							<td class="return_select_4">已阅读<a href="article.php?id=21">《退换货原则》</a></td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>&nbsp;</td>
+							<td><a class="common_botton" id="return_goods_sub" onclick="return_goods_before_submit()">提交申请</a></td>
+							<td>&nbsp;</td>
+						  </tr>
+					</table>
+                   </form>
+                </div>
+                 <!--案例2-->
+				<div class="orders_tab_main">
+					<table class="return_main_1" width="940" border="0" cellspacing="0" cellpadding="0">					 
+						 <tr class="return_main_1_a">
+							<td width="382">订单信息</td>
+							<td width="110">交易金额</td>
+							<td width="110">退款金额</td>
+							<td width="110">申请时间</td>
+							<td width="110">处理时间</td>
+							<td width="110">处理结果</td>
+							<td width="110">操作</td>
+						  </tr>			   
+							<!--{foreach from=$return_goods_history item=good_history} -->
+								<tr id="return_goods_{$good_history.back_id}">
+									<td class="return_main_1_b">
+									   <!--{foreach from=$good_history.goods item=good} -->
+										<a href="goods.php?id={$good.goods_id}">{$good.goods_name}</a>
+									<!-- {/foreach} -->    
+									</td>
+									<td> {if $good_history.goods_amount}¥{$good_history.goods_amount}{else}---{/if} </td>
+									<td> {if $good_history.return_money}¥{$good_history.return_money}{else}---{/if} </td>
+									<td>{$good_history.return_time}</td>
+									<td>{if $good_history.reply}{$good_history.reply.reply_time}{else}---{/if}</td>
+									<td>
+									{if $good_history.reply}
+									    {if $good_history.reply.action_type == '0'}
+										   不同意
+									    {elseif $good_history.reply.action_type == '1'}
+									      同意退/换货
+									    {/if}
+									{else}
+									   未处理
+									{/if}
+									</td>
+									<td class="return_main_1_c"><a href="javascript:void(0)" onclick="cancle_back_order({$good_history.back_id});return false;">取消申请</a></td>
+								</tr>
+							<!-- {/foreach} -->    
+						
+					</table>
+					  <!-- {if $return_goods_history}--> 
+							 <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem --> 
+						  <!-- {else}--> 
+							<br/>&nbsp;&nbsp;&nbsp;没有退/换货记录！
+						  <!-- {/if}--> 
+				</div>
+    
+            </div>
+		</div>
+	</div>
+	   	<!--{/if} --> 
+    <!--#退货 end-->
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+  <!--chen 0901-->
+	<div class="deleteorder_pop" style="display:none" id="delete_order">
+	        <input type="hidden" id='del_order_id' value=''/>
+			<span>确定要删除订单吗？<br />
+					删除后无法找回！
+			</span>
+			<p><a class="select_c" href="javascript:delete_order();turnoff('delete_order');">确定</a><a class="select_d" href="javascript:turnoff('delete_order')">取消</a></p>
+	</div>
+    <div class="orders_review" id="comment" style="display:none">
+	    <form action="comment.php" method="post" name="comment_form">
+			<div class="title">
+				<h3>发表评论</h3>
+				<a onclick="javascript:turnoff('comment')"><img src="images/cloes.gif" /></a>
+				 <input type="hidden" id='comment_order_id' name="order_id" value=''/>
+				 <input type="hidden" id='comment_rate' name="comment_rate" value=''/>
+			</div>
+			<!--代码开始-->
+			<div id="xzw_starSys">
+				<h3>满意程度：</h3>
+				<div id="xzw_starBox">
+					<ul class="star" id="star">
+						<li><a href="javascript:void(0)" class="one-star">1</a></li>
+						<li><a href="javascript:void(0)" class="two-stars">2</a></li>
+						<li><a href="javascript:void(0)" class="three-stars">3</a></li>
+						<li><a href="javascript:void(0)" class="four-stars">4</a></li>
+						<li><a href="javascript:void(0)" class="five-stars">5</a></li>
+					</ul>
+					<div class="current-rating" id="showb"></div>
+				</div>
+				<!--评价文字-->
+				<div class="description"></div>
+			</div>
+			<div class="orders_review_a">
+				<span>评论内容：</span>
+				<textarea class="orders_review_a_textarea" name="comment_content" cols="" rows=""></textarea>
+				<table width="450" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+				  
+					<td width="24">
+						<input type="checkbox" name="checkbox" id="checkbox" />
+						<label for="checkbox"></label>
+					</td>
+					<td width="64">是否匿名</td>
+					
+					<td width="93" align="right">验证码：</td>
+					<td width="69">
+						<label  for="textfield"></label>
+						<input class="orders_review_a_input" type="text" name="captcha" id="textfield" /></td>
+					<td width="200"><img src="captcha.php?{$rand}" alt="captcha" onClick="this.src='captcha.php?'+Math.random()" class="captcha" height="30px" width="80px"></td> 
+				 </tr>
+				</table>
+				<p class="orders_review_b"><a class="home_m_2_button" href="javascript:comment_form.submit()">提交评论</a></p>
+			</div>
+		</form>
+    </div>
+
+
+  <!--chen 0902-->
+	 <div class="orders_review" id="complain" style="display:none;height:330px" >
+		<form action="user.php" method="post" name="complain_form">
+			<input id='complain_order_id' type='hidden' name='order_id' value=''/>
+			<input type='hidden' name='act' value='user_complain'/>
+			<div class="title">
+				<h3>投诉/建议</h3>
+				<a onclick="javascript:turnoff('complain')"><img src="images/cloes.gif" /></a>
+			</div>
+			<div class="orders_review_a" style="height:320px">
+				<table width="450" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td width="24" height="30"><input type="radio" name="type"  value="0" checked="checked"/></td>
+					<td width="64">投诉</td>
+					<td width="24">            <input type="radio" name="type"  value="1" /></td>
+					<td width="130"><label  for="textfield">建议</label></td>
+					<td width="200">&nbsp;</td>
+				  </tr>
+				</table>
+				<span>订单号：<label id="complain_order_sn"></label></span>
+				<span>投诉原因：</span>
+				<textarea class="orders_review_a_textarea" name="content" cols="" rows=""></textarea>
+				<table width="450" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td width="24"><input type="checkbox" name="checkbox" id="checkbox" />
+					  <label for="checkbox"></label></td>
+					<td width="64">是否匿名</td>
+					<td width="93" align="right">验证码：</td>
+					<td width="69"><label  for="textfield"></label>
+					  <input class="orders_review_a_input" type="text" name="captcha"/></td>
+					 <td width="200"><img src="captcha.php?{$rand}" alt="captcha" onClick="this.src='captcha.php?'+Math.random()" class="captcha" height="30px" width="80px"></td>
+				  </tr>
+				</table>
+				<p class="orders_review_b"><a class="home_m_2_button" href="javascript:complain_form.submit()">提交</a></p>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

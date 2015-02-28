@@ -1,0 +1,70 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="hd_header_nav headerNav_channel" id="headerNav">
+	<div class="hd_fixed_bg"></div>
+  <div class="wrap clearfix" style="z-index:1000;">
+<div id="allSortOuterbox">
+<h2 class="hd_all_sort_link fl"><a href="#" class="fl">所有商品分类</a></h2>
+<div class="hd_allsort_out_box {if $script_name neq 'index'}no_index{/if}" id="allCategoryHeader" {if $script_name neq 'index'}style="display:none;"{/if}>
+<div class="hd_allsort_out">
+<ul class="hd_allsort" id="j_allsort">
+
+  <!--{foreach from=$categories item=cat}-->
+<li>
+<h3>
+<a title="{$cat.name|escape:html}" target="_blank" href="{$cat.url}">{$cat.name|escape:html}</a>
+</h3>
+<div class="hd_show_sort">
+
+<div class="hd_sort_list_wrap clearfix">
+<div class="hd_sort_list">
+  <!--{foreach from=$cat.cat_id item=child name=foo}-->
+<dl class="clearfix">
+<dt class="clearfix">
+<a href="{$child.url}" target="_blank">{$child.name|escape:html}</a>
+</dt>
+<!--{foreach from=$child.cat_id item=childer}--><dd><a target="_blank" href="{$childer.url}">{$childer.name|escape:html}</a></dd><!--{/foreach}-->
+</dl>
+ <!-- {/foreach} -->
+</div>
+
+</div></div>
+</li>
+<!-- {/foreach} -->
+</ul>
+</div> </div>
+</div>
+<div class="headerNavWrap" id="global_menu">
+<ul id="wideScreenTabShowID" class="headerNavMain clearfix">
+        <li style="z-index:799" {if $navigator_list.config.index eq 1} class="cur"{/if}><a href="index.php">{$lang.home}</a></li>
+          <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+        <li style="z-index:797" {if $nav.active eq 1} class="cur"{/if}><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></li>
+        <!-- {/foreach} -->
+</ul>
+</div>
+
+<div class="mini_cart clearfix" >
+	<div class="minicart_box" id="ECS_CARTINFO">{insert name='cart_flow_content'}</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function deleteCartGoods(rec_id)
+{
+	Ajax.call('delete_cart_goods.php', 'id='+rec_id, deleteCartGoodsResponse, 'POST', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function deleteCartGoodsResponse(res)
+{
+  if (res.error)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+      document.getElementById('ECS_CARTINFO').innerHTML = res.content;
+  }
+}
+</script>

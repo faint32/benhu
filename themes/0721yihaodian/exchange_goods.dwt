@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<script type="text/javascript">
+function $id(element)
+{
+  return document.getElementById(element);
+}
+//切屏--是按钮，_v是内容平台，_h是内容库
+function reg(str)
+{
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+
+  for(var i=0;i<bt.length;i++)
+  {
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+
+    bt[i].onclick=function()
+    {
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++)
+      {
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+
+</script>
+
+<style>
+.mod_sku .cartbox input {
+	margin-left:8px;
+	display:block;
+	height:44px;
+	line-height:44px;
+	background:url(images/btn_sprit.png) no-repeat;
+}
+.mod_sku .cartbox .add_cart,.mod_sku .cartbox .buy_btn1,.mod_sku .cartbox .buy_btn2 {
+	box-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+.mod_sku .cartbox .add_cart {
+	width:140px;
+	background-position:0 -304px;
+	font-size:18px;
+	text-indent:4px;
+	cursor:pointer;
+	font-weight:bold;
+	color:#FFF;
+	border:none;
+}
+
+.w980 .mod_sku .cartbox .add_cart {
+		width:140px;
+	background-position:0 -304px;
+	font-size:18px;
+	text-indent:4px;
+	cursor:pointer;
+	font-weight:bold;
+	color:#FFF;
+	border:none;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> <script>if(screen.width > 1210 && $(window).width() > 1210)
+{
+	$("body").addClass("w1200");
+}
+else
+{
+	$("body").addClass("w980");
+}</script>{insert_scripts files='easydialog.min.js,magiczoomplus.js,jquery.mousewheel.js,hScrollPane.js,yhd_goods.js'}<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+<div class="layout_wrap crumbbox"> 
+  <!--面包屑-->
+  <div class="crumb clearfix"> <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --> </div>
+</div>
+<!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
+<div class="layout_wrap">
+  <div class="mod_sku">
+    <div class="sku_box clearfix" id="J_skuBox">
+      <form action="exchange.php?act=buy" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+        <div class="sku_main" id="detail_sku_main">
+          <h1 class="prod_title" id="productMainName" title="{$goods.goods_style_name}">{$goods.goods_style_name}</h1>
+          <h2 class="sub_title">{$goods.goods_brief}</h2>
+          <div class="sku_unit price_array nbor">
+            <dl class="clearfix">
+              <dt style="width:86px;">{$lang.exchange_integral}</dt>
+              <dd><span class="oldprice">{$goods.exchange_integral}</span></dd>
+            </dl>
+          </div>
+          <div style="" id="sku_unit" class="sku_unit choicebox clearfix"> 
+            <!-- {* 开始循环所有可选属性 *} --> 
+            <!-- {foreach from=$specification item=spec key=spec_key} --> 
+            <!-- {if $spec.attr_type eq 1} -->
+            
+            <dl id="tasteList" class="tastelist clearfix">
+              <dt id="tasteAttrName">{$spec.name}</dt>
+              <dd>
+                <div class="tastebox">
+                  <ul class="clearfix">
+                    <!-- {foreach from=$spec.values item=value key=key} -->
+                    <li {if $key eq 0}class="selected"{/if}>{$value.label}
+                      <input id="spec_value_{$value.id}" style="display:none;" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked{/if} />
+                      <div class="lion">已选中</div>
+                    </li>
+                    <!-- {/foreach} -->
+                    <input type="hidden" name="spec_list" value="{$key}" />
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            <!-- {else} -->
+            
+            <dl id="tasteList" class="tastelist2 clearfix">
+              <dt id="tasteAttrName">{$spec.name}</dt>
+              <dd>
+                <div class="tastebox">
+                  <ul class="clearfix">
+                    <!-- {foreach from=$spec.values item=value key=key} -->
+                    <li>
+                      <input type="checkbox" name="spec_{$spec_key}" value="{$value.id}" id="spec_value_{$value.id}" onclick="changePrice()" />
+                      {$value.label} </li>
+                    <!-- {/foreach} -->
+                    <input type="hidden" name="spec_list" value="{$key}" />
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            
+            <!-- {/if} --> 
+            
+            <!-- {/foreach} --> 
+            <!-- {* 结束循环可选属性 *} --> 
+          </div>
+          <div class="sku_unit buy_act">
+            <div class="computing" id="computingArea">
+              <div class="computerbox clearfix">
+                <div class="cartbox" id="BtnArea">
+                  <input type="hidden" name="goods_id" value="{$goods.goods_id}" />
+                  <input type="submit" value="{$lang.exchange_goods}" class="add_cart" value="立即兑换"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div id="fubz_top" class="sku_sub">
+          <div class="commitbox"> <!-- #BeginLibraryItem "/library/service_commit.lbi" --><!-- #EndLibraryItem --> </div>
+          <div id="sku_brand_logo" class="sku_brand brand_img none" style="display: block; ">{if $goods.brand_logo}<a title="{$goods.goods_brand}" href="{$goods.goods_brand_url}" target="_blank"><img src="data/brandlogo/{$goods.brand_logo}"></a>{else}{$goods.goods_brand}{/if}</div>
+          
+          <!--在线客服 -->
+          <div id="yhdOnlineService" class="sku_unit sku_faq clearfix none nbor"> </div>
+          
+          <!--好评率-->
+          <div id="skuGoodCommentRateOuter" class="sku_unit none" style="display: block; "> 
+            <!--评论条-->
+            <div id="skuGoodCommentRate" class="none" style="display: block; ">
+              <p class="comment_tit">好评率</p>
+              <div class="commentbar"> <i></i>
+                <p id="commentbarrate"><em style="width:{$comment_percent.haoping_percent}%;"></em></p>
+                <span class="percent">{$comment_percent.haoping_percent}<em>%</em></span> </div>
+            </div>
+            <!--评论、问答数量-->
+            <div class="sku_combox">
+              <ul id="showSkuPeNumber" class="com_tab clearfix none" style="display: block; ">
+                <li id="commentsNum"><a class="none" onclick="detailSkuPeComment.forwardPL('p');detailSkuPeComment.detailPeCommentTracker('detail_head_ReviewsNum');" href="#desc_sppj" rel="comment" style="display: inline; ">{$goods.comments_number}人评论</a></li>
+              </ul>
+              <!--评论内容-->
+              
+              <div id="commentGreatDiv" class="com_tips none" {if $new_comment.user_name}style="display: block;"{else}style="display: none;"{/if}> <i></i>
+                <p>{$new_comment.user_name}：<i class="before"></i><span style="cursor:pointer;" title="{$new_comment.content}">{$new_comment.content}</span><i class="after"></i></p>
+              </div>
+            </div>
+          </div>
+          
+          <!--商品编号-->
+          <div class="sku_unit nbor goods_num">
+            <p class="service_goods"><span>产品编号</span><span id="productCode">{$goods.goods_sn}</span></p>
+          </div>
+
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="layout_w1200_g22 laymt"><div class="grid_4"> 
+    <!--1号店左侧-->
+    <div id="detail_buyTogether" style="display:none;" class="mod_box"> </div>
+    
+    <!-- TemplateBeginEditable name="购买过此商品的人还买过的商品" --> <!-- #BeginLibraryItem "/library/bought_goods.lbi" --> 
+    
+    <!-- {if $bought_goods} -->
+    <div id="detail_viewAndBuyRecomm" style="" class="mod_box mod_product_box">
+      <div class="box_hd"><strong>{$lang.shopping_and_other}</strong></div>
+      <div class="box_list">
+        <ul>
+          <!--{foreach from=$bought_goods item=bought_goods_data}-->
+          <li><a class="pro_img" href="{$bought_goods_data.url}" target="_blank"><img width="80" height="80" alt="{$bought_goods_data.goods_name}" src="{$bought_goods_data.goods_thumb}"></a>
+            <p class="pro_tit"><a href="{$bought_goods_data.url}" title="{$bought_goods_data.goods_name}" target="_blank">{$bought_goods_data.short_name}</a></p>
+            <p class="pro_price"><span class="color_red"> <!-- {if $bought_goods_data.promote_price neq 0} --> 
+              ¥{$bought_goods_data.formated_promote_price} 
+              <!-- {else} --> 
+              ¥{$bought_goods_data.shop_price} 
+              <!-- {/if} --></span><del>¥{$bought_goods_data.market_price}</del><a class="commandbtn" href="addToCart({$bought_goods_data.goods_id});">加入购物车</a></p>
+          </li>
+          <!-- {/foreach} -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- {/if} --> <!-- #EndLibraryItem --> <!-- TemplateEndEditable -->
+    <div id="detail_buyAndBuyRecomm" style="display:none;" class="mod_box mod_product_box"> </div>
+    <div id="detail_hotSaleList" style="" class="mod_box mod_search_sidlist clearfix">
+      <div class="box_hd">销量排行榜</div>
+      <div class="sidlist_box sidlist_slide">
+        <ul>
+          <li><a onclick="addTrackPositionToCookie('1','pms_dpSameBrand_0')" href="http://item.yhd.com/item/8573683_1?ref=pms_15_45_188" target="_blank" class="pro_img_small"><img src="http://d6.yihaodianimg.com/N03/M09/43/E9/CgQCtVFrzB2AJML0AADrPHnrwiw20501_90x90.jpg" width="90" height="90"><sup class="nub1"></sup></a>
+            <p class="price"><span class="color_red">¥1649</span><del>¥2499</del></p>
+            <p class="name"><a onclick="addTrackPositionToCookie('1','pms_dpSameBrand_0')" href="http://item.yhd.com/item/8573683_1?ref=pms_15_45_188" target="_blank">Samsung 三星 i879 智能双模双待手机（GSM/CDMA2000）白色 电信定制机</a></p>
+            <u></u></li>
+        </ul>
+      </div>
+    </div>
+  </div><div class="grid_18">
+    
+    <div id="J_fixedDes" class="des_fixed">
+      <div class="layout_wrap">
+        <div class="des">
+          <div class="des_search fl">
+            <div class="shopdsr clearfix">
+              <p title="" id="detail_desc_shopname_fixed" class="shopdsr_name"></p>
+              <p class="shopdsr_online" style="display:none;" id="detail_dzd_faq_fixed"></p>
+            </div>
+          </div>
+          <ul class="des_tab">
+            <li id="detail_desc_tab_fixed" class="des_tabbox"> <a class="tab cur" tabindex="0" href="javascript:void(0)">商品介绍</a> <a class="tab" href="javascript:void(0)" tabindex="1">规格及包装</a> <a class="tab" href="javascript:void(0)" tabindex="3">售后服务</a> <a tabindex="-100" id="desc_sppj_fixed" class="tab" href="javascript:void(0)">评价</a> </li>
+            <li class="des_act">
+              <div class="btnbox"> <a href="javascript:addToCart({$goods.goods_id});" id="detail_desc_addCartBtn_fixed" class="add_cart"><span>加入购物车</span></a> </div>
+              <div class="onlinebox" id="detail_desc_FaqBtn_fixed" style="display:none;"><a href="javascript:void(0);">商家客服</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="" id="J_des" class="des">
+      <ul class="des_tab">
+        <li id="detail_desc_tab" class="des_tabbox"> <a class="tab cur" tabindex="0" href="javascript:void(0)">商品介绍</a> <a class="tab" href="javascript:void(0)" tabindex="1">规格及包装</a> <a class="tab" href="javascript:void(0)" tabindex="3">售后服务</a> <a tabindex="-100" id="desc_sppj" class="tab" href="javascript:void(0)">评价</a> </li>
+        <li class="des_act">
+          <div class="btnbox"> <a href="javascript:void(0);" id="detail_desc_addCartBtn" style="display:none;" class="add_cart"><span>加入购物车</span></a> </div>
+          <div class="onlinebox" id="detail_desc_FaqBtn" style="display:none;"><a href="javascript:void(0);">商家客服</a></div>
+        </li>
+      </ul>
+      <div id="detail_desc_content" class="descon">
+        <div id="prodDetailCotentDiv" style="display: block;" class="desitem" tabindex="0"> 
+          <!--商品规格-->
+          <dl class="des_info clearfix">
+            <dt>规格参数 </dt>
+            <dd title="产地：其它国家">产地：其它国家</dd>
+            <dd title="可可脂含量：22%以下">可可脂含量：22%以下</dd>
+            <dd title="包装：盒装">包装：盒装</dd>
+            <dd title="制作工艺：非手工巧克力">制作工艺：非手工巧克力</dd>
+            <dd title="形状：其它形状">形状：其它形状</dd>
+          </dl>
+          <!--商品规格-->
+          <div class="desbox"> {$goods.goods_desc} </div>
+        </div>
+        <div style="display: none;" class="desitem desqoute" tabindex="1"> {$goods.goods_ggbz} </div>
+        <div style="display: none;" class="desitem desqoute" tabindex="3"> {$goods.goods_shfw} </div>
+      </div>
+    </div>
+    <div class="clearfix" id="buyer_experience">
+      <div id="productExperience" name="productExperience" class="tab two_column" >
+        <div class="comment_mod">
+          <div class="chart">
+            <div class="top_con clearfix">
+              <div class="score_num">
+                <p class="progress"> <strong>{$comment_percent.haoping_percent}<span>%</span></strong> 好评 </p>
+                <p class="num">共有<span>{$pager.record_count}</span>人参与评分</p>
+              </div>
+              <div class="evaluate_con clearfix">
+                <ul>
+                  <li> <span class="icon face1"></span> <span class="per"> <i class="p1" style="width:{$comment_percent.haoping_percent}%;"></i> </span> <span class="text">{$comment_percent.haoping_percent}%好评</span> </li>
+                  <li> <span class="icon face2"></span> <span class="per"> <i class="p2" style="width:{$comment_percent.zhongping_percent}%;"></i> </span> <span class="text">{$comment_percent.zhongping_percent}%中评</span> </li>
+                  <li> <span class="icon face3"></span> <span class="per"> <i class="p3" style="width:{$comment_percent.chaping_percent}%;"></i> </span> <span class="text">{$comment_percent.chaping_percent}%差评</span> </li>
+                </ul>
+              </div>
+              <div class="text_con"> <span class="tc">
+                <p>{if $factor eq 0}所有用户都可以对该商品<a href="javascript:void(0);" class="open_comment">发表评论</a>{elseif $factor eq 1}只有登陆的用户才可以对该商品<a href="javascript:void(0);" class="open_comment">发表评论</a>{elseif $factor eq 2}在本站购买过一次其他商品的用户才可以对该商品<a href="javascript:void(0);" class="open_comment">发表评论</a>{elseif $factor eq 3}购买过此{$goods_name}的顾客，在收到商品才可以对该商品<a href="javascript:void(0);" class="open_comment">发表评论</a>{/if}</p>
+                </span> </div>
+            </div>
+          </div>
+          <!-- #BeginLibraryItem "/library/comments.lbi" --> {insert_scripts files='transport.js,utils.js'}
+          <div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
+          <!-- #EndLibraryItem --> </div>
+      </div>
+    </div>
+  </div></div>
+        <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+        <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+<!-- {literal} -->
+onload = function()
+{
+  fixpng();
+}
+<!-- {/literal} -->
+</script>
+</html>

@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<span class="fl">Hi,&nbsp;</span>
+{if $user_info}
+ <div id="global_login" class="hd_login_wrap" > <span id="user_name" class="hd_login fl">{$user_info.username}</span><a target="_blank" class="hd_user_center fl" href="user.php">的<span>个人中心</span></a>
+        <ul>
+          <li><a target="_blank" tk="YHD_TOP_order" href="user.php?act=order_list">我的订单</a></li>
+          <li><a target="_blank" tk="YHD_TOP_points" href="user.php?act=affiliate">我的推荐</a></li>
+          <li><a target="_blank" tk="YHD_TOP_coupon" href="user.php?act=bonus">我的红包</a></li>
+          <li><a target="_blank" tk="YHD_TOP_mycollection" href="user.php?act=collection_list">我的收藏</a></li>
+          <li><a target="_blank" tk="YHD_TOP_comment" href="user.php?act=comment_list">我的评论</a></li>
+        </ul>
+		
+      </div>
+	  <a href="user.php?act=logout" class="logout blue_link" id="logout" style="background:none;">{$lang.user_logout}</a>
+{else}
+
+<div id="global_unlogin" class="hd_unlogin_wrap"> <span class="hd_unlogin">请<a class="blue_link" id="global_top_bar_loginLink" href="user.php">登录&nbsp;</a>/&nbsp;<a class="blue_link" tk="YHD_TOP_register" href="user.php?act=register">注册</a></span><a target="_blank" tk="YHD_TOP_myyihaodian" href="user.php">个人中心</a> </div>
+{/if}

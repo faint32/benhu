@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $related_goods} -->
+
+<dl id="detail_viewAndViewRecomm" class="recommnad clearfix"><dt>{$lang.releate_goods}</dt>
+    <!--{foreach from=$related_goods item=releated_goods_data}-->
+<dd data-hover="hover" style="border-left-color: rgb(255, 255, 255); "><span><a class="pic"  href="{$releated_goods_data.url}" target="_blank" title="{$releated_goods_data.goods_name}"><img src="{$releated_goods_data.goods_thumb}" width="115" height="115"></a><a class="tit" href="{$releated_goods_data.url}" target="_blank" title="{$releated_goods_data.goods_name}">{$releated_goods_data.short_name}</a><ins>¥   <!-- {if $releated_goods_data.promote_price neq 0} -->
+        {$releated_goods_data.formated_promote_price}
+        <!-- {else} -->
+        {$releated_goods_data.shop_price}
+        <!-- {/if} --></ins><del>¥{$releated_goods_data.market_price}</del><a class="commandbtn" href="{$releated_goods_data.url}">立即购买</a></span></dd>
+ <!--{/foreach}-->
+</dl>
+
+
+
+
+
+
+<!-- {/if} -->

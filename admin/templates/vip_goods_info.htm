@@ -1,0 +1,219 @@
+<!-- $Id: exchange_goods_info.htm 15544 2009-01-09 01:54:28Z zblikai $ -->
+{include file="pageheader.htm"}
+<script type="text/javascript" src="../style/js/jquery.min.js"></script>
+{insert_scripts files="../js/utils.js,selectzone.js,validator.js "}
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
+
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+
+<!-- start goods form -->
+<div class="tab-div">
+<form  action="vip_goods.php" method="post" name="theForm" onsubmit="return validate();">
+  <table width="90%" id="general-table">
+    <tr>
+      <td align="right">关键字</td>
+      <td><input type="text" name="keywords" size="30" />
+      <input type="button" value="{$lang.button_search}" class="button" onclick="searchGoods()" {if $form_action eq 'update'} disabled="true" {/if}></td>
+    </tr>
+    <tr>
+      <td class="label">
+	  <a href="javascript:showNotice('noticegoodsid');" title="{$lang.form_notice}">
+	  <img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}">
+	  </a>
+	  商品
+	  </td>
+      <td>
+        <select name="goods_id">
+        {$goods.option}
+        </select>
+        {$lang.require_field}
+       <br />
+	   <span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticegoodsid">需要先搜索商品，生成商品列表，然后再选择</span></td>
+    </tr>
+     <tr>
+      <td class="narrow-label"></td>
+	  </tr>
+     <tr>
+      <td class="narrow-label"></td>
+       <td>
+        等级 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现金
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 		<span id="label_user_integral">积分</span>
+	  </td>
+    </tr>
+	
+	 {foreach from=$user_rank_list item=user_rank name=loop}
+	 {if $user_rank.rank_name != '代销用户'}
+	     <tr>
+      <td class="narrow-label">{if $smarty.foreach.loop.index == 3}等级价格{/if}</td>
+      <td>  {$user_rank.rank_name} &nbsp;&nbsp;&nbsp;<input type="hidden" name="user_rank[]" value="{$user_rank.rank_id}">
+	  ¥<input type="text" name='user_price[]' {if $user_rank.user_price}value='{$user_rank.user_price}'{else}value='0'{/if}/>  &nbsp;&nbsp;&nbsp;
+	  <input type="text"  name='user_integral[]'  {if $user_rank.user_integral}value='{$user_rank.user_integral}'{else}value='0'{/if}/> </td>
+    </tr>
+	{/if}
+     {/foreach}
+ 	<!--
+       <tr>
+      <td class="narrow-label"></td>
+      <td>   现金对应的值为-1时，删除原先设置的vip价格和积分设置（不推荐设置为-1）  </td>
+	  </tr>
+	  -->
+    <tr>
+      <td class="narrow-label">是否可兑换</td>
+      <td>
+        <input type="radio" name="is_exchange" value="1" {if $goods.is_exchange eq 1}checked{/if}> 可兑换 
+        <input type="radio" name="is_exchange" value="0" {if $goods.is_exchange eq 0}checked{/if}> 不可兑换{$lang.require_field}
+		</td>
+    </tr>
+	<!--
+	 <tr>
+      <td class="narrow-label">是否会员专享</td>
+      <td>
+        <input type="radio" name="is_vip_only" value="1" {if $goods.is_vip_only eq 1}checked{/if}> 会员专享
+        <input type="radio" name="is_vip_only" value="0" {if $goods.is_vip_only eq 0}checked{/if}> 非会员专享{$lang.require_field}
+	  </td>
+    </tr>
+	-->
+	 <tr>
+      <td class="narrow-label">兑换类型</td>
+      <td>
+        <input type="radio" name="is_integral_buy" value="1" {if $goods.is_integral_buy eq 1}checked="checked"{/if}> 积分换购
+        <input type="radio" name="is_integral_buy" value="0" {if $goods.is_integral_buy eq 0}checked="checked"{/if}> 会员专享{$lang.require_field}
+	  </td>
+    </tr>
+	 <tr>
+      <td class="narrow-label">是否下期开放</td>
+      <td>
+         <input type="radio" name="is_next" value="1" {if $goods.is_next eq 1}checked{/if} onchange="display_element('isNext_startTime',1);"> 下期开放
+         <input type="radio" name="is_next" value="0" {if $goods.is_next eq 0}checked{/if} onchange="display_element('isNext_startTime',0);"> 非下期开放{$lang.require_field}
+	  </td>
+    </tr>
+	
+	 <tr id="isNext_startTime" {if $goods.is_next eq 0} style="visibility:hidden"{/if}>
+      <td class="narrow-label">开始时间</td>
+      <td>
+        <input name="start_time" type="text" id="start_time" size="22" value='{$goods.begin_time}' readonly="readonly" />
+		<input name="selbtn1" type="button" id="selbtn1" 
+		onclick="return showCalendar('start_time', '%Y-%m-%d %H:%M', '24', false, 'selbtn1');"
+		value="{$lang.btn_select}" class="button"/>
+	  </td>
+    </tr>
+	
+  </table>
+
+  <div class="button-div">
+    <input type="hidden" name="act" value="{$form_action}" />
+    <input type="submit" value="{$lang.button_submit}" class="button"  />
+    <input type="reset" value="{$lang.button_reset}" class="button" />
+  </div>
+</form>
+</div>
+<!-- end goods form -->
+<script language="JavaScript">
+
+{literal}
+onload = function()
+{
+  // 开始检查订单
+  startCheckOrder();
+}
+function display_element(id,flag)
+{
+var tmp = document.getElementById(id);
+if(flag=='0')
+{
+tmp.style.visibility="hidden";
+}
+else if(flag == '1')
+{
+tmp.style.visibility="visible";
+}
+}
+
+function validate()
+{
+
+  var validator = new Validator('theForm');
+
+  validator.isNullOption("goods_id", '商品名不能为空');
+  
+  
+ validator.isNumberArray("user_price[]", '现金不能为非数字', true);
+ validator.isNumberArray("user_integral[]", '积分不能为非数字', true);
+
+  return validator.passed();
+}
+
+function searchGoods()
+{
+    var filter = new Object;
+    filter.keyword = document.forms['theForm'].elements['keywords'].value;
+
+    Ajax.call('vip_goods.php?is_ajax=1&act=search_goods', filter, searchGoodsResponse, 'GET', 'JSON')
+}
+
+function searchGoodsResponse(result)
+{
+  var frm = document.forms['theForm'];
+  var sel = frm.elements['goods_id'];
+
+  if (result.error == 0)
+  {
+    /* 清除 options */
+    sel.length = 0;
+
+    /* 创建 options */
+    var goods = result.content;
+    if (goods)
+    {
+        for (i = 0; i < goods.length; i++)
+        {
+            var opt = document.createElement("OPTION");
+            opt.value = goods[i].goods_id;
+            opt.text  = goods[i].goods_name;
+            sel.options.add(opt);
+        }
+    }
+    else
+    {
+        var opt = document.createElement("OPTION");
+        opt.value = 0;
+        opt.text  = search_is_null;
+        sel.options.add(opt);
+    }
+  }
+
+  if (result.message.length > 0)
+  {
+    alert(result.message);
+  }
+}
+
+/*是否积分购切换*/
+$(function(){
+
+ $('input[name="is_integral_buy"]').each(function(){
+   if($(this).attr('checked') == 'checked' && $(this).val() == 0)
+   {
+     $('input[name="user_integral[]"]').hide();
+	 $('#label_user_integral').hide();
+   }
+ });
+ 
+$('input[name="is_integral_buy"]').change(function(){
+  var is_integral_buy =  $(this).val();
+   if(is_integral_buy == 0)
+   {
+     $('input[name="user_integral[]"]').hide();
+	 $('#label_user_integral').hide();
+   }
+   else if(is_integral_buy == 1)
+   {
+     $('input[name="user_integral[]"]').show();
+	 $('#label_user_integral').show();
+   }
+});
+});
+{/literal}
+</script>
+{include file="pagefooter.htm"}

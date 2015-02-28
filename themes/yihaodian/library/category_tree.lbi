@@ -1,0 +1,99 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="nav-wrap middle">
+  <div class="nav">
+    <div class="goods">
+      <div>
+       <script>
+          function xianshi() {
+              document.getElementById("dvtype").style.display = "";
+          }
+		  
+$(function(){
+var curUrl = window.location.href
+var curPage = curUrl.split("/");
+var lastPara = curPage[curPage.length-1];
+   $('.nav-list-currenOrNot a').each(function(index){
+    if($(this).attr('href') == lastPara)
+	{
+	   $(this).addClass('on');
+	}
+	else if( $(this).hasClass('on'))
+	{
+	  $(this).removeClass('on');
+	}
+   });
+});
+      </script>
+        <h2> <a onmouseover="xianshi()">所有商品分类</a></h2>
+      </div>
+
+       <div id="dvtype" onmouseout="yincang()" class="all-goods" style="display:none;">
+<!--{foreach from=$categories item=cat name=cats}-->
+        <div class="item  {if $smarty.foreach.cats.index <1}btnone{/if}">
+          <div class="product">
+            <h3 class="mylistbj{$smarty.foreach.cats.iteration}">
+                    {$cat.name|escape:html}
+            </h3>
+            <div class="product_classify">
+                
+                    <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                        <!--{if $smarty.foreach.foo.index < 6 }-->
+                    <a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a>
+                        <!--{/if}-->
+                    <!-- {/foreach} -->
+            </div>
+            <s style="display:block;"></s> 
+          </div>
+            
+          <div class="product-wrap pos{$smarty.foreach.cats.iteration}"> 
+            <!--LOGO-->
+            <div class="cf">
+              <div>
+                <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                <h4><a href="{$child.url}" target="_blank">{$child.name|escape:html}</a></h4>
+                <p class="cf">
+                  <!--{foreach from=$child.cat_id item=childer}-->
+                  <a href="{$childer.url}" target="_blank">{$childer.name|escape:html}</a>
+                  <!-- {/foreach} -->
+                </p>
+                <!-- {/foreach} -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+         <!-- {/foreach} -->
+    </div>
+    </div>
+    <ul class="nav-list cf nav-list-currenOrNot">
+        <li><a href="index.php">{$lang.home}</a></li>
+         {foreach name=nav_middle_list from=$navigator_list.middle item=nav}
+        <li><a href="{$nav.url}" target="_blank" >{$nav.name}</a></li>
+        {/foreach}
+    </ul>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+function deleteCartGoods(rec_id)
+{
+	Ajax.call('delete_cart_goods.php', 'id='+rec_id, deleteCartGoodsResponse, 'POST', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function deleteCartGoodsResponse(res)
+{
+  if (res.error)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+      document.getElementById('ECS_CARTINFO').innerHTML = res.content;
+  }
+}
+</script>

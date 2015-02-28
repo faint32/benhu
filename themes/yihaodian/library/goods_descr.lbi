@@ -1,0 +1,90 @@
+﻿    <div class="main middle over item_pt20">
+    <div class="main_1_right_1 item_2_left">
+                  <h3>购买过该商品的人还购买过</h3>
+<!--{foreach from=$bought_goods item=bought_goods_data}-->
+                    <dl>
+                      <dt><a href="{$bought_goods_data.url}"><img class="disable_hover_attr" src="{$bought_goods_data.goods_thumb}" width="178" height="178" /></a></dt>
+                        <dd><a class="main_1_right_1_a" href="{$bought_goods_data.url}">{$bought_goods_data.goods_name}</a><span class="main_1_right_1_b">￥{$bought_goods_data.shop_price}</span><span class="main_1_right_1_c" style="width:100px">已售<b>{$bought_goods_data.goods_num}</b>件</span></dd>
+                    </dl>
+<!-- {/foreach} -->                  
+                   
+      </div>
+      <div class="item_2_right">
+        <div id=item_con>
+  <div id=item_tags>
+    <ul>
+      <li class=zzjs_net><a onClick="select_zzjs('wwwzzjsnet0',this)" href="javascript:void(0)">商品详情</a> </li>
+      <li>
+          <a onClick="select_zzjs('wwwzzjsnet1',this)" href="javascript:void(0)">
+            购买评价(<!--{if $comment_percent.count}{$comment_percent.count}{else}0{/if}-->)
+          </a> 
+      </li>                        
+      <li> 
+          <a onClick="select_zzjs('wwwzzjsnet2',this)" href="javascript:void(0)">
+            销售记录(<!--{if $sale_history}{$count_sale_history}{else}0{/if}-->)
+          </a> 
+      </li>
+      <li><a onClick="select_zzjs('wwwzzjsnet3',this)" href="javascript:void(0)">服务承诺</a> </li>
+    </ul>
+    </div>
+<div id=wwwzzjsnet>
+    <div class="wwwzzjsnet zzjs_net" id=wwwzzjsnet0>
+        <!--商品规格--> 
+          <!-- {if $properties} -->
+          <div class="description_1" style="display:none">
+            <dt>规格参数 </dt>
+            <!-- {foreach from=$properties item=property key=key} -->
+            <span>{$property.name|escape:html}：{$property.value}</span>
+            <!-- {/foreach}-->
+            
+          </div>
+          <!-- {/if}--> 
+          <!--商品规格-->
+
+  <div class="item_2_right_img">{$goods.goods_desc}</div>
+    </div>
+    <div class=wwwzzjsnet id=wwwzzjsnet1>
+    
+      <div class="description_2">
+          <div class="description_2_a"><span>{$comment_percent.haoping_percent}%</span>&nbsp;&nbsp;<b>用户满意</b><br />共有{if $comment_percent.count}{$comment_percent.count}{else}0{/if}人参与评价
+            </div>
+            <div class="description_2_b">
+              <dl>
+                  <dt>满意</dt>
+                    <div class="a"><p  style="width:{$comment_percent.haoping_percent}%;"></p></div>
+                    <dd>{$comment_percent.haoping_percent}%</dd>
+                </dl>
+                <dl>
+                  <dt>一般</dt>
+                    <div class="b"><p style="width:{$comment_percent.zhongping_percent}%;"></p></div>
+                    <dd>{$comment_percent.zhongping_percent}%</dd>
+                </dl>
+                <dl>
+                  <dt>不满意</dt>
+                    <div class="c"><p style="width:{$comment_percent.chaping_percent}%;"></p></div>
+                    <dd>{$comment_percent.chaping_percent}%</dd>
+                </dl>
+            </div>
+        </div>
+
+    <!-- #BeginLibraryItem "/library/comments.lbi" --> 
+          {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}
+          {insert name='comments' type=$type id=$id}
+    <!-- #EndLibraryItem -->
+    </div>
+
+    <div class='wwwzzjsnet' id='wwwzzjsnet2'>
+      <div class="description_1">
+        30天内：交易中{$recently_buy.trading}笔，交易成功{$recently_buy.traded}笔！
+      </div>
+      <div id="ECS_BOUGHT">
+          <!--{insert name="sale_history" type=$type id=$id}-->
+      </div>
+    </div>
+    <div class=wwwzzjsnet id=wwwzzjsnet3>
+      {$fuwu}
+    </div>
+    </div>
+</div>
+      </div>
+    </div>

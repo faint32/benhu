@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+  <ul class="tab_content clearfix time_buying" id="limitBuy" style="display: block;">
+    <!--{foreach from=$promotion_goods item=goods }-->
+    
+    <li class=""> <a target="_blank" title="{$goods.name|escape:html}" class="pro_img" href="{$goods.url}"> <img src="{$goods.thumb}" ></a> <a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_name|escape:html}</a>
+      <p class="tl"><strong>{$goods.promote_price}</strong><del>{$goods.shop_price}</del></p>
+      <p class="endtime last_time" value="{$goods.end_date}"></p>
+    </li>
+    
+    <!--{/foreach}-->
+  </ul>
+<!-- {/if} -->

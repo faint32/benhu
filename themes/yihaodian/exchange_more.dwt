@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+{insert_scripts files='jquery.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js,top.js,curvycorners.src.js'}
+{insert_scripts files='all_top_nav.js,top.js,curvycorners.src.js'}
+<link href="new_style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/integral.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+ <!-- #BeginLibraryItem "/library/page_header.lbi" -->
+ <!-- #EndLibraryItem -->
+   <!-- #BeginLibraryItem "/library/jifen_category.lbi" -->
+ <!-- #EndLibraryItem -->
+    <div class="integral">
+    <span class="integral_goods_list_title">
+   	  <h2><!--{if $type=='new'}-->精品上新<!--{else}-->超值兑换<!--{/if}--></h2>
+                </span>
+		    <div class="integral_goods_list">
+                <!--{foreach from=$more_exchange_goods item=good}-->
+				<dl>
+                	<dt><a href="{$good.url}"><img src="{$good.goods_thumb}" /></a></dt>
+                    <dd class="name"><a href="{$good.url}">{$good.goods_name}</a></dd>
+                  <div class="price">
+                   	<ul class="price_1">
+                        	<li class="price_1_a">原价：￥{$good.shop_price}</li>
+                            <li class="price_1_b"><span>￥{$good.needed_money}</span>+<b>{$good.exchange_integral}</b>积分</li>
+                        </ul>
+                    </div>
+                </dl>
+				<!--{/foreach}-->
+            </div>
+            <div class="integral_list_page">
+               <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem -->
+            </div>
+    </div>
+  
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

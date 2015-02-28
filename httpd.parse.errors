@@ -1,0 +1,1 @@
+Line 6: Unrecognized string: RewriteCond %{HTTP:Host} (?:www\.)?benhu\.com

@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ <div id="preview">
+          <div class=jqzoom>
+			 <!-- {if $pictures}--> 
+				<img  id='bigImg' width='350' height='350' src="{$pictures.0.img_url}" jqimg="{$pictures.0.img_original}">  			
+			<!-- {/if}-->
+          </div>
+          <div id='spec'>
+			  <div id='specLeft' class="control specLeftT"></div>
+			  <div id='specList'>
+				<ul class='listImg' >
+				    <!-- {if $pictures}--> 
+					<!-- {foreach from=$pictures item=picture}-->
+						 <li><img src="{$picture.thumb_url}" src_H="{$picture.img_url}" src_D="{$picture.img_original}">  </li>
+					<!--{/foreach}--> 
+					<!-- {/if}-->
+				</ul>
+			  </div>
+			  <div id='specRight' class="control specRightT"></div>
+          </div>
+  </div>
+  
+    <div class="item_collect">
+    	<a class="a" href="javascript:collect('{$goods.goods_id}')">收藏该商品</a>
+    
+ <div  id="bdshare"  class="bdshare_t bds_tools get-codes-bdshare" >  
+		<span class="bds_more">分享给朋友</span>
+</div>
+	
+
+   <script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+    </script>
+ </div>
+ 		<style type="text/css">
+ .bdshare-button-style0-16 a, .bdshare-button-style0-16 .bds_more{
+	background-image : url("");
+	}
+   
+
+</style>
+ 

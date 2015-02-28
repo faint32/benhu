@@ -1,0 +1,3 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<a href="affiche.php?ad_id={$ad.ad_id}&amp;uri={$ad.ad_link}">
+<img src="{$src}" width="{$ad.ad_width}" height="{$ad.ad_height}"/>  {if $ad.class}<div class="{$ad.class}"></div>{/if}</a>

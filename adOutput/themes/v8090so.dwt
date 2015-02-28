@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+	<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+	<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+	<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+	<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+    <head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <link rel="stylesheet" type="text/css" href="http://www.benhu.com/adOutput/template/ablum/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="http://www.benhu.com/adOutput/template/ablum/css/elastislide.css" />
+		<link rel="stylesheet" type="text/css" href="http://www.benhu.com/adOutput/template/ablum/css/custom.css" />
+		<script src="http://www.benhu.com/adOutput/template/ablum/js/modernizr.custom.17475.js"></script>
+		<style>
+		 	#carousel li a span{
+		 		position:absolute;
+  				bottom:0px;
+  				text-align: center;
+  				line-height: 30px;
+  				color: black;
+  				width: 180px;
+  				overflow: hidden;
+  				font-size: 14px;
+		 	}
+		</style>
+    </head>
+    <body>
+		<div class="container demo-1">
+		 
+            <div class="main">
+				<!-- Elastislide Carousel -->
+				<ul id="carousel" class="elastislide-list">
+				<!--{foreach from = $goods_list item = good}-->
+				   <li>
+				   	<a target="_blank" href="http://www.benhu.com/{$good.url}">
+				   		<img style="height:200px;" src="http://www.benhu.com/{$good.goods_img}" alt="image20" />
+				   		<span style="left:{$good.left}px;">
+  							{$good.goods_name}
+						</span>
+				   	</a>
+				   </li>
+				<!--{/foreach}-->
+				</ul>
+				<!-- End Elastislide Carousel -->
+			</div>
+		</div>
+		<script type="text/javascript" src="http://www.benhu.com/adOutput/jquery.js"></script>
+		<script type="text/javascript" src="http://www.benhu.com/adOutput/template/ablum/js/jquerypp.custom.js"></script>
+		<script type="text/javascript" src="http://www.benhu.com/adOutput/template/ablum/js/jquery.elastislide.js"></script>
+		<script type="text/javascript">
+				$( '#carousel' ).elastislide();
+		</script>
+    </body>
+</html>

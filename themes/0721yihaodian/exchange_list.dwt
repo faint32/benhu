@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> {insert_scripts files='yhd_category.js'}<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+<div id="searchwrap" class="searchwrap wrap">
+  <div class="clearfix">
+    <div class="layout_search_sidebar" id="searchColSub"> 
+      <!--left start-->
+      <div class="searchLeftBanner"> <!-- TemplateBeginEditable name="左边区域" -->
+<!-- #BeginLibraryItem "/library/exchange_hot.lbi" -->
+
+<!-- {if $hot_goods}-->
+
+<div id="pms_searchlook" class="mod_search_sidlist mt clearfix">
+  <h2 class="search_title">精品推荐</h2>
+  <div class="sidlist_box">
+    <ul>
+      <!--{foreach from=$hot_goods item=goods}-->
+      <li> <a target="_blank" class="pro_img" title="{$goods.name|escape:html}" href="{$goods.url}"> <img src="{$goods.thumb}" width="115" height="115"><sup class="ico_search_list">精品</sup></a>
+        <p class="pirce"> <span class="color_red">
+          <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+          </span> </p>
+        <p class="name"> <a target="_blank" href="{$goods.url}" class="name">{$goods.short_style_name}</a> </p>
+      </li>
+      <!--{/foreach}-->
+    </ul>
+  </div>
+</div>
+
+<!-- {/if} -->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --> </div>
+      <!--left end--> 
+    </div>
+    <!--right start-->
+    
+    <div class="layout_search_main mt" id="bodyRight"> <!-- #BeginLibraryItem "/library/exchange_list.lbi" --><!-- #EndLibraryItem --> 
+      <div id="plist"> <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+    </div>
+    
+    <!--right end--> 
+    
+  </div>
+</div>
+
+
+<!--帮助-->
+ <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!--帮助--> 
+
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

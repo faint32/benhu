@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/category.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="style/js/jquery.min.js"></script>
+<script type="text/javascript" src="style/js/left_nav_2.js"></script>
+<script type="text/javascript" src="style/js/category.js"></script>
+
+
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+
+    <div class="main middle over">
+	<div class="category_left over">
+           <!-- #BeginLibraryItem "/library/category_treeS.lbi" --><!-- #EndLibraryItem --> 
+    <div id="smallDiv" class="main_1_right_1 category_left_mt">
+                	<h3>精品推荐</h3>
+
+<!--{foreach from=$best_goods item=goods}-->
+                    <dl>
+                    	<dt><a href="{$goods.url}"><img src="{$goods.thumb}" width="178" height="178" /></a></dt>
+                        <dd><a class="main_1_right_1_a" href="{$goods.url}">{$goods.short_style_name}</a>
+                        <span class="main_1_right_1_b">¥<!-- {if $goods.promote_price neq ""} --> 
+                  {$goods.promote_price} 
+                  <!-- {else}--> 
+                  {$goods.shop_price} 
+                  <!--{/if}--> </span><span class="main_1_right_1_c">已售<b>{$goods.number}</b>件</span></dd>
+                    </dl>
+<!--{/foreach}-->                   
+      </div>
+</div>
+    <div class="category_right over">
+    	<div class="category_right_1">
+           <span style="line-height:35px;padding:0 10px">搜索结果</span>
+        	
+<!--{foreach from=$filter_attr_list item=filter_attr}-->
+      <dt>{$filter_attr.filter_attr_name|escape:html}</dt>
+                <dd>
+			<strong> :</strong>
+			<!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+                                <a href="javascript:void(0);"  class="cur"> {$attr.attr_value} </a>
+				<!-- {else} -->
+				<a href="{$attr.url}">{$attr.attr_value}</a>&nbsp;
+				<!-- {/if} -->
+			<!--{/foreach}-->
+			</div>
+      <!--{/foreach}-->
+            </dl>
+            
+        </div>
+		
+	<!--{if $goods_list}-->
+            <form action="search.php" method="post"  name="listform" id="listform">
+              <input type="hidden" name="sort" id="sort"  value=""/>
+			  <input type="hidden" name="order" id="order" value=""/>
+              <input type="hidden" name="imageField"  class="btn_small" style="border:none; top:0;" value="提交"/>
+              <input type="hidden" name="page" value="{$pager.page}" />
+              <input type="hidden" name="display" value="{$pager.display}" id="display" />
+              <!--{foreach from=$pager.search key=key item=item}--> 
+              {if $key neq "sort" and $key neq "order"}
+              {if $key eq 'keywords'}
+              <input type="hidden" name="{$key}" value="{$item|escape:decode_url}" />
+              {else}
+              <input type="hidden" name="{$key}" value="{$item}" />
+              {/if}
+              {/if} 
+              <!--{/foreach}-->
+            </form>
+            <!--{/if}--> 
+   <script>
+      function listform_onsubmit(sort,order)
+	  {
+	   $('#sort').val(sort);
+	  var last_sort="{$pager.search.sort}";
+
+	if(last_sort==sort) 
+	{
+     	order =  ( order =='DESC' ? 'ASC' : 'DESC');  
+		}
+		else
+		{
+		  order = 'ASC';
+		}
+		 $('#order').val(order);
+		 $('#listform').submit();
+	  }
+   </script>
+  <div class="category_right_2" id="goods_list">
+   <a class="category_right_2_<!-- {if $pager.search.sort == 'goods_id'} -->a<!--{else}-->a_1<!-- {/if} -->"    href="javascript:listform_onsubmit('goods_id','{$pager.search.order}')">默认</a>
+   <a class="category_right_2_<!-- {if $pager.search.sort == 'sales_volume'} --><!--{if $pager.search.order=='DESC'}-->b_2<!--{else}-->b_1<!--{/if}--><!--{else}-->b<!-- {/if} -->"  href="javascript:listform_onsubmit('sales_volume','{$pager.search.order}')" >销量</a>
+   <a class="category_right_2_<!-- {if $pager.search.sort == 'comments_number'} --><!--{if $pager.search.order=='DESC'}-->b_2<!--{else}-->b_1<!--{/if}--><!--{else}-->b<!-- {/if} -->" href="javascript:listform_onsubmit('comments_number','{$pager.search.order}')" >好评</a>
+   <a class="category_right_2_<!-- {if $pager.search.sort == 'shop_price'} --><!--{if $pager.search.order=='DESC'}-->b_2<!--{else}-->b_1<!--{/if}--><!--{else}-->b<!-- {/if} -->"    href="javascript:listform_onsubmit('shop_price','{$pager.search.order}')"  >价格</a>
+ </div>
+		       <div class="main_2_left over" >
+<form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+ 
+    <!--{foreach name=goods_list from=$goods_list item=goods}-->
+        <!-- {if $goods.goods_id} -->
+        <dl>
+            	<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" width="178" height="178"/></a></dt>
+                <dd><a href="{$goods.url}">{$goods.goods_name}</a>
+                	<span class="main_2_left_price1">￥{$goods.shop_price}</span><span class="main_2_left_price2">￥{$goods.market_price}</span>
+                </dd>
+            </dl>
+	<!-- {/if} -->
+    <!--{/foreach}-->
+  
+    </form>
+</div>
+
+	
+	   
+   <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+   
+   
+     </div>
+</div>
+     
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

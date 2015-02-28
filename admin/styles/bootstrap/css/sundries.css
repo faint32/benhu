@@ -1,0 +1,38 @@
+  .other_row
+   {
+    margin-top:10px;
+   }
+   .notice_lable
+   {
+    float:right; 
+    margin:5px 10px 0px 10px;
+   }
+   .coupon_lable
+   {
+    font-size:16px;
+   }
+ /*  .coupon_rightdiv
+   {
+    width:200px;
+   }*/
+
+   .row .alert_format{
+    height:10px;
+   
+   }
+   .row .alert_format .alert-danger{
+    display: none;
+    height:10px;
+   }
+  .alert_format .alert .alert_words{
+      margin-top:-10px;
+   }
+
+   #footer
+   {
+     border: 0 solid #bbdde5;
+   }
+   #coupons_list .table td span{
+    max-width:60px;
+    }
+

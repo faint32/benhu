@@ -1,0 +1,18 @@
+    <table class="item_sales" width="960" border="0" cellspacing="0" cellpadding="0">
+            <tr class="title">
+              <td width="260">买家</td>
+              <td width="130">购买价格</td>
+              <td width="130">数量</td>
+              <td>付款时间</td>
+              <!--<td>款式和型号</td>-->
+            </tr>
+  <!--{foreach from=$sale_historys item=saleItme}-->
+            <tr>              
+                      <td class="name" style="text-align:center">{$saleItme.consignee}</td>
+      <td class="price">¥{$saleItme.pay_fee}</td>
+      <td>{$saleItme.goods_number}</td>
+      <td>{$saleItme.pay_time}</td>
+      <!--<td>$saleItme.goods_attr</td>  -->            
+            </tr>              
+<!-- {/foreach} -->               
+        </table>

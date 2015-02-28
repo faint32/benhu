@@ -1,0 +1,15 @@
+﻿	  .shaidan{ width:100%; margin-top:10px; overflow:hidden;}
+.shaidan ul{ width:500px; overflow:hidden;}
+.shaidan ul li{ width:50px; height:50px; float:left; overflow:hidden; margin-right:5px; border:1px #e3e3e3 solid; padding:4px;}
+.current img{
+cursor:url(http://www.benhu.com/style/cursor/zoom_out.png),url(http://www.benhu.com/style/cursor/zoom_out.cur),auto;				    
+}
+.shaidan ul li img{
+						width:50px; height:50px; overflow:hidden;
+cursor:url(http://www.benhu.com/style/cursor/zoom_in.png),url(http://www.benhu.com/style/cursor/zoom_in.cur),auto;
+				}
+.shaidan_a img {
+max-width:830px;
+        max-height:600px; 
+        scale:expression((this.offsetWidth > this.offsetHeight)?(this.style.width = this.offsetWidth >= 830 ? "830px" : "auto"):(this.style.height = this.offsetHeight >= 600 ? "600px" : "auto")); display:inline !important;border:1px #e3e3e3 solid; padding:4px; margin-top:5px;
+		}

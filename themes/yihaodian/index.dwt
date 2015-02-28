@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta property="qc:admins" content="12240364526256056375" />
+<meta property="wb:webmaster" content="609fcdee4c3f7d0b" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}-最优质的母婴生活馆 最快乐的亲子购物行 正品 精品  良品   奶瓶、奶嘴、纸尿裤、学饮杯、睡袋、童装、图书</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+{* 包含脚本文件 *}
+</head>
+<body>
+    <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="style/js/combine/index.js"></script> 
+   <!--左侧无极限菜单-->
+    <div class="nav-wrap middle">
+  <div class="nav">
+    <div class="goods">
+      <div>
+      <script>
+          function xianshi() {
+              document.getElementById("dvtype").style.display = "";
+          }
+      </script>
+        <h2> <a onclick="xianshi()">所有商品分类</a></h2>
+      </div>
+
+      <div id="dvtype" onmouseout="yincang()" class="all-goods" style="display:none;">
+<!--{foreach from=$categories item=cat name=cats}-->
+        <div class="item  {if $smarty.foreach.cats.index <1}btnone{/if}">
+          <div class="product">
+            <h3 class="mylistbj{$smarty.foreach.cats.iteration}">
+                    {$cat.name|escape:html}
+            </h3>
+            <div class="product_classify">
+                
+                    <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                        <!--{if $smarty.foreach.foo.index < 6 }-->
+                    <a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a>
+                        <!--{/if}-->
+                    <!-- {/foreach} -->
+            </div>
+            <s style="display:block;"></s> 
+          </div>
+            
+          <div class="product-wrap pos{$smarty.foreach.cats.iteration}"> 
+            <!--LOGO-->
+            <div class="cf">
+              <div>
+                <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                <h4><a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a></h4>
+                <p class="cf">
+                  <!--{foreach from=$child.cat_id item=childer}-->
+                  <a href="{$childer.url}" target="_blank">{$childer.name|escape:html}</a>
+                  <!-- {/foreach} -->
+                </p>
+                <!-- {/foreach} -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+         <!-- {/foreach} -->
+    </div>
+    </div>
+    <ul class="nav-list cf">
+        <li><a href="{$staticPages.index}" class="on">{$lang.home}</a></li>
+         {foreach name=nav_middle_list from=$navigator_list.middle item=nav}
+        <li><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></li>
+        {/foreach}
+    </ul>
+
+  </div>
+</div>
+<!--左侧无极限菜单结束-->
+    
+            <div id="focus">
+    <ul><!-- #BeginLibraryItem "/library/ad.lbi" --><!-- #EndLibraryItem --></ul>
+        
+  </div>
+  <div class="main over middle">
+        <div class="main_1_left over">
+        <div class="mytab">
+        <div class="title cf">
+          
+          <ul class="title-list fr cf ">
+          <li class="on" style="width:328px">精品推荐</li>
+            <li style="width:328px">爆款新品</li>
+            <!--<li>团购</li>-->
+            <li style="width:328px">当季热卖</li>
+          </ul>
+        </div>
+
+<div class="tabproduct-wrap">
+    <!--案例1-->
+    <div class="tabproduct show">
+      
+      <ul class="cf over">
+            <!--{foreach from=$best_goods item=goods name=name}-->
+      <div class="mytab_hoverbox {if $smarty.foreach.name.iteration !=5 && $smarty.foreach.name.iteration !=10}mr10{/if}">
+      <b class="tabproduct_price_3"><a href="{$goods.url}"  target="_blank"></a></b>
+        <li class="mosaic-backdrop">
+          <a href="{$goods.url}" class="imgwrap"><img src="" class="lazyload"  id="index_bestgoods_{$smarty.foreach.name.index}" data-lazyload="{$goods.thumb}" width="165" height="198"  target="_blank"/></a>
+          <p class="textwrap"> <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></p>
+          <p class="jiagewrap">
+          <span class="tabproduct_price_1">￥{$goods.shop_price}</span>
+          <span class="tabproduct_price_2">￥{$goods.market_price}</span>
+          </p>
+        </li>
+        </div>
+        <!--{/foreach}-->
+      </ul>
+    </div>
+  <!--案例2-->
+    <div class="tabproduct">
+      
+      <ul class="cf over">
+            <!--{foreach from=$new_goods item=goods name=name}-->
+      <div class="mytab_hoverbox {if $smarty.foreach.name.iteration !=5 && $smarty.foreach.name.iteration !=10}mr10{/if}">
+      <b class="tabproduct_price_3"><a href="{$goods.url}"  target="_blank"></a></b>
+        <li class="mosaic-backdrop">
+          <a href="{$goods.url}" class="imgwrap"><img src="" class="lazyload"  id="index_newgoods_{$smarty.foreach.name.index}" data-lazyload="{$goods.thumb}" width="165" height="198"  target="_blank"/></a>
+          <p class="textwrap"> <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></p>
+          <p class="jiagewrap">
+          <span class="tabproduct_price_1">￥{$goods.shop_price}</span>
+          <span class="tabproduct_price_2">￥{$goods.market_price}</span>
+          </p>
+        </li>
+        </div>
+        <!--{/foreach}-->
+      </ul>
+    </div>
+
+    <!--案例4-->
+    <div class="tabproduct">
+      
+      <ul class="cf over">
+      <!--{foreach from=$hot_goods item=goods name=foo}-->
+       <div class="mytab_hoverbox {if $smarty.foreach.foo.iteration !=5 && $smarty.foreach.foo.iteration !=10}mr10{/if}">
+      <b class="tabproduct_price_3"><a href="{$goods.url}"></a></b>
+        <li class="mosaic-backdrop">
+          <a href="{$goods.url}" class="imgwrap"><img src="" class="lazyload"  id="index_hotgoods_{$smarty.foreach.foo.index}" data-lazyload="{$goods.thumb}" width="165" height="198"  target="_blank"/></a>
+          <p class="textwrap"> <a href="{$goods.url}"  title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></p>
+          <p class="jiagewrap">
+          <span class="tabproduct_price_1">￥{$goods.shop_price}</span>
+          <span class="tabproduct_price_2">￥{$goods.market_price}</span>
+          </p>
+        </li>
+        </div>
+        <!--{/foreach}-->
+      </ul>
+    </div>
+   <!--案例4-->
+
+</div>
+</div>
+            </div>
+            <div class="main_1_right">
+              <div class="main_1_right_3">
+                <span class="tabbtn_star"></span><ul class="tabbtn" id="fadetab">
+                
+    <li class="current">公告</li>
+    
+  </ul>
+  <!--tabbtn end-->
+  <div class="tabcon" id="fadecon">
+    <div class="sublist">
+      <ul>
+<!--{foreach from=$gao item=cat name=cats}-->
+        <li><a href="{$cat.url}">{$cat.title}</a></li>
+<!-- {/foreach} -->
+      </ul>
+    </div>
+  </div>
+                </div>
+                <div class="main_1_right_1">
+                  <h3>猜你喜欢</h3>
+                    <dl>
+<!--{foreach from=$cai item=cai name=cats}-->
+                      <dt><a href="{$cai.url}"><img src="" class="lazyload"   id="index_cai_{$smarty.foreach.cats.index}" data-lazyload="{$cai.goods_thumb}" width="178" height="178" /></a></dt>
+                        <dd><a class="main_1_right_1_a" href="{$cai.url}"  target="_blank" title="{$cai.goods_name}">{$cai.goods_name}</a><span class="main_1_right_1_b">¥{$cai.shop_price}</span><span class="main_1_right_1_c">已售<b>{$cai.num}</b>件</span></dd>
+<!-- {/foreach} -->
+                    </dl>
+                </div>
+                <div class="main_1_right_2">
+<!--{foreach from=$you item=you name=cats}-->
+        {if $you.position_id==3}
+                <a href="{$you.ad_link}"><img src="" class="lazyload"  id="index_you_{$smarty.foreach.cats.index}" data-lazyload="data/afficheimg/{$you.ad_code}" width="178" height="178" /></a>
+        {/if}
+<!-- {/foreach} -->
+                </div>            
+              
+                
+            </div>
+        </div>
+        
+    </div>
+<!--中下部-->
+<div id=con>
+  <div id=tags>
+    <p class="tags_title"></p>
+    <ul>
+      <li class=zzjs_net><a class="index_m3_a" onmouseover="select_zzjs('wwwzzjsnet0',this)" href="javascript:void(0)"></a> </li>
+      <li><a class="index_m3_b" onmouseover="select_zzjs('wwwzzjsnet1',this)" href="javascript:void(0)"></a> </li>
+      <li><a class="index_m3_c" onmouseover="select_zzjs('wwwzzjsnet2',this)" href="javascript:void(0)"></a> </li>
+      <li><a class="index_m3_d" onmouseover="select_zzjs('wwwzzjsnet3',this)" href="javascript:void(0)"></a> </li>
+      <li><a class="index_m3_e" onmouseover="select_zzjs('wwwzzjsnet4',this)" href="javascript:void(0)"></a> </li>
+      <li><a class="index_m3_f" onmouseover="select_zzjs('wwwzzjsnet5',this)" href="javascript:void(0)"></a> </li>
+    </ul>
+    </div>
+
+<div id='wwwzzjsnet'>
+ <script>
+      function before_another_batch(ele_id, changeDetail, age , cat_id)
+    {
+       var extra_info = new Array();
+     extra_info[0] = changeDetail;
+     extra_info[1] = age;
+     extra_info[2] = cat_id;
+     
+       another_batch(ele_id,extra_info);
+    }
+   </script>
+<!--宝宝成长循环开始-->
+   <!--{foreach from=$goods_baby item=per_goods name=loop}--> 
+    <div class="wwwzzjsnet {if $per_goods.0.age_index==0}zzjs_net{/if}"  id='wwwzzjsnet{$per_goods.0.age_index}'>
+     <!--{foreach from=$per_goods item=goods name=loop2}--> 
+      <div class="main_2 middle over">
+        <p class="main_2_left_title">
+          <span class="main_2_left_title_a">{$goods.name_id.0.cat_name}</span>
+          <span class="main_2_left_title_b">
+            <a href="javascript:before_another_batch('aged_goods_{$smarty.foreach.loop.index}_{$smarty.foreach.loop2.index}','index_babyGrowth','{$per_goods.0.age_index}','{$goods.name_id.0.cat_id}')">
+            <img src="" class="lazyload"  id="index_goodsbaby{$smarty.foreach.loop.index}_pergoods{$smarty.foreach.loop2.index}" data-lazyload="style/images/main_2_left_title_b.png" width="65" height="20" /></a>
+          </span>
+          <span class="main_2_left_title_c">
+            <a href="{$goods.moreUrl}"  target="_blank">更多&gt;</a>
+          </span>
+        </p>
+        <div>
+        <textarea style="visibility:hidden;">
+            <div class="main_2_left over" id="aged_goods_{$smarty.foreach.loop.index}_{$smarty.foreach.loop2.index}">
+              <!--{foreach from=$goods.goods item=goods1 name=cats}-->
+                    <dl>
+                      <dt>
+                        <a href="{$goods1.url}"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby{$smarty.foreach.loop.index}_pergood{$smarty.foreach.loop2.index}_goods{$smarty.foreach.cats.index}" data-lazyload="{$goods1.goods_thumb}" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="{$goods1.url}"  target="_blank" title="{$goods1.goods_name}">{$goods1.goods_name}</a>
+                        <span class="main_2_left_price1">￥{$goods1.shop_price}</span>
+                        <span class="main_2_left_price2">￥{$goods1.market_price}</span>
+                      </dd>
+                    </dl>
+              <!-- {/foreach} -->
+            </div>
+          <div class="main_2_right over">
+            <h3>推荐分类</h3>
+            <div class="main_2_right_a">
+              <!-- {foreach from=$goods.recommend item=recommend name=foo} -->
+                      <a href="{$recommend.url}" {if $ recommend.recommend_type==1}class="main_2_right_a_only"{/if} target="_blank">{$recommend.cat_name}</a>
+              <!-- {/foreach} -->
+            </div>
+            <h3>推荐品牌</h3>
+            <div class="main_2_right_b">
+              <!-- {foreach from=$goods.brands item=brand name=foo} -->
+                    <a href="{$brand.url}"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby{$smarty.foreach.loop.index}_pergood{$smarty.foreach.loop2.index}_foo{$smarty.foreach.foo.index}" data-lazyload="data/brandlogo/{$brand.brand_logo}"  title="{$brand.brand_name}"/></a>
+              <!-- {/foreach} -->    
+            </div> 
+          </div>
+        </textarea>
+      </div>
+      </div>
+       <!-- {/foreach} 一个分类循环结束-->    
+   </div> 
+<!--{/foreach}-->
+   <!--宝宝成长循环结束-->
+
+</div>
+   </div>
+   <div class="child_know main over middle">
+     <textarea style="visibility:hidden;">
+      <p class="main_2_left_title"><span class="main_2_left_title_a">育儿知识</span><span class="main_2_left_title_c"><a href="article_cat-22.html" target="_blank">更多&gt;</a></span></p>
+  <!-- {foreach from=$yu item=yu name=foo} -->
+  {if $smarty.foreach.foo.index==0}
+        <div class="child_know_a">
+              <a href="{$yu.url}" target="_blank"><img src="" class="lazyload"  id="index_yu_{$smarty.foreach.foo.index}" data-lazyload="{$yu.file_url}" width="280" height="350" /><p>{$yu.title}</p></a>
+        </div>
+  {/if}
+  <!-- {/foreach}-->
+  
+        <div class="child_know_b">
+      <ul class="child_know_b_1">
+        <!-- {foreach from=$yu item=yu name=foo} -->
+       {if $smarty.foreach.foo.index > 0 && $smarty.foreach.foo.index < 4}
+              <li><a href="{$yu.url}" target="_blank"><img src="" class="lazyload"  id="index_yu2_{$smarty.foreach.foo.index}" data-lazyload="{$yu.file_url}" width="280" height="350" /><p>{$yu.title}</p></a></li>
+              {/if}
+              <!-- {/foreach}-->
+            </ul>
+            <ul class="child_know_b_2">
+              <!-- {foreach from=$yu item=yu name=foo} -->
+  {if $smarty.foreach.foo.index > 3 }
+              <li>
+                  <a class="child_know_b_2_title" href="{$yu.url}">{$yu.cat_name}</a>
+                    <dl>
+                      <dt><a href="{$yu.url}" target="_blank"><img src="" class="lazyload"  id="index_yu3_{$smarty.foreach.foo.index}" data-lazyload="{$yu.file_url}" /></a></dt>
+                        <dd>
+              <a href="{$yu.url}" target="_blank">
+              {$yu.title}
+              </a>
+              <br/>
+              {$yu.content}
+                         </dd>
+                    </dl>
+                </li>
+    {/if}
+    <!-- {/foreach}-->
+            </ul>
+        </div>
+   </textarea>
+    </div>
+<!-- 页脚 start-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

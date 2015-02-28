@@ -1,0 +1,6 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<!--{foreach from=$banner item=cat name=cats}-->
+<li><div><a href="{$cat.ad_link}" target="_blank"><img src="data/afficheimg/{$cat.ad_code}" alt="" /></a></div></li>
+<!-- {/foreach} -->

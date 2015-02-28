@@ -1,0 +1,38 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <div class="home_left">
+        <h3>个人中心</h3>
+        <dl class="home_left_head">
+            <dt><span>
+	    <a href="{$staticPages.user}">
+		<img style='width:88px;height:88px' 
+			{if $personal_pic} src="{$personal_pic}" 
+			{else} src="style/home/images/nonehead.jpg" 
+			{/if}>
+	    </a>
+	    </span></dt>
+            <dd class="home_left_head_name">{$info.username}</dd>
+            <dd class="home_left_head_class"><img src="style/images/{$vip_pic}" width="52" height="27" /></dd>
+        </dl>
+        <div class="home_nav">
+            <p>帐户信息</p>
+            <a href="{$staticPages.user-profile}" {if $action eq 'profile'}class="selected"{/if}>个人资料</a>
+            <a href="{$staticPages.user-address_list}" {if $action eq 'address_list'}class="selected"{/if}>收货地址</a>
+            <a href="{$staticPages.user-security_settings}" {if $action eq 'security_settings'}class="selected"{/if}>安全设置</a><!--chen 0910-->
+            <a href="{$staticPages.user-my_integral}" {if $action eq 'my_integral'}class="selected"{/if}>我的积分</a> <!--chen 0905-->
+            <a href="{$staticPages.user-my_rank}" {if $action eq 'my_rank'}class="selected"{/if}>我的等级</a>  <!--chen 0905-->
+
+            <p>订单中心</p>
+            <a href="{$staticPages.user-order_list}" {if $action eq 'order_list'|| $action eq 'order_detail'}class="selected"{/if}>我的订单</a>
+            <a href="{$staticPages.user-collection_list}" {if $action eq 'collection_list'}class="selected"{/if}>我的收藏</a>
+            <a href="{$staticPages.user-comment_list}" {if $action eq 'comment_list'}class="selected"{/if}>我的评论</a>
+            <a href="{$staticPages.user-coupons}" {if $action eq 'coupons'}class="selected"{/if}>我的购物券</a>
+
+
+            <p>客户服务</p>
+            <a href="{$staticPages.user-complain_list}" {if $action eq 'complain_list'}class="selected"{/if}>我的投诉/建议</a>
+            <a href="{$staticPages.user-return_goods}" {if $action eq 'return_goods'} class="selected"{/if}>退换货</a>
+
+
+        </div>
+    </div>

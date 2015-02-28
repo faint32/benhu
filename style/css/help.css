@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+.category_left{ width:200px; float:left; margin-top:10px;border-top:1px solid #e6e6e6;}
+
+/*收缩菜单*/
+.v{width:198px;voice-family:"\"}\""; width:158px;padding-left:40px;height:35px;overflow:hidden;background:url(../images/help.gif) no-repeat 0px 0;display:inline-block; font-style:normal;}
+.v01{background-position:0 0;}
+.v02{background-position:0 -35px;}
+.vtitle{height:35px; width:198px;line-height:35px;border:1px solid #e6e6e6;margin-top:-1px;font-size:16px;color:#323232;font-family:'微软雅黑',sans-serif;cursor:pointer;}
+.vtitle em{margin:0;}
+.vconlist{background:#fff;clearfix:after;border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6;}
+.vconlist li{ background:url(../images/allimg.gif) no-repeat -200px -508px;}
+.vconlist li a{height:30px;line-height:30px;padding-left:30px;display:block;font-size:14px;color:#787878;}
+.vconlist li.select a,.vconlist li a:hover{color:#f13d6d;text-decoration:none;}
+
+.help{width:988px; float:right;padding-bottom:20px; border:1px #e6e6e6 solid; background:#fff; margin-top:10px; overflow:hidden;}
+.help_site{ padding-top:15px; margin-left:20px;}
+.help_site span{ padding:0 10px;}
+
+.other_title{ width:946px;border-bottom: 3px solid #e7e7e7; height:27px; margin:20px; overflow:hidden;}
+.other_title h1{ padding:0 15px;height:27px;font-size:16px;font-family:'微软雅黑',sans-serif;position:absolute;border-bottom: 3px solid #fe7ba3; font-weight:normal;}
+
+.help_main{width:926px; margin:0 auto;  overflow:hidden; line-height:26px;}
+
+
+.list{ width:920px; margin:0 auto;  overflow:hidden;clear:float;}
+.list a{ width:720px;voice-family:"\"}\""; width:700px; height:34px; line-height:34px; overflow:hidden; display:block; background:url(../images/allimg.gif) no-repeat -588px -735px; padding-left:20px; font-size:14px;float:left;}
+.list span{widht:200px;float:right;}

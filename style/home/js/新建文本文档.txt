@@ -1,0 +1,2 @@
+curvycorners.src 个人中心首页兼容圆角
+home_tab  中心首页交易提醒效果

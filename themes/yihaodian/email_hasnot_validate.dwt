@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link href="style/css/user.css" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='jquery.min.js,common.js,user.js,transport.js,register.js'}
+  <body>
+  <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<script>
+         function send_verify_email()
+				{
+					var email = '{$registerEmail}';
+					alert(email)
+					  if(!reg_email.test(email))
+					{
+					  alert('邮箱格式不正确');
+					  return false;
+				   }		                                                        
+							sendHashMail("emailUser_register_email");
+					
+				}
+</script>
+	<div class="login_box">
+    	<div class="login">
+        	<p class="register_1_tixing">您没有注册邮箱！</p>
+            <span class="register_1_tixing_2">您注册时填的邮箱号为：{$registerEmail}。您可以发送邮件，重新接收。<br />
+<span>完善资料达80%以上可立即领取{$registerPoint}积分。</span></span>
+            <p class="register_1_tixing_botton">
+            	<a class="register_1_tixing_botton_1" href="javascript:void(0)" onclick="send_verify_email();">立即发送邮件</a>
+                <a class="register_1_tixing_botton_2" href="{$loginEmail}">登陆邮箱</a>
+            </p>
+        </div>
+    </div>
+	<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+  </body>
+</html>

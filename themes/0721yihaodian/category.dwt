@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->{insert_scripts files='yhd_category.js'} <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->{insert_scripts files='jquery.lazyload.min.js'}
+<div id="searchwrap" class="searchwrap wrap">
+  <div class="clearfix">
+    <div class="layout_search_sidebar" id="searchColSub"> 
+      <!-- 分类筛选 -->
+      <div class="mod_search_filter clearfix mt">
+        <h2 class="clearfix"> <span>{$on_cat_name}</span> <u></u> </h2>
+        <div class="search_filter"> 
+          <!--{foreach from=$categories_left item=cat name=categories_left}--> 
+         <!-- {if $cat.status eq 1} -->
+          <h3> <span class="icon_filter icon_open"></span> <a title="{$cat.name}" href="{$cat.url}">{$cat.name}</a> </h3>
+          <div class="search_filter_son" {if $cat.status eq 1}style="display:block;"{/if}>
+            <ul>
+              <!-- {foreach from=$cat.cat_id item=child} -->
+              <li class="child_third"> <span class="icon_filter"></span> <a title="{$child.name}" href="{$child.url}" class="color_red">{$child.name}</a> {if $child.cat_id}
+                <ul>
+                  <!-- {foreach from=$child.cat_id item=childer} -->
+                  <li><a title="{$childer.name}" href="{$childer.url}">{$childer.name}</a></li>
+                 <!-- {/foreach} -->
+                </ul>
+                <!-- {/if} --></li>
+              <!-- {/foreach}-->
+            </ul>
+            <i class="bg_son_top"></i> </div>
+         <!-- {/if} -->
+          <!-- {/foreach} --> 
+          
+          <!--{foreach from=$categories_left item=cat name=categories_left}--> 
+          <!-- {if $cat.status neq 1} -->
+          <h3> <span class="icon_filter icon_close"></span> <a title="{$cat.name}" href="{$cat.url}">{$cat.name}</a> </h3>
+          <div class="search_filter_son" {if $cat.status neq 1}style="display:none;"{/if}>
+            <ul>
+              <!-- {foreach from=$cat.cat_id item=child} -->
+              <li class="child_third"> <span class="icon_filter"></span> <a title="{$child.name}" href="{$child.url}" class="color_red">{$child.name}</a> </li>
+              <!-- {/foreach}-->
+            </ul>
+            <i class="bg_son_top"></i> </div>
+          <!-- {/if} -->
+          <!-- {/foreach}--> 
+        </div>
+      </div>
+      <!--
+<div id="searchAlsoSee"></div>
+-->
+      <div class="searchLeftBanner"></div>
+      <!-- TemplateBeginEditable name="精品推荐区域" --> <!-- #BeginLibraryItem "/library/recommend_best.lbi" --> 
+      <!-- {if $best_goods} --> 
+      <!-- {if $script_name eq "category"}-->
+      <div id="pms_searchlook" class="mod_search_sidlist mt clearfix">
+        <h2 class="search_title">精品推荐</h2>
+        <div class="sidlist_box">
+          <ul>
+            <!--{foreach from=$best_goods item=goods}-->
+            <li> <a target="_blank" class="pro_img" title="{$goods.name|escape:html}" href="{$goods.url}"> <img src="{$goods.thumb}" width="115" height="115"><sup class="ico_search_list">精品</sup></a>
+              <p class="pirce"> <span class="color_red"> 
+                <!-- {if $goods.promote_price neq ""} --> 
+                {$goods.promote_price} 
+                <!-- {else}--> 
+                {$goods.shop_price} 
+                <!--{/if}--> 
+                </span> </p>
+              <p class="name"> <a target="_blank" href="{$goods.url}" class="name">{$goods.short_style_name}</a> </p>
+            </li>
+            <!--{/foreach}-->
+          </ul>
+        </div>
+      </div>
+      <!-- {else}-->
+      <div style="display: none;" class="tab_content none" id="youFavorateProduct"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+        <ul id="youFavorateProduct_prod" class="clearfix">
+          <!--{foreach from=$best_goods item=goods}-->
+          <li><a target="_blank" title="{$goods.name|escape:html}"  class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}"></a><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+            <p class="tl"><strong> 
+              <!-- {if $goods.promote_price neq ""} --> 
+              {$goods.promote_price} 
+              <!-- {else}--> 
+              {$goods.shop_price} 
+              <!--{/if}--> 
+              </strong></p>
+          </li>
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      <!-- {/if} --> 
+      <!-- {/if} --> <!-- #EndLibraryItem --> <!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="热卖商品区域" --> <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --> 
+      <!-- {if $hot_goods} --> 
+      <!-- {if $script_name eq "category_top"} -->
+      <div id="hotRecommend" lazyimg="y" class="hot_recommend">
+        <h3>爆款推荐</h3>
+        <div class="box">
+          <ul class="clearfix">
+            <!--{foreach from=$hot_goods item=goods name=foo}-->
+            <li {if $smarty.foreach.foo.first}style="width: 195px;"{/if}>
+              <dl class="product_item"  {if $smarty.foreach.foo.first}style="width: 187px;"{/if}>
+                <dd class="pic"><a target="_blank" href="{$goods.url}"><img width="160" height="160" src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a></dd>
+                <dt><a target="_blank" href="{$goods.url}">{$goods.short_style_name}</a></dt>
+                <dd class="price"> <strong> 
+                  <!-- {if $goods.promote_price neq ""} --> 
+                  {$goods.promote_price} 
+                  <!-- {else}--> 
+                  {$goods.shop_price} 
+                  <!--{/if}--> 
+                  </strong> <del highprice="y"> {$goods.market_price}</del> </dd>
+              </dl>
+            </li>
+            <!--{/foreach}-->
+          </ul>
+        </div>
+      </div>
+      <!-- {elseif $script_name eq "category"}-->
+      <div class="mod_search_sidlist mt clearfix" style="" id="hotProducts">
+        <div>
+          <h2 class="search_title">热卖商品</h2>
+          <div class="sidlist_box">
+            <ul>
+              <!--{foreach from=$hot_goods item=goods}-->
+              <li> <a target="_blank" class="pro_img_big" href="{$goods.url}"><img src="{$goods.thumb}"><sup class="ico_search_list">热卖</sup></a>
+                <p class="price"><span class="color_red"> 
+                  <!-- {if $goods.promote_price neq ""} --> 
+                  {$goods.promote_price} 
+                  <!-- {else}--> 
+                  {$goods.shop_price} 
+                  <!--{/if}--> 
+                  </span><del>{$goods.market_price}</del></p>
+                <p class="name"><a target="_blank" href="{$goods.url}"><span class="color_red"></span>{$goods.short_style_name}</a></p>
+                <p class="comment">评论<a target="_blank" href="{$goods.url}">21条</a></p>
+              </li>
+              <!--{/foreach}-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- {else}-->
+      <div style="display: none;" class="tab_content none" id="youFavoratePromotion"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+        <ul id="youFavoratePromotion_prod" class="clearfix">
+          <!--{foreach from=$hot_goods item=goods}-->
+          <li><a target="_blank" title="{$goods.name|escape:html}"  class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}"></a><a target="_blank" title="{$goods.name|escape:html}"  href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+            <p class="tl"><strong> 
+              <!-- {if $goods.promote_price neq ""} --> 
+              {$goods.promote_price} 
+              <!-- {else}--> 
+              {$goods.shop_price} 
+              <!--{/if}--> 
+              </strong></p>
+          </li>
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      <!-- {/if} --> 
+      <!-- {/if} --> <!-- #EndLibraryItem --> <!-- TemplateEndEditable -->
+         <!-- {if $sales_volume} -->
+      <div class="mod_search_sidlist mt" style="" id="hotSale">
+        <div class="mod_search_sidlist mt">
+          <h2 class="search_title"> 销量排行榜 </h2>
+          <div class="sidlist_box sidlist_slide">
+            <ul>
+              <!-- {foreach from=$sales_volume item=goods name=foo} -->
+              <li style="margin-left: 45px;"> <a href="{$goods.url}" title="{$goods.name}" target="_blank" class="pro_img_small"> <img width="90" height="90" src="{$goods.thumb}" alt="{$goods.name}"> <sup style="opacity: 1;" class="nub{$smarty.foreach.foo.iteration}"></sup> </a>
+                <p class="pirce"> <span class="color_red"> 
+                  <!--{if $goods.promote_price}-->{$goods.promote_price}<!--{else}-->{$goods.shop_price}<!--{/if}--> 
+                  </span> </p>
+                <p class="name"> <a target="_blank" href="{$goods.url}">{$goods.short_name}</a> </p>
+                <u style="right: 52px;"></u> </li>
+              <!-- {/foreach} -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--{/if}--> 
+      
+    </div>
+    <div class="layout_search_main mt" id="bodyRight"> 
+      <!-- 面包屑导航类目 -->
+      <div class="mod_search_crumb clearfix"> <span class="crumb_ico"></span>
+        <div class="crumb_list"> <span class="crumb_all_title clearfix"> <a href="#">{$on_cat_name}</a> </span> </div>
+        
+        {foreach from=$crumb_list item=crumb}
+      
+        <span class="crumb_triangle"></span>
+        <div class="crumb_list"> <span class="crumb_list_title clearfix">{foreach from=$crumb.cat_id item=crumb_child}{if $crumb.on_id eq $crumb_child.id}<a title="{$crumb_child.name}" href="{$crumb_child.url}">{$crumb_child.name}</a>{/if}  {/foreach}<i></i> </span>
+          <ul>
+           {foreach from=$crumb.cat_id item=crumb_child} <li {if $crumb.on_id eq $crumb_child.id}class="on"{/if}><a title="{$crumb_child.name}" href="{$crumb_child.url}">{$crumb_child.name}</a></li>{/foreach}
+          </ul>
+        </div>
+       
+        {/foreach}
+      
+        <span class="crumb_triangle"></span> 
+        <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchFormCat()
+    {
+        if(document.getElementById('keyWordsCat').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+        <form onsubmit="return checkSearchFormCat()" action="search.php" method="get" name="searchForm" id="searchForm">
+          <div class="crumb_search search_empty">
+            <input type="text" value="在分类中查找" class="input_keyword" id="keyWordsCat" name="keyWordsCat">
+            <input type="hidden" value="{$category}" name="category">
+            <input type="submit" style="cursor:pointer;" class="btn_search" value="">
+          </div>
+        </form>
+        <small class="result_count">共{$pager.record_count}条</small> </div>
+      <!--组合搜索 开始--> 
+      <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
+      <div id="group_attr" class="mod_search_guide clearfix">
+        <div class="search_guide"> 
+          <!--{if $brands.1}-->
+          <div class="guide_box guide_multiple">
+            <div class="guide_title"><span>{$lang.brand}</span></div>
+            <div class="guide_main">
+              <ul class="guide_con clearfix">
+                <!--{foreach from=$brands item=brand name=brand_foo}--> 
+                <!-- {if $brand.selected} -->
+                <li class="cur"> <a href="javascript:void(0);" > <span>{$brand.brand_name}</span> </a> </li>
+                <!-- {else} -->
+                <li> <a href="{$brand.url}" > <span>{$brand.brand_name}</span></a> </li>
+                <!-- {/if} --> 
+                <!--{/foreach}-->       
+              </ul>
+            </div>
+            <div attrtyle="show" multi_brand="0" class="multiple_choice"> <a class="more" href="javascript:void(0);" style="display: block;">更多<i></i></a> <a class="more more_open" href="javascript:void(0);" style="display: none;">收起<i></i></a> </div>
+          </div>
+          <!--{/if}--> 
+          
+          <!--{if $price_grade.1}-->
+          <div class="guide_box guide_multiple">
+            <div class="guide_title"><span>{$lang.price}</span></div>
+            <div class="guide_main">
+              <ul class="guide_con clearfix">
+                <!--{foreach from=$price_grade item=grade}--> 
+                <!-- {if $grade.selected} -->
+                <li class="cur"> <a href="javascript:void(0);" > <span>{$grade.price_range}</span> </a> </li>
+                <!-- {else} -->
+                <li> <a href="{$grade.url}" > <span>{$grade.price_range}</span></a> </li>
+                <!-- {/if} --> 
+                <!--{/foreach}-->
+              </ul>
+            </div>
+            <div attrtyle="show" multi_brand="0" class="multiple_choice"> <a class="more" href="javascript:void(0);" style="display: block;">更多<i></i></a> <a class="more more_open" href="javascript:void(0);" style="display: none;">收起<i></i></a> </div>
+          </div>
+          <!--{/if}--> 
+          
+          <!--{foreach from=$filter_attr_list item=filter_attr}-->
+          
+          <div class="guide_box guide_multiple">
+            <div class="guide_title"><span>{$filter_attr.filter_attr_name|escape:html}</span></div>
+            <div class="guide_main">
+              <ul class="guide_con clearfix">
+                <!--{foreach from=$filter_attr.attr_list item=attr}--> 
+                <!-- {if $attr.selected} -->
+                <li class="cur"> <a href="javascript:void(0);" > <span>{$attr.attr_value}</span> </a> </li>
+                <!-- {else} -->
+                <li> <a href="{$attr.url}" > <span>{$attr.attr_value}</span></a> </li>
+                <!-- {/if} --> 
+                <!--{/foreach}-->
+              </ul>
+            </div>
+            <div attrtyle="show" multi_brand="0" class="multiple_choice"> <a class="more" href="javascript:void(0);" style="display: block;">更多<i></i></a> <a class="more more_open" href="javascript:void(0);" style="display: none;">收起<i></i></a> </div>
+          </div>
+          
+          <!--{/foreach}--> 
+          
+        </div>
+      </div>
+      <!-- {/if} --> 
+      <!--组合搜索 结束-->
+      <div id="plist"> <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+      <div id="searchRelatedCategory"></div>
+      <div style="clear:both;" id="hisAssociated"></div>
+      <div style="clear:both;" id="getMoreProducts"></div>
+    </div>
+  </div>
+</div>
+<div id="globalBottomBrowseRelated" class="browse_related_wrap mt">
+  <div class="browse_related">
+    <div class="clearfix"> <!-- #BeginLibraryItem "/library/yhd_history.lbi" --><!-- #EndLibraryItem -->
+      <div class="browse_related_right">
+        <h4>与您浏览记录相关的商品</h4>
+        <div id="alsoBuyBox" class="browse_related_list"><a class="prev prev_clickable" href="javascript:;">上一页</a>
+          <div class="paging_wrap slide_box">
+            <ul style="margin-left: 0px;" class="clearfix">
+              <!-- {foreach from=$browse_related item=goods} -->
+              <li><a target="_blank" href="{$goods.url}" title="{$goods.name}" class="pic"><img src="{$goods.thumb}"></a><a class="pro_name" target="_blank" href="{$goods.url}" title="{$goods.name}">{$goods.short_name}</a>
+                <p class="price"><strong>{$goods.shop_price}</strong></p>
+                <p class="prolist_link"><a></a></p>
+                <p class="glbtn"><a href="javascript:addToCart({$goods.id})">加入购物车</a></p>
+              </li>
+              <!-- {/foreach} -->
+            </ul>
+          </div>
+          <a style="display: block;" class="next next_clickable" href="javascript:;">下一页</a><em class="page_num pageState"></em></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

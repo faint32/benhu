@@ -1,0 +1,60 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/yhd_common.js"></script>
+<p class="good_cart" id="in_cart_num">{$number}</P>
+      <span class="fixeBoxSpan">购物车</span> 
+      <div class="cartBox">
+        <div class="sc_message">
+            {if $number > 0}
+            <div class="sc_main">
+            	<dl class="sc_main_all">
+                	<dt>总价：<span id="totalDesc">￥{$amount}</span></dt>
+                    <dd>共<span id="totalNumber">{$number}</span>件商品</dd>
+                </dl>
+                <div class="sc_main_goods" data-discount_rate="{$discount_rate}">
+                   {foreach from=$goods item=goods}
+				        {if $goods.packageBuy == '0'}
+							<dl id="mini_cart_li_{$goods.rec_id}">
+								<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" width="80" height="80" /></a></dt>
+								<dd><a href="{$goods.url}">{$goods.short_name}</a>
+									<div><span class="price">¥{$goods.goods_price}</span>
+										<span class="number">
+											<input type="text" value="{$goods.goods_number}" onKeyUp="keyUpCartNum(this,{$goods.rec_id});"  id="minicart_num_{$goods.rec_id}" style="text-align:center;">
+											<div class="standard_3_1"><a onClick="onClickCartNum({$goods.rec_id},+1);"></a><a onClick="onClickCartNum({$goods.rec_id},-1);"></a></div>
+										</span>
+										<span class="standard_3_2"><a href="javascript:void(0)" onclick="deleteCartGoods({$goods.rec_id})">删除</a></span>
+									</div>
+								</dd>
+							</dl>
+						{else}
+							{if $goods.packageBuy == '1'}
+							    <div class="index_sc_taocan">
+									<span class="index_sc_taocan_title">
+										<h6>推荐搭配套餐</h6>
+										<table border="0" cellspacing="0" cellpadding="0">
+										    <tr>
+												<td class="per_number" data-per-number="{$goods.goods_number}">{$goods.goods_number}套</td>
+												<td class="per_amount">XXXX</td>
+										    </tr>
+										</table>
+									</span>
+							{/if}
+									<dl>
+										<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" width="80" height="80" /></a></dt>
+										<dd>
+											<a href="{$goods.url}">{$goods.short_name}</a>
+											<div><span class="price" data-shop-price="{$goods.goods_price}">¥{$goods.goods_price}</span></div>
+										</dd>
+									</dl>
+							{if $goods.packageBuy == '3'}
+							    </div>
+							{/if}
+						{/if}
+                   {/foreach}
+                </div>
+                <span class="sc_botton"><a href="./{$staticPages.flow}"></a></span>
+            </div>
+            {else}
+                <span style=" width:280px; text-align:center; padding:30px 0; display:block;">购物车内暂无商品，赶紧选购吧</span>
+            {/if}
+        </div>
+      </div>

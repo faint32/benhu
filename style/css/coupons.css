@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.youhuiquan{ width:1140px; margin:30px auto; overflow:hidden;}
+.youhuiquan dl{ width:350px; height:200px; margin:15px; float:left; overflow:hidden;font-family:'微软雅黑',sans-serif;}
+.youhuiquan dl dt{ width:350px; height:100px; overflow:hidden;}
+.youhuiquan dl dt a{ width:50px; height:50px; display:block; text-align:center; font-size:18px; color:#fff; margin:25px auto auto 255px; line-height:20px;}
+.youhuiquan dl dt a:hover{ color:#fffdc9; text-decoration:none;}
+.youhuiquan dl dd{ width:300px; margin:10px auto; color:#fff; font-size:14px; line-height:24px; overflow:hidden;}
+.quan3{ background:url(../images/coupons/quan3.jpg) no-repeat 0 0;}
+.quan5{ background:url(../images/coupons/quan5.jpg) no-repeat 0 0;}
+.quan10{ background:url(../images/coupons/quan10.jpg) no-repeat 0 0;}
+.quan15{ background:url(../images/coupons/quan15.jpg) no-repeat 0 0;}
+.quan20{ background:url(../images/coupons/quan20.jpg) no-repeat 0 0;}
+.quan30{ background:url(../images/coupons/quan30.jpg) no-repeat 0 0;}
+.quan50{ background:url(../images/coupons/quan50.jpg) no-repeat 0 0;}
+.quan80{ background:url(../images/coupons/quan80.jpg) no-repeat 0 0;}
+.quan100{ background:url(../images/coupons/quan100.jpg) no-repeat 0 0;}
+
+.youhuiquan_1{ width:1200px; height:236px; background:url(../images/coupons/10.jpg) no-repeat; margin:20px auto;}
+
+.item_2_right_popup{ width:400px; height:250px; border:2px #f4c557 solid; background:#fff; position:absolute; top:350px; left:50%;right:50%; z-index:999; margin-left:-200px; background:url(../images/coupons/11.jpg) no-repeat; overflow:hidden;font-family:'微软雅黑',sans-serif;}
+.item_2_right_popup_1{ width:350px; margin:40px auto; text-align:center;overflow:hidden;}
+.item_2_right_popup_1 .aa{ width:350px; height:35px; line-height:35px; color:#925d35; font-size:25px; font-weight:bold;}
+.item_2_right_popup_1 .bb{ font-size:14px; line-height:30px;}
+.item_2_right_popup_1 .bb a{ font-size:14px; color:#f13d6d;}
+
+.item_2_right_popup_cloes{ position:absolute; right:5px; top:5px; cursor:pointer;}
+.item_2_right_popup_queding{ width:130px; height:40px; text-align:center; line-height:40px; background:#f4c557; border:1px #f4c557 solid;  margin:10px auto; display:block; font-size:15px; color:#333;}

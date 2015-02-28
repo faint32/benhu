@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $best_goods} -->
+<!-- {if $script_name eq "category" || $script_name eq 'search' || $script_name eq 'brand'}-->
+<div id="pms_searchlook" class="mod_search_sidlist mt clearfix">
+  <h2 class="search_title">精品推荐</h2>
+  <div class="sidlist_box">
+    <ul>
+      <!--{foreach from=$best_goods item=goods}-->
+      <li> <a target="_blank" class="pro_img" title="{$goods.name|escape:html}" href="{$goods.url}"> <img src="{$goods.thumb}" width="115" height="115"><sup class="ico_search_list">精品</sup></a>
+        <p class="pirce"> <span class="color_red">
+          <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+          </span> </p>
+        <p class="name"> <a target="_blank" href="{$goods.url}" class="name">{$goods.short_style_name}</a> </p>
+      </li>
+      <!--{/foreach}-->
+    </ul>
+  </div>
+</div>
+<!-- {else}-->
+<div style="display: none;" class="tab_content none" id="youFavorateProduct"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+  <ul id="youFavorateProduct_prod" class="clearfix">
+    <!--{foreach from=$best_goods item=goods}-->
+    <li><a target="_blank" title="{$goods.name|escape:html}"  class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}"></a><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+      <p class="tl"><strong>
+        <!-- {if $goods.promote_price neq ""} -->
+        {$goods.promote_price}
+        <!-- {else}-->
+        {$goods.shop_price}
+        <!--{/if}-->
+        </strong></p>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+</div>
+<!-- {/if} -->
+<!-- {/if} -->

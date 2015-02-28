@@ -1,0 +1,75 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods} -->
+<!-- {if $script_name eq "category_top"} -->
+<div id="hotRecommend" lazyimg="y" class="hot_recommend">
+  <h3>爆款推荐</h3>
+  <div class="box">
+    <ul class="clearfix">
+      <!--{foreach from=$hot_goods item=goods name=foo}-->
+      <li {if $smarty.foreach.foo.first}style="width: 195px;"{/if}>
+        <dl class="product_item"  {if $smarty.foreach.foo.first}style="width: 187px;"{/if}>
+          <dd class="pic"><a target="_blank" href="{$goods.url}"><img width="160" height="160" src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a></dd>
+          <dt><a target="_blank" href="{$goods.url}">{$goods.short_style_name}</a></dt>
+          <dd class="price"> <strong> <!-- {if $goods.promote_price neq ""} --> 
+            {$goods.promote_price} 
+            <!-- {else}--> 
+            {$goods.shop_price} 
+            <!--{/if}--></strong> <del highprice="y"> {$goods.market_price}</del> </dd>
+        </dl>
+      </li>
+      <!--{/foreach}-->
+      
+    </ul>
+  </div>
+</div>
+<!-- {elseif $script_name eq "category"}-->
+<div class="mod_search_sidlist mt clearfix" style="" id="hotProducts">
+  <div>
+    <h2 class="search_title">热卖商品</h2>
+    <div class="sidlist_box">
+      <ul>
+        <!--{foreach from=$hot_goods item=goods}-->
+        <li> <a target="_blank" class="pro_img_big" href="{$goods.url}"><img src="{$goods.thumb}"  width="160" height="160"><sup class="ico_search_list">热卖</sup></a>
+          <p class="price"><span class="color_red"> <!-- {if $goods.promote_price neq ""} --> 
+            {$goods.promote_price} 
+            <!-- {else}--> 
+            {$goods.shop_price} 
+            <!--{/if}--></span><del>{$goods.market_price}</del></p>
+          <p class="name"><a target="_blank" href="{$goods.url}"><span class="color_red"></span>{$goods.short_style_name}</a></p>
+          <p class="comment">评论<a target="_blank" href="{$goods.url}">21条</a></p>
+        </li>
+        <!--{/foreach}-->
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- {elseif $script_name eq "group"}-->
+<Div class="grouSideMod grouSideLove mb">
+  <h4>热卖商品</h4>
+  <ul id="detail_ad_ul">
+    <!-- {foreach from=$hot_goods item=goods} -->
+    <li> 
+    <a class="thumb" target="_blank" href="{$goods.url}"> <img width="180" height="180" src="{$goods.thumb}"> </a> <a class="title" title="{$goods.name|escape:html}" target="_blank" href="{$goods.url}">{$goods.short_name|escape:html}</a>
+      <p class="price clearfix"> <span class="num fr"><em>{$goods.sales_volume}</em>人已购买</span> <strong>¥{$goods.shop_price}</strong> </p>
+    </li>
+    <!-- {/foreach} -->
+  </ul>
+</Div>
+<!-- {else}-->
+<div style="display: none;"class="tab_content " id="youFavoratePromotion"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+  <ul id="youFavoratePromotion_prod" class="clearfix">
+    <!--{foreach from=$hot_goods item=goods}-->
+    <li><a target="_blank" title="{$goods.name|escape:html}"  class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}"></a><a target="_blank" title="{$goods.name|escape:html}"  href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+      <p class="tl"><strong> 
+        <!-- {if $goods.promote_price neq ""} --> 
+        {$goods.promote_price} 
+        <!-- {else}--> 
+        {$goods.shop_price} 
+        <!--{/if}--> 
+        </strong></p>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+</div>
+<!-- {/if} --> 
+<!-- {/if} --> 

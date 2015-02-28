@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* lanrenzhijia */
+#channel_hdp {
+	width:1200px;
+	height:350px;
+	margin:10px auto 0 auto;
+	position:relative;
+	overflow:hidden;
+}
+#channel_inner {
+	display:block;
+	width:60000px;
+	height:350px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+#channel_inner li {
+	display:block;
+	width:1200px;
+	height:350px;
+	float:left;
+	font-size:72px;
+	line-height:350px;
+	text-align:center;
+	content:#666;
+	text-shadow:3px 3px 2px #999, 5px 5px 2px #ccc;
+	background:#eee;
+}
+#channel_inner li img{ width:1200px; height:350px;}
+#channel_nav {
+	width:200px;
+	height:40px;
+	padding-left:600px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+#channel_nav em {
+	display:block;
+	float:left;
+	width:24px;
+	height:24px;
+	margin-right:8px;
+	margin-top:8px;
+	line-height:24px;
+	text-align:center;
+	font-size:14px;
+	color:#333;
+	font-style:normal;
+	font-family:Arial;
+	background:#eee;
+	border-radius:12px;
+	cursor:pointer;
+}
+#channel_nav .ehover {
+	background:#f13d6d;
+	color:#fff;
+}
+#channel_left, #channel_right {
+	width:30px;
+	height:70px;
+	position:absolute;
+	top:130px;
+	background:#333;
+	opacity:0.4;
+	color:#fff;
+	font-size:20px;
+	text-align:center;
+	line-height:70px;
+	cursor:pointer;
+}
+#channel_left:hover, #channel_right:hover {
+	opacity:0.8
+}
+#channel_left {
+	left:0;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+}
+#channel_right {
+	right:0;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+}
+/*------------------------------*/
+.channel_2_left{ width:200px; float:left; margin-top:20px; overflow:hidden;}
+.channel_2_left dl{ width:200px;}
+.channel_2_left dl dt{ width:200px; height:50px; line-height:50px; background:#fa3c50; text-align:center; font-size:24px; color:#fff;font-family:'微软雅黑',sans-serif;}
+.channel_2_left_a,.channel_2_left_a img{ width:200px; height:386px;}
+.channel_2_left_b{ width:200px;voice-family:"\"}\""; width:180px; height:50px;background:#fa3c50; line-height:24px; padding:10px 10px; overflow:hidden;}
+.channel_2_left_b a{ width:90px; height:24px; display:block; float:left;color:#fff;font-family:'微软雅黑',sans-serif; font-size:14px;}
+.channel_2_right{ width:986px; float:right; padding-top:10px;}

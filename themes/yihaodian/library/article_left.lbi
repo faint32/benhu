@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<!-- {foreach from=$helps item=help_cat name=foo} -->
+<!--{if !$smarty.foreach.foo.last}-->
+	    <div class="vtitle"><em class="v {if $cat_id eq $help_cat.cat_id}v02{else}v01{/if}">{$help_cat.cat_name}</em></div>
+            <div class="vcon" {if $cat_id neq $help_cat.cat_id}style="display: none;" {/if}>
+                <ul class="vconlist">
+                  <!-- {foreach from=$help_cat.article item=item} -->
+                    <li {if $id eq $item['article_id'] }class="select"{/if} >
+                        <a href="{$item.url}">{$item.short_title}</a>
+                    </li>
+                  <!-- {/foreach} -->
+                </ul>
+            </div>
+	    <!--{/if}-->
+<!-- {/foreach} -->

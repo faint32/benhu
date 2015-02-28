@@ -1,0 +1,42 @@
+﻿<div class="item_2_right_popup" id="cloes" style="display:none">
+	<a class="item_2_right_popup_cloes" onclick="javascript:turnoff('cloes')"><img src="images/item_cloes.gif" /></a>
+   <script>
+function turnoff(obj){
+document.getElementById(obj).style.display="none";
+}
+function ajax_change_goods(goods_id)
+{
+   var param='act=ajax_change_goods&id='+goods_id;
+     Ajax.call( 'goods.php',param,ajax_change_goods_callback , 'GET', 'json', true, true );
+}
+function ajax_change_goods_callback(result)
+{
+var json = result;
+for(var i=0; i<json.length; i++)  
+  {  
+  var str=' <dt><a href="goods.php?id='+json[i].goods_id+'"><img src="'+json[i].goods_thumb+'" /></a></dt><dd>'+json[i].rank_price+'</dd>';
+    $('#change_goods_'+i).html(str);
+  } 
+}
+</script>
+	<ul class="item_2_right_popup_1">
+    	<li class="aa">添加成功！</li>
+        <li class="bb">您可以<a href="#" id="view_cart">查看购物车</a></li>
+    </ul>
+    <ul class="item_2_right_popup_2">
+    	<li>购买此商品的人还喜欢</li>
+        <span><a href="javascript:ajax_change_goods('{$goods.goods_id}');"><img src="images/main_2_left_title_b.png" width="65" height="20" /></a></span>
+    </ul>
+    <div class="item_2_right_popup_3" >
+	<!--{if $user_may_love}-->
+	<!--{foreach from=$user_may_love item=good name=loop}-->
+    <dl id="change_goods_{$smarty.foreach.loop.index}">
+        <dt><a href="goods.php?id={$good.goods_id}"><img src="{$good.goods_thumb}" /></a></dt>
+        <dd>¥{$good.rank_price}</dd>
+    </dl>
+	<!--{/foreach}-->
+	<!--{else}-->
+	<br/>&nbsp;&nbsp;&nbsp;<b>暂无商品</b>
+	<!--{/if}-->
+    </div>
+</div>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>新年礼物</title>
+	
+	</head>
+
+	<body>
+	    <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+			<link href="style/css/newyear.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="style/js/combine/index.js"></script>
+   <!--左侧无极限菜单-->
+    <div class="nav-wrap middle">
+  <div class="nav">
+    <div class="goods">
+      <div>
+      <script>
+          function xianshi() {
+              document.getElementById("dvtype").style.display = "";
+          }
+      </script>
+        <h2> <a onclick="xianshi()">所有商品分类</a></h2>
+      </div>
+
+      <div id="dvtype" onmouseout="yincang()" class="all-goods" style="display:none;">
+<!--{foreach from=$categories item=cat name=cats}-->
+        <div class="item  {if $smarty.foreach.cats.index <1}btnone{/if}">
+          <div class="product">
+            <h3 class="mylistbj{$smarty.foreach.cats.iteration}">
+                    {$cat.name|escape:html}
+            </h3>
+            <div class="product_classify">
+                
+                    <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                        <!--{if $smarty.foreach.foo.index < 6 }-->
+                    <a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a>
+                        <!--{/if}-->
+                    <!-- {/foreach} -->
+            </div>
+            <s style="display:block;"></s> 
+          </div>
+            
+          <div class="product-wrap pos{$smarty.foreach.cats.iteration}"> 
+            <!--LOGO-->
+            <div class="cf">
+              <div>
+                <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                <h4><a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a></h4>
+                <p class="cf">
+                  <!--{foreach from=$child.cat_id item=childer}-->
+                  <a href="{$childer.url}" target="_blank">{$childer.name|escape:html}</a>
+                  <!-- {/foreach} -->
+                </p>
+                <!-- {/foreach} -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+         <!-- {/foreach} -->
+    </div>
+    </div>
+    <ul class="nav-list cf">
+        <li><a href="index.php" class="on">{$lang.home}</a></li>
+         {foreach name=nav_middle_list from=$navigator_list.middle item=nav}
+        <li><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></li>
+        {/foreach}
+    </ul>
+
+  </div>
+</div>
+<!--左侧无极限菜单结束-->
+
+
+		<div class="newyear_bj">
+		<div class="newyear_top">
+		</div>
+		<div class="newyear_main">
+			<!--{foreach from=$newyearActivty.0.goods item=good}-->
+				<dl>
+					<div <!--{if $good.goods_number == '0'}-->class="maiguang"<!--{/if}-->>
+					</div>
+					<dt><a href="{$good.url}" target="_blank"><img src="{$good.original_img}" width="279" height="279" /></a></dt>
+					<dd>
+						<a href="{$good.url}" target="_blank" class="name">{$good.goods_name}</a>
+					</dd>
+					<dd>
+						<p>
+							<span>￥{$good.discountPrice}</span>
+							<b>原价：￥{$good.market_price}</b>
+						</p>
+						<a href="{$good.url}"  <!--{if $good.goods_number == '0'}-->class="button_1"<!--{else}-->class="button"<!--{/if}-->  target="_blank">立即抢购</a>
+					</dd>
+				</dl>
+			<!--{/foreach}-->
+		</div>
+		<div class="newyear_main_down"></div>
+		<a class="wanjumore" href="search.php?keywords=简叶贝贝" target="_blank">点击查看更多服装</a>
+		<div class="newyear_main_down"></div>
+		<div class="fenlei"></div>
+		<div class="newyear_main">
+				<!--{foreach from=$newyearActivty.1.goods item=good}-->
+				<dl>
+					<div <!--{if $good.goods_number == '0'}-->class="maiguang"<!--{/if}-->>
+					</div>
+					<dt><a href="{$good.url}" target="_blank"><img src="{$good.original_img}" width="279" height="279" /></a></dt>
+					<dd>
+						<a href="{$good.url}" target="_blank" class="name">{$good.goods_name}</a>
+					</dd>
+					<dd>
+						<p>
+							<span>￥{$good.discountPrice}</span>
+							<b>原价：￥{$good.market_price}</b>
+						</p>
+						<a href="{$good.url}" <!--{if $good.goods_number == '0'}-->class="button_1"<!--{else}-->class="button"<!--{/if}--> target="_blank">立即抢购</a>
+					</dd>
+				</dl>
+			<!--{/foreach}-->
+		</div>
+		<div class="newyear_main_down"></div>
+		<a class="wanjumore" href="search.php?keywords=玩具" target="_blank">点击查看更多玩具</a>
+		<a href="javascript:scroll(0,0)" class="newyear_gototop"></a>
+		<div class="down">
+		</div>
+		</div>
+	</body>
+</html>

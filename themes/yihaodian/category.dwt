@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/category.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="style/js/jquery.min.js"></script>
+<script type="text/javascript" src="style/js/left_nav_2.js"></script>
+<script type="text/javascript" src="style/js/category.js"></script>
+
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+
+    <div class="main middle over">
+	<div class="category_left over">
+           <!-- #BeginLibraryItem "/library/category_tree3.lbi" --><!-- #EndLibraryItem --> 
+    <div id="smallDiv" class="main_1_right_1 category_left_mt">
+                	<h3>热卖排行</h3>
+
+<!--{foreach from=$hot_goods item=goods}-->
+                    <dl>
+                    	<dt><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" width="178" height="178" /></a></dt>
+                        <dd><a class="main_1_right_1_a" href="{$goods.url}" target="_blank">{$goods.short_style_name}</a>
+                        <span class="main_1_right_1_b">¥<!-- {if $goods.promote_price neq ""} --> 
+                  {$goods.promote_price} 
+                  <!-- {else}--> 
+                  {$goods.shop_price} 
+                  <!--{/if}--> </span><span class="main_1_right_1_c">已售<b>{$goods.selledNum}</b>件</span></dd>
+                    </dl>
+<!--{/foreach}-->                   
+      </div>
+</div>
+    <div class="category_right over" id="filter_cnd">
+    	<div class="category_right_1">
+            <!-- #BeginLibraryItem "/library/ur_here1.lbi" --><!-- #EndLibraryItem -->
+       <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}--> 	
+            <dl id="up_down_brand" class="up_down" style="height:87px;">
+ <!--{if $brands.1}-->
+            	<dt>{$lang.brand}</dt>
+                <dd>
+                    <!--{foreach from=$brands item=brand name=brand_foo}--> 
+                    <!-- {if $brand.selected} -->
+                        <a href="{$brands.0.url}#filter_cnd"  class="selected" > {$brand.brand_name} </a>
+                     <!-- {else} -->
+                        <a href="{$brand.url}#filter_cnd"  >{$brand.brand_name}</a> 
+                     <!-- {/if} --> 
+                <!--{/foreach}--> 
+                     
+                </dd>
+				<div class="category_search_more">
+						<a href="javascript:void(0)" id="show_brand" onclick="document.getElementById('up_down_brand').style.height='auto';document.getElementById('hidden_brand').style.display='';document.getElementById('show_brand').style.display='none';">展开↓</a>
+						<a href="javascript:void(0)" id="hidden_brand" onclick="document.getElementById('up_down_brand').style.height='87px';document.getElementById('hidden_brand').style.display='none';document.getElementById('show_brand').style.display='';" style="display: none;">收起↑</a>
+                </div>
+   <!--{/if}--> 
+            </dl id="up_down_price" class="up_down" style="height:87px;">
+             <dl>
+			           <!--{if $price_grade.1}-->
+            	<dt>{$lang.price}</dt>
+                <dd>
+                    <!--{foreach from=$price_grade item=grade}--> 
+                <!-- {if $grade.selected} -->
+                <a href="{$price_grade.0.url}#filter_cnd"  class="selected">{if $grade.price_range=='全部'}{$grade.price_range} {else}{$grade.price_range}元{/if}</a>
+                <!-- {else} -->
+                <a href="{$grade.url}#filter_cnd" > {if $grade.price_range=='全部'}{$grade.price_range} {else}{$grade.price_range}元{/if}</a> 
+                <!-- {/if} --> 
+                <!--{/foreach}-->
+                </dd>
+				<div class="category_search_more">
+						<a href="javascript:void(0)" id="show_price" onclick="document.getElementById('up_down_price').style.height='auto';document.getElementById('hidden_price').style.display='';document.getElementById('show_price').style.display='none';">展开↓</a>
+						<a href="javascript:void(0)" id="hidden_price" onclick="document.getElementById('up_down_price').style.height='87px';document.getElementById('hidden_price').style.display='none';document.getElementById('show_price').style.display='';" style="display: none;">收起↑</a>
+                </div>
+				<!--{/if}-->
+            </dl>
+			
+			
+			   <!--{foreach from=$filter_attr_list item=filter_attr name=loop}-->
+            <dl id="up_down_{$smarty.foreach.loop.index}" class="up_down" style="height:87px;">
+            <dt> {$filter_attr.filter_attr_name|escape:html}</dt>
+            <dd>
+                <!--{foreach from=$filter_attr.attr_list item=attr}--> 
+                <!-- {if $attr.selected} -->
+				 <a href="{$filter_attr.attr_list.0.url}#filter_cnd"  class="selected"> {$attr.attr_value}</a>
+                <!-- {else} -->
+              <a href="{$attr.url}#filter_cnd" > {$attr.attr_value}</a> 
+              <!-- {/if} --> 
+                <!--{/foreach}-->
+             </dd>
+			  	<div class="category_search_more">
+						<a href="javascript:void(0)" id="show_{$smarty.foreach.loop.index}" onclick="document.getElementById('up_down_{$smarty.foreach.loop.index}').style.height='auto';document.getElementById('hidden_{$smarty.foreach.loop.index}').style.display='';document.getElementById('show_{$smarty.foreach.loop.index}').style.display='none';">展开↓</a>
+						<a href="javascript:void(0)" id="hidden_{$smarty.foreach.loop.index}" onclick="document.getElementById('up_down_{$smarty.foreach.loop.index}').style.height='87px';document.getElementById('hidden_{$smarty.foreach.loop.index}').style.display='none';document.getElementById('show_{$smarty.foreach.loop.index}').style.display='';" style="display: none;">收起↑</a>
+                </div>
+            </dl>
+          
+          <!--{/foreach}--> 
+			
+			<!--{/if}-->
+			
+			 
+        </div>
+
+        <!--组合搜索 结束-->
+     <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+     </div>
+</div>
+     
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

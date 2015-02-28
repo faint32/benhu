@@ -1,0 +1,8 @@
+          累计商品金额：<span class="sc_order_submit_1 add">¥{if $is_exchange_goods != 1}{$total.goods_price_formated} {else}{$total.needed_money}{/if}</span><br />
+{if $is_exchange_goods == 1}+累计需要积分：<span class="sc_order_submit_1" id="ECS_INTEGRAL" value="{$total.exchange_integral}">{$total.exchange_integral}</span><br/>{/if}
+      +&nbsp;累计配送费：<span id="shipping_fee" class="sc_order_submit_1 add">¥{$total.shipping_fee_formated}</span><br />
+      <span id="fapiao_dsp" style="display:none">+发票费用：<span class="sc_order_submit_1 add" id="tax_fee">¥0.0</span><br /></span>
+      <!--{if $total.discount_formated != '0.00'}-->
+        -&nbsp;折扣: <span class="sc_order_submit_1 minus">¥{$total.discount_formated}</span><br/>
+        <!--{/if}-->
+订单总金额：<span class="sc_order_submit_2" id="total_amount">¥{$total.amount_formated}</span><br />

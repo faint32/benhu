@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $new_goods} -->
+<div style="display: none;" class="tab_content none" id="newProductRecommend"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+
+  <ul id="newProductRecommend_prod" class="clearfix">
+    <!--{foreach from=$new_goods item=goods}-->
+    <li><a target="_blank" title="{$goods.name|escape:html}" class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}" ></a><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+      <p class="tl"><strong>
+        <!-- {if $goods.promote_price neq ""} -->
+        {$goods.promote_price}
+        <!-- {else}-->
+        {$goods.shop_price}
+        <!--{/if}-->
+        </strong></p>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+
+</div>
+<!-- {/if} -->

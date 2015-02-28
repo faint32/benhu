@@ -1,0 +1,17 @@
+user.php测试数据
+
+1.login
+  http://localhost/benhushop1231/MobileInterface/user.php?act=login&userName=18768103573&pwd=96e79218965eb72c92a549dd5a33011
+2.SMS
+  http://localhost/benhushop1231/MobileInterface/user.php?act=SMS&userName=18768103573
+3.register
+  http://localhost/benhushop1231/MobileInterface/user.php?act=register&userName=18768103573&SMS=505615&pwd=96e79218965eb72c92a549dd5a330112
+
+
+
+1.login
+   http://www.benhu.com/MobileInterface/user.php?act=login&userName=18768103573&pwd=96e79218965eb72c92a549dd5a33011
+2.SMS
+  http://www.benhu.com/MobileInterface/user.php?act=SMS&userName=18768103573
+3.register
+  http://www.benhu.com/MobileInterface/user.php?act=register&userName=18768103573&SMS=505615&pwd=96e79218965eb72c92a549dd5a330112

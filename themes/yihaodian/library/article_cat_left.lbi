@@ -1,0 +1,15 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<div  style="text-align: center;background:#fe7ba3;;font-family:'微软雅黑',sans-serif; color:#fff;line-height:35px;font-size:20px;">文章列表</div>
+<!--{foreach from=$article_categories item=cat}-->
+            <div class="vtitle"><em class="v {if $cat_id eq $cat.id || $cat.id1==1}v02{/if}">{$cat.name|escape:html}</em></div>
+            <div class="vcon"  {if $cat_id neq $cat.id  && !$cat.id2}style="display: none;" {/if}>
+                <ul class="vconlist">
+                 <!--{foreach from=$cat.children item=child}-->
+                    <li {if $cat_id eq $child.id }class="select"{/if} >
+                       <a href="{$child.url}">{$child.name|escape:html}</a>
+                    </li>
+                  <!-- {/foreach} -->
+                </ul>
+            </div>
+<!-- {/foreach} -->
+			

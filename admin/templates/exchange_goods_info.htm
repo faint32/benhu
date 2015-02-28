@@ -1,0 +1,188 @@
+<!-- $Id: exchange_goods_info.htm 15544 2009-01-09 01:54:28Z zblikai $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,selectzone.js,validator.js "}
+
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+
+<!-- start goods form -->
+<div class="tab-div">
+<form  action="exchange_goods.php" method="post" name="theForm" onsubmit="return validate();">
+  <table width="90%" id="general-table">
+    <tr>
+      <td align="right">{$lang.keywords}</td>
+      <td><input type="text" name="keywords" size="30" />
+      <input type="button" value="{$lang.button_search}" class="button" onclick="searchGoods()" {if $form_action eq 'update'} disabled="true" {/if}></td>
+    </tr>
+    <tr>
+      <td class="label"><a href="javascript:showNotice('noticegoodsid');" title="{$lang.form_notice}"><img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}"></a>{$lang.goodsid}</td>
+      <td>
+        <select name="goods_id">
+        {$goods.option}
+        </select>
+        {$lang.require_field}
+       <br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticegoodsid">{$lang.notice_goodsid}</span></td>
+    </tr>
+    <tr>
+      <td class="label">
+		<a href="javascript:showNotice('noticepackagePrice');" title="{$lang.form_notice}">
+			<img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}">
+		</a>{$lang.integral}
+	  </td>
+      <td><input type="text" name="exchange_integral" maxlength="60" size="20" value="{$goods.exchange_integral}" />{$lang.require_field}<br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticepackagePrice">{$lang.notice_integral}</span></td>
+    </tr>
+	<tr>
+      <td class="label">
+		<a href="javascript:showNotice('noticepackagePrice');" title="{$lang.form_notice}">
+			<img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}">
+		</a>{$lang.needed_money}
+	  </td>
+		<td>
+			¥<input type="text" name="needed_money" maxlength="60" size="20" value="{$goods.needed_money}" />
+			{$lang.require_field}<br />
+			<span class="notice-span" 
+			{if $help_open}
+			style="display:block" 
+			{else} 
+			style="display:none" 
+			{/if} id="noticepackagePrice">
+			{$lang.notice_needed_money}
+			</span>
+		</td>
+    </tr>
+    <tr>
+      <td class="narrow-label">{$lang.is_exchange}</td>
+      <td>
+        <input type="radio" name="is_exchange" value="1" {if $goods.is_exchange eq 1}checked{/if}> {$lang.isexchange}
+        <input type="radio" name="is_exchange" value="0" {if $goods.is_exchange eq 0}checked{/if}> {$lang.isnotexchange}{$lang.require_field}</td>
+    </tr>
+<!--   
+   <tr>
+      <td class="narrow-label">{$lang.is_hot}</td>
+      <td>
+        <input type="radio" name="is_hot" value="1" {if $goods.is_hot eq 1}checked{/if}> {$lang.ishot}
+        <input type="radio" name="is_hot" value="0" {if $goods.is_hot eq 0}checked{/if}> {$lang.isnothot}{$lang.require_field}
+	  </td>
+    </tr>
+	-->
+	 <tr>
+      <td class="narrow-label">{$lang.is_best}</td>
+      <td>
+        <input type="radio" name="is_best" value="1" {if $goods.is_best eq 1}checked{/if}> {$lang.isbest}
+        <input type="radio" name="is_best" value="0" {if $goods.is_best eq 0}checked{/if}> {$lang.isnotbest}{$lang.require_field}
+	  </td>
+    </tr>
+	 <tr>
+      <td class="narrow-label">{$lang.is_new}</td>
+      <td>
+        <input type="radio" name="is_new" value="1" {if $goods.is_new eq 1}checked{/if}> {$lang.isnew}
+        <input type="radio" name="is_new" value="0" {if $goods.is_new eq 0}checked{/if}> {$lang.isnotnew}{$lang.require_field}
+	  </td>
+    </tr>
+	 <tr>
+      <td class="narrow-label">是否下期开放</td>
+      <td>
+         <input type="radio" name="is_next" value="1" {if $goods.is_next eq 1}checked{/if} onchange="display_element('isNext_startTime',1);"> 下期开放
+         <input type="radio" name="is_next" value="0" {if $goods.is_next eq 0}checked{/if} onchange="display_element('isNext_startTime',0);"> 非下期开放{$lang.require_field}
+	  </td>
+    </tr>
+	
+	 <tr id="isNext_startTime" {if $goods.is_next eq 0} style="visibility:hidden"{/if}>
+      <td class="narrow-label">开始时间</td>
+      <td>
+        <input name="start_time" type="text" id="start_time" size="22" value='{$goods.begin_time}' readonly="readonly" />
+		<input name="selbtn1" type="button" id="selbtn1" 
+		onclick="return showCalendar('start_time', '%Y-%m-%d %H:%M', '24', false, 'selbtn1');"
+		value="{$lang.btn_select}" class="button"/>
+	  </td>
+    </tr>
+	
+  </table>
+
+  <div class="button-div">
+    <input type="hidden" name="act" value="{$form_action}" />
+    <input type="submit" value="{$lang.button_submit}" class="button"  />
+    <input type="reset" value="{$lang.button_reset}" class="button" />
+  </div>
+</form>
+</div>
+<!-- end goods form -->
+<script language="JavaScript">
+
+{literal}
+onload = function()
+{
+  // 开始检查订单
+  startCheckOrder();
+}
+function display_element(id,flag)
+{
+var tmp = document.getElementById(id);
+if(flag=='0')
+{
+tmp.style.visibility="hidden";
+}
+else if(flag == '1')
+{
+tmp.style.visibility="visible";
+}
+}
+
+function validate()
+{
+  var validator = new Validator('theForm');
+  validator.isNullOption("goods_id", no_goods_id);
+  validator.isNumber("exchange_integral", invalid_exchange_integral, true);
+
+
+  return validator.passed();
+}
+
+function searchGoods()
+{
+    var filter = new Object;
+    filter.keyword = document.forms['theForm'].elements['keywords'].value;
+
+    Ajax.call('exchange_goods.php?is_ajax=1&act=search_goods', filter, searchGoodsResponse, 'GET', 'JSON')
+}
+
+function searchGoodsResponse(result)
+{
+  var frm = document.forms['theForm'];
+  var sel = frm.elements['goods_id'];
+
+  if (result.error == 0)
+  {
+    /* 清除 options */
+    sel.length = 0;
+
+    /* 创建 options */
+    var goods = result.content;
+    if (goods)
+    {
+        for (i = 0; i < goods.length; i++)
+        {
+            var opt = document.createElement("OPTION");
+            opt.value = goods[i].goods_id;
+            opt.text  = goods[i].goods_name;
+            sel.options.add(opt);
+        }
+    }
+    else
+    {
+        var opt = document.createElement("OPTION");
+        opt.value = 0;
+        opt.text  = search_is_null;
+        sel.options.add(opt);
+    }
+  }
+
+  if (result.message.length > 0)
+  {
+    alert(result.message);
+  }
+}
+
+{/literal}
+</script>
+{include file="pagefooter.htm"}

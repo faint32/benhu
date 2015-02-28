@@ -1,0 +1,226 @@
+<!-- $Id: order_info.htm 15544 2009-01-09 01:54:28Z zblikai $ -->
+
+{include file="pageheader.htm"}
+{insert_scripts files="topbar.js,../js/utils.js,listtable.js,selectzone.js,../js/common.js"}
+
+<div class="list-div" style="margin-bottom: 5px">
+<table width="100%" cellpadding="3" cellspacing="1">
+  <tr>
+    <th colspan="4">{$lang.base_info}</th>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.return_time}</strong></div></td>
+    <td>{$back_order.formated_return_time}</td>
+    <td><div align="right"><strong></strong></div></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.delivery_sn_number}</strong></div></td>
+    <td>{$back_order.delivery_sn}</td>
+    <td><div align="right"><strong>{$lang.label_shipping_time}</strong></div></td>
+    <td>{$back_order.formated_update_time}</td>
+  </tr>
+  <tr>
+    <td width="18%"><div align="right"><strong>{$lang.label_order_sn}</strong></div></td>
+   <td width="34%">{$back_order.order_sn}{if $back_order.extension_code eq "group_buy"}<a href="group_buy.php?act=edit&id={$back_order.extension_id}">{$lang.group_buy}</a>{elseif $back_order.extension_code eq "exchange_goods"}<a href="exchange_goods.php?act=edit&id={$back_order.extension_id}">{$lang.exchange_goods}</a>{/if}
+    <td><div align="right"><strong>{$lang.label_order_time}</strong></div></td>
+    <td>{$back_order.formated_add_time}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_user_name}</strong></div></td>
+    <td>{$back_order.user_name|default:$lang.anonymous}</td>
+    <td><div align="right"><strong>{$lang.label_how_oos}</strong></div></td>
+    <td>{$back_order.how_oos}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_shipping}</strong></div></td>
+    <td>{if $exist_real_goods}{if $back_order.shipping_id > 0}{$back_order.shipping_name}{else}{$lang.require_field}{/if} {if $back_order.insure_fee > 0}（{$lang.label_insure_fee}{$back_order.formated_insure_fee}）{/if}{/if}</td>
+    <td><div align="right"><strong>{$lang.label_shipping_fee}</strong></div></td>
+    <td>{$back_order.shipping_fee}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_insure_yn}</strong></div></td>
+    <td>{if $insure_yn}{$lang.yes}{else}{$lang.no}{/if}</td>
+    <td><div align="right"><strong>{$lang.label_insure_fee}</strong></div></td>
+    <td>{$back_order.insure_fee|default:0.00}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_invoice_no}</strong></div></td>
+    <td colspan="3">{$back_order.invoice_no}</td>
+  </tr>
+  <tr>
+    <th colspan="4">{$lang.consignee_info}</th>
+    </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_consignee}</strong></div></td>
+    <td>{$back_order.consignee|escape}</td>
+    <td><div align="right"><strong>{$lang.label_email}</strong></div></td>
+    <td>{$back_order.email}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_address}</strong></div></td>
+    <td>[{$back_order.region}] {$back_order.address|escape}</td>
+    <td><div align="right"><strong>{$lang.label_zipcode}</strong></div></td>
+    <td>{$back_order.zipcode|escape}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_tel}</strong></div></td>
+    <td>{$back_order.tel}</td>
+    <td><div align="right"><strong>{$lang.label_mobile}</strong></div></td>
+    <td>{$back_order.mobile|escape}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_sign_building}</strong></div></td>
+    <td>{$back_order.sign_building|escape}</td>
+    <td><div align="right"><strong>{$lang.label_best_time}</strong></div></td>
+    <td>{$back_order.best_time|escape}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>{$lang.label_postscript}</strong></div></td>
+    <td colspan="3">{$back_order.postscript}</td>
+  </tr>
+ 
+</table>
+</div>
+  
+<div class="list-div" style="margin-bottom: 5px">
+<table width="100%" cellpadding="3" cellspacing="1">
+  <tr>
+    <th colspan="7" scope="col">{$lang.goods_info}</th>
+    </tr>
+  <tr>
+    <td scope="col"><div align="center"><strong>{$lang.goods_name_brand}</strong></div></td>
+    <td scope="col"><div align="center"><strong>{$lang.goods_sn}</strong></div></td>
+    <td scope="col"><div align="center"><strong>{$lang.product_sn}</strong></div></td>
+    <td scope="col"><div align="center"><strong>{$lang.goods_attr}</strong></div></td>
+    <td scope="col"><div align="center"><strong>{$lang.label_send_number}</strong></div></td>
+  </tr>
+  {foreach from=$goods_list item=goods}
+  <tr>
+    <td>
+    {if $goods.goods_id gt 0 && $goods.extension_code neq 'package_buy'}
+    <a href="../goods.php?id={$goods.goods_id}" target="_blank">{$goods.goods_name} {if $goods.brand_name}[ {$goods.brand_name} ]{/if}
+    {/if}
+    </td>
+    <td><div align="left">{$goods.goods_sn}</div></td>
+    <td><div align="left">{$goods.product_sn}</div></td>
+    <td><div align="left">{$goods.goods_attr|nl2br}</div></td>
+    <td><div align="left">{$goods.send_number}</div></td>
+  </tr>
+  {/foreach}
+</table>
+</div>
+
+<div class="list-div" style="margin-bottom: 5px">
+<table width="100%" cellpadding="2" cellspacing="1">
+  <tr>
+    <th colspan="4" scope="col">{if $back_order.back_type==1}退货{else}换货{/if}详情</th>
+    </tr>
+   <tr>
+    <td><div align="right"><strong>商品总金额：</strong></div></td>
+    <td>￥{$order.goods_amount}</td>
+    <td><div align="right"><strong>运费：</strong></div></td>
+    <td>￥{$order.shipping_fee}</td>
+  </tr>
+  <tr>
+    <td><div align="right"><strong>发票费：</strong></div></td>
+    <td>￥{$order.tax}</td>
+    <td><div align="right"><strong>使用的积分：</strong></div></td>
+    <td>{$order.integral}</td>
+  </tr>
+  <tr>
+      <td><div align="right"><strong>用户已付款：</strong></div></td>
+    <td>￥{$order.money_paid}</td>
+    <td><div align="right"><strong>订单总费用：</strong></div></td>
+    <td>￥{$order.total_fee}</td>
+
+  </tr>
+  <tr>
+    <td><div align="right"><strong>用户退款数：</strong></div></td>
+    <td>￥{$back_order.return_money}</td>
+{if $agree =='1'}
+  <td><div align="right"><strong>注意：</strong></div></td>
+    <td><font color="red">用户要退款的金额大于商品总金额.<br/>请谨慎处理！</font></td>
+{/if}	
+  </tr>
+</table>
+</div>
+
+{if $back_pics}
+<div  class="list-div" style="margin-bottom: 5px">
+  <table width="100%">
+    <tr>
+    <th colspan="4" scope="col">退换货凭证：</th>
+    </tr>
+	<tr>
+	  <td>
+	           <div class="shaidan">
+			   {insert_scripts files='../js/jquery.min.js'}
+			   <link href="/style/css/shaidan.css" rel="stylesheet" type="text/css" />
+		<script src="/style/js/shaidan.js" type="text/javascript" ></script>
+    	<ul class="shaidan_pic" >
+		{foreach from=$back_pics item=pic}
+        	<li><a href="javascript:void(0)"><img  src="{$pic.pic_url}"/></a></li>
+		{/foreach}
+        </ul>
+        <div class="shaidan_a" style="display:none">
+               	<img  src="{$pic.pic_url}"> 
+		</div>
+        </div>
+               
+	  </td>
+	</tr>
+  </table>
+</div>
+{/if}
+
+
+<div class="list-div" style="margin-bottom: 5px">
+<table width="100%" cellpadding="3" cellspacing="1">
+    <tr>
+		<th colspan="7" scope="col">{if $back_order.back_type==1}退货{else}换货{/if}理由详细描述</th>
+    </tr>
+	<tr>
+		<td align='center'><strong>{if $back_order.back_type==1}退货{else}换货{/if}理由：</strong>{$back_order.pro_descrip}</td>
+    </tr>
+ </table>
+</div> 
+<div class="list-div" style="margin-bottom: 5px">
+<table width="100%" cellpadding="3" cellspacing="1">
+  <script>
+     function admin_handle_back_order(agree_type)
+	 {
+	 var back_id = {$back_order.back_id};
+	
+	  Ajax.call( 'order.php?act=admin_hander_back_order', 'agree_type=' + agree_type + '&back_id=' + back_id, admin_handle_back_order_callback , 'GET', 'TEXT', false, true );
+	 }
+	  function admin_handle_back_order_callback(result)
+	  {
+	  if(result == '1') alert('success');
+	  else alert('failed');
+	  }
+  </script>
+    <tr>
+		<th colspan="7" scope="col">管理员处理</th>
+    </tr>
+	<tr>
+		<td align='center'><input type='button' value='同意' onclick="admin_handle_back_order(1)"/>&nbsp;&nbsp;&nbsp;<input type='button' value='不同意' onclick="admin_handle_back_order(0)"></td>
+    </tr>
+ </table>
+</div> 
+
+{literal}
+<script language="JavaScript">
+{/literal}
+  var oldAgencyId = {$back_order.agency_id|default:0};
+{literal}
+  onload = function()
+  {
+    // 开始检查订单
+    startCheckOrder();
+  }
+
+</script>
+{/literal}
+
+{include file="pagefooter.htm"}

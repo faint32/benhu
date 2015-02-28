@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+<div id="searchwrap" class="searchwrap wrap">
+  <div class="clearfix">
+    <div class="layout_search_sidebar" id="searchColSub">
+      <div class="searchLeftBanner"> <!-- TemplateBeginEditable name="左边区域" --><!-- #BeginLibraryItem "/library/recommend_best.lbi" --><!-- #EndLibraryItem --><!-- TemplateEndEditable --></div>
+    </div>
+    <div class="layout_search_main mt" id="bodyRight">
+      <div id="plist" class="border_h">
+        <div class="mod_search_crumb search_page" id="rankOpDiv">
+          <h3 style="text-align:left; font-size:14px; text-indent:10px;">{$lang.all_brand}</h3>
+        </div>
+        <div class="search_table" id="search_table">
+          <div class="mod_search_list">
+            <div id="brandList" class="clearfix"> 
+              <!-- {foreach from=$brand_list name="brand_list_foreach" item=brand_data} -->
+              <div class="brandBox">
+                <h4><span>{$brand_data.brand_name}</span>({$brand_data.goods_num})</h4>
+                <!-- {if $brand_data.brand_logo} -->
+                <div class="brandLogo"> <a href="{$brand_data.url}"><img src="data/brandlogo/{$brand_data.brand_logo}" alt="{$brand_data.brand_name|escape:html} ({$brand_data.goods_num})" /></a> </div>
+                <!-- {/if} -->
+                <p title="{$brand_data.brand_desc}">{$brand_data.brand_desc}</p>
+              </div>
+              <!-- {/foreach} --> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--帮助--> 
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --> 
+<!--帮助--> 
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

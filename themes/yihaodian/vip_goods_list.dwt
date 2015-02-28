@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+{insert_scripts files='jquery.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js,top.js,curvycorners.src.js'}
+{insert_scripts files='all_top_nav.js,top.js,curvycorners.src.js'}
+
+<link href="style/css/integral.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+$(function(){
+			var $li = $('#tab li');
+			var $ul = $('#content .content_box');
+						
+			$li.mouseover(function(){
+				var $this = $(this);
+				var $t = $this.index();
+				$li.removeClass();
+				$this.addClass('current');
+				$ul.css('display','none');
+				$ul.eq($t).css('display','block');
+			})
+	});		
+function setTab(m,n){
+ var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+ var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+ for(i=0;i<tli.length;i++){
+  tli[i].className=i==n?"hover":"";
+  mli[i].style.display=i==n?"block":"none";
+ }
+}
+
+</script>
+
+<body>
+  <!-- #BeginLibraryItem "/library/page_header.lbi" -->
+ <!-- #EndLibraryItem -->
+   <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+ <!-- #EndLibraryItem -->
+
+    <div class="integral">
+<div class="integral_l">
+   	<div class="integral_l_nav">
+	    <!--{foreach from=$categories item=category}-->
+		    <h3><a href="{$category.url}">{$category.name}</a></h3>
+			<div class="product_classify">
+			    <!--{foreach from=$category.cat_id item=child_category}-->
+				   <a href="{$child_category.url}" style="width:90px;overflow:hidden;">{$child_category.name}&nbsp;</a>
+				<!--{/foreach}-->
+			</div>
+		<!--{/foreach}-->
+    </div>
+         	<div id="outer">
+    <ul id="tab">
+        <li class="current">周排行</li>
+        <li>月排行</li>
+    </ul>
+    <div id="content">
+        <ul class="content_box" style="display:block;">
+		<!--{foreach from=$weekly_rank item=good name=loop}-->
+       	  <div class="integral_hdm">
+           	<ul class="integral_hdm_1">
+           	  <li class="integral_hdm_1_a">{$smarty.foreach.loop.iteration}</li>
+              <li class="integral_hdm_1_b">已兑换<span>{$good.cnum}</span>件</li>
+            </ul>
+            <ul class="integral_hdm_2">
+            	<li class="integral_hdm_2_a">
+                	<a href="exchange.php?id={$good.id}&act=view"><img src="{$good.goods_thumb}" /></a>
+                </li>
+              <li class="integral_hdm_2_b"><a href="exchange.php?id={$good.id}&act=view" title="{$good.goods_name}">{$good.goods_name}</a>
+              	<span>¥{$good.needed_money}+{$good.exchange_integral}积分</span>
+                </li>
+            </ul>
+           </div>
+        <!--{/foreach}-->
+        </ul>
+        <ul class="content_box">
+           <!--{foreach from=$monthly_rank item=good name=loop}-->
+       	  <div class="integral_hdm">
+           	<ul class="integral_hdm_1">
+           	  <li class="integral_hdm_1_a">{$smarty.foreach.loop.iteration}</li>
+              <li class="integral_hdm_1_b">已兑换<span>{$good.cnum}</span>件</li>
+            </ul>
+            <ul class="integral_hdm_2">
+            	<li class="integral_hdm_2_a">
+                	<a href="exchange.php?id={$good.id}&act=view"><img src="{$good.goods_thumb}" /></a>
+                </li>
+              <li class="integral_hdm_2_b"><a href="exchange.php?id={$good.id}&act=view" title="{$good.goods_name}">{$good.goods_name}</a>
+              	<span>¥{$good.needed_money}+{$good.exchange_integral}积分</span>
+                </li>
+            </ul>
+           </div>
+        <!--{/foreach}-->
+        </ul>
+    </div><!-- html代码end -->
+</div>
+
+  </div>
+  <div class="integral_r">
+       	<div class="integral_r_1">
+            <!-- #BeginLibraryItem "/library/ad_vipGoods.lbi" -->
+				<!-- #EndLibraryItem -->
+				     <div class="integral_r_1_b">
+                	<dl class="home_left_head">
+            	<dt><span>{if $personal_pic}
+		<img src="{$personal_pic}" style="width:62px;height:62px;"/>
+		{else}
+		<img src="style/images/img/nonehead.jpg" style="width:62px;height:62px;"/>{/if}</span></dt>
+                <dd class="home_left_head_name"><a>{if $info.username}{$info.username}{/if}</a>
+                <span class="home_left_head_class">
+					<img src="{if $vip_name == 'VIP1'} style/images/vip_s1.png 
+					{elseif $vip_name == 'VIP0'}style/images/vip_s0.png 
+					{elseif $vip_name == 'VIP2'} style/images/vip_s2.png
+					{elseif $vip_name == 'VIP3'} style/images/vip_s3.png	  
+					{elseif $vip_name == 'VIP4'}style/images/vip_s4.png
+					{else}style/images/vip_custom.png{/if}" 
+					width="52" height="27" />
+				</span>
+                </dd>
+            </dl>
+			{if $info.current_lever}<!--如果用户已经登陆-->
+            	<div class="vip_dengji">
+                <dl>
+                	<dt><span>{$info.current_lever}</span><p>{$info.next_lever}</p></dt>
+                    <dd><p style="width:{$info.leverRate}%"></p></dd>
+                </dl>
+                </div>
+				<div class="number">
+                <span>我的成长值：{$info.rank_points}</span><a href="{$staticPages.user}">查看我的等级</a>
+                </div>
+		  {else}<!--如果用户未登陆-->
+				<div id="sign" class="sign">
+									<a target="_self" href="{$staticPages.user}">未登陆</a>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				                </div>
+								<div class="number">
+                <span id="available_integral">我的成长值：0</span><a href="{$staticPages.user}">查看我的等级</a>
+                </div>
+			{/if}
+                
+                </div>
+        </div>
+            
+            	<span class="integral_goods_title">
+                	<h2>VIP专享</h2>
+                	<a href="vip_goods.php?type=vip_only&act=more">更多VIP专享&nbsp;&gt;</a>
+                </span>
+            <div class="integral_goods">
+			<!--{foreach  from=$vip_only_goods item=good name=foo}-->
+            	<dl>
+                	<dt><a href="{$good.url}" target="_blank"><img src="{$good.goods_thumb}" /></a></dt>
+                    <dd class="name">
+					 <a href="{$good.url}" target="_blank" title="{$good.goods_style_name}">{$good.goods_name}</a>
+					</dd>
+                  <dd class="vip_price">
+                    	<div class="vip_price_a">
+                        	<span class="vip_price_a_1 price_1_a">原价：¥{$good.shop_price}</span>
+                            <span class="vip_price_a_2">独享价：<b>¥{$good.user_price}</b></span>
+                      </div>
+                        <span class="vip_price_b">
+						  {if $good.rank_name == 'VIP1'} 
+						  V1
+						  {elseif $good.rank_name == 'VIP2'}
+						  V2
+						  {elseif $good.rank_name == 'VIP3'}
+						  V3
+						  {elseif $good.rank_name == 'VIP4'}
+						  V4
+						  {/if}
+						</span>
+                  </dd>
+                </dl>
+            <!--{/foreach}-->
+             
+            </div>
+        <span class="integral_goods_title">
+                	<h2>积分换购</h2>
+               	<a href="vip_goods.php?type=integral_buy&act=more">更多积分换购&nbsp;&gt;</a>
+        </span>
+        <div class="integral_goods">
+		<!--{foreach  from=$integral_buy_goods item=good name=foo}-->
+            		<dl>
+                	<dt><a href="{$good.url}" target="_blank"><img src="{$good.goods_thumb}" /></a></dt>
+                    <dd class="name"><a href="{$good.url}" target="_blank">{$good.goods_name}</a></dd>
+               	  	<dd class="vip_jifen_yuanjia">
+                    	<span>¥{$good.shop_price}</span>
+                        <b class="price_1_a">原价：¥{$good.market_price}</b>
+                    </dd>
+                  <div class="vip_jifen_price">
+    <div class="tabs_menu">
+        <ul id="menu{$smarty.foreach.foo.iteration}" class="menu">
+            <li class="hover" onmouseover="setTab({$smarty.foreach.foo.iteration},0)">V1价</li>
+            <li onmouseover="setTab({$smarty.foreach.foo.iteration},1)">V2价</li>
+            <li onmouseover="setTab({$smarty.foreach.foo.iteration},2)">V3价</li>
+            <li onmouseover="setTab({$smarty.foreach.foo.iteration},3)">V4价</li>
+        </ul>
+    </div>
+    <div class="tabs_content">
+        <div id="main{$smarty.foreach.foo.iteration}" class="content">
+		  {foreach from=$good.vip_goods item=vip_good   name = vipGoodLoop}
+            <ul {if $smarty.foreach.vipGoodLoop.index == 0} class="block" {/if}>
+			   <li>￥{$vip_good.user_price}&nbsp;+&nbsp;{$vip_good.user_integral} 积分</li>
+			</ul>          
+		  {/foreach}
+        </div>
+    </div>
+</div>
+                </dl>
+            <!--{/foreach}-->
+             
+            </div>
+    <span class="integral_goods_title">
+   	<h2>下期预告</h2>
+    </span>
+   	<div class="notice">
+		<!--{foreach from=$goods_trailer item=good}-->
+		  <dl>
+			<dt>{$good.begin_date}<br /><i>{$good.begin_hour}</i></dt>
+			  <dd>
+				 <a href="javascript:void(0)" class="img"><img src="{$good.goods_img}" /></a>
+				 <a href="javascript:void(0)" class="name" title="{$good.goods_style_name}">{$good.goods_style_name}</a>
+			  </dd>
+			</dl> 
+		<!--{/foreach}-->
+    </div>
+      </div>
+    </div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

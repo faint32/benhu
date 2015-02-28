@@ -1,0 +1,32 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="catehome" id="category_home">
+  <ul>
+
+      <!--{foreach from=$categories item=cat}-->
+
+              <li class="parentCat">
+                <a href="{$cat.url}" class="cateone">{$cat.name|escape:html}</a>
+                <div class="catetwo">
+                
+                                        <h4><a href="{$cat.url}">All Subcategories within {$cat.name|escape:html}</a><span class="cate_new"></span></h4>
+
+                                           <!--{foreach from=$cat.cat_id item=child name=child_cat}-->
+                                           {if $smarty.foreach.child_cat.index % 2 eq 0 || $smarty.foreach.child_cat.first}
+                                            <dl>
+                                        {/if}
+                            <dt><a href="{$child.url}">{$child.name|escape:html}</a></dt>
+                                {if $smarty.foreach.child_cat.index % 2 eq 1 || $smarty.foreach.child_cat.last}
+                        </dl>
+                        {/if}
+
+   <!--{/foreach}-->
+                                        
+                        
+                                        </div>
+        </li>
+
+  <!--{/foreach}--> 
+
+
+            </ul>
+</div>

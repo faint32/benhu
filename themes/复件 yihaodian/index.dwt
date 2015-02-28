@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta property="qc:admins" content="12240364526256056727" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+<script type="text/javascript">
+var cur_date = new Date();
+var serverTime = cur_date.getTime();
+</script>
+{insert_scripts files='common.js,index.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->{insert_scripts files='yhd_index.js'} <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+<div class="layout_main">
+  <div class="layout_wrap">
+    <div class="layout_col_a">
+      <div class="mod_promo_show" id="promo_show" style="overflow: hidden;">
+        <div class="promo_wrapper" id="index_menu_carousel">
+          <ol class="clearfix big_slide">
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域一（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域一（宽）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域二（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域二（宽）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域三（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域三（宽）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域四（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域四（宽）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域五（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域五（宽）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域六（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域六（宽）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域七（宽）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix">
+              <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域七（宽）" -->
+<!-- TemplateEndEditable -->
+          </ol>
+          <ol class="clearfix small_slide">
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域一（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域一（窄）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域二（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域二（窄）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域三（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域三（窄）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域四（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域四（窄）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域五（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域五（窄）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域六（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix"> <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域六（窄）" -->
+<!-- TemplateEndEditable --> </div>
+            </li>
+            <li> <!-- TemplateBeginEditable name="首页顶部幻灯片区域七（窄）" -->
+<!-- TemplateEndEditable -->
+              <div class="mini_promo clearfix">
+              <!-- TemplateBeginEditable name="首页顶部幻灯片三小广告区域七（窄）" -->
+<!-- TemplateEndEditable -->
+          </ol>
+        </div>
+        <ul id="lunboNum" class="none" style="display: block; ">
+          <li class="cur">
+            <div><span>•</span></div>
+          </li>
+          <li class="">
+            <div><span>•</span></div>
+          </li>
+          <li class="">
+            <div><span>•</span></div>
+          </li>
+          <li class="">
+            <div><span>•</span></div>
+          </li>
+          <li class="">
+            <div><span>•</span></div>
+          </li>
+          <li class="">
+            <div><span>•</span></div>
+          </li>
+          <li class="">
+            <div><span>•</span></div>
+          </li>
+        </ul>
+        <a href="javascript:void(0);" class="show_next" style="right: -45px;"><s></s></a> <a href="javascript:void(0);" class="show_pre" style="left: -45px;"><s></s></a> </div>
+      <div class="mod_recommend_list" id="index_recommend_list">
+        <ul class="pro_tab clearfix">
+          <li class="cur">限时抢购</li>
+          <li>爆款新品</li>
+          <li>您可能喜欢的促销</li>
+          <li class="last_tab">您可能喜欢的商品</li>
+        </ul>
+        <div id="recommend_bd"> <!-- TemplateBeginEditable name="限时抢购区域" -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+
+<!-- {if $promotion_goods} -->
+  <ul class="tab_content clearfix time_buying" id="limitBuy" style="display: block;">
+    <!--{foreach from=$promotion_goods item=goods }-->
+    
+    <li class=""> <a target="_blank" title="{$goods.name|escape:html}" class="pro_img" href="{$goods.url}"> <img src="{$goods.thumb}" ></a> <a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_name|escape:html}</a>
+      <p class="tl"><strong>{$goods.promote_price}</strong><del>{$goods.shop_price}</del></p>
+      <p class="endtime last_time" value="{$goods.end_date}"></p>
+    </li>
+    
+    <!--{/foreach}-->
+  </ul>
+<!-- {/if} -->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="爆款新品区域" -->
+<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
+
+<!-- {if $new_goods} -->
+<div style="display: none;" class="tab_content none" id="newProductRecommend"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+
+  <ul id="newProductRecommend_prod" class="clearfix">
+    <!--{foreach from=$new_goods item=goods}-->
+    <li><a target="_blank" title="{$goods.name|escape:html}" class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}" ></a><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+      <p class="tl"><strong>
+        <!-- {if $goods.promote_price neq ""} -->
+        {$goods.promote_price}
+        <!-- {else}-->
+        {$goods.shop_price}
+        <!--{/if}-->
+        </strong></p>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+
+</div>
+<!-- {/if} -->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="您可能喜欢的热卖区域" -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
+<!-- {if $hot_goods} -->
+<!-- {if $script_name eq "category_top"} -->
+<div id="hotRecommend" lazyimg="y" class="hot_recommend">
+  <h3>爆款推荐</h3>
+  <div class="box">
+    <ul class="clearfix">
+      <!--{foreach from=$hot_goods item=goods name=foo}-->
+      <li {if $smarty.foreach.foo.first}style="width: 195px;"{/if}>
+        <dl class="product_item"  {if $smarty.foreach.foo.first}style="width: 187px;"{/if}>
+          <dd class="pic"><a target="_blank" href="{$goods.url}"><img width="160" height="160" src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a></dd>
+          <dt><a target="_blank" href="{$goods.url}">{$goods.short_style_name}</a></dt>
+          <dd class="price"> <strong> <!-- {if $goods.promote_price neq ""} --> 
+            {$goods.promote_price} 
+            <!-- {else}--> 
+            {$goods.shop_price} 
+            <!--{/if}--></strong> <del highprice="y"> {$goods.market_price}</del> </dd>
+        </dl>
+      </li>
+      <!--{/foreach}-->
+      
+    </ul>
+  </div>
+</div>
+<!-- {elseif $script_name eq "category"}-->
+<div class="mod_search_sidlist mt clearfix" style="" id="hotProducts">
+  <div>
+    <h2 class="search_title">热卖商品</h2>
+    <div class="sidlist_box">
+      <ul>
+        <!--{foreach from=$hot_goods item=goods}-->
+        <li> <a target="_blank" class="pro_img_big" href="{$goods.url}"><img src="{$goods.thumb}"  width="160" height="160"><sup class="ico_search_list">热卖</sup></a>
+          <p class="price"><span class="color_red"> <!-- {if $goods.promote_price neq ""} --> 
+            {$goods.promote_price} 
+            <!-- {else}--> 
+            {$goods.shop_price} 
+            <!--{/if}--></span><del>{$goods.market_price}</del></p>
+          <p class="name"><a target="_blank" href="{$goods.url}"><span class="color_red"></span>{$goods.short_style_name}</a></p>
+          <p class="comment">评论<a target="_blank" href="{$goods.url}">21条</a></p>
+        </li>
+        <!--{/foreach}-->
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- {elseif $script_name eq "group"}-->
+<Div class="grouSideMod grouSideLove mb">
+  <h4>热卖商品</h4>
+  <ul id="detail_ad_ul">
+    <!-- {foreach from=$hot_goods item=goods} -->
+    <li> 
+    <a class="thumb" target="_blank" href="{$goods.url}"> <img width="180" height="180" src="{$goods.thumb}"> </a> <a class="title" title="{$goods.name|escape:html}" target="_blank" href="{$goods.url}">{$goods.short_name|escape:html}</a>
+      <p class="price clearfix"> <span class="num fr"><em>{$goods.sales_volume}</em>人已购买</span> <strong>¥{$goods.shop_price}</strong> </p>
+    </li>
+    <!-- {/foreach} -->
+  </ul>
+</Div>
+<!-- {else}-->
+<div style="display: none;"class="tab_content " id="youFavoratePromotion"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+  <ul id="youFavoratePromotion_prod" class="clearfix">
+    <!--{foreach from=$hot_goods item=goods}-->
+    <li><a target="_blank" title="{$goods.name|escape:html}"  class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}"></a><a target="_blank" title="{$goods.name|escape:html}"  href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+      <p class="tl"><strong> 
+        <!-- {if $goods.promote_price neq ""} --> 
+        {$goods.promote_price} 
+        <!-- {else}--> 
+        {$goods.shop_price} 
+        <!--{/if}--> 
+        </strong></p>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+</div>
+<!-- {/if} --> 
+<!-- {/if} --> 
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="您可能喜欢的精品区域" -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+
+<!-- {if $best_goods} -->
+<!-- {if $script_name eq "category" || $script_name eq 'search' || $script_name eq 'brand'}-->
+<div id="pms_searchlook" class="mod_search_sidlist mt clearfix">
+  <h2 class="search_title">精品推荐</h2>
+  <div class="sidlist_box">
+    <ul>
+      <!--{foreach from=$best_goods item=goods}-->
+      <li> <a target="_blank" class="pro_img" title="{$goods.name|escape:html}" href="{$goods.url}"> <img src="{$goods.thumb}" width="115" height="115"><sup class="ico_search_list">精品</sup></a>
+        <p class="pirce"> <span class="color_red">
+          <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+          </span> </p>
+        <p class="name"> <a target="_blank" href="{$goods.url}" class="name">{$goods.short_style_name}</a> </p>
+      </li>
+      <!--{/foreach}-->
+    </ul>
+  </div>
+</div>
+<!-- {else}-->
+<div style="display: none;" class="tab_content none" id="youFavorateProduct"> <a class="tabpre" href="javascript:void(0);"></a> <a class="tabnext" href="javascript:void(0);"></a>
+  <ul id="youFavorateProduct_prod" class="clearfix">
+    <!--{foreach from=$best_goods item=goods}-->
+    <li><a target="_blank" title="{$goods.name|escape:html}"  class="pro_img" href="{$goods.url}"><img src="{$goods.thumb}"></a><a target="_blank" title="{$goods.name|escape:html}" href="{$goods.url}" class="pro_name">{$goods.short_style_name}</a>
+      <p class="tl"><strong>
+        <!-- {if $goods.promote_price neq ""} -->
+        {$goods.promote_price}
+        <!-- {else}-->
+        {$goods.shop_price}
+        <!--{/if}-->
+        </strong></p>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+</div>
+<!-- {/if} -->
+<!-- {/if} -->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --> </div>
+      </div>
+    </div>
+    <div class="layout_col_b"> <!-- #BeginLibraryItem "/library/index_exclusivity.lbi" --> <!-- #EndLibraryItem -->
+      <div id="index_tuan" class="mod_tab_cont">
+        <p class="tabs tabs_4"> <a class="cur" href="javascript:void(0);">团购</a> <a class="" href="javascript:void(0);"> 热卖 </a> <a class="" href="javascript:void(0);"> 新品 </a> <a class="last_tb" href="javascript:void(0);"> 精品 </a> </p>
+        <div class="index_tuan_bd">
+          <div class="content" style="display: block;">
+            <p class="tuan_img"> <a title="{$group_buy_list_index.act_name}" target="_blank" href="{$group_buy_list_index.url}"> <img src="{$group_buy_list_index.goods_thumb}"> </a> </p>
+            <p id="currentGroupon"class="tuan_detail"> <strong class="price">¥<i>{$group_buy_list_index.price_ladder.0.price}</i></strong> <a data-ref="YHD_HOME_TUAN_Link" target="_blank" class="btn" href="{$group_buy_list_index.url}">抢购</a> <span class="num">已售<strong>{$group_buy_list_index.cur_amount.valid_goods}</strong>件</span> </p>
+          </div>
+          <div style="display: none;" class="content">
+            <p class="pic"> <!-- TemplateBeginEditable name="幻灯片右侧热卖广告区域" -->
+<!-- TemplateEndEditable --> </p>
+          </div>
+          <div style="display: none;" class="content">
+            <p class="pic"> <!-- TemplateBeginEditable name="幻灯片右侧新品广告区域" -->
+<!-- TemplateEndEditable --> </p>
+          </div>
+          <div style="display: none;" class="content">
+            <p class="pic"> <!-- TemplateBeginEditable name="幻灯片右侧精品广告区域" -->
+<!-- TemplateEndEditable --> </p>
+          </div>
+        </div>
+      </div>
+      <div id="index_digit" class="mod_iframe_app"> <!-- TemplateBeginEditable name="团购下广告" -->
+<!-- TemplateEndEditable --> </div>
+      <div id="index_news" class="mod_news">
+        <p class="tabs "> <a class="tb1 cur" href="javascript:void(0);"><span>耍</span>大牌</a> <a class="tb2 " href="javascript:void(0);">公告</a> <a class="tb3" href="javascript:void(0);">新闻</a> </p>
+        <div class="index_news_bd">
+          <div class="content" style="display: block;">
+            <p class="pic"><!-- TemplateBeginEditable name="耍大牌广告区域" -->
+<!-- TemplateEndEditable --></p>
+          </div>
+          <div style="display: none;" class="content">
+            <ul class="news_list">
+              <!-- TemplateBeginEditable name="公告区域" -->
+<!-- TemplateEndEditable -->
+            </ul>
+          </div>
+          <div style="display: none;" class="content">
+            <ul class="news_list">
+              <!-- TemplateBeginEditable name="新闻区域" -->
+<!-- TemplateEndEditable -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="loucengBanner" class="index_column_ad wrap mt">
+  <div class="loucengBanner_big"> <!-- TemplateBeginEditable name="首页中部横幅广告（宽）" -->
+<!-- TemplateEndEditable --> </div>
+  <div class="loucengBanner_small"> <!-- TemplateBeginEditable name="首页中部横幅广告（窄）" -->
+<!-- TemplateEndEditable --></div>
+</div>
+<!-- 商品分类 start-->
+<div id="needLazyLoad"> 
+
+<!-- TemplateBeginEditable name="首页分类下商品区域" -->
+<!-- TemplateEndEditable -->
+  
+</div>
+<!-- 商品分类 end-->
+
+<!-- 底部帮助 start-->
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- 底部帮助 end-->
+
+<!-- 页脚 start-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- 页脚 end-->
+</body>
+</html>

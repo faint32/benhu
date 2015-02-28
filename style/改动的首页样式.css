@@ -1,0 +1,24 @@
+/*左侧无极限菜单*/
+.all-goods .pos1{left: 198px; top: 0px;}
+.all-goods .pos2{left: 198px; top: 37px;}
+.all-goods .pos3{left: 198px; top: 140px;}
+.all-goods .pos4{left: 198px; top: 111px;}
+.all-goods .pos5{left: 198px; top: 148px;}
+.all-goods .pos6{left: 198px; top: 350px;}
+.all-goods .pos7{left: 198px; bottom: 280px;}
+.all-goods .pos8{left: 198px; bottom: -2px;}
+.all-goods .pos9{left: 198px; bottom: -2px;}
+.all-goods .pos10{left: 198px; bottom: -2px;}
+.all-goods .pos11{left: 198px; bottom: -2px;}
+
+
+.all-goods .item .product_classify a{ font-size:12px; width:60px; height:24px; display:block; float:left; text-align:left; line-height:24px;overflow: hidden;}
+
+/* 幻灯片 */
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:30px; height:15px; margin-right:5px; cursor:pointer; background:#cccccc;}
+#focus .btn span.on {background:#e60012; height:15px;}
+
+/* logo */
+.logo{ width:366px; height:100px; background:url(../images/logo1.png) no-repeat; display:block; float:left;}
+.header_2{ width:520px; float:left; margin-left:110px;height:100px;}
+

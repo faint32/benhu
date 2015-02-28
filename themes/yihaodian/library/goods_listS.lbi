@@ -1,0 +1,55 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- 筛选栏 start -->
+<div class="category_right_2">
+   <a class="category_right_2_a" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list" >默认</a>
+   <a class="category_right_2_b" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=sales_volume&order=<!-- {if $pager.sort == 'sales_volume' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list">销量</a>
+   <a class="category_right_2_b_1" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=comments_number&order=<!-- {if $pager.sort == 'comments_number' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list">好评</a>
+   <a class="category_right_2_b_2" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list">价格</a>
+ </div>
+ 
+<!-- 筛选栏 end -->
+<div class="main_2_left over">
+<form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+ 
+    <!--{foreach name=goods_list from=$goods_list item=goods}-->
+        <!-- {if $goods.goods_id} -->
+        <dl>
+            	<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" width="178" height="178"/></a></dt>
+                <dd><a href="{$goods.url}">{$goods.goods_name}</a>
+                	<span class="main_2_left_price1">￥{$goods.shop_price}</span><span class="main_2_left_price2">￥{$goods.market_price}</span>
+                </dd>
+            </dl>
+	<!-- {/if} -->
+    <!--{/foreach}-->
+  
+    </form>
+</div>
+
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>

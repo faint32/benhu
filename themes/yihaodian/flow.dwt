@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- 
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+-->
+<link href="style/css/shoppingcart.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="style/js/jquery.min.js"></script>
+{* 包含脚本文件 *}
+{insert_scripts files='yhd_flow.js'}
+{insert_scripts files='common.js,shopping_flow.js,region.js,'}
+<script type="text/javascript" src="style/js/cart_deliv_addr.js"></script>
+<script type="text/javascript" src="style/js/ele_autoCenter.js"></script>
+<script type="text/javascript" src="style/js/cart_checkbox.js"></script>
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+	<!-- {if $step eq "cart"} --> 
+<!--第一步 查看购物车开始 -->
+     <p class="sc_step"></p>
+     {if $goods_list}
+     <form id="formCart" name="formCart" method="post" action="flow.php">
+    <div class="sc_box">
+        <div class="sc_title">
+            <div class="sc_a"><input name="" type="checkbox" value="" id="sc_all" class="sc_all"/></div>
+            <div class="sc_f">全选</div>
+            <div class="sc_e">商品信息</div>
+            <div class="sc_c">单价</div>
+            <div class="sc_c">数量</div>
+            <div class="sc_c">金额</div>
+            <div class="sc_d">操作</div>
+        </div>
+	<!-- {foreach from=$goods_list item=goods} -->
+		{if $goods.packageBuy_id == '0'}<!--普通商品-->
+			<div class="sc_goods">
+				<div class="sc_a"><input  type="checkbox" class="sc_good" value="{$goods.rec_id}" />&nbsp;&nbsp;</div>
+				<div class="sc_b">
+					<dl class="sc_goods_1">
+						<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" width="80" height="80" /></a></dt>
+						<dd><a href="goods.php?id={$goods.goods_id}">{$goods.goods_name}</a><span>{$goods.goods_attr|nl2br}</span></dd>
+					</dl>
+				</div>
+				<div class="sc_c">
+					<ul class="sc_goods_2">
+						<li class="sc_goods_2_1">¥{$goods.market_price} </li>
+						<li class="sc_goods_2_2">¥{$goods.goods_price} </li>
+						<!--<li class="sc_goods_2_3">会员折扣</li>-->
+					</ul>
+				</div>
+				<div class="sc_c">
+					<p class="sc_goods_3">					   
+						<input id="items_{$goods.rec_id}" value="{$goods.goods_number}" type="text" style="text-align:center" 
+						onblur="beforeCartNumInput('{$goods.rec_id}',document.getElementById('items_{$goods.rec_id}').value)"/>
+						<div class="sc_goods_3_1"><a onClick="flowClickCartNum({$goods.rec_id},+1);"></a><a  onClick="flowClickCartNum({$goods.rec_id},-1);"></a></div>
+					</p>
+					</div>
+					<div class="sc_c">
+						<span class="sc_goods_4"  id="total_items_{$goods.rec_id}">¥{$goods.subtotal}</span>
+					</div>
+					<div class="sc_d">
+						<span class="sc_goods_5">
+							<a href="javascript:collect({$goods.goods_id})" id="addFavorite">加入收藏夹</a>
+							<a class="sc_goods_5_1" href="flow.php?step=drop_goods&amp;id={$goods.rec_id}';">删除</a>
+						</span>
+					</div>
+				</div>
+		{else}<!--第一件套餐购商品-->
+	        {if $goods.packageBuy == '1'} <!--第1件套餐购商品-->		
+				<div class="shoppingcatr_taocan">
+					<div class="shoppingcatr_taocan_title titleDiv">
+							搭配套餐
+					</div>
+					<div class="sc_a_1 shoppingcatr_taocan_padding autoCenter">
+						<input class="sc_good" goods-varieties="1" type="checkbox" value="{$goods.packageBuy_id}" />&nbsp;&nbsp;
+					</div>		
+			        <div class="shoppingcatr_taocan_goods">
+			{/if}
+			    <div class="shoppingcatr_taocan_goods_box" data-goods-price="{$goods.goods_price}" data-rec-id="{$goods.rec_id}">
+					<div class="sc_b">
+						<dl class="sc_goods_1">
+							<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}"/></a></dt>
+							<dd><a href="{$goods.url}">{$goods.goods_name}</a><span>{$goods.goods_attr|nl2br}</span></dd>
+						</dl>
+					</div>
+					<div class="sc_c">
+						<ul class="sc_goods_2">
+							<li class="sc_goods_2_1">¥{$goods.market_price} </li>
+							<li class="sc_goods_2_2">¥{$goods.goods_price} </li>
+							<!--<li class="sc_goods_2_3">+1000积分</li>-->
+						</ul>
+					</div>
+				</div>
+			{if $goods.packageBuy == '3'}<!--最后一件套餐购商品-->
+				</div>
+				<div class="autoCenter">
+					<div class="sc_c shoppingcatr_taocan_padding">
+						<span class="sc_goods_3">
+							<input id="items_{$goods.packageBuy_id}" class="taocan_num" value="{$goods.goods_number}" type="text" style="text-align:center" 
+							onblur="beforeCartNumInput('{$goods.packageBuy_id}',document.getElementById('items_{$goods.packageBuy_id}').value,'taocan')"/>
+							<div class="sc_goods_3_1">
+								<a onClick="flowClickCartNum({$goods.packageBuy_id},+1,'taocan');"></a>
+								<a  onClick="flowClickCartNum({$goods.packageBuy_id},-1,'taocan');"></a>
+							</div>
+						</span>
+					</div>
+					<div class="sc_c shoppingcatr_taocan_padding">
+						<span class="sc_goods_4"  id="total_items_{$goods.packageBuy_id}">¥{$goods.subtotal}</span>
+						<br/><span class="sc_goods_2_3 packageBuyHY">优惠¥1000</span>
+					</div>
+					<div class="sc_d shoppingcatr_taocan_padding">
+						<span class="sc_goods_5">
+							<a class="sc_goods_5_1" href="flow.php?step=drop_goods&amp;buyType=taocan&amp;id={$goods.packageBuy_id}'">删除</a>
+						</span>
+					</div>
+				</div>
+			</div>			
+			{/if}		 
+		{/if}
+    <!--{/foreach}-->
+	
+	<!-- #BeginLibraryItem "/library/packageBuyDiscount.lbi" --><!-- #EndLibraryItem -->
+		
+        </div>
+
+	<div class="sc_price">
+            <div class="sc_a">
+                <table width="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr><td height="50" align="right"><input name="" type="checkbox" value="" id="sc_all_two"/></td></tr>
+                </table>
+            </div>
+            <div class="sc_f"><a href="javascript:void(0)" id="clearAllCart" onclick="checkAll('check')">全选</a></div>
+            <div class="sc_c"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) drop_selected_goods()">删除</a></div>
+            <div class="sc_c"><a href="javascript:drop_collect_goods()">加入收藏夹</a></div>
+	    <table class="sc_price_1" width="550" border="0" align="right" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="149">已选商品<span id="totalDifGoodsNumber">{ if $total_goods_count}{$total_goods_count}{else}{insert name='cart_info_number'}{/if}</span>件</td>
+                  <td width="42">合计：</td>
+                  <td width="196"><b id="amount">¥{$total_goods_price}</b></td>
+                  <td width="163">
+		  <a href="javascript:void(0)" onclick="checkoutGoods()" 
+		  class="settlementBt ctn_shopping" 
+		  id="confirmToPay">
+		  <input type="button" value="结&nbsp;&nbsp;算"  />
+		  </a>
+		  </td>
+                </tr>
+            </table>
+	     <!-- {else}--> 
+	     <div class="main middle over">
+		<p class="sc_nothing">您的购物车还是空的，赶快去逛逛吧！
+		    <a href="./index.php">现在就去逛</a>
+		    </p>
+	     </div>
+  {/if}
+	</div>
+	<div class="sc_youlike">
+        <p><span>猜你喜欢</span><a href="user.php?act=collection_list">去我的收藏夹&gt;&gt;</a></p>
+        <div class="main over">
+<!--{foreach from=$cai item=cai name=cats}-->
+            <dl>
+                <dt><a href="goods.php?id={$cai.goods_id}"><img src="{$cai.goods_thumb}" /></a></dt>
+                <dd><a href="goods.php?id={$cai.goods_id}">{$cai.goods_name}</a>
+                    <span class="sc_youlike_price1">￥{$cai.shop_price}</span><span class="sc_youlike_price2">￥{$cai.market_price}</span>
+                </dd>
+            </dl>
+<!-- {/foreach} -->
+        </div>
+        <input type="hidden" name="step" value="update_cart" />
+        </form>
+    </div>   
+<!--第一步 查看购物车结束 -->
+<!-- {/if} --> 
+
+	<!-- {if $step eq "checkout"} 开始订单确认界面 -->
+<!--第二步 确认订单信息开始 -->
+{insert_scripts files='add_address.js,'}
+<script type="text/javascript" src="/style/js/add_address.js"></script>
+    <p class="sc_order_step"></p>
+   <form action="flow.php" method="post" name="theForm" id="theForm" onSubmit="return checkOrderForm(this);">
+ <div class="sc_box">
+    	<p class="sc_order_title">
+		<span>确认收货地址</span>
+		<a href="user.php?act=address_list">管理收货地址</a>
+		</p>
+        <ul id="up_down" class="sc_order_address">
+                
+					<!-- {foreach from=$consignee_list item=consignee key=sn name=loop} -->
+							{if $consignee.consignee}
+						<li id="address_id{$consignee.address_id}" class="{if $consignee.is_first==1}sc_order_address_choose{else}sc_order_address_1{/if}"
+						onclick=" set_moren('{$consignee.address_id}') "
+					         style="cursor:pointer;"><b>{$consignee.add|escape}{$consignee.address|escape}</b><span>{$consignee.consignee}（收）</span><span>{$consignee.tel}</span><input type="hidden" name="addr" value="1" id="addr"></li> 				
+							{elseif  $smarty.foreach.loop.index == 0}
+							  <li style="text-align: center;line-height:50px;font-size:25px;">请添加收货地址！
+							  <input type="hidden" name="addr" value="" id="addr">
+							  </li>			
+							{/if}
+					<!-- {/foreach} --> 
+        </ul>
+       
+        <div class="sc_order_botton" style="margin:10px 0;">
+        	<a href="#" class="sc_order_botton_1" onclick="elem_toggle('container')">使用新地址</a>
+                <a href="javascript:void(0)" id="show"  onclick="document.getElementById('up_down').style.height='auto';document.getElementById('hidden').style.display='';document.getElementById('show').style.display='none';">查看全部收货地址</a>
+                <a href="javascript:void(0)" id="hidden" style="display:none;" onclick="document.getElementById('up_down').style.height='148px';document.getElementById('hidden').style.display='none';document.getElementById('show').style.display='';">收起地址</a>
+        </div>
+  
+    </div>
+    </div>
+      <table class="sc_order_express" width="1198" border="0" cellpadding="0" cellspacing="0">
+        <tr><td colspan="5"><span>配送方式</span></td></tr>
+        <tr class="title">
+         <td width="200" align="center">名称</td><td width="363">收费规则</td>
+        </tr>
+      	<!--{foreach from=$shipping_list item=ship}-->
+        <tr>
+          <td align="center"><input type="radio"  name="shipping" value="{$ship.shipping_id}" checked="true" />&nbsp;{$ship.shipping_name}
+           </td>
+           <td align="left">
+             {$ship.shipping_desc}          
+		  </td>
+        </tr>
+        <!--{/foreach}-->
+    </table>
+<table class="sc_order_express" width="1198" border="0" cellpadding="0" cellspacing="0" style="display:none;">
+        <tr><td colspan="5"><span>支付方式</span></td></tr>
+        <tr class="title">
+          <td width="200" align="center">名称</td><td width="363">订购描述</td><td width="200" align="center">手续费</td>
+        </tr>
+<!-- {foreach from=$payment_list item=payment} 循环支付方式 -->
+        <tr>
+          <td align="center"><input type="radio" name="payment" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id || $order.pay_id==0}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/>
+            {$payment.pay_name}</td>
+          <td>{$payment.pay_desc}</td>
+          <td align="center">{$payment.format_pay_fee}元</td>
+        </tr>
+<!-- {/foreach} 循环支付方式 -->
+       
+    </table>
+
+ {if $is_exchange_goods != 1}
+    <table width="1198" border="0" cellspacing="0" cellpadding="0" class="sc_order_fapiao" style="display:none;">   
+	  <tr>
+        <td width="100"><span>发票信息</span></td>
+        <td width="116">&nbsp;</td>
+        <td width="110">&nbsp;</td>
+        <td width="138">&nbsp;</td>
+        <td width="110">&nbsp;</td>
+        <td width="138">&nbsp;</td>
+        <td width="111">&nbsp;</td>
+        <td width="67">&nbsp;</td>
+        <td width="306">&nbsp;</td>
+      </tr>
+	 
+      <tr class="sc_order_fapiao_1">
+        <td align="right">开发票：</td>
+        <td><label for="select"></label>
+          <select name="need_inv" id="ECS_NEEDINV" onchange="changeNeedInv()"><option value="0">不需要</option><option value="1" >需要</option></select>
+        </td>
+        <td align="right">发票类型：</td>
+        <td><label for="select2"></label>
+          <select name="inv_type" id="ECS_INVTYPE"  onchange="changeNeedInv()" disabled>
+            {html_options options=$inv_type_list selected=$order.inv_type}
+          </select>
+        </td>
+        <td align="right">发票内容：</td>
+        <td><label for="select3"></label>
+          <select name="inv_content" id="ECS_INVCONTENT"   onchange="changeNeedInv()" disabled>
+            {html_options values=$inv_content_list output=$inv_content_list selected=$order.inv_content}
+          </select>
+        </td>
+        <td align="right">发票抬头：</td>
+        <td><label for="textfield"></label><input name="inv_payee" type="text"  id="ECS_INVPAYEE"  value="{$order.inv_payee}" onblur="changeNeedInv()" disabled/></td>
+      </tr>
+    </table>
+	  {/if}
+    <div class="sc_box sc_order_margin_1">
+    	<p class="sc_order_title"><span>确认订单信息</span></p>
+        <div class="sc_title">
+          <div class="sc_f"></div>
+          <div class="sc_e sc_order_mr_1">商品信息</div>
+          <div class="sc_c sc_order_mr_1">单价</div>
+          <div class="sc_c sc_order_mr_1">数量</div>
+          <div class="sc_c">小计</div>
+        </div>
+<!-- {foreach from=$goods_list item=goods} -->
+        <!--{if $goods.packageBuy_id == '0'}-->
+			<div class="sc_goods">
+			    <div class="sc_b sc_order_mr_1">
+					<dl class="sc_goods_1">
+					    <dt>
+							<a href="{$goods.url}">
+								<img src="{$goods.goods_thumb}" width="80" height="80" />
+							</a>
+						</dt>
+						<dd>
+							<a href="{$goods.url}">
+								{$goods.goods_name}
+							</a>
+							<span>规格：{$goods.goods_attr|nl2br}</span>
+						</dd>
+					</dl>
+			    </div>
+				<div class="sc_c sc_order_mr_1">
+				    <ul class="sc_goods_2">
+					   <li class="sc_goods_2_2">¥{if $is_exchange_goods != 1}{$goods.formated_goods_price} {else}{$goods.needed_money}{/if}</li>
+				    </ul>
+				</div>
+				<div class="sc_c sc_order_mr_1">
+					{$goods.goods_number}
+				</div>
+				<div class="sc_c">
+					<span class="sc_goods_4">
+						¥{if $is_exchange_goods != 1}{$goods.formated_subtotal} {else}{$total.needed_money}{/if}
+					</span>
+				</div>
+			</div>
+		<!--{else}-->
+			<!--{if $goods.packageBuy == '1'}-->
+				<div class="shoppingcatr_taocan">
+					<div class="shoppingcatr_taocan_title titleDiv">
+						搭配套餐
+					</div>
+					<div class="sc_a_1 shoppingcatr_taocan_padding">&nbsp;&nbsp;</div>
+					<div class="shoppingcatr_taocan_goods">
+			<!--{/if}-->
+						<div class="shoppingcatr_taocan_goods_box" data-goods-price="{$goods.goods_price}">
+							<div class="sc_b">
+							<dl class="sc_goods_1">
+								<dt><a href="{$goods.url}"><img src="{$goods.goods_thumb}" width="80" height="80" /></a></dt>
+								<dd><a href="{$goods.url}">{$goods.goods_name}</a><span>{$goods.goods_attr}</span></dd>
+							</dl>
+							</div>
+							<div class="sc_c">
+								<ul class="sc_goods_2">
+									<li class="sc_goods_2_1">¥{$goods.market_price} </li>
+									<li class="sc_goods_2_2">¥{$goods.goods_price} </li>
+									<!--<li class="sc_goods_2_3">+1000积分</li>-->
+								</ul>
+							</div>
+						</div>
+			<!--{if $goods.packageBuy == '3'}-->
+			        </div> 
+					
+						<div class="autoCenter" style="margin-left:65px;">
+						
+							<div class="sc_c shoppingcatr_taocan_padding">
+								<span class="sc_goods_3" >{$goods.goods_number}</span>
+								<input type="hidden" class="taocan_num" value="{$goods.goods_number}"/>
+							</div>
+							<div class="sc_c shoppingcatr_taocan_padding" style="margin-left:80px;">
+								<span class="sc_goods_4"></span>
+								<!-- <span class="huiyuan"><img src="images/huiyuan_1.png" /></span>-->
+							</div>
+							
+						</div>
+						<div class="sc_d shoppingcatr_taocan_padding"></div>
+					
+				</div>
+			<!--{/if}-->
+		<!--{/if}-->
+<!-- {/foreach} -->
+<!-- #BeginLibraryItem "/library/packageBuyDiscount.lbi" --><!-- #EndLibraryItem -->
+			
+    </div>
+    <div class="sc_box sc_order_margin_1">
+    	<p class="sc_order_title">
+            <span>其他信息</span>
+        </p>
+        <table width="800" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td>&nbsp;</td>
+		    <td>&nbsp;</td>
+		    <td>&nbsp;</td>
+		  </tr>
+		</table>
+    	<dl class="sc_order_other">
+        	<dt>使用优惠券：</dt>
+            <dd>
+            	<select id="ECS_COUPONS" style="border:1px solid #ccc;" onchange="changeCoupons(this.value)" name="coupons">
+	              <option value="0" selected="selected">不使用优惠券</option>
+	              <!--{foreach from=$coupons item=coupon}-->
+		              <option value="{$coupon.sent_coupon_id}">
+		              	{$coupon.coupon_value}元优惠券(满{$coupon.restriction_ext}可用)
+		              </option>
+	              <!--{/foreach}-->
+            	</select>
+        	</dd>
+        </dl>
+        <dl class="sc_order_other">
+            <dt>留言：</dt>
+            <dd><textarea name="postscript" cols="80" rows="3" id="postscript">{$order.postscript|escape}</textarea></dd>
+        </dl>
+<!-- {if $how_oos_list} 是否使用缺货处理 -->
+        <dl class="sc_order_other">
+            <dt>缺货处理：</dt>
+            <dd>
+                <!-- {foreach from=$how_oos_list key=how_oos_id item=how_oos_name} -->
+                    <input name="how_oos" type="radio" value="{$how_oos_id}" {if $order.how_oos eq $how_oos_id}checked{/if} onclick="changeOOS(this)" />{$how_oos_name}
+                <!-- {/foreach} -->    
+            </dd>
+        </dl>
+<!-- {/if} 缺货处理结束 -->
+    </div>
+    <div class="sc_box sc_order_margin_1">
+        <p class="sc_order_submit" >
+
+        	<span id="ECS_ORDERTOTAL">
+        	<!-- #BeginLibraryItem "/library/order_total.lbi" --> <!-- #EndLibraryItem -->
+        	</span>
+<strong>寄送至：</strong><span id="from">{$consignee1.address1|escape}{$consignee1.address|escape}</span><br />
+<strong>收货人：</strong><span id="to">{$consignee1.consignee|escape}&nbsp;{$consignee1.tel}</span>
+        </p>
+        <p class="sc_order_submit_3">
+            <a href="./flow.php" class="sc_order_submit_3_a">返回购物车</a>
+            <a href="javascript:validate()" class="sc_order_submit_3_b">提交订单</a>
+				<input type="hidden" value="{$buyType}" name="buyType">
+            <input type="hidden" name="step" value="done" />
+        </p>
+    </div>
+    </form>
+    <div class="sc_youlike">
+       	<p><span>猜你喜欢</span><a href="./user.php?act=collection_list">去我的收藏夹</a></p>
+            <div class="main over">
+<!--{foreach from=$cai item=cai name=cats}-->
+                <dl>
+                    <dt><a href="goods.php?id={$cai.goods_id}"><img src="{$cai.goods_thumb}" /></a></dt>
+                    <dd><a href="goods.php?id={$cai.goods_id}">{$cai.goods_name}</a>
+                        <span class="sc_youlike_price1">￥{$cai.shop_price}</span><span class="sc_youlike_price2">￥{$cai.market_price}</span>
+                    </dd>
+                </dl>
+<!-- {/foreach} -->
+            </div>
+    </div>
+    <!--使用新地址弹出遮罩层-->
+<form action="user.php" method="post" name="newForm" onsubmit="return checkAdd()" id="newForm">
+            <div class="newaddress_box"  id="container" style="display:none;">
+	    <table class="newaddress" width="700" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="151" align="right"><b>*</b>所在地区：</td>
+                <td width="549"><label for="select5"></label>
+                  <span class="select_a">
+                        <select name="country" id="selCountries_1" onchange="region.changed(this, 1, 'selProvinces_1')" style="display:none;">
+                      <option value="1" selected>中国</option>
+                    </select>
+                        <select name="province" id="selProvinces_1" onchange="region.changed(this, 2, 'selCities_1')">
+                            <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                            <!-- {foreach from=$province_list.$sn item=province} -->
+                            <option value="{$province.region_id}" >{$province.region_name}</option>
+                            <!-- {/foreach} -->
+                        </select>
+                 </span>
+                  <span class="select_a">
+                        <select name="city" id="selCities_1" onchange="region.changed(this, 3, 'selDistricts_1')">
+                            <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+                            <!-- {foreach from=$city_list.$sn item=city} -->
+                            <option value="{$city.region_id}" >{$city.region_name}</option>
+                            <!-- {/foreach} -->
+                        </select>
+                   </span>
+                   <span class="select_a">
+                        <select name="district" id="selDistricts_1" >    
+                            <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+                            <!-- {foreach from=$district_list.$sn item=district} -->
+                            <option value="{$district.region_id}" >{$district.region_name}</option>
+                            <!-- {/foreach} -->
+                        </select>
+                   </span>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"><b>*</b>详细地址：</td>
+                <td><label for="textfield2"></label>
+                  <span class="select_b"><input type="text" name="address" id="address" /></span></td>
+              </tr>
+              <tr>
+                <td align="right">邮编：</td>
+                <td><span class="select_b"><input type="text" name="zipcode" id="zipcode" /></span></td>
+              </tr>
+              <tr>
+                <td align="right"><b>*</b>收货人姓名：</td>
+                <td><span class="select_b"><input type="text" name="consignee" id="consignee"/></span></td>
+              </tr>
+              <tr>
+                <td align="right"><b>*</b>手机：</td>
+                <td><span class="select_b"><input type="text" name="tel" id="tel"/></span></td>
+              </tr>
+              <tr>
+                <td align="right"><input type="checkbox" name="is_first" id="is_first" value="1" checked="checked"/>
+                  <label for="checkbox2"></label></td>
+                <td>设为默认收货地址</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <a class="select_c" href="#" onclick="check_format('check_out'); ">保存收货地址</a><!--saveadd();-->
+                    <a class="select_d" href="#xiugai" onclick="clearAll(); " id="clearAll">取消</a>
+                    <input type="hidden" value="act_edit_address" name="act">
+				
+                    <input type="hidden" value="" name="address_id" id="address_id">
+                </td>
+              </tr>
+            </table>
+	    </div>
+ </form>
+<!--第二步 确认订单信息结束 -->
+     <!-- {/if} -->
+
+<!--第三步 成功提交订单开始 -->
+    <!-- {if $step eq "done"} --> 
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/pay.css" rel="stylesheet" type="text/css" />
+<link href="style/css/shoppingcart.css" rel="stylesheet" type="text/css" />
+        <div class="pay">
+  <div class="pay_1">
+        	<span></span>
+            <p>{if $immediate_pay}请确认支付方式后付款！{else}您的订单信息已提交！{/if}</p>
+            
+<b class="payok_1">支付金额共计：{if $immediate_pay}{$order.total_fee}{else}{$total.amount_formated}{/if}元<br />
+订单号：{$order.order_sn}<br>
+<div style="position: absolute; opacity: 0; filter:Alpha(opacity=0);" id="change_pay">
+{$pay_online}
+</div>
+</b>
+<table cellspacing="0" cellpadding="0" border="0" width="350" class="payok_2">
+<script>
+    $(document).ready(function(){
+    var pay_code = '{$pay_code}';
+	switch(pay_code)
+	{
+	  case 'alipay'://支付宝
+	   $('.payment').hide();
+	  break;
+	   case 'kuaiqian'://快钱
+	  $('.payment').show();
+	   break;
+	}
+	
+     $('.payok_2 input').change(function(){
+		 if($(this).val()=='6') //kuaiqian
+		 {
+		  $('.payment').show();
+		 }
+		 else
+		 {
+		 $('.payment').hide();
+		 }
+	   Ajax.call( 'flow.php?step=ajax_check_pay', 'payment=' + $(this).val() + '&order_id=' + '{$order.order_id}', paymentChange_callback , 'GET', 'TEXT', false, true);
+		
+	 });
+   });
+   function paymentChange_callback(result)
+   {
+     $('#change_pay').html(result)
+   }
+</script>
+  <tbody>
+  <tr>
+    <td width="92">支付方式：</td>
+    <td width="28">
+		<input type="radio" value="4"  name="payment" {if $pay_code=='alipay'}checked{/if}>
+	</td>
+    <td width="127">
+		<a href="#"><img width="91" height="30"  src="style/images/pay_1.gif"></a>
+	</td>
+    <td width="31">
+		<input type="radio" value="6"  name="payment" {if $pay_code=='kuaiqian'}checked{/if}>
+	</td>
+    <td width="122">
+		<a href="#"><img width="91" height="30" src="style/images/pay_2.gif"></a>
+	</td>
+  </tr>
+</tbody>
+</table>
+<!--快钱网银结束-->
+        <!-- #BeginLibraryItem "/library/kuaiqian_bank_select.lbi" --><!-- #EndLibraryItem -->
+		<!--快钱网银开始-->
+	<b class="payok_1">
+		<a class="common_botton" href="javascript:document.getElementById('pay_btn').click()">立即支付</a>
+		<a class="payok_1_a" href="user.php?act=order_list">查看订单</a>
+	</b>
+        </div>
+</div>
+<div class="sc_youlike">
+       	<p>
+            	<span>精品推荐</span><a href="./user.php?act=collection_list">去我的收藏夹</a>
+            </p>
+            <div class="main over">
+<!--{foreach from=$cai item=cai name=cats}-->
+                <dl>
+                    <dt><a href="goods.php?id={$cai.goods_id}"><img src="{$cai.goods_thumb}" /></a></dt>
+                    <dd><a href="goods.php?id={$cai.goods_id}">{$cai.goods_name}</a>
+                        <span class="sc_youlike_price1">￥{$cai.shop_price}</span><span class="sc_youlike_price2">￥{$cai.market_price}</span>
+                    </dd>
+                </dl>
+<!-- {/foreach} -->
+            </div>
+        </div>
+
+<!-- {/if} -->
+<!--第三步 成功提交订单结束 -->
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var orderId = "{$order.order_id}"; 
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+</html>

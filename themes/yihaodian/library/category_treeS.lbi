@@ -1,0 +1,48 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{foreach from=$categories item=cat name=cats}-->
+     {if $smarty.foreach.cats.iteration ==1}
+    <div class="vtitle"><em class="v">{$cat.name|escape:html}</em></div>
+		<div class="vcon">
+		<ul class="vconlist">
+                    <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                        <li><a href="{$child.url}" target="_blank">{$child.name|escape:html}</a></li>
+                    <!-- {/foreach} -->
+		</ul>
+	</div>
+	{else}
+	<div class="vtitle"><em class="v">{$cat.name|escape:html}</em></div>
+		<div class="vcon" style="display: none;">
+		<ul class="vconlist">
+		    <!--{foreach from=$cat.cat_id item=child name=foo}-->
+                        <li><a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a></li>
+                    <!-- {/foreach} -->
+		</ul>
+	</div>
+	
+        {/if}
+	
+<!-- {/foreach} -->
+
+
+<script type="text/javascript">
+function deleteCartGoods(rec_id)
+{
+	Ajax.call('delete_cart_goods.php', 'id='+rec_id, deleteCartGoodsResponse, 'POST', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function deleteCartGoodsResponse(res)
+{
+  if (res.error)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+      document.getElementById('ECS_CARTINFO').innerHTML = res.content;
+  }
+}
+</script>

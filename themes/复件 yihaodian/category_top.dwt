@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='jquery-1.9.1.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->{insert_scripts files='yhd_category.js'}
+<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+<div id="muyingWrap" class="muying_wrap wrap clearfix">
+  <div id="muyingLeft" class="muying_left">
+    <div class="muying_title clearfix">
+      <h3>{$cat_name}</h3>
+    </div>
+    <div class="menu_wrap">
+      <ul class="clearfix">
+        <!--{foreach from=$categories_child item=child name=foo}-->
+        <li>
+          <div class="menu_first">
+            <h3 class="menu_tit clearfix"> <strong><a href="{$child.url}">{$child.name|escape:html}</a></strong> <b class="menu_arrow"></b> </h3>
+            <div class="menu_links clearfix">
+              <!--{foreach from=$child.cat_id item=childer}-->
+              <a target="_blank" title="{$childer.name|escape:html}" href="{$childer.url}">{$childer.name|escape:html}</a>
+              <!--{/foreach}-->
+            </div>
+          </div>
+          <div class="sub_menu" style="{if $smarty.foreach.foo.index > 0}top:{$smarty.foreach.foo.index}00px;{/if}">
+            <dl class="clearfix">
+              <dd>
+                <!--{foreach from=$child.cat_id item=childer}-->
+                <span> <a target="_blank" title="{$childer.name|escape:html}" href="{$childer.url}">{$childer.name|escape:html}</a> </span>
+                <!--{/foreach}-->
+              </dd>
+            </dl>
+          </div>
+        </li>
+        <!-- {/foreach} -->
+      </ul>
+    </div>
+    <!--{if $like_goods}-->
+    <div id="cnxh" class="left_products">
+      <h3>猜你喜欢</h3>
+      <div class="box">
+        <ul>
+          <!--{foreach from=$like_goods item=goods}-->
+          <li>
+            <dl class="clearfix">
+              <dd class="pic"><a target="_blank" title="{$goods.name}" href="{$goods.url}"> <img width="80" height="80" src="{$goods.thumb}" alt="{$goods.name}"></a></dd>
+              <dt><a target="_blank" title="{$goods.name}" href="{$goods.url}">{$goods.short_name}</a></dt>
+              <dd class="price"> 价格：<strong>
+                <!-- {if $goods.promote_price neq ""} -->
+                {$goods.promote_price}
+                <!-- {else}-->
+                {$goods.shop_price}
+                <!--{/if}-->
+                </strong> </dd>
+            </dl>
+          </li>
+          <!-- {/foreach} -->
+        </ul>
+      </div>
+    </div>
+    <!-- {/if} -->
+  </div>
+  <div id="muyingRight" class="muying_right">
+    <div class="first_screen_t clearfix">
+      <div class="promo_show" id="promo_show">
+        <div id="index_menu_carousel" class="promo_wrapper">
+          <ol class="clearfix">
+            <li>{insert name='get_ad' cat_name=$cat_name type='头部幻灯片1'}</li>
+            <li>{insert name='get_ad' cat_name=$cat_name type='头部幻灯片2'}</li>
+            <li>{insert name='get_ad' cat_name=$cat_name type='头部幻灯片3'}</li>
+            <li>{insert name='get_ad' cat_name=$cat_name type='头部幻灯片4'}</li>
+            <li>{insert name='get_ad' cat_name=$cat_name type='头部幻灯片5'}</li>
+          </ol>
+        </div>
+        <div class="show_num_bg"></div>
+        <ul class="hd">
+          <li class="cur">•</li>
+          <li>•</li>
+          <li>•</li>
+          <li>•</li>
+          <li>•</li>
+        </ul>
+        <a href="#" class="show_next" style="display: none;"><b></b></a> <a href="#" class="show_pre" style="display: none;"><b></b></a> </div>
+      <div class="today_product_wrap">
+        <div class="today_product clearfix"> 
+        	{insert name='get_ad' cat_name=$cat_name type='顶级分类页右侧广告'}        
+      </div>
+      </div>
+    </div>
+    <div class="first_screen_b clearfix"> <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem --> </div>
+	  <!--{foreach from=$categories_child_goods item=cat name=foo}-->
+    <div class="floor_wrap clearfix" id="floor{$smarty.foreach.foo.iteration}">
+    
+      <div id="floorMain{$smarty.foreach.foo.iteration}" class="floor_main">
+        <div class="tit clearfix">
+          <h3><strong>{$smarty.foreach.foo.iteration}F</strong>{$cat.name}</h3>
+          <div class="floor_nav hd">
+            <ul class="clearfix">
+			  <!--{foreach from=$cat.cat_id item=child name=no}-->
+              <li id="floor1Tab{$smarty.foreach.no.iteration}" {if $smarty.foreach.no.iteration eq 1}class="cur"{/if}><span>{$child.name}<b></b></span></li>
+			  <!--{/foreach}-->
+            </ul>
+          </div>
+        </div>
+<Div class="bd" >
+		   <!--{foreach from=$cat.cat_id item=child name=child_no}-->
+        <div id="floor{$smarty.foreach.foo.iteration}Con{$smarty.foreach.child_no.iteration}" class="con">
+          <ul class="clearfix">
+		
+		   		   <!--{foreach from=$child.goods item=goods}-->
+            <li>
+              <dl class="product_item">
+                <dd class="pic"><a title="" target="_blank" href="{$goods.url}"><img width="160" height="160" src="{$goods.thumb}" alt=""></a></dd>
+                <dt><a title="{$goods.name}" target="_blank" href="{$goods.url}">{$goods.short_name}</a></dt>
+                <dd class="price"> <strong>{$goods.shop_price}</strong> <del highprice="y">{$goods.market_price}</del> </dd>
+              </dl>
+            </li> 
+			 <!--{/foreach}-->
+          </ul>
+        </div>
+		<!--{/foreach}-->
+		</div>
+      </div>
+ </div>
+
+	     <!--{/foreach}-->
+  </div>
+</div>
+
+
+<div id="globalBottomBrowseRelated" class="browse_related_wrap mt"><div class="browse_related"><div class="clearfix">
+
+<!-- #BeginLibraryItem "/library/yhd_history.lbi" --><!-- #EndLibraryItem -->
+
+<div class="browse_related_right"><h4>与您浏览记录相关的商品</h4><div id="alsoBuyBox" class="browse_related_list"><a class="prev prev_clickable" href="javascript:;">上一页</a><div class="paging_wrap slide_box"><ul style="margin-left: 0px;" class="clearfix">
+
+<!-- {foreach from=$browse_related item=goods} -->
+
+<li><a target="_blank" href="{$goods.url}" title="{$goods.name}" class="pic"><img src="{$goods.thumb}"></a><a class="pro_name" target="_blank" href="{$goods.url}" title="{$goods.name}">{$goods.short_name}</a><p class="price"><strong>{$goods.shop_price}</strong></p><p class="prolist_link"><a></a></p><p class="glbtn"><a href="javascript:addToCart({$goods.id})">加入购物车</a></p></li>
+
+<!-- {/foreach} -->
+</ul></div><a style="display: block;" class="next next_clickable" href="javascript:;">下一页</a><em class="page_num pageState"></em></div></div></div></div></div>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+</body>
+</html>

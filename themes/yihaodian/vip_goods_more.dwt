@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+{insert_scripts files='jquery.min.js,jquery.json.js'}
+{insert_scripts files='common.js,global.js,compare.js,top.js,curvycorners.src.js'}
+{insert_scripts files='all_top_nav.js,top.js,curvycorners.src.js'}
+<link href="style/css/integral.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+
+function setTab(m,n){
+ var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+ var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+ for(i=0;i<tli.length;i++){
+  tli[i].className=i==n?"hover":"";
+  mli[i].style.display=i==n?"block":"none";
+ }
+}
+
+</script>
+
+<body>
+ <!-- #BeginLibraryItem "/library/page_header.lbi" -->
+ <!-- #EndLibraryItem -->
+   <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+ <!-- #EndLibraryItem -->
+    <div class="integral">
+    <span class="integral_goods_list_title">
+   	  <h2><!--{if $type=='vip_only'}-->VIP专享<!--{else}-->积分换购<!--{/if}--></h2>
+                </span>
+		    <div class="integral_goods_list">
+			{if $type == 'integral_buy'}
+                <!--{foreach from=$vip_goods_more_goods item=good name=foo}-->
+					<dl>
+                	<dt><a href="{$good.url}" target="_blank"><img src="{$good.goods_thumb}" /></a></dt>
+                    <dd class="name"><a href="{$good.url}" target="_blank">{$good.goods_name}</a></dd>
+               	  	<dd class="vip_jifen_yuanjia">
+                    	<span>¥{$good.shop_price}</span>
+                        <b class="price_1_a">原价：¥{$good.market_price}</b>
+                    </dd>
+                  <div class="vip_jifen_price">
+    <div class="tabs_menu">
+        <ul id="menu{$smarty.foreach.foo.iteration}" class="menu">
+            <li class="hover" onmouseover="setTab({$smarty.foreach.foo.iteration},0)">V1价</li>
+            <li onmouseover="setTab({$smarty.foreach.foo.iteration},1)">V2价</li>
+            <li onmouseover="setTab({$smarty.foreach.foo.iteration},2)">V3价</li>
+            <li onmouseover="setTab({$smarty.foreach.foo.iteration},3)">V4价</li>
+        </ul>
+    </div>
+    <div class="tabs_content">
+        <div id="main{$smarty.foreach.foo.iteration}" class="content">
+		  {foreach from=$good.vip_goods item=vip_good   name = vipGoodLoop}
+            <ul {if $smarty.foreach.vipGoodLoop.index == 0} class="block" {/if}>
+			   <li>￥{$vip_good.user_price}&nbsp;+&nbsp;{$vip_good.user_integral} 积分</li>
+			</ul>          
+		  {/foreach}
+        </div>
+    </div>
+</div>
+                </dl>
+				<!--{/foreach}-->
+				{elseif $type == 'vip_only'}
+					<!--{foreach  from=$vip_goods_more_goods item=good name=foo}-->
+            	<dl>
+                	<dt><a href="{$good.url}" target="_blank"><img src="{$good.goods_thumb}" /></a></dt>
+                    <dd class="name">
+					 <a href="{$good.url}" target="_blank" title="{$good.goods_style_name}">{$good.goods_name}</a>
+					</dd>
+                  <dd class="vip_price">
+                    	<div class="vip_price_a">
+                        	<span class="vip_price_a_1 price_1_a">原价：¥{$good.shop_price}</span>
+                            <span class="vip_price_a_2">独享价：<b>¥{$good.user_price}</b></span>
+                      </div>
+                        <span class="vip_price_b">
+						  {if $good.rank_name == 'VIP1'} 
+						  V1
+						  {elseif $good.rank_name == 'VIP2'}
+						  V2
+						  {elseif $good.rank_name == 'VIP3'}
+						  V3
+						  {elseif $good.rank_name == 'VIP4'}
+						  V4
+						  {/if}
+						</span>
+                  </dd>
+                </dl>
+            <!--{/foreach}-->
+				{/if}
+            </div>
+            <div class="integral_list_page">
+               <!-- #BeginLibraryItem "/library/pages_new.lbi" --><!-- #EndLibraryItem -->
+            </div>
+    </div>
+  
+ 
+<!-- 回顶部END -->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
