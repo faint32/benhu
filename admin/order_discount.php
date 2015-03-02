@@ -37,6 +37,10 @@ include_once(ROOT_PATH . 'includes/lib_main.php');
   }
   elseif($_REQUEST['act'] == 'eidtOrderDis')
   {
+    // echo "<pre>";
+    // print_r($_REQUEST);
+    // echo "</pre>";
+    // exit;
     foreach ($_REQUEST as $k => $v) 
     {
       if(strpos($k,'time') && !empty($v))

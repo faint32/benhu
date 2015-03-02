@@ -3,11 +3,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="styles/bootstrap/js/jquery.min.js"></script>
+    <script src="styles/bootstrap/js/jquery-1.9.1.min.js"></script>
     <script src="styles/bootstrap/js/bootstrap.min.js"></script>
-    <script src="styles/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+     <script src="styles/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
     <script src="styles/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
-     <script src="styles/bootstrap/js/sundries.js" charset="UTF-8"></script>
+    <script src="styles/bootstrap/js/sundries.js" charset="UTF-8"></script>
     <script src="styles/bootstrap/js/set_language_zh-CN.js"></script>
     <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/bootstrap/css/bootstrap-datetimepicker.min.css">
@@ -16,10 +16,12 @@
   </head>
   <body>
   <script>
-      function trim(str){ 
-  　　     return str.replace(/(^\s*)|(\s*$)/g, "");
-  　　}
-    function isPositiveInteger(oNum){
+    function trim(str)
+    { 
+　　     return str.replace(/(^\s*)|(\s*$)/g, "");
+　　}
+    function isPositiveInteger(oNum)
+    {
       if(!oNum) return false;
       var strP=/^\d+$/; //正整数
       if(!strP.test(oNum)) return false;
@@ -79,6 +81,11 @@
             break;
          }
       })
+console.log($("input[name='discount_limitation']").val())
+console.log($("input[name='discount_money']").val())
+      if(!validOrderDiscount($("input[name='discount_limitation']").val(), $("input[name='discount_money']").val())){
+        checkFlag = false;
+      }
       return checkFlag;
     }
   </script>
@@ -167,68 +174,67 @@
             </div>
           </div>
         </div>
+              <div class="row row-item other_row">
+                <div class="col-md-4">
+                  <div class="notice_lable">
+                     <span class="glyphicon glyphicon-question-sign notice" aria-hidden="true"></span>
+                     <b class="coupon_lable"> 金额下限</b>
+                   </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="coupon_rightdiv">
+                      <div class="input-group">
+                          <div class="input-group-addon">￥:</div>
+                           <input type="input" check-type="notEmptyValue" placeholder="输入金额下限" class="form-control" class="discount_limitation" name="discount_limitation" value="{$discount_limitation}">
+                     </div>
+                  </div>
+                  <div class="warning" style="display:none;">
+                    <div class="alert alert-warning" role="alert">金额下限：50,100  <br/>减免金额：5,11<br/>（订单满50块，可减免5块。满100块可减11块）</div>
+                  </div>
+                </div>
+                <div class="col-md-3 alert_format">
+                  <div class="alert alert-danger" role="alert">
+                    <p class="alert_words">
+                      不能为空！ 
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-        <div class="row row-item other_row">
-          <div class="col-md-4">
-            <div class="notice_lable">
-               <span class="glyphicon glyphicon-question-sign notice" aria-hidden="true"></span>
-               <b class="coupon_lable"> 金额下限</b>
-             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="coupon_rightdiv">
-                <div class="input-group">
-                    <div class="input-group-addon">￥:</div>
-                     <input type="input" check-type="float" placeholder="输入金额下限" class="form-control" name="discount_limitation" value="{$discount_limitation}">
-               </div>
-            </div>
-            <div class="warning" style="display:none;">
-             订单金额超过才能享受满减！
-            </div>
-          </div>
-          <div class="col-md-3 alert_format">
-            <div class="alert alert-danger" role="alert">
-              <p class="alert_words">
-                不是有效的浮点数！ 
-              </p>
-            </div>
-          </div>
-        </div>
+              <div class="row row-item other_row">
+                <div class="col-md-4">
+                  <div class="notice_lable">
+                     <span class="glyphicon glyphicon-question-sign notice" aria-hidden="true"></span>
+                     <b class="coupon_lable"> 减免金额</b>
+                   </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="coupon_rightdiv">
+                    <div class="input-group">
+                          <div class="input-group-addon">￥:</div>
+                           <input type="input" check-type="notEmptyValue" placeholder="输入减免的金额" class="form-control" name="discount_money" value="{$discount_money}">
+                     </div>
+                  </div>
+                  <div class="warning" style="display:none;">
+                     <div class="alert alert-warning" role="alert">金额下限：50,100  <br/>减免金额：5,11<br/>（订单满50块，可减免5块。满100块可减11块）</div>
+                  </div>
+                </div>
 
-        <div class="row row-item other_row">
-          <div class="col-md-4">
-            <div class="notice_lable">
-               <span class="glyphicon glyphicon-question-sign notice" aria-hidden="true"></span>
-               <b class="coupon_lable"> 减免金额</b>
-             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="coupon_rightdiv">
-              <div class="input-group">
-                    <div class="input-group-addon">￥:</div>
-                     <input type="input" check-type="float" placeholder="输入减免的金额" class="form-control" name="discount_money" value="{$discount_money}">
-               </div>
-            </div>
-            <div class="warning" style="display:none;">
-            减免的金额!
-            </div>
-          </div>
+                <div class="col-md-3 alert_format">
+                  <div class="alert alert-danger" role="alert">
+                    <p class="alert_words">
+                     不能为空！
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-          <div class="col-md-3 alert_format">
-            <div class="alert alert-danger" role="alert">
-              <p class="alert_words">
-                不是有效的浮点数！ 
-              </p>
-            </div>
-          </div>
-        </div>
-
-        
+       
          <div class="row row-item other_row" style="margin-bottom:20px;">
           <div class="col-md-4">
             <div class="notice_lable">
                <!-- <button type="submit" class="btn btn-default">确定</button> -->
-               <input type="submit" class="btn btn-default" value="确定"/>
+               <input type="submit" class="btn btn-default" value="确定" data-toggle="modal" data-target="#myModal"/>
              </div>
           </div>
           <div class="col-md-3">
@@ -240,7 +246,24 @@
 
       </div>
 
-
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">提交失败！</h4>
+      </div>
+      <div class="modal-body">
+         请检查数据是否填写错误。
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
 
       <div class="row panel panel-default" style="margin:20px 10px 0px 10px;height:90px;">
         {include file="pagefooter.htm"}
@@ -248,5 +271,7 @@
     
 
     </form> 
+
+    
   </body>
 </html>

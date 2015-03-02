@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:4:{i:0;s:52:"D:/wamp/www/benhushop1231/themes/yihaodian/index.dwt";i:1;s:66:"D:/wamp/www/benhushop1231/themes/yihaodian/library/page_header.lbi";i:2;s:57:"D:/wamp/www/benhushop1231/themes/yihaodian/library/ad.lbi";i:3;s:66:"D:/wamp/www/benhushop1231/themes/yihaodian/library/page_footer.lbi";}s:7:"expires";i:1425104940;s:8:"maketime";i:1425101340;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:4:{i:0;s:52:"D:/wamp/www/benhushop1231/themes/yihaodian/index.dwt";i:1;s:66:"D:/wamp/www/benhushop1231/themes/yihaodian/library/page_header.lbi";i:2;s:57:"D:/wamp/www/benhushop1231/themes/yihaodian/library/ad.lbi";i:3;s:66:"D:/wamp/www/benhushop1231/themes/yihaodian/library/page_footer.lbi";}s:7:"expires";i:1425278270;s:8:"maketime";i:1425274670;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -1146,74 +1146,74 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_0_0">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2323"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods0" data-lazyload="images/201412/thumb_img/2323_thumb_G_1417568200675.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=948"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods0" data-lazyload="images/201412/thumb_img/948_thumb_G_1417566940293.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2323"  target="_blank" title="阳光宝贝宝宝智力开发妙招">阳光宝贝宝宝智力开发妙招</a>
-                        <span class="main_2_left_price1">￥7.84</span>
-                        <span class="main_2_left_price2">￥9.80</span>
+                        <a href="goods.php?id=948"  target="_blank" title="贝亲—产后束身带二段式【22035-22038】">贝亲—产后束身带二段式【22035-22038】</a>
+                        <span class="main_2_left_price1">￥628.20</span>
+                        <span class="main_2_left_price2">￥698.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2615"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods1" data-lazyload="images/201412/thumb_img/2615_thumb_G_1417568449691.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=210"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods1" data-lazyload="images/201412/thumb_img/210_thumb_G_1417566362068.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2615"  target="_blank" title="Ampais恩贝氏 孕产妇护肤洗发氨基酸养护洗发精华正品孕妇专用">Ampais恩贝氏 孕产妇护肤洗发氨基酸养护洗发精华正品孕妇专用</a>
-                        <span class="main_2_left_price1">￥64.60</span>
-                        <span class="main_2_left_price2">￥68.00</span>
+                        <a href="goods.php?id=210"  target="_blank" title="小白熊HL-0610按摩吸奶器">小白熊HL-0610按摩吸奶器</a>
+                        <span class="main_2_left_price1">￥151.20</span>
+                        <span class="main_2_left_price2">￥189.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2628"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods2" data-lazyload="images/201412/thumb_img/2628_thumb_G_1417568463923.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2300"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods2" data-lazyload="images/201412/thumb_img/2300_thumb_G_1417568160880.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2628"  target="_blank" title="小米米多功能抱枕【YM1600B/YM1600Y】">小米米多功能抱枕【YM1600B/YM1600Y】</a>
-                        <span class="main_2_left_price1">￥206.40</span>
-                        <span class="main_2_left_price2">￥258.00</span>
+                        <a href="goods.php?id=2300"  target="_blank" title="艾妮宝贝韩版经典格子哺乳装AQ922301">艾妮宝贝韩版经典格子哺乳装AQ922301</a>
+                        <span class="main_2_left_price1">￥178.50</span>
+                        <span class="main_2_left_price2">￥238.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=341"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods3" data-lazyload="images/201412/thumb_img/341_thumb_G_1417566453657.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=3160"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods3" data-lazyload="" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=341"  target="_blank" title="小白熊09204母乳储存袋">小白熊09204母乳储存袋</a>
-                        <span class="main_2_left_price1">￥20.00</span>
-                        <span class="main_2_left_price2">￥25.00</span>
+                        <a href="goods.php?id=3160"  target="_blank" title="测试">测试</a>
+                        <span class="main_2_left_price1">￥211.00</span>
+                        <span class="main_2_left_price2">￥211.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2231"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods4" data-lazyload="images/201412/thumb_img/2231_thumb_G_1417568092248.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1549"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods4" data-lazyload="images/201412/thumb_img/1549_thumb_G_1417567440337.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2231"  target="_blank" title="艾妮宝贝产后磁疗收腹带056">艾妮宝贝产后磁疗收腹带056</a>
-                        <span class="main_2_left_price1">￥43.50</span>
-                        <span class="main_2_left_price2">￥58.00</span>
+                        <a href="goods.php?id=1549"  target="_blank" title="爱得利 DT-503孕妇内裤（2条装） 孕妇内裤 爱得利孕妇内裤">爱得利 DT-503孕妇内裤（2条装） 孕妇内裤 爱得利孕妇内裤</a>
+                        <span class="main_2_left_price1">￥42.75</span>
+                        <span class="main_2_left_price2">￥45.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1546"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods5" data-lazyload="images/201412/thumb_img/1546_thumb_G_1417567437739.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=3087"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods5" data-lazyload="images/201412/thumb_img/3087_thumb_G_1417568945753.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1546"  target="_blank" title="Ivory 爱得利 纯棉哺乳文胸罩内衣 孕产妇哺乳期必需用品 DT-502">Ivory 爱得利 纯棉哺乳文胸罩内衣 孕产妇哺乳期必需用品 DT-502</a>
-                        <span class="main_2_left_price1">￥36.10</span>
-                        <span class="main_2_left_price2">￥38.00</span>
+                        <a href="goods.php?id=3087"  target="_blank" title="安宝儿孕妇头巾/纯棉沐浴头巾/化妆沐浴头巾A6118">安宝儿孕妇头巾/纯棉沐浴头巾/化妆沐浴头巾A6118</a>
+                        <span class="main_2_left_price1">￥15.12</span>
+                        <span class="main_2_left_price2">￥18.90</span>
                       </dd>
                     </dl>
                                   <dl>
@@ -1230,38 +1230,38 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=3111"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods7" data-lazyload="images/201412/thumb_img/3111_thumb_G_1417568979063.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2567"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods7" data-lazyload="images/201412/thumb_img/2567_thumb_G_1417568402833.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=3111"  target="_blank" title="为生单层银离子肚兜ws006-2">为生单层银离子肚兜ws006-2</a>
-                        <span class="main_2_left_price1">￥238.40</span>
-                        <span class="main_2_left_price2">￥298.00</span>
+                        <a href="goods.php?id=2567"  target="_blank" title="Ampais恩贝氏 孕妇倍柔平衡洁面乳100ml（产前专用）">Ampais恩贝氏 孕妇倍柔平衡洁面乳100ml（产前专用）</a>
+                        <span class="main_2_left_price1">￥83.60</span>
+                        <span class="main_2_left_price2">￥88.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=433"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods8" data-lazyload="images/201412/thumb_img/433_thumb_G_1417566334763.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2069"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods8" data-lazyload="images/201412/thumb_img/2069_thumb_G_1417567947740.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=433"  target="_blank" title="小白熊09236防溢母乳垫">小白熊09236防溢母乳垫</a>
-                        <span class="main_2_left_price1">￥57.60</span>
-                        <span class="main_2_left_price2">￥72.00</span>
+                        <a href="goods.php?id=2069"  target="_blank" title="贝亲-产褥期卫生巾L（18*60cm）XA224">贝亲-产褥期卫生巾L（18*60cm）XA224</a>
+                        <span class="main_2_left_price1">￥43.20</span>
+                        <span class="main_2_left_price2">￥48.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2010"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods9" data-lazyload="images/201412/thumb_img/2010_thumb_G_1417567897054.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2065"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood0_goods9" data-lazyload="images/201412/thumb_img/2065_thumb_G_1417567943242.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2010"  target="_blank" title="阳光宝贝 婴幼儿营养食谱100例">阳光宝贝 婴幼儿营养食谱100例</a>
-                        <span class="main_2_left_price1">￥7.84</span>
-                        <span class="main_2_left_price2">￥9.80</span>
+                        <a href="goods.php?id=2065"  target="_blank" title="贝亲-产褥期护理垫（60*90cm）XA223">贝亲-产褥期护理垫（60*90cm）XA223</a>
+                        <span class="main_2_left_price1">￥31.50</span>
+                        <span class="main_2_left_price2">￥35.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -1279,12 +1279,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=390&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo0" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=390&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo1" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=390&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo2" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=390&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo3" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
-                                  <a href="category.php?id=390&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo4" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
-                                  <a href="category.php?id=390&amp;brand=289"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo5" data-lazyload="data/brandlogo/1416330738080522636.jpg"  title="Ampais恩贝氏"/></a>
+                                  <a href="category.php?id=390&amp;brand=289"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo0" data-lazyload="data/brandlogo/1416330738080522636.jpg"  title="Ampais恩贝氏"/></a>
+                                  <a href="category.php?id=390&amp;brand=121"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo1" data-lazyload="data/brandlogo/1414014060575315542.jpg"  title="抱抱熊"/></a>
+                                  <a href="category.php?id=390&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo2" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=390&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo3" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
+                                  <a href="category.php?id=390&amp;brand=118"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo4" data-lazyload="data/brandlogo/1414342820121734844.jpg"  title="艾妮宝贝"/></a>
+                                  <a href="category.php?id=390&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood0_foo5" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
                   
             </div> 
           </div>
@@ -1308,8 +1308,44 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_0_1">
                                   <dl>
                       <dt>
+                        <a href="goods.php?id=330"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods0" data-lazyload="images/201412/thumb_img/330_thumb_G_1417566445304.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=330"  target="_blank" title="小白熊09190婴儿护肤柔湿巾80抽">小白熊09190婴儿护肤柔湿巾80抽</a>
+                        <span class="main_2_left_price1">￥14.40</span>
+                        <span class="main_2_left_price2">￥18.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1689"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods1" data-lazyload="images/201412/thumb_img/1689_thumb_G_1417567576738.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1689"  target="_blank" title="正品爱得利贝芬妮诗婴儿香皂80g香茅精油新生儿肥皂洗浴用品BP021">正品爱得利贝芬妮诗婴儿香皂80g香茅精油新生儿肥皂洗浴用品BP021</a>
+                        <span class="main_2_left_price1">￥11.40</span>
+                        <span class="main_2_left_price2">￥12.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=349"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods2" data-lazyload="images/201412/thumb_img/349_thumb_G_1417566457969.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=349"  target="_blank" title="小白熊09212婴儿护脐带">小白熊09212婴儿护脐带</a>
+                        <span class="main_2_left_price1">￥55.20</span>
+                        <span class="main_2_left_price2">￥69.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
                         <a href="goods.php?id=385"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods0" data-lazyload="images/201412/thumb_img/385_thumb_G_1417566263634.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods3" data-lazyload="images/201412/thumb_img/385_thumb_G_1417566263634.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -1320,108 +1356,72 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=125"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods1" data-lazyload="images/201412/thumb_img/125_thumb_G_1417566314131.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2720"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods4" data-lazyload="images/201412/thumb_img/2720_thumb_G_1417568557621.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=125"  target="_blank" title="婴之侣ID-H001前额快捷体温计">婴之侣ID-H001前额快捷体温计</a>
-                        <span class="main_2_left_price1">￥14.28</span>
-                        <span class="main_2_left_price2">￥16.80</span>
+                        <a href="goods.php?id=2720"  target="_blank" title="小米米浴盆架YA0202">小米米浴盆架YA0202</a>
+                        <span class="main_2_left_price1">￥182.40</span>
+                        <span class="main_2_left_price2">￥228.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=487"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods2" data-lazyload="images/201412/thumb_img/487_thumb_G_1417566537335.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1126"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods5" data-lazyload="images/201412/thumb_img/1126_thumb_G_1417567056092.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=487"  target="_blank" title="小白熊09017变形虫多功能坐便器">小白熊09017变形虫多功能坐便器</a>
-                        <span class="main_2_left_price1">￥175.20</span>
-                        <span class="main_2_left_price2">￥219.00</span>
+                        <a href="goods.php?id=1126"  target="_blank" title="贝亲MA35婴儿纸尿裤NB 36P">贝亲MA35婴儿纸尿裤NB 36P</a>
+                        <span class="main_2_left_price1">￥64.80</span>
+                        <span class="main_2_left_price2">￥72.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=906"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods3" data-lazyload="images/201412/thumb_img/906_thumb_G_1417566905547.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=322"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods6" data-lazyload="images/201412/thumb_img/322_thumb_G_1417566440863.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=906"  target="_blank" title="日康新生儿喂哺礼盒多功能喂哺套装8件装宝宝礼盒装RK-3678">日康新生儿喂哺礼盒多功能喂哺套装8件装宝宝礼盒装RK-3678</a>
-                        <span class="main_2_left_price1">￥233.10</span>
-                        <span class="main_2_left_price2">￥259.00</span>
+                        <a href="goods.php?id=322"  target="_blank" title="小白熊09173婴幼儿安全剪刀">小白熊09173婴幼儿安全剪刀</a>
+                        <span class="main_2_left_price1">￥20.00</span>
+                        <span class="main_2_left_price2">￥25.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=844"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods4" data-lazyload="images/201412/thumb_img/844_thumb_G_1417566852717.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1569"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods7" data-lazyload="images/201412/thumb_img/1569_thumb_G_1417567459950.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=844"  target="_blank" title="贝亲IA162婴儿防晒露30G">贝亲IA162婴儿防晒露30G</a>
-                        <span class="main_2_left_price1">￥73.80</span>
-                        <span class="main_2_left_price2">￥82.00</span>
+                        <a href="goods.php?id=1569"  target="_blank" title="正品爱得利F20 安全防撞角垫 宝宝安全用品 保护用品">正品爱得利F20 安全防撞角垫 宝宝安全用品 保护用品</a>
+                        <span class="main_2_left_price1">￥6.18</span>
+                        <span class="main_2_left_price2">￥6.50</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=977"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods5" data-lazyload="images/201412/thumb_img/977_thumb_G_1417566957947.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=386"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods8" data-lazyload="images/201412/thumb_img/386_thumb_G_1417566262851.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=977"  target="_blank" title="贝亲KB05除菌喷雾300ML">贝亲KB05除菌喷雾300ML</a>
-                        <span class="main_2_left_price1">￥106.20</span>
-                        <span class="main_2_left_price2">￥118.00</span>
+                        <a href="goods.php?id=386"  target="_blank" title="正品 良木 婴儿纯棉可洗纱布尿布 新生儿双层健康尿布8条装LMS001">正品 良木 婴儿纯棉可洗纱布尿布 新生儿双层健康尿布8条装LMS001</a>
+                        <span class="main_2_left_price1">￥73.50</span>
+                        <span class="main_2_left_price2">￥98.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2475"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods6" data-lazyload="images/201412/thumb_img/2475_thumb_G_1417566870419.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1131"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods9" data-lazyload="images/201412/thumb_img/1131_thumb_G_1417567059793.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2475"  target="_blank" title="Pampers帮宝适超薄干爽系列分销商渠道中包装小号26片">Pampers帮宝适超薄干爽系列分销商渠道中包装小号26片</a>
-                        <span class="main_2_left_price1">￥47.20</span>
-                        <span class="main_2_left_price2">￥47.20</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=817"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods7" data-lazyload="images/201412/thumb_img/817_thumb_G_1417566830581.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=817"  target="_blank" title="日康爽身粉盒 RK-3612">日康爽身粉盒 RK-3612</a>
-                        <span class="main_2_left_price1">￥13.50</span>
-                        <span class="main_2_left_price2">￥15.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=873"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods8" data-lazyload="images/201412/thumb_img/873_thumb_G_1417566876131.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=873"  target="_blank" title="贝亲—婴儿衣物清洗剂（温和洗净型） 12104">贝亲—婴儿衣物清洗剂（温和洗净型） 12104</a>
-                        <span class="main_2_left_price1">￥106.20</span>
-                        <span class="main_2_left_price2">￥118.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=847"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood1_goods9" data-lazyload="images/201412/thumb_img/847_thumb_G_1417566855298.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=847"  target="_blank" title="贝亲IA31婴儿洗发精(泡沫型） 200ml">贝亲IA31婴儿洗发精(泡沫型） 200ml</a>
+                        <a href="goods.php?id=1131"  target="_blank" title="贝亲MA37婴儿纸尿裤M  32P">贝亲MA37婴儿纸尿裤M  32P</a>
                         <span class="main_2_left_price1">￥70.20</span>
                         <span class="main_2_left_price2">￥78.00</span>
                       </dd>
@@ -1441,12 +1441,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo0" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo1" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=657&amp;brand=250"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo2" data-lazyload="data/brandlogo/1414342289343391389.jpg"  title="Pampers帮宝适"/></a>
-                                  <a href="category.php?id=657&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo3" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
-                                  <a href="category.php?id=657&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=657&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo5" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=657&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=657&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo1" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
+                                  <a href="category.php?id=657&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=657&amp;brand=282"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo3" data-lazyload="data/brandlogo/1414342997812101241.jpg"  title="良木"/></a>
+                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood1_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -1470,32 +1470,8 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_0_2">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=456"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods0" data-lazyload="images/201412/thumb_img/456_thumb_G_1417566502592.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=456"  target="_blank" title="正品日康 小熊牙胶RK-3345 4种颜色随机发">正品日康 小熊牙胶RK-3345 4种颜色随机发</a>
-                        <span class="main_2_left_price1">￥14.31</span>
-                        <span class="main_2_left_price2">￥15.90</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1171"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods1" data-lazyload="images/201412/thumb_img/1171_thumb_G_1417567086160.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1171"  target="_blank" title="贝亲新生儿哺喂成长哺乳礼盒OA08（经典款）">贝亲新生儿哺喂成长哺乳礼盒OA08（经典款）</a>
-                        <span class="main_2_left_price1">￥277.20</span>
-                        <span class="main_2_left_price2">￥308.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
                         <a href="goods.php?id=307"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods2" data-lazyload="images/201412/thumb_img/307_thumb_G_1417566431489.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods0" data-lazyload="images/201412/thumb_img/307_thumb_G_1417566431489.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -1506,44 +1482,32 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=207"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods3" data-lazyload="images/201412/thumb_img/207_thumb_G_1417566360962.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1421"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods1" data-lazyload="images/201412/thumb_img/1421_thumb_G_1417567314485.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=207"  target="_blank" title="小白熊HL-0607暖奶器">小白熊HL-0607暖奶器</a>
-                        <span class="main_2_left_price1">￥87.20</span>
-                        <span class="main_2_left_price2">￥109.00</span>
+                        <a href="goods.php?id=1421"  target="_blank" title="爱得利正品A-40奶瓶蒸汽消毒器/消毒盒/烘干器可容纳8个奶瓶">爱得利正品A-40奶瓶蒸汽消毒器/消毒盒/烘干器可容纳8个奶瓶</a>
+                        <span class="main_2_left_price1">￥303.05</span>
+                        <span class="main_2_left_price2">￥319.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=263"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods4" data-lazyload="images/201412/thumb_img/263_thumb_G_1417566398912.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=700"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods2" data-lazyload="images/201412/thumb_img/700_thumb_G_1417566729582.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=263"  target="_blank" title="小白熊HL-0678多功能电炖锅">小白熊HL-0678多功能电炖锅</a>
-                        <span class="main_2_left_price1">￥159.20</span>
-                        <span class="main_2_left_price2">￥199.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=514"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods5" data-lazyload="images/201412/thumb_img/514_thumb_G_1417566564877.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=514"  target="_blank" title="小白熊09056保鲜杯">小白熊09056保鲜杯</a>
-                        <span class="main_2_left_price1">￥33.60</span>
-                        <span class="main_2_left_price2">￥42.00</span>
+                        <a href="goods.php?id=700"  target="_blank" title="贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒">贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒</a>
+                        <span class="main_2_left_price1">￥142.20</span>
+                        <span class="main_2_left_price2">￥158.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=196"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods6" data-lazyload="images/201412/thumb_img/196_thumb_G_1417566355850.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods3" data-lazyload="images/201412/thumb_img/196_thumb_G_1417566355850.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -1554,38 +1518,74 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=369"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods7" data-lazyload="images/201412/thumb_img/369_thumb_G_1417566248713.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=207"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods4" data-lazyload="images/201412/thumb_img/207_thumb_G_1417566360962.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=369"  target="_blank" title="日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子">日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子</a>
-                        <span class="main_2_left_price1">￥21.51</span>
-                        <span class="main_2_left_price2">￥23.90</span>
+                        <a href="goods.php?id=207"  target="_blank" title="小白熊HL-0607暖奶器">小白熊HL-0607暖奶器</a>
+                        <span class="main_2_left_price1">￥87.20</span>
+                        <span class="main_2_left_price2">￥109.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=306"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods8" data-lazyload="images/201412/thumb_img/306_thumb_G_1417566431696.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=384"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods5" data-lazyload="images/201412/thumb_img/384_thumb_G_1417566265364.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=306"  target="_blank" title="小白熊吸管训练杯09603/09103">小白熊吸管训练杯09603/09103</a>
-                        <span class="main_2_left_price1">￥47.20</span>
-                        <span class="main_2_left_price2">￥59.00</span>
+                        <a href="goods.php?id=384"  target="_blank" title="日康奶瓶婴儿液态硅胶吸管握把多用宽口径270ml RK-3056送汤勺嘴">日康奶瓶婴儿液态硅胶吸管握把多用宽口径270ml RK-3056送汤勺嘴</a>
+                        <span class="main_2_left_price1">￥80.10</span>
+                        <span class="main_2_left_price2">￥89.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=458"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods9" data-lazyload="images/201412/thumb_img/458_thumb_G_1417566328806.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=198"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods6" data-lazyload="images/201412/thumb_img/198_thumb_G_1417566356617.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=458"  target="_blank" title="日康丽宝晶畅标口十字孔奶嘴RK-3350">日康丽宝晶畅标口十字孔奶嘴RK-3350</a>
-                        <span class="main_2_left_price1">￥9.00</span>
-                        <span class="main_2_left_price2">￥10.00</span>
+                        <a href="goods.php?id=198"  target="_blank" title="日康RK-3309标准口径奶嘴（S）">日康RK-3309标准口径奶嘴（S）</a>
+                        <span class="main_2_left_price1">￥9.18</span>
+                        <span class="main_2_left_price2">￥10.20</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=708"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods7" data-lazyload="images/201412/thumb_img/708_thumb_G_1417566735687.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=708"  target="_blank" title="贝亲—训练用面叉03145">贝亲—训练用面叉03145</a>
+                        <span class="main_2_left_price1">￥27.00</span>
+                        <span class="main_2_left_price2">￥30.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=214"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods8" data-lazyload="images/201412/thumb_img/214_thumb_G_1417566365455.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=214"  target="_blank" title="小白熊HL-0614防滑奶瓶夹">小白熊HL-0614防滑奶瓶夹</a>
+                        <span class="main_2_left_price1">￥15.20</span>
+                        <span class="main_2_left_price2">￥19.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=197"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby0_pergood2_goods9" data-lazyload="images/201412/thumb_img/197_thumb_G_1417566355955.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=197"  target="_blank" title="日康RK-3307吸水嘴">日康RK-3307吸水嘴</a>
+                        <span class="main_2_left_price1">￥7.11</span>
+                        <span class="main_2_left_price2">￥7.90</span>
                       </dd>
                     </dl>
                           </div>
@@ -1601,12 +1601,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo0" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo1" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo2" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=879&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo5" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo0" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo1" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo2" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo3" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby0_pergood2_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -1634,38 +1634,38 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_1_0">
                                   <dl>
                       <dt>
+                        <a href="goods.php?id=246"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods0" data-lazyload="images/201412/thumb_img/246_thumb_G_1417566386211.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=246"  target="_blank" title="小白熊HL-0657防水型婴童理发器">小白熊HL-0657防水型婴童理发器</a>
+                        <span class="main_2_left_price1">￥175.20</span>
+                        <span class="main_2_left_price2">￥219.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=385"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods1" data-lazyload="images/201412/thumb_img/385_thumb_G_1417566263634.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=385"  target="_blank" title="良木尿裤 婴幼儿天然彩棉健康尿裤 纯棉舒适尿裤隔尿干爽LMK001/LMD002">良木尿裤 婴幼儿天然彩棉健康尿裤 纯棉舒适尿裤隔尿干爽LMK001/LMD002</a>
+                        <span class="main_2_left_price1">￥51.75</span>
+                        <span class="main_2_left_price2">￥69.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
                         <a href="goods.php?id=817"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods0" data-lazyload="images/201412/thumb_img/817_thumb_G_1417566830581.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods2" data-lazyload="images/201412/thumb_img/817_thumb_G_1417566830581.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
                         <a href="goods.php?id=817"  target="_blank" title="日康爽身粉盒 RK-3612">日康爽身粉盒 RK-3612</a>
                         <span class="main_2_left_price1">￥13.50</span>
                         <span class="main_2_left_price2">￥15.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=334"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods1" data-lazyload="images/201412/thumb_img/334_thumb_G_1417566448036.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=334"  target="_blank" title="小白熊09031天然海洋海藻海绵（蜂窝绵）">小白熊09031天然海洋海藻海绵（蜂窝绵）</a>
-                        <span class="main_2_left_price1">￥103.20</span>
-                        <span class="main_2_left_price2">￥129.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=330"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods2" data-lazyload="images/201412/thumb_img/330_thumb_G_1417566445304.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=330"  target="_blank" title="小白熊09190婴儿护肤柔湿巾80抽">小白熊09190婴儿护肤柔湿巾80抽</a>
-                        <span class="main_2_left_price1">￥14.40</span>
-                        <span class="main_2_left_price2">￥18.00</span>
                       </dd>
                     </dl>
                                   <dl>
@@ -1694,62 +1694,62 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2478"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods5" data-lazyload="images/201412/thumb_img/2478_thumb_G_1417566402305.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=334"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods5" data-lazyload="images/201412/thumb_img/334_thumb_G_1417566448036.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2478"  target="_blank" title="Pampers帮宝适超薄干爽系列中包装加大号17片">Pampers帮宝适超薄干爽系列中包装加大号17片</a>
-                        <span class="main_2_left_price1">￥47.20</span>
-                        <span class="main_2_left_price2">￥47.20</span>
+                        <a href="goods.php?id=334"  target="_blank" title="小白熊09031天然海洋海藻海绵（蜂窝绵）">小白熊09031天然海洋海藻海绵（蜂窝绵）</a>
+                        <span class="main_2_left_price1">￥103.20</span>
+                        <span class="main_2_left_price2">￥129.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=807"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods6" data-lazyload="images/201412/thumb_img/807_thumb_G_1417566822732.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1689"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods6" data-lazyload="images/201412/thumb_img/1689_thumb_G_1417567576738.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=807"  target="_blank" title="贝亲—粉扑F型10030">贝亲—粉扑F型10030</a>
-                        <span class="main_2_left_price1">￥34.20</span>
-                        <span class="main_2_left_price2">￥38.00</span>
+                        <a href="goods.php?id=1689"  target="_blank" title="正品爱得利贝芬妮诗婴儿香皂80g香茅精油新生儿肥皂洗浴用品BP021">正品爱得利贝芬妮诗婴儿香皂80g香茅精油新生儿肥皂洗浴用品BP021</a>
+                        <span class="main_2_left_price1">￥11.40</span>
+                        <span class="main_2_left_price2">￥12.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1132"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods7" data-lazyload="images/201412/thumb_img/1132_thumb_G_1417567059411.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=498"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods7" data-lazyload="images/201412/thumb_img/498_thumb_G_1417566550892.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1132"  target="_blank" title="贝亲MA38婴儿纸尿裤L  30 P">贝亲MA38婴儿纸尿裤L  30 P</a>
-                        <span class="main_2_left_price1">￥79.20</span>
-                        <span class="main_2_left_price2">￥88.00</span>
+                        <a href="goods.php?id=498"  target="_blank" title="小白熊09029变形虫伸缩便圈">小白熊09029变形虫伸缩便圈</a>
+                        <span class="main_2_left_price1">￥44.00</span>
+                        <span class="main_2_left_price2">￥55.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=246"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods8" data-lazyload="images/201412/thumb_img/246_thumb_G_1417566386211.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1699"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods8" data-lazyload="images/201412/thumb_img/1699_thumb_G_1417567442908.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=246"  target="_blank" title="小白熊HL-0657防水型婴童理发器">小白熊HL-0657防水型婴童理发器</a>
-                        <span class="main_2_left_price1">￥175.20</span>
-                        <span class="main_2_left_price2">￥219.00</span>
+                        <a href="goods.php?id=1699"  target="_blank" title="爱得利婴儿洗衣皂特惠三联装 玫瑰香型 BP-035 200克X3">爱得利婴儿洗衣皂特惠三联装 玫瑰香型 BP-035 200克X3</a>
+                        <span class="main_2_left_price1">￥27.55</span>
+                        <span class="main_2_left_price2">￥29.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=129"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods9" data-lazyload="images/201412/thumb_img/129_thumb_G_1417566316752.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=223"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood0_goods9" data-lazyload="images/201412/thumb_img/223_thumb_G_1417566266750.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=129"  target="_blank" title="婴之侣ID-H020B降温贴-幼儿型(4片)">婴之侣ID-H020B降温贴-幼儿型(4片)</a>
-                        <span class="main_2_left_price1">￥18.70</span>
-                        <span class="main_2_left_price2">￥22.00</span>
+                        <a href="goods.php?id=223"  target="_blank" title="小白熊HL-0622变频式电子驱蚊器　　">小白熊HL-0622变频式电子驱蚊器　　</a>
+                        <span class="main_2_left_price1">￥39.20</span>
+                        <span class="main_2_left_price2">￥49.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -1767,12 +1767,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo0" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo1" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=657&amp;brand=250"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo2" data-lazyload="data/brandlogo/1414342289343391389.jpg"  title="Pampers帮宝适"/></a>
-                                  <a href="category.php?id=657&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo3" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
-                                  <a href="category.php?id=657&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=657&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo5" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=657&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=657&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo1" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
+                                  <a href="category.php?id=657&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=657&amp;brand=282"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo3" data-lazyload="data/brandlogo/1414342997812101241.jpg"  title="良木"/></a>
+                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood0_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -1796,104 +1796,20 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_1_1">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=641"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods0" data-lazyload="images/201412/thumb_img/641_thumb_G_1417566674882.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=534"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods0" data-lazyload="images/201412/thumb_img/534_thumb_G_1417566582746.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=641"  target="_blank" title="爱得利宽口径实感超软奶嘴B51/(S1)">爱得利宽口径实感超软奶嘴B51/(S1)</a>
-                        <span class="main_2_left_price1">￥20.90</span>
-                        <span class="main_2_left_price2">￥22.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=434"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods1" data-lazyload="images/201412/thumb_img/434_thumb_G_1417566332257.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=434"  target="_blank" title="日康丽宝全硅胶安抚奶嘴RK-3335">日康丽宝全硅胶安抚奶嘴RK-3335</a>
-                        <span class="main_2_left_price1">￥9.90</span>
-                        <span class="main_2_left_price2">￥11.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=122"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods2" data-lazyload="images/201412/thumb_img/122_thumb_G_1417566311788.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=122"  target="_blank" title="婴之侣ID-F009儿童训练筷">婴之侣ID-F009儿童训练筷</a>
-                        <span class="main_2_left_price1">￥15.30</span>
+                        <a href="goods.php?id=534"  target="_blank" title="日康晶畅标口奶嘴（两粒装）正品 十字孔6月以上 RK-3374">日康晶畅标口奶嘴（两粒装）正品 十字孔6月以上 RK-3374</a>
+                        <span class="main_2_left_price1">￥16.20</span>
                         <span class="main_2_left_price2">￥18.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=369"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods3" data-lazyload="images/201412/thumb_img/369_thumb_G_1417566248713.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=369"  target="_blank" title="日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子">日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子</a>
-                        <span class="main_2_left_price1">￥21.51</span>
-                        <span class="main_2_left_price2">￥23.90</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1798"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods4" data-lazyload="images/201412/thumb_img/1798_thumb_G_1417567685434.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1798"  target="_blank" title="NUK专用奶嘴刷(带海绵头)">NUK专用奶嘴刷(带海绵头)</a>
-                        <span class="main_2_left_price1">￥31.50</span>
-                        <span class="main_2_left_price2">￥35.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1355"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods5" data-lazyload="images/201412/thumb_img/1355_thumb_G_1417567225143.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1355"  target="_blank" title="爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器">爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器</a>
-                        <span class="main_2_left_price1">￥14.25</span>
-                        <span class="main_2_left_price2">￥15.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=279"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods6" data-lazyload="images/201412/thumb_img/279_thumb_G_1417566411746.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=279"  target="_blank" title="小白熊HL-0691可旋转多用奶瓶刷">小白熊HL-0691可旋转多用奶瓶刷</a>
-                        <span class="main_2_left_price1">￥15.20</span>
-                        <span class="main_2_left_price2">￥19.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=311"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods7" data-lazyload="images/201412/thumb_img/311_thumb_G_1417566434518.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=311"  target="_blank" title="小白熊09115不锈钢多功能双头保温水瓶">小白熊09115不锈钢多功能双头保温水瓶</a>
-                        <span class="main_2_left_price1">￥71.20</span>
-                        <span class="main_2_left_price2">￥89.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
                         <a href="goods.php?id=197"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods8" data-lazyload="images/201412/thumb_img/197_thumb_G_1417566355955.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods1" data-lazyload="images/201412/thumb_img/197_thumb_G_1417566355955.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -1904,14 +1820,98 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=198"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods9" data-lazyload="images/201412/thumb_img/198_thumb_G_1417566356617.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=456"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods2" data-lazyload="images/201412/thumb_img/456_thumb_G_1417566502592.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=198"  target="_blank" title="日康RK-3309标准口径奶嘴（S）">日康RK-3309标准口径奶嘴（S）</a>
-                        <span class="main_2_left_price1">￥9.18</span>
-                        <span class="main_2_left_price2">￥10.20</span>
+                        <a href="goods.php?id=456"  target="_blank" title="正品日康 小熊牙胶RK-3345 4种颜色随机发">正品日康 小熊牙胶RK-3345 4种颜色随机发</a>
+                        <span class="main_2_left_price1">￥14.31</span>
+                        <span class="main_2_left_price2">￥15.90</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1171"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods3" data-lazyload="images/201412/thumb_img/1171_thumb_G_1417567086160.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1171"  target="_blank" title="贝亲新生儿哺喂成长哺乳礼盒OA08（经典款）">贝亲新生儿哺喂成长哺乳礼盒OA08（经典款）</a>
+                        <span class="main_2_left_price1">￥277.20</span>
+                        <span class="main_2_left_price2">￥308.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=207"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods4" data-lazyload="images/201412/thumb_img/207_thumb_G_1417566360962.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=207"  target="_blank" title="小白熊HL-0607暖奶器">小白熊HL-0607暖奶器</a>
+                        <span class="main_2_left_price1">￥87.20</span>
+                        <span class="main_2_left_price2">￥109.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=306"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods5" data-lazyload="images/201412/thumb_img/306_thumb_G_1417566431696.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=306"  target="_blank" title="小白熊吸管训练杯09603/09103">小白熊吸管训练杯09603/09103</a>
+                        <span class="main_2_left_price1">￥47.20</span>
+                        <span class="main_2_left_price2">￥59.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=384"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods6" data-lazyload="images/201412/thumb_img/384_thumb_G_1417566265364.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=384"  target="_blank" title="日康奶瓶婴儿液态硅胶吸管握把多用宽口径270ml RK-3056送汤勺嘴">日康奶瓶婴儿液态硅胶吸管握把多用宽口径270ml RK-3056送汤勺嘴</a>
+                        <span class="main_2_left_price1">￥80.10</span>
+                        <span class="main_2_left_price2">￥89.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=369"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods7" data-lazyload="images/201412/thumb_img/369_thumb_G_1417566248713.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=369"  target="_blank" title="日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子">日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子</a>
+                        <span class="main_2_left_price1">￥21.51</span>
+                        <span class="main_2_left_price2">￥23.90</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=700"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods8" data-lazyload="images/201412/thumb_img/700_thumb_G_1417566729582.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=700"  target="_blank" title="贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒">贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒</a>
+                        <span class="main_2_left_price1">￥142.20</span>
+                        <span class="main_2_left_price2">￥158.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=184"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood1_goods9" data-lazyload="images/201412/thumb_img/184_thumb_G_1417566347531.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=184"  target="_blank" title="日康RK-3161标口有柄自动奶瓶200ml.PPSU">日康RK-3161标口有柄自动奶瓶200ml.PPSU</a>
+                        <span class="main_2_left_price1">￥71.10</span>
+                        <span class="main_2_left_price2">￥79.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -1927,12 +1927,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo0" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo1" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo2" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=879&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo5" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo0" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo1" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo2" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo3" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood1_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -1956,68 +1956,32 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_1_2">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2783"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods0" data-lazyload="images/201412/thumb_img/2783_thumb_G_1417568615261.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2853"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods0" data-lazyload="images/201412/thumb_img/2853_thumb_G_1417568695291.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2783"  target="_blank" title="小米米多彩部落棉袜【YA04701-YA04704】">小米米多彩部落棉袜【YA04701-YA04704】</a>
-                        <span class="main_2_left_price1">￥20.80</span>
-                        <span class="main_2_left_price2">￥26.00</span>
+                        <a href="goods.php?id=2853"  target="_blank" title="minimoto小米米 欢乐派对 双面穿夹棉 长袖对襟上衣/粉红/粉蓝YU3105">minimoto小米米 欢乐派对 双面穿夹棉 长袖对襟上衣/粉红/粉蓝YU3105</a>
+                        <span class="main_2_left_price1">￥151.20</span>
+                        <span class="main_2_left_price2">￥189.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=991"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods1" data-lazyload="images/201412/thumb_img/991_thumb_G_1417566965511.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2648"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods1" data-lazyload="images/201412/thumb_img/2648_thumb_G_1417568479384.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=991"  target="_blank" title="贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11">贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11</a>
-                        <span class="main_2_left_price1">￥43.20</span>
+                        <a href="goods.php?id=2648"  target="_blank" title="minimoto小米米 YU13101 西瓜小船 印花纱布 开裆长裤">minimoto小米米 YU13101 西瓜小船 印花纱布 开裆长裤</a>
+                        <span class="main_2_left_price1">￥38.40</span>
                         <span class="main_2_left_price2">￥48.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1882"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods2" data-lazyload="images/201412/thumb_img/1882_thumb_G_1417567772188.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1882"  target="_blank" title="爱得利 正品DT-20A 护手套（厚） 宝宝护手套">爱得利 正品DT-20A 护手套（厚） 宝宝护手套</a>
-                        <span class="main_2_left_price1">￥5.70</span>
-                        <span class="main_2_left_price2">￥6.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2865"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods3" data-lazyload="images/201412/thumb_img/2865_thumb_G_1417568707252.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2865"  target="_blank" title="minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102">minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102</a>
-                        <span class="main_2_left_price1">￥190.40</span>
-                        <span class="main_2_left_price2">￥238.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=82"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods4" data-lazyload="images/201412/thumb_img/82_thumb_G_1417566290536.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=82"  target="_blank" title="良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 ">良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 </a>
-                        <span class="main_2_left_price1">￥51.75</span>
-                        <span class="main_2_left_price2">￥69.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
                         <a href="goods.php?id=2635"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods5" data-lazyload="images/201412/thumb_img/2635_thumb_G_1417568470615.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods2" data-lazyload="images/201412/thumb_img/2635_thumb_G_1417568470615.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2028,32 +1992,20 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2778"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods6" data-lazyload="images/201412/thumb_img/2778_thumb_G_1417568611916.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1889"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods3" data-lazyload="images/201412/thumb_img/1889_thumb_G_1417567779585.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2778"  target="_blank" title="小米米宝宝爬行护膝/粉蓝色YA03241B">小米米宝宝爬行护膝/粉蓝色YA03241B</a>
-                        <span class="main_2_left_price1">￥18.40</span>
-                        <span class="main_2_left_price2">￥23.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2618"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods7" data-lazyload="images/201412/thumb_img/2618_thumb_G_1417568451992.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2618"  target="_blank" title="小伙伴莫代尔内裤【YA04711P-YA04713B】">小伙伴莫代尔内裤【YA04711P-YA04713B】</a>
-                        <span class="main_2_left_price1">￥54.40</span>
-                        <span class="main_2_left_price2">￥68.00</span>
+                        <a href="goods.php?id=1889"  target="_blank" title="正品爱得利DT-29A IVORY BABY 纱布双层手帕（3条装）">正品爱得利DT-29A IVORY BABY 纱布双层手帕（3条装）</a>
+                        <span class="main_2_left_price1">￥14.25</span>
+                        <span class="main_2_left_price2">￥15.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=67"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods8" data-lazyload="images/201412/thumb_img/67_thumb_G_1417566280130.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods4" data-lazyload="images/201412/thumb_img/67_thumb_G_1417566280130.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2064,14 +2016,62 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=3168"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods9" data-lazyload="images/201412/thumb_img/3168_thumb_G_1419361769159.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2865"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods5" data-lazyload="images/201412/thumb_img/2865_thumb_G_1417568707252.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=3168"  target="_blank" title="简叶贝贝棉衣女8002">简叶贝贝棉衣女8002</a>
-                        <span class="main_2_left_price1">￥319.50</span>
-                        <span class="main_2_left_price2">￥426.00</span>
+                        <a href="goods.php?id=2865"  target="_blank" title="minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102">minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102</a>
+                        <span class="main_2_left_price1">￥190.40</span>
+                        <span class="main_2_left_price2">￥238.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1917"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods6" data-lazyload="images/201412/thumb_img/1917_thumb_G_1417567805976.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1917"  target="_blank" title="正品爱得利 DT-118 IVORY BABY 长袖哈衣">正品爱得利 DT-118 IVORY BABY 长袖哈衣</a>
+                        <span class="main_2_left_price1">￥66.50</span>
+                        <span class="main_2_left_price2">￥70.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1575"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods7" data-lazyload="images/201412/thumb_img/1575_thumb_G_1417567463863.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1575"  target="_blank" title="贝亲-宝宝凉鞋成长舒适型 135MM（军绿色）GB226">贝亲-宝宝凉鞋成长舒适型 135MM（军绿色）GB226</a>
+                        <span class="main_2_left_price1">￥214.20</span>
+                        <span class="main_2_left_price2">￥238.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2869"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods8" data-lazyload="images/201412/thumb_img/2869_thumb_G_1417568710045.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2869"  target="_blank" title="minimoto小米米 绅士与名媛系列 和短袍/粉红/粉蓝YU3704">minimoto小米米 绅士与名媛系列 和短袍/粉红/粉蓝YU3704</a>
+                        <span class="main_2_left_price1">￥126.40</span>
+                        <span class="main_2_left_price2">￥158.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1547"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby1_pergood2_goods9" data-lazyload="images/201412/thumb_img/1547_thumb_G_1417567438388.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1547"  target="_blank" title="贝亲—第三阶段宝宝学步鞋 13.5CM（绿色）GB183">贝亲—第三阶段宝宝学步鞋 13.5CM（绿色）GB183</a>
+                        <span class="main_2_left_price1">￥214.20</span>
+                        <span class="main_2_left_price2">￥238.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -2087,12 +2087,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo0" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
-                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo1" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
-                                  <a href="category.php?id=776&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=776&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=776&amp;brand=295"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo4" data-lazyload="data/brandlogo/1418941752240578648.jpg"  title="圣婴岛"/></a>
-                                  <a href="category.php?id=776&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo5" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=776&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=776&amp;brand=294"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo1" data-lazyload="data/brandlogo/1416432383219016859.jpg"  title="茶香宝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=776&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
+                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo4" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby1_pergood2_foo5" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
                   
             </div> 
           </div>
@@ -2120,56 +2120,32 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_2_0">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2641"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods0" data-lazyload="images/201412/thumb_img/2641_thumb_G_1417568474440.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=82"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods0" data-lazyload="images/201412/thumb_img/82_thumb_G_1417566290536.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2641"  target="_blank" title="YU13042 小米米 西瓜小船 印花纱布  和短袍3:6月">YU13042 小米米 西瓜小船 印花纱布  和短袍3:6月</a>
-                        <span class="main_2_left_price1">￥38.40</span>
-                        <span class="main_2_left_price2">￥48.00</span>
+                        <a href="goods.php?id=82"  target="_blank" title="良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 ">良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 </a>
+                        <span class="main_2_left_price1">￥51.75</span>
+                        <span class="main_2_left_price2">￥69.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=67"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods1" data-lazyload="images/201412/thumb_img/67_thumb_G_1417566280130.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1889"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods1" data-lazyload="images/201412/thumb_img/1889_thumb_G_1417567779585.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=67"  target="_blank" title="良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 ">良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 </a>
-                        <span class="main_2_left_price1">￥12.00</span>
-                        <span class="main_2_left_price2">￥16.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1904"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods2" data-lazyload="images/201412/thumb_img/1904_thumb_G_1417567791664.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1904"  target="_blank" title="正品爱得利 DT-109 IVORY BABY 侧开护手衣">正品爱得利 DT-109 IVORY BABY 侧开护手衣</a>
-                        <span class="main_2_left_price1">￥28.50</span>
-                        <span class="main_2_left_price2">￥30.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2668"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods3" data-lazyload="images/201412/thumb_img/2668_thumb_G_1417568502930.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2668"  target="_blank" title="minimoto小米米 双层提花 开扣长裤3:6月/草绿/粉红/米白/粉蓝YU07122">minimoto小米米 双层提花 开扣长裤3:6月/草绿/粉红/米白/粉蓝YU07122</a>
-                        <span class="main_2_left_price1">￥58.40</span>
-                        <span class="main_2_left_price2">￥73.00</span>
+                        <a href="goods.php?id=1889"  target="_blank" title="正品爱得利DT-29A IVORY BABY 纱布双层手帕（3条装）">正品爱得利DT-29A IVORY BABY 纱布双层手帕（3条装）</a>
+                        <span class="main_2_left_price1">￥14.25</span>
+                        <span class="main_2_left_price2">￥15.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=1917"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods4" data-lazyload="images/201412/thumb_img/1917_thumb_G_1417567805976.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods2" data-lazyload="images/201412/thumb_img/1917_thumb_G_1417567805976.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2180,44 +2156,8 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2913"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods5" data-lazyload="images/201412/thumb_img/2913_thumb_G_1417568751292.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2913"  target="_blank" title="小米米 春夏女宝宝新款 粉色憧憬系列 短裙印花 YJ0229">小米米 春夏女宝宝新款 粉色憧憬系列 短裙印花 YJ0229</a>
-                        <span class="main_2_left_price1">￥78.40</span>
-                        <span class="main_2_left_price2">￥98.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=991"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods6" data-lazyload="images/201412/thumb_img/991_thumb_G_1417566965511.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=991"  target="_blank" title="贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11">贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11</a>
-                        <span class="main_2_left_price1">￥43.20</span>
-                        <span class="main_2_left_price2">￥48.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1633"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods7" data-lazyload="images/201412/thumb_img/1633_thumb_G_1417567367424.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1633"  target="_blank" title="贝亲-宝宝冬鞋保暖休闲型 【GB322-GB329】">贝亲-宝宝冬鞋保暖休闲型 【GB322-GB329】</a>
-                        <span class="main_2_left_price1">￥259.20</span>
-                        <span class="main_2_left_price2">￥288.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
                         <a href="goods.php?id=2879"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods8" data-lazyload="images/201412/thumb_img/2879_thumb_G_1417568719332.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods3" data-lazyload="images/201412/thumb_img/2879_thumb_G_1417568719332.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2228,14 +2168,74 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1889"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods9" data-lazyload="images/201412/thumb_img/1889_thumb_G_1417567779585.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2783"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods4" data-lazyload="images/201412/thumb_img/2783_thumb_G_1417568615261.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1889"  target="_blank" title="正品爱得利DT-29A IVORY BABY 纱布双层手帕（3条装）">正品爱得利DT-29A IVORY BABY 纱布双层手帕（3条装）</a>
-                        <span class="main_2_left_price1">￥14.25</span>
-                        <span class="main_2_left_price2">￥15.00</span>
+                        <a href="goods.php?id=2783"  target="_blank" title="小米米多彩部落棉袜【YA04701-YA04704】">小米米多彩部落棉袜【YA04701-YA04704】</a>
+                        <span class="main_2_left_price1">￥20.80</span>
+                        <span class="main_2_left_price2">￥26.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2869"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods5" data-lazyload="images/201412/thumb_img/2869_thumb_G_1417568710045.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2869"  target="_blank" title="minimoto小米米 绅士与名媛系列 和短袍/粉红/粉蓝YU3704">minimoto小米米 绅士与名媛系列 和短袍/粉红/粉蓝YU3704</a>
+                        <span class="main_2_left_price1">￥126.40</span>
+                        <span class="main_2_left_price2">￥158.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=3168"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods6" data-lazyload="images/201412/thumb_img/3168_thumb_G_1419361769159.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=3168"  target="_blank" title="简叶贝贝棉衣女8002">简叶贝贝棉衣女8002</a>
+                        <span class="main_2_left_price1">￥319.50</span>
+                        <span class="main_2_left_price2">￥426.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=991"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods7" data-lazyload="images/201412/thumb_img/991_thumb_G_1417566965511.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=991"  target="_blank" title="贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11">贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11</a>
+                        <span class="main_2_left_price1">￥43.20</span>
+                        <span class="main_2_left_price2">￥48.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=67"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods8" data-lazyload="images/201412/thumb_img/67_thumb_G_1417566280130.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=67"  target="_blank" title="良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 ">良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 </a>
+                        <span class="main_2_left_price1">￥12.00</span>
+                        <span class="main_2_left_price2">￥16.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2641"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood0_goods9" data-lazyload="images/201412/thumb_img/2641_thumb_G_1417568474440.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2641"  target="_blank" title="YU13042 小米米 西瓜小船 印花纱布  和短袍3:6月">YU13042 小米米 西瓜小船 印花纱布  和短袍3:6月</a>
+                        <span class="main_2_left_price1">￥38.40</span>
+                        <span class="main_2_left_price2">￥48.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -2251,12 +2251,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo0" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
-                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo1" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
-                                  <a href="category.php?id=776&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=776&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=776&amp;brand=295"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo4" data-lazyload="data/brandlogo/1418941752240578648.jpg"  title="圣婴岛"/></a>
-                                  <a href="category.php?id=776&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo5" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=776&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=776&amp;brand=294"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo1" data-lazyload="data/brandlogo/1416432383219016859.jpg"  title="茶香宝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=776&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
+                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo4" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood0_foo5" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
                   
             </div> 
           </div>
@@ -2280,38 +2280,38 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_2_1">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1875"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods0" data-lazyload="images/201412/thumb_img/1875_thumb_G_1417567767303.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1918"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods0" data-lazyload="images/201412/thumb_img/1918_thumb_G_1417567805936.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1875"  target="_blank" title="皇室音乐动物手推车TR856">皇室音乐动物手推车TR856</a>
-                        <span class="main_2_left_price1">￥351.12</span>
-                        <span class="main_2_left_price2">￥399.00</span>
+                        <a href="goods.php?id=1918"  target="_blank" title="NUK层层圈(叠高玩具)">NUK层层圈(叠高玩具)</a>
+                        <span class="main_2_left_price1">￥43.20</span>
+                        <span class="main_2_left_price2">￥48.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2052"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods1" data-lazyload="images/201412/thumb_img/2052_thumb_G_1417567934687.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1939"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods1" data-lazyload="images/201412/thumb_img/1939_thumb_G_1417567827734.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2052"  target="_blank" title="正品汇乐566A/B/C/D拆装智力工程车挖土机推土机 组装益智玩">正品汇乐566A/B/C/D拆装智力工程车挖土机推土机 组装益智玩</a>
-                        <span class="main_2_left_price1">￥90.40</span>
-                        <span class="main_2_left_price2">￥113.00</span>
+                        <a href="goods.php?id=1939"  target="_blank" title="汇乐玩具 536梦幻天鹅游乐园灯光 电动万向车 女孩玩具 生日礼物">汇乐玩具 536梦幻天鹅游乐园灯光 电动万向车 女孩玩具 生日礼物</a>
+                        <span class="main_2_left_price1">￥76.00</span>
+                        <span class="main_2_left_price2">￥95.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1950"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods2" data-lazyload="images/201412/thumb_img/1950_thumb_G_1417567836627.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1839"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods2" data-lazyload="images/201412/thumb_img/1839_thumb_G_1417567733069.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1950"  target="_blank" title="汇乐玩具 596眩彩智能小乌龟 中英双语早教 手拍鼓儿童益智爬行玩具">汇乐玩具 596眩彩智能小乌龟 中英双语早教 手拍鼓儿童益智爬行玩具</a>
-                        <span class="main_2_left_price1">￥111.20</span>
-                        <span class="main_2_left_price2">￥139.00</span>
+                        <a href="goods.php?id=1839"  target="_blank" title="皇室小鸡不倒翁TR807">皇室小鸡不倒翁TR807</a>
+                        <span class="main_2_left_price1">￥87.12</span>
+                        <span class="main_2_left_price2">￥99.00</span>
                       </dd>
                     </dl>
                                   <dl>
@@ -2328,32 +2328,8 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1615"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods4" data-lazyload="images/201412/thumb_img/1615_thumb_G_1417567501768.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1615"  target="_blank" title="皇室玩具TR3441玩具智能手机-樱花粉">皇室玩具TR3441玩具智能手机-樱花粉</a>
-                        <span class="main_2_left_price1">￥86.24</span>
-                        <span class="main_2_left_price2">￥98.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1862"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods5" data-lazyload="images/201412/thumb_img/1862_thumb_G_1417567755754.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1862"  target="_blank" title="Toyroyal 日本 皇室玩具 TR838 音乐健身架 健身器">Toyroyal 日本 皇室玩具 TR838 音乐健身架 健身器</a>
-                        <span class="main_2_left_price1">￥263.12</span>
-                        <span class="main_2_left_price2">￥299.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
                         <a href="goods.php?id=1427"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods6" data-lazyload="images/201412/thumb_img/1427_thumb_G_1417567321450.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods4" data-lazyload="images/201412/thumb_img/1427_thumb_G_1417567321450.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2364,38 +2340,62 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1918"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods7" data-lazyload="images/201412/thumb_img/1918_thumb_G_1417567805936.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1657"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods5" data-lazyload="images/201412/thumb_img/1657_thumb_G_1417567549093.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1918"  target="_blank" title="NUK层层圈(叠高玩具)">NUK层层圈(叠高玩具)</a>
-                        <span class="main_2_left_price1">￥43.20</span>
-                        <span class="main_2_left_price2">￥48.00</span>
+                        <a href="goods.php?id=1657"  target="_blank" title="Toyroyal日本皇室玩具八用床边音乐铃床铃婴幼儿爬行健身架TR3807">Toyroyal日本皇室玩具八用床边音乐铃床铃婴幼儿爬行健身架TR3807</a>
+                        <span class="main_2_left_price1">￥693.44</span>
+                        <span class="main_2_left_price2">￥788.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1985"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods8" data-lazyload="images/201412/thumb_img/1985_thumb_G_1417567871720.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2052"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods6" data-lazyload="images/201412/thumb_img/2052_thumb_G_1417567934687.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1985"  target="_blank" title="阳光宝贝 宝宝学习绘本蝴蝶风筝">阳光宝贝 宝宝学习绘本蝴蝶风筝</a>
-                        <span class="main_2_left_price1">￥5.60</span>
-                        <span class="main_2_left_price2">￥7.00</span>
+                        <a href="goods.php?id=2052"  target="_blank" title="正品汇乐566A/B/C/D拆装智力工程车挖土机推土机 组装益智玩">正品汇乐566A/B/C/D拆装智力工程车挖土机推土机 组装益智玩</a>
+                        <span class="main_2_left_price1">￥90.40</span>
+                        <span class="main_2_left_price2">￥113.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=850"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods9" data-lazyload="images/201412/thumb_img/850_thumb_G_1417566857196.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=443"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods7" data-lazyload="images/201412/thumb_img/443_thumb_G_1417566501630.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=850"  target="_blank" title="新款日康婴儿用品儿童小摇铃/宝宝玩具/开发大脑 RK3645">新款日康婴儿用品儿童小摇铃/宝宝玩具/开发大脑 RK3645</a>
-                        <span class="main_2_left_price1">￥18.00</span>
-                        <span class="main_2_left_price2">￥20.00</span>
+                        <a href="goods.php?id=443"  target="_blank" title="小白熊09258海精灵充气式安全游泳池（圆形）">小白熊09258海精灵充气式安全游泳池（圆形）</a>
+                        <span class="main_2_left_price1">￥271.20</span>
+                        <span class="main_2_left_price2">￥339.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1592"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods8" data-lazyload="images/201412/thumb_img/1592_thumb_G_1417567478092.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1592"  target="_blank" title="正品Toyroyal皇室附软带三键琴TR3418迷你小钢琴儿童益智音乐玩具">正品Toyroyal皇室附软带三键琴TR3418迷你小钢琴儿童益智音乐玩具</a>
+                        <span class="main_2_left_price1">￥77.44</span>
+                        <span class="main_2_left_price2">￥88.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1964"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood1_goods9" data-lazyload="images/201412/thumb_img/1964_thumb_G_1417567850910.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1964"  target="_blank" title="汇乐玩具 汇乐696多功能跳跳椅 带电子琴 婴儿蹦跳椅">汇乐玩具 汇乐696多功能跳跳椅 带电子琴 婴儿蹦跳椅</a>
+                        <span class="main_2_left_price1">￥511.20</span>
+                        <span class="main_2_left_price2">￥639.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -2409,12 +2409,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=828&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo0" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
-                                  <a href="category.php?id=828&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo1" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=828&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=828&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
-                                  <a href="category.php?id=828&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=828&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo5" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=828&amp;brand=284"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo0" data-lazyload="data/brandlogo/1414015726293595383.jpg"  title="铭塔"/></a>
+                                  <a href="category.php?id=828&amp;brand=286"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo1" data-lazyload="data/brandlogo/1414015031306064169.png"  title="汇乐"/></a>
+                                  <a href="category.php?id=828&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo2" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
+                                  <a href="category.php?id=828&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo3" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=828&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=828&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood1_foo5" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
                   
             </div> 
           </div>
@@ -2438,80 +2438,68 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_2_2">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=458"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods0" data-lazyload="images/201412/thumb_img/458_thumb_G_1417566328806.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=434"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods0" data-lazyload="images/201412/thumb_img/434_thumb_G_1417566332257.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=458"  target="_blank" title="日康丽宝晶畅标口十字孔奶嘴RK-3350">日康丽宝晶畅标口十字孔奶嘴RK-3350</a>
-                        <span class="main_2_left_price1">￥9.00</span>
-                        <span class="main_2_left_price2">￥10.00</span>
+                        <a href="goods.php?id=434"  target="_blank" title="日康丽宝全硅胶安抚奶嘴RK-3335">日康丽宝全硅胶安抚奶嘴RK-3335</a>
+                        <span class="main_2_left_price1">￥9.90</span>
+                        <span class="main_2_left_price2">￥11.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=369"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods1" data-lazyload="images/201412/thumb_img/369_thumb_G_1417566248713.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=700"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods1" data-lazyload="images/201412/thumb_img/700_thumb_G_1417566729582.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=369"  target="_blank" title="日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子">日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子</a>
-                        <span class="main_2_left_price1">￥21.51</span>
-                        <span class="main_2_left_price2">￥23.90</span>
+                        <a href="goods.php?id=700"  target="_blank" title="贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒">贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒</a>
+                        <span class="main_2_left_price1">￥142.20</span>
+                        <span class="main_2_left_price2">￥158.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1798"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods2" data-lazyload="images/201412/thumb_img/1798_thumb_G_1417567685434.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=203"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods2" data-lazyload="images/201412/thumb_img/203_thumb_G_1417566358894.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1798"  target="_blank" title="NUK专用奶嘴刷(带海绵头)">NUK专用奶嘴刷(带海绵头)</a>
-                        <span class="main_2_left_price1">￥31.50</span>
-                        <span class="main_2_left_price2">￥35.00</span>
+                        <a href="goods.php?id=203"  target="_blank" title="日康RK-3113防爆玻璃奶瓶150ml">日康RK-3113防爆玻璃奶瓶150ml</a>
+                        <span class="main_2_left_price1">￥80.10</span>
+                        <span class="main_2_left_price2">￥89.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=207"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods3" data-lazyload="images/201412/thumb_img/207_thumb_G_1417566360962.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=504"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods3" data-lazyload="images/201412/thumb_img/504_thumb_G_1417566556001.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=207"  target="_blank" title="小白熊HL-0607暖奶器">小白熊HL-0607暖奶器</a>
-                        <span class="main_2_left_price1">￥87.20</span>
-                        <span class="main_2_left_price2">￥109.00</span>
+                        <a href="goods.php?id=504"  target="_blank" title="小白熊09050手动榨汁器">小白熊09050手动榨汁器</a>
+                        <span class="main_2_left_price1">￥55.20</span>
+                        <span class="main_2_left_price2">￥69.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=708"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods4" data-lazyload="images/201412/thumb_img/708_thumb_G_1417566735687.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=534"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods4" data-lazyload="images/201412/thumb_img/534_thumb_G_1417566582746.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=708"  target="_blank" title="贝亲—训练用面叉03145">贝亲—训练用面叉03145</a>
-                        <span class="main_2_left_price1">￥27.00</span>
-                        <span class="main_2_left_price2">￥30.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=209"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods5" data-lazyload="images/201412/thumb_img/209_thumb_G_1417566362626.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=209"  target="_blank" title="小白熊HL-0609便携式电动搅奶棒">小白熊HL-0609便携式电动搅奶棒</a>
-                        <span class="main_2_left_price1">￥23.20</span>
-                        <span class="main_2_left_price2">￥29.00</span>
+                        <a href="goods.php?id=534"  target="_blank" title="日康晶畅标口奶嘴（两粒装）正品 十字孔6月以上 RK-3374">日康晶畅标口奶嘴（两粒装）正品 十字孔6月以上 RK-3374</a>
+                        <span class="main_2_left_price1">￥16.20</span>
+                        <span class="main_2_left_price2">￥18.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=263"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods6" data-lazyload="images/201412/thumb_img/263_thumb_G_1417566398912.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods5" data-lazyload="images/201412/thumb_img/263_thumb_G_1417566398912.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2522,38 +2510,50 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
+                        <a href="goods.php?id=458"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods6" data-lazyload="images/201412/thumb_img/458_thumb_G_1417566328806.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=458"  target="_blank" title="日康丽宝晶畅标口十字孔奶嘴RK-3350">日康丽宝晶畅标口十字孔奶嘴RK-3350</a>
+                        <span class="main_2_left_price1">￥9.00</span>
+                        <span class="main_2_left_price2">￥10.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1355"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods7" data-lazyload="images/201412/thumb_img/1355_thumb_G_1417567225143.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1355"  target="_blank" title="爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器">爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器</a>
+                        <span class="main_2_left_price1">￥14.25</span>
+                        <span class="main_2_left_price2">￥15.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=197"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods8" data-lazyload="images/201412/thumb_img/197_thumb_G_1417566355955.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=197"  target="_blank" title="日康RK-3307吸水嘴">日康RK-3307吸水嘴</a>
+                        <span class="main_2_left_price1">￥7.11</span>
+                        <span class="main_2_left_price2">￥7.90</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
                         <a href="goods.php?id=198"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods7" data-lazyload="images/201412/thumb_img/198_thumb_G_1417566356617.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods9" data-lazyload="images/201412/thumb_img/198_thumb_G_1417566356617.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
                         <a href="goods.php?id=198"  target="_blank" title="日康RK-3309标准口径奶嘴（S）">日康RK-3309标准口径奶嘴（S）</a>
                         <span class="main_2_left_price1">￥9.18</span>
                         <span class="main_2_left_price2">￥10.20</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=647"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods8" data-lazyload="images/201412/thumb_img/647_thumb_G_1417566690766.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=647"  target="_blank" title="日康不锈钢触饮杯 卡通防漏喝水杯带手柄 牛奶杯 RK3440 260ml">日康不锈钢触饮杯 卡通防漏喝水杯带手柄 牛奶杯 RK3440 260ml</a>
-                        <span class="main_2_left_price1">￥44.91</span>
-                        <span class="main_2_left_price2">￥49.90</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=204"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby2_pergood2_goods9" data-lazyload="images/201412/thumb_img/204_thumb_G_1417566359241.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=204"  target="_blank" title="小白熊HL-0600奶瓶消毒器">小白熊HL-0600奶瓶消毒器</a>
-                        <span class="main_2_left_price1">￥463.20</span>
-                        <span class="main_2_left_price2">￥579.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -2569,12 +2569,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo0" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo1" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo2" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=879&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo5" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo0" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo1" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo2" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo3" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby2_pergood2_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -2602,44 +2602,80 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_3_0">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1985"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods0" data-lazyload="images/201412/thumb_img/1985_thumb_G_1417567871720.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1615"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods0" data-lazyload="images/201412/thumb_img/1615_thumb_G_1417567501768.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1985"  target="_blank" title="阳光宝贝 宝宝学习绘本蝴蝶风筝">阳光宝贝 宝宝学习绘本蝴蝶风筝</a>
-                        <span class="main_2_left_price1">￥5.60</span>
-                        <span class="main_2_left_price2">￥7.00</span>
+                        <a href="goods.php?id=1615"  target="_blank" title="皇室玩具TR3441玩具智能手机-樱花粉">皇室玩具TR3441玩具智能手机-樱花粉</a>
+                        <span class="main_2_left_price1">￥86.24</span>
+                        <span class="main_2_left_price2">￥98.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1611"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods1" data-lazyload="images/201412/thumb_img/1611_thumb_G_1417567495145.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=923"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods1" data-lazyload="images/201412/thumb_img/923_thumb_G_1417566919443.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1611"  target="_blank" title="正品日本皇室玩具Toyroyal童车玩具风车TR3430">正品日本皇室玩具Toyroyal童车玩具风车TR3430</a>
-                        <span class="main_2_left_price1">￥121.44</span>
-                        <span class="main_2_left_price2">￥138.00</span>
+                        <a href="goods.php?id=923"  target="_blank" title="日康丽宝儿童发声椅RK-3698">日康丽宝儿童发声椅RK-3698</a>
+                        <span class="main_2_left_price1">￥80.10</span>
+                        <span class="main_2_left_price2">￥89.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1839"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods2" data-lazyload="images/201412/thumb_img/1839_thumb_G_1417567733069.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1875"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods2" data-lazyload="images/201412/thumb_img/1875_thumb_G_1417567767303.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1839"  target="_blank" title="皇室小鸡不倒翁TR807">皇室小鸡不倒翁TR807</a>
-                        <span class="main_2_left_price1">￥87.12</span>
-                        <span class="main_2_left_price2">￥99.00</span>
+                        <a href="goods.php?id=1875"  target="_blank" title="皇室音乐动物手推车TR856">皇室音乐动物手推车TR856</a>
+                        <span class="main_2_left_price1">￥351.12</span>
+                        <span class="main_2_left_price2">￥399.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1939"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods3" data-lazyload="images/201412/thumb_img/1939_thumb_G_1417567827734.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1939"  target="_blank" title="汇乐玩具 536梦幻天鹅游乐园灯光 电动万向车 女孩玩具 生日礼物">汇乐玩具 536梦幻天鹅游乐园灯光 电动万向车 女孩玩具 生日礼物</a>
+                        <span class="main_2_left_price1">￥76.00</span>
+                        <span class="main_2_left_price2">￥95.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=443"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods4" data-lazyload="images/201412/thumb_img/443_thumb_G_1417566501630.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=443"  target="_blank" title="小白熊09258海精灵充气式安全游泳池（圆形）">小白熊09258海精灵充气式安全游泳池（圆形）</a>
+                        <span class="main_2_left_price1">￥271.20</span>
+                        <span class="main_2_left_price2">￥339.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1950"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods5" data-lazyload="images/201412/thumb_img/1950_thumb_G_1417567836627.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1950"  target="_blank" title="汇乐玩具 596眩彩智能小乌龟 中英双语早教 手拍鼓儿童益智爬行玩具">汇乐玩具 596眩彩智能小乌龟 中英双语早教 手拍鼓儿童益智爬行玩具</a>
+                        <span class="main_2_left_price1">￥111.20</span>
+                        <span class="main_2_left_price2">￥139.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=1427"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods3" data-lazyload="images/201412/thumb_img/1427_thumb_G_1417567321450.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods6" data-lazyload="images/201412/thumb_img/1427_thumb_G_1417567321450.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -2650,74 +2686,38 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1378"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods4" data-lazyload="images/201412/thumb_img/1378_thumb_G_1417567274742.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1592"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods7" data-lazyload="images/201412/thumb_img/1592_thumb_G_1417567478092.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1378"  target="_blank" title="皇室 奇趣足球 铃铛球 滚滚球 TR1040">皇室 奇趣足球 铃铛球 滚滚球 TR1040</a>
-                        <span class="main_2_left_price1">￥28.16</span>
-                        <span class="main_2_left_price2">￥32.00</span>
+                        <a href="goods.php?id=1592"  target="_blank" title="正品Toyroyal皇室附软带三键琴TR3418迷你小钢琴儿童益智音乐玩具">正品Toyroyal皇室附软带三键琴TR3418迷你小钢琴儿童益智音乐玩具</a>
+                        <span class="main_2_left_price1">￥77.44</span>
+                        <span class="main_2_left_price2">￥88.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1872"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods5" data-lazyload="images/201412/thumb_img/1872_thumb_G_1417567764370.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=850"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods8" data-lazyload="images/201412/thumb_img/850_thumb_G_1417566857196.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1872"  target="_blank" title="Toyroyal皇室 家屋益智盒 TR850">Toyroyal皇室 家屋益智盒 TR850</a>
-                        <span class="main_2_left_price1">￥87.12</span>
-                        <span class="main_2_left_price2">￥99.00</span>
+                        <a href="goods.php?id=850"  target="_blank" title="新款日康婴儿用品儿童小摇铃/宝宝玩具/开发大脑 RK3645">新款日康婴儿用品儿童小摇铃/宝宝玩具/开发大脑 RK3645</a>
+                        <span class="main_2_left_price1">￥18.00</span>
+                        <span class="main_2_left_price2">￥20.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2390"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods6" data-lazyload="images/201412/thumb_img/2390_thumb_G_1417567750926.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1611"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods9" data-lazyload="images/201412/thumb_img/1611_thumb_G_1417567495145.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2390"  target="_blank" title="阳光宝贝 宝贝堂启蒙认知必备卡:看图唐诗">阳光宝贝 宝贝堂启蒙认知必备卡:看图唐诗</a>
-                        <span class="main_2_left_price1">￥13.44</span>
-                        <span class="main_2_left_price2">￥16.80</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2152"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods7" data-lazyload="images/201412/thumb_img/2152_thumb_G_1417567803525.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2152"  target="_blank" title="阳光宝贝儿歌小手工-叮咚叮咚我的家">阳光宝贝儿歌小手工-叮咚叮咚我的家</a>
-                        <span class="main_2_left_price1">￥7.04</span>
-                        <span class="main_2_left_price2">￥8.80</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1240"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods8" data-lazyload="images/201412/thumb_img/1240_thumb_G_1417567148061.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1240"  target="_blank" title="铭塔100粒彩色积木MT-A8061">铭塔100粒彩色积木MT-A8061</a>
-                        <span class="main_2_left_price1">￥91.80</span>
-                        <span class="main_2_left_price2">￥108.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1657"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood0_goods9" data-lazyload="images/201412/thumb_img/1657_thumb_G_1417567549093.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1657"  target="_blank" title="Toyroyal日本皇室玩具八用床边音乐铃床铃婴幼儿爬行健身架TR3807">Toyroyal日本皇室玩具八用床边音乐铃床铃婴幼儿爬行健身架TR3807</a>
-                        <span class="main_2_left_price1">￥693.44</span>
-                        <span class="main_2_left_price2">￥788.00</span>
+                        <a href="goods.php?id=1611"  target="_blank" title="正品日本皇室玩具Toyroyal童车玩具风车TR3430">正品日本皇室玩具Toyroyal童车玩具风车TR3430</a>
+                        <span class="main_2_left_price1">￥121.44</span>
+                        <span class="main_2_left_price2">￥138.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -2731,12 +2731,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=828&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo0" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
-                                  <a href="category.php?id=828&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo1" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=828&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=828&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
-                                  <a href="category.php?id=828&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=828&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo5" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=828&amp;brand=284"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo0" data-lazyload="data/brandlogo/1414015726293595383.jpg"  title="铭塔"/></a>
+                                  <a href="category.php?id=828&amp;brand=286"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo1" data-lazyload="data/brandlogo/1414015031306064169.png"  title="汇乐"/></a>
+                                  <a href="category.php?id=828&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo2" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
+                                  <a href="category.php?id=828&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo3" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=828&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=828&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood0_foo5" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
                   
             </div> 
           </div>
@@ -2760,122 +2760,122 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_3_1">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1170"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods0" data-lazyload="images/201412/thumb_img/1170_thumb_G_1417567086555.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=207"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods0" data-lazyload="images/201412/thumb_img/207_thumb_G_1417566360962.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1170"  target="_blank" title="贝亲新生儿成长哺乳礼盒OA07">贝亲新生儿成长哺乳礼盒OA07</a>
-                        <span class="main_2_left_price1">￥412.20</span>
-                        <span class="main_2_left_price2">￥458.00</span>
+                        <a href="goods.php?id=207"  target="_blank" title="小白熊HL-0607暖奶器">小白熊HL-0607暖奶器</a>
+                        <span class="main_2_left_price1">￥87.20</span>
+                        <span class="main_2_left_price2">￥109.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=647"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods1" data-lazyload="images/201412/thumb_img/647_thumb_G_1417566690766.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=708"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods1" data-lazyload="images/201412/thumb_img/708_thumb_G_1417566735687.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=647"  target="_blank" title="日康不锈钢触饮杯 卡通防漏喝水杯带手柄 牛奶杯 RK3440 260ml">日康不锈钢触饮杯 卡通防漏喝水杯带手柄 牛奶杯 RK3440 260ml</a>
-                        <span class="main_2_left_price1">￥44.91</span>
-                        <span class="main_2_left_price2">￥49.90</span>
+                        <a href="goods.php?id=708"  target="_blank" title="贝亲—训练用面叉03145">贝亲—训练用面叉03145</a>
+                        <span class="main_2_left_price1">￥27.00</span>
+                        <span class="main_2_left_price2">￥30.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=450"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods2" data-lazyload="images/201412/thumb_img/450_thumb_G_1417566507423.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=613"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods2" data-lazyload="images/201412/thumb_img/613_thumb_G_1417566648353.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=450"  target="_blank" title="日康婴儿吮食器新鲜果蔬训练袋吮食网兜宝宝食物辅食器 RK-3341">日康婴儿吮食器新鲜果蔬训练袋吮食网兜宝宝食物辅食器 RK-3341</a>
-                        <span class="main_2_left_price1">￥19.71</span>
-                        <span class="main_2_left_price2">￥21.90</span>
+                        <a href="goods.php?id=613"  target="_blank" title="日康 宝宝两用起步杯RK-3428(颜色随机）">日康 宝宝两用起步杯RK-3428(颜色随机）</a>
+                        <span class="main_2_left_price1">￥35.10</span>
+                        <span class="main_2_left_price2">￥39.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=204"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods3" data-lazyload="images/201412/thumb_img/204_thumb_G_1417566359241.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=458"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods3" data-lazyload="images/201412/thumb_img/458_thumb_G_1417566328806.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=204"  target="_blank" title="小白熊HL-0600奶瓶消毒器">小白熊HL-0600奶瓶消毒器</a>
-                        <span class="main_2_left_price1">￥463.20</span>
-                        <span class="main_2_left_price2">￥579.00</span>
+                        <a href="goods.php?id=458"  target="_blank" title="日康丽宝晶畅标口十字孔奶嘴RK-3350">日康丽宝晶畅标口十字孔奶嘴RK-3350</a>
+                        <span class="main_2_left_price1">￥9.00</span>
+                        <span class="main_2_left_price2">￥10.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=700"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods4" data-lazyload="images/201412/thumb_img/700_thumb_G_1417566729582.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=369"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods4" data-lazyload="images/201412/thumb_img/369_thumb_G_1417566248713.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=700"  target="_blank" title="贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒">贝亲婴儿食物研磨器03040宝宝辅食手动搅拌器研磨棒</a>
-                        <span class="main_2_left_price1">￥142.20</span>
-                        <span class="main_2_left_price2">￥158.00</span>
+                        <a href="goods.php?id=369"  target="_blank" title="日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子">日康 米糊离乳奶瓶婴儿软头喂米粉瓶宝宝果汁辅食工具汤勺子</a>
+                        <span class="main_2_left_price1">￥21.51</span>
+                        <span class="main_2_left_price2">￥23.90</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=642"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods5" data-lazyload="images/201412/thumb_img/642_thumb_G_1417566675461.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1171"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods5" data-lazyload="images/201412/thumb_img/1171_thumb_G_1417567086160.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=642"  target="_blank" title="日康正品 RK-3438 宝宝两用杯 奶嘴+学饮嘴两用杯">日康正品 RK-3438 宝宝两用杯 奶嘴+学饮嘴两用杯</a>
-                        <span class="main_2_left_price1">￥34.11</span>
-                        <span class="main_2_left_price2">￥37.90</span>
+                        <a href="goods.php?id=1171"  target="_blank" title="贝亲新生儿哺喂成长哺乳礼盒OA08（经典款）">贝亲新生儿哺喂成长哺乳礼盒OA08（经典款）</a>
+                        <span class="main_2_left_price1">￥277.20</span>
+                        <span class="main_2_left_price2">￥308.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=118"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods6" data-lazyload="images/201412/thumb_img/118_thumb_G_1417566309193.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=203"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods6" data-lazyload="images/201412/thumb_img/203_thumb_G_1417566358894.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=118"  target="_blank" title="婴之侣ID-F004硅胶安全软头勺">婴之侣ID-F004硅胶安全软头勺</a>
-                        <span class="main_2_left_price1">￥12.75</span>
-                        <span class="main_2_left_price2">￥15.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=504"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods7" data-lazyload="images/201412/thumb_img/504_thumb_G_1417566556001.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=504"  target="_blank" title="小白熊09050手动榨汁器">小白熊09050手动榨汁器</a>
-                        <span class="main_2_left_price1">￥55.20</span>
-                        <span class="main_2_left_price2">￥69.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=311"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods8" data-lazyload="images/201412/thumb_img/311_thumb_G_1417566434518.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=311"  target="_blank" title="小白熊09115不锈钢多功能双头保温水瓶">小白熊09115不锈钢多功能双头保温水瓶</a>
-                        <span class="main_2_left_price1">￥71.20</span>
+                        <a href="goods.php?id=203"  target="_blank" title="日康RK-3113防爆玻璃奶瓶150ml">日康RK-3113防爆玻璃奶瓶150ml</a>
+                        <span class="main_2_left_price1">￥80.10</span>
                         <span class="main_2_left_price2">￥89.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=316"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods9" data-lazyload="images/201412/thumb_img/316_thumb_G_1417566436160.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1355"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods7" data-lazyload="images/201412/thumb_img/1355_thumb_G_1417567225143.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=316"  target="_blank" title="小白熊09160一次性奶粉储存袋">小白熊09160一次性奶粉储存袋</a>
-                        <span class="main_2_left_price1">￥39.20</span>
-                        <span class="main_2_left_price2">￥49.00</span>
+                        <a href="goods.php?id=1355"  target="_blank" title="爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器">爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器</a>
+                        <span class="main_2_left_price1">￥14.25</span>
+                        <span class="main_2_left_price2">￥15.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=305"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods8" data-lazyload="images/201412/thumb_img/305_thumb_G_1417566430506.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=305"  target="_blank" title="小白熊09602/09102鸭嘴训练杯">小白熊09602/09102鸭嘴训练杯</a>
+                        <span class="main_2_left_price1">￥47.20</span>
+                        <span class="main_2_left_price2">￥59.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=209"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood1_goods9" data-lazyload="images/201412/thumb_img/209_thumb_G_1417566362626.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=209"  target="_blank" title="小白熊HL-0609便携式电动搅奶棒">小白熊HL-0609便携式电动搅奶棒</a>
+                        <span class="main_2_left_price1">￥23.20</span>
+                        <span class="main_2_left_price2">￥29.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -2891,12 +2891,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo0" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo1" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo2" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=879&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo5" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo0" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo1" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo2" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo3" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood1_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -2920,104 +2920,32 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_3_2">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=290"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods0" data-lazyload="images/201412/thumb_img/290_thumb_G_1417566420304.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=817"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods0" data-lazyload="images/201412/thumb_img/817_thumb_G_1417566830581.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=290"  target="_blank" title="小白熊HL-0816多功能空气加湿器">小白熊HL-0816多功能空气加湿器</a>
-                        <span class="main_2_left_price1">￥239.20</span>
-                        <span class="main_2_left_price2">￥299.00</span>
+                        <a href="goods.php?id=817"  target="_blank" title="日康爽身粉盒 RK-3612">日康爽身粉盒 RK-3612</a>
+                        <span class="main_2_left_price1">￥13.50</span>
+                        <span class="main_2_left_price2">￥15.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=498"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods1" data-lazyload="images/201412/thumb_img/498_thumb_G_1417566550892.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=904"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods1" data-lazyload="images/201412/thumb_img/904_thumb_G_1417566903332.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=498"  target="_blank" title="小白熊09029变形虫伸缩便圈">小白熊09029变形虫伸缩便圈</a>
-                        <span class="main_2_left_price1">￥44.00</span>
-                        <span class="main_2_left_price2">￥55.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=842"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods2" data-lazyload="images/201412/thumb_img/842_thumb_G_1417566851291.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=842"  target="_blank" title="贝亲婴儿香氛护肤礼盒IA150/IA151">贝亲婴儿香氛护肤礼盒IA150/IA151</a>
-                        <span class="main_2_left_price1">￥385.20</span>
-                        <span class="main_2_left_price2">￥428.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=851"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods3" data-lazyload="images/201412/thumb_img/851_thumb_G_1417566858842.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=851"  target="_blank" title="贝亲—动物别针6个卡装10827">贝亲—动物别针6个卡装10827</a>
-                        <span class="main_2_left_price1">￥27.00</span>
-                        <span class="main_2_left_price2">￥30.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=385"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods4" data-lazyload="images/201412/thumb_img/385_thumb_G_1417566263634.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=385"  target="_blank" title="良木尿裤 婴幼儿天然彩棉健康尿裤 纯棉舒适尿裤隔尿干爽LMK001/LMD002">良木尿裤 婴幼儿天然彩棉健康尿裤 纯棉舒适尿裤隔尿干爽LMK001/LMD002</a>
-                        <span class="main_2_left_price1">￥51.75</span>
-                        <span class="main_2_left_price2">￥69.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=439"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods5" data-lazyload="images/201412/thumb_img/439_thumb_G_1417566325916.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=439"  target="_blank" title="小白熊09256果果婴儿浴盆">小白熊09256果果婴儿浴盆</a>
-                        <span class="main_2_left_price1">￥239.20</span>
-                        <span class="main_2_left_price2">￥299.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=873"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods6" data-lazyload="images/201412/thumb_img/873_thumb_G_1417566876131.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=873"  target="_blank" title="贝亲—婴儿衣物清洗剂（温和洗净型） 12104">贝亲—婴儿衣物清洗剂（温和洗净型） 12104</a>
-                        <span class="main_2_left_price1">￥106.20</span>
-                        <span class="main_2_left_price2">￥118.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=41"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods7" data-lazyload="images/201412/thumb_img/41_thumb_G_1417566265854.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=41"  target="_blank" title="婴之侣ID-S011婴幼儿多用洗头帽">婴之侣ID-S011婴幼儿多用洗头帽</a>
-                        <span class="main_2_left_price1">￥13.60</span>
-                        <span class="main_2_left_price2">￥16.00</span>
+                        <a href="goods.php?id=904"  target="_blank" title="贝亲婴儿防皴护理霜IA79">贝亲婴儿防皴护理霜IA79</a>
+                        <span class="main_2_left_price1">￥31.50</span>
+                        <span class="main_2_left_price2">￥35.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=1689"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods8" data-lazyload="images/201412/thumb_img/1689_thumb_G_1417567576738.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods2" data-lazyload="images/201412/thumb_img/1689_thumb_G_1417567576738.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3028,14 +2956,86 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=844"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods9" data-lazyload="images/201412/thumb_img/844_thumb_G_1417566852717.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1086"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods3" data-lazyload="images/201412/thumb_img/1086_thumb_G_1417567025145.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=844"  target="_blank" title="贝亲IA162婴儿防晒露30G">贝亲IA162婴儿防晒露30G</a>
-                        <span class="main_2_left_price1">￥73.80</span>
-                        <span class="main_2_left_price2">￥82.00</span>
+                        <a href="goods.php?id=1086"  target="_blank" title="贝亲MA22浓缩型衣物柔软剂1000ML">贝亲MA22浓缩型衣物柔软剂1000ML</a>
+                        <span class="main_2_left_price1">￥50.40</span>
+                        <span class="main_2_left_price2">￥56.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=47"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods4" data-lazyload="images/201412/thumb_img/47_thumb_G_1417566267216.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=47"  target="_blank" title="良木尿垫 婴儿纯棉法兰绒尿垫 宝宝双面法兰绒隔尿垫 透气LMD011">良木尿垫 婴儿纯棉法兰绒尿垫 宝宝双面法兰绒隔尿垫 透气LMD011</a>
+                        <span class="main_2_left_price1">￥73.50</span>
+                        <span class="main_2_left_price2">￥98.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1569"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods5" data-lazyload="images/201412/thumb_img/1569_thumb_G_1417567459950.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1569"  target="_blank" title="正品爱得利F20 安全防撞角垫 宝宝安全用品 保护用品">正品爱得利F20 安全防撞角垫 宝宝安全用品 保护用品</a>
+                        <span class="main_2_left_price1">￥6.18</span>
+                        <span class="main_2_left_price2">￥6.50</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1670"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods6" data-lazyload="images/201412/thumb_img/1670_thumb_G_1417567558928.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1670"  target="_blank" title="贝亲-盒装婴儿怯痱粉120gHA09">贝亲-盒装婴儿怯痱粉120gHA09</a>
+                        <span class="main_2_left_price1">￥30.60</span>
+                        <span class="main_2_left_price2">￥34.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2475"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods7" data-lazyload="images/201412/thumb_img/2475_thumb_G_1417566870419.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2475"  target="_blank" title="Pampers帮宝适超薄干爽系列分销商渠道中包装小号26片">Pampers帮宝适超薄干爽系列分销商渠道中包装小号26片</a>
+                        <span class="main_2_left_price1">￥47.20</span>
+                        <span class="main_2_left_price2">￥47.20</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=845"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods8" data-lazyload="images/201412/thumb_img/845_thumb_G_1417566853926.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=845"  target="_blank" title="贝亲IA30婴儿沐浴露(泡沫型） 200ml">贝亲IA30婴儿沐浴露(泡沫型） 200ml</a>
+                        <span class="main_2_left_price1">￥70.20</span>
+                        <span class="main_2_left_price2">￥78.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1132"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby3_pergood2_goods9" data-lazyload="images/201412/thumb_img/1132_thumb_G_1417567059411.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1132"  target="_blank" title="贝亲MA38婴儿纸尿裤L  30 P">贝亲MA38婴儿纸尿裤L  30 P</a>
+                        <span class="main_2_left_price1">￥79.20</span>
+                        <span class="main_2_left_price2">￥88.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -3053,12 +3053,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo0" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo1" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=657&amp;brand=250"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo2" data-lazyload="data/brandlogo/1414342289343391389.jpg"  title="Pampers帮宝适"/></a>
-                                  <a href="category.php?id=657&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo3" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
-                                  <a href="category.php?id=657&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=657&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo5" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=657&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=657&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo1" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
+                                  <a href="category.php?id=657&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=657&amp;brand=282"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo3" data-lazyload="data/brandlogo/1414342997812101241.jpg"  title="良木"/></a>
+                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby3_pergood2_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -3086,14 +3086,14 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_4_0">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=906"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods0" data-lazyload="images/201412/thumb_img/906_thumb_G_1417566905547.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=41"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods0" data-lazyload="images/201412/thumb_img/41_thumb_G_1417566265854.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=906"  target="_blank" title="日康新生儿喂哺礼盒多功能喂哺套装8件装宝宝礼盒装RK-3678">日康新生儿喂哺礼盒多功能喂哺套装8件装宝宝礼盒装RK-3678</a>
-                        <span class="main_2_left_price1">￥233.10</span>
-                        <span class="main_2_left_price2">￥259.00</span>
+                        <a href="goods.php?id=41"  target="_blank" title="婴之侣ID-S011婴幼儿多用洗头帽">婴之侣ID-S011婴幼儿多用洗头帽</a>
+                        <span class="main_2_left_price1">￥13.60</span>
+                        <span class="main_2_left_price2">￥16.00</span>
                       </dd>
                     </dl>
                                   <dl>
@@ -3110,44 +3110,56 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1086"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods2" data-lazyload="images/201412/thumb_img/1086_thumb_G_1417567025145.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=844"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods2" data-lazyload="images/201412/thumb_img/844_thumb_G_1417566852717.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1086"  target="_blank" title="贝亲MA22浓缩型衣物柔软剂1000ML">贝亲MA22浓缩型衣物柔软剂1000ML</a>
-                        <span class="main_2_left_price1">￥50.40</span>
-                        <span class="main_2_left_price2">￥56.00</span>
+                        <a href="goods.php?id=844"  target="_blank" title="贝亲IA162婴儿防晒露30G">贝亲IA162婴儿防晒露30G</a>
+                        <span class="main_2_left_price1">￥73.80</span>
+                        <span class="main_2_left_price2">￥82.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1126"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods3" data-lazyload="images/201412/thumb_img/1126_thumb_G_1417567056092.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=817"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods3" data-lazyload="images/201412/thumb_img/817_thumb_G_1417566830581.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1126"  target="_blank" title="贝亲MA35婴儿纸尿裤NB 36P">贝亲MA35婴儿纸尿裤NB 36P</a>
-                        <span class="main_2_left_price1">￥64.80</span>
-                        <span class="main_2_left_price2">￥72.00</span>
+                        <a href="goods.php?id=817"  target="_blank" title="日康爽身粉盒 RK-3612">日康爽身粉盒 RK-3612</a>
+                        <span class="main_2_left_price1">￥13.50</span>
+                        <span class="main_2_left_price2">￥15.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2492"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods4" data-lazyload="images/201412/thumb_img/2492_thumb_G_1417568333434.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=487"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods4" data-lazyload="images/201412/thumb_img/487_thumb_G_1417566537335.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2492"  target="_blank" title="Pampers 帮宝适超薄干爽系列大包装加加大号34片">Pampers 帮宝适超薄干爽系列大包装加加大号34片</a>
-                        <span class="main_2_left_price1">￥111.90</span>
-                        <span class="main_2_left_price2">￥111.90</span>
+                        <a href="goods.php?id=487"  target="_blank" title="小白熊09017变形虫多功能坐便器">小白熊09017变形虫多功能坐便器</a>
+                        <span class="main_2_left_price1">￥175.20</span>
+                        <span class="main_2_left_price2">￥219.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=498"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods5" data-lazyload="images/201412/thumb_img/498_thumb_G_1417566550892.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=498"  target="_blank" title="小白熊09029变形虫伸缩便圈">小白熊09029变形虫伸缩便圈</a>
+                        <span class="main_2_left_price1">￥44.00</span>
+                        <span class="main_2_left_price2">￥55.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=1676"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods5" data-lazyload="images/201412/thumb_img/1676_thumb_G_1417567564441.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods6" data-lazyload="images/201412/thumb_img/1676_thumb_G_1417567564441.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3158,50 +3170,38 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=845"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods6" data-lazyload="images/201412/thumb_img/845_thumb_G_1417566853926.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=39"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods7" data-lazyload="images/201501/thumb_img/39_thumb_G_1420414734783.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=845"  target="_blank" title="贝亲IA30婴儿沐浴露(泡沫型） 200ml">贝亲IA30婴儿沐浴露(泡沫型） 200ml</a>
-                        <span class="main_2_left_price1">￥70.20</span>
-                        <span class="main_2_left_price2">￥78.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=320"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods7" data-lazyload="images/201412/thumb_img/320_thumb_G_1417566439872.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=320"  target="_blank" title="小白熊09172婴儿发梳组">小白熊09172婴儿发梳组</a>
-                        <span class="main_2_left_price1">￥15.92</span>
-                        <span class="main_2_left_price2">￥19.90</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1689"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods8" data-lazyload="images/201412/thumb_img/1689_thumb_G_1417567576738.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1689"  target="_blank" title="正品爱得利贝芬妮诗婴儿香皂80g香茅精油新生儿肥皂洗浴用品BP021">正品爱得利贝芬妮诗婴儿香皂80g香茅精油新生儿肥皂洗浴用品BP021</a>
-                        <span class="main_2_left_price1">￥11.40</span>
+                        <a href="goods.php?id=39"  target="_blank" title="婴之侣ID-S009洗澡温度计">婴之侣ID-S009洗澡温度计</a>
+                        <span class="main_2_left_price1">￥10.20</span>
                         <span class="main_2_left_price2">￥12.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=223"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods9" data-lazyload="images/201412/thumb_img/223_thumb_G_1417566266750.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2598"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods8" data-lazyload="images/201412/thumb_img/2598_thumb_G_1417568435822.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=223"  target="_blank" title="小白熊HL-0622变频式电子驱蚊器　　">小白熊HL-0622变频式电子驱蚊器　　</a>
-                        <span class="main_2_left_price1">￥39.20</span>
-                        <span class="main_2_left_price2">￥49.00</span>
+                        <a href="goods.php?id=2598"  target="_blank" title="Ampais恩贝氏婴儿护肤品儿童护手霜宝宝深层滋养护手霜50ml">Ampais恩贝氏婴儿护肤品儿童护手霜宝宝深层滋养护手霜50ml</a>
+                        <span class="main_2_left_price1">￥30.40</span>
+                        <span class="main_2_left_price2">￥32.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=280"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood0_goods9" data-lazyload="images/201412/thumb_img/280_thumb_G_1417566411240.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=280"  target="_blank" title="小白熊HL-0693小熊型发光掏耳宝">小白熊HL-0693小熊型发光掏耳宝</a>
+                        <span class="main_2_left_price1">￥31.20</span>
+                        <span class="main_2_left_price2">￥39.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -3219,12 +3219,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo0" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo1" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=657&amp;brand=250"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo2" data-lazyload="data/brandlogo/1414342289343391389.jpg"  title="Pampers帮宝适"/></a>
-                                  <a href="category.php?id=657&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo3" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
-                                  <a href="category.php?id=657&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=657&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo5" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=657&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=657&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo1" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
+                                  <a href="category.php?id=657&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=657&amp;brand=282"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo3" data-lazyload="data/brandlogo/1414342997812101241.jpg"  title="良木"/></a>
+                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood0_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -3248,32 +3248,20 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_4_1">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=3027"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods0" data-lazyload="images/201412/thumb_img/3027_thumb_G_1417568870175.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1009"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods0" data-lazyload="images/201412/thumb_img/1009_thumb_G_1417566978692.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=3027"  target="_blank" title="minimoto小米米 欢乐小熊套装 圆领上衣&密裆长裤/粉红/粉蓝YD2043">minimoto小米米 欢乐小熊套装 圆领上衣&密裆长裤/粉红/粉蓝YD2043</a>
-                        <span class="main_2_left_price1">￥118.40</span>
-                        <span class="main_2_left_price2">￥148.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1917"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods1" data-lazyload="images/201412/thumb_img/1917_thumb_G_1417567805976.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1917"  target="_blank" title="正品爱得利 DT-118 IVORY BABY 长袖哈衣">正品爱得利 DT-118 IVORY BABY 长袖哈衣</a>
-                        <span class="main_2_left_price1">￥66.50</span>
-                        <span class="main_2_left_price2">￥70.00</span>
+                        <a href="goods.php?id=1009"  target="_blank" title="贝亲超柔纱布浴巾（1片入）LA29/LA30/LA31">贝亲超柔纱布浴巾（1片入）LA29/LA30/LA31</a>
+                        <span class="main_2_left_price1">￥41.40</span>
+                        <span class="main_2_left_price2">￥46.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=2641"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods2" data-lazyload="images/201412/thumb_img/2641_thumb_G_1417568474440.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods1" data-lazyload="images/201412/thumb_img/2641_thumb_G_1417568474440.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3284,20 +3272,80 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=82"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods3" data-lazyload="images/201412/thumb_img/82_thumb_G_1417566290536.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=2913"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods2" data-lazyload="images/201412/thumb_img/2913_thumb_G_1417568751292.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=82"  target="_blank" title="良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 ">良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 </a>
-                        <span class="main_2_left_price1">￥51.75</span>
-                        <span class="main_2_left_price2">￥69.00</span>
+                        <a href="goods.php?id=2913"  target="_blank" title="小米米 春夏女宝宝新款 粉色憧憬系列 短裙印花 YJ0229">小米米 春夏女宝宝新款 粉色憧憬系列 短裙印花 YJ0229</a>
+                        <span class="main_2_left_price1">￥78.40</span>
+                        <span class="main_2_left_price2">￥98.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2618"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods3" data-lazyload="images/201412/thumb_img/2618_thumb_G_1417568451992.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2618"  target="_blank" title="小伙伴莫代尔内裤【YA04711P-YA04713B】">小伙伴莫代尔内裤【YA04711P-YA04713B】</a>
+                        <span class="main_2_left_price1">￥54.40</span>
+                        <span class="main_2_left_price2">￥68.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1917"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods4" data-lazyload="images/201412/thumb_img/1917_thumb_G_1417567805976.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1917"  target="_blank" title="正品爱得利 DT-118 IVORY BABY 长袖哈衣">正品爱得利 DT-118 IVORY BABY 长袖哈衣</a>
+                        <span class="main_2_left_price1">￥66.50</span>
+                        <span class="main_2_left_price2">￥70.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2753"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods5" data-lazyload="images/201412/thumb_img/2753_thumb_G_1417568583894.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2753"  target="_blank" title="小米米蝶语小熊礼盒YG0071\YG0072">小米米蝶语小熊礼盒YG0071\YG0072</a>
+                        <span class="main_2_left_price1">￥230.40</span>
+                        <span class="main_2_left_price2">￥288.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2853"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods6" data-lazyload="images/201412/thumb_img/2853_thumb_G_1417568695291.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2853"  target="_blank" title="minimoto小米米 欢乐派对 双面穿夹棉 长袖对襟上衣/粉红/粉蓝YU3105">minimoto小米米 欢乐派对 双面穿夹棉 长袖对襟上衣/粉红/粉蓝YU3105</a>
+                        <span class="main_2_left_price1">￥151.20</span>
+                        <span class="main_2_left_price2">￥189.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1904"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods7" data-lazyload="images/201412/thumb_img/1904_thumb_G_1417567791664.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1904"  target="_blank" title="正品爱得利 DT-109 IVORY BABY 侧开护手衣">正品爱得利 DT-109 IVORY BABY 侧开护手衣</a>
+                        <span class="main_2_left_price1">￥28.50</span>
+                        <span class="main_2_left_price2">￥30.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=2778"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods4" data-lazyload="images/201412/thumb_img/2778_thumb_G_1417568611916.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods8" data-lazyload="images/201412/thumb_img/2778_thumb_G_1417568611916.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3308,62 +3356,14 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1882"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods5" data-lazyload="images/201412/thumb_img/1882_thumb_G_1417567772188.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1882"  target="_blank" title="爱得利 正品DT-20A 护手套（厚） 宝宝护手套">爱得利 正品DT-20A 护手套（厚） 宝宝护手套</a>
-                        <span class="main_2_left_price1">￥5.70</span>
-                        <span class="main_2_left_price2">￥6.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
                         <a href="goods.php?id=2783"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods6" data-lazyload="images/201412/thumb_img/2783_thumb_G_1417568615261.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods9" data-lazyload="images/201412/thumb_img/2783_thumb_G_1417568615261.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
                         <a href="goods.php?id=2783"  target="_blank" title="小米米多彩部落棉袜【YA04701-YA04704】">小米米多彩部落棉袜【YA04701-YA04704】</a>
                         <span class="main_2_left_price1">￥20.80</span>
                         <span class="main_2_left_price2">￥26.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=67"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods7" data-lazyload="images/201412/thumb_img/67_thumb_G_1417566280130.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=67"  target="_blank" title="良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 ">良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 </a>
-                        <span class="main_2_left_price1">￥12.00</span>
-                        <span class="main_2_left_price2">￥16.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2879"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods8" data-lazyload="images/201412/thumb_img/2879_thumb_G_1417568719332.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2879"  target="_blank" title="小米米纱布 护脐带YA03061W">小米米纱布 护脐带YA03061W</a>
-                        <span class="main_2_left_price1">￥20.00</span>
-                        <span class="main_2_left_price2">￥25.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2865"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood1_goods9" data-lazyload="images/201412/thumb_img/2865_thumb_G_1417568707252.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2865"  target="_blank" title="minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102">minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102</a>
-                        <span class="main_2_left_price1">￥190.40</span>
-                        <span class="main_2_left_price2">￥238.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -3379,12 +3379,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo0" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
-                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo1" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
-                                  <a href="category.php?id=776&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=776&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=776&amp;brand=295"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo4" data-lazyload="data/brandlogo/1418941752240578648.jpg"  title="圣婴岛"/></a>
-                                  <a href="category.php?id=776&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo5" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=776&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=776&amp;brand=294"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo1" data-lazyload="data/brandlogo/1416432383219016859.jpg"  title="茶香宝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=776&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
+                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo4" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood1_foo5" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
                   
             </div> 
           </div>
@@ -3408,50 +3408,50 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_4_2">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=197"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods0" data-lazyload="images/201412/thumb_img/197_thumb_G_1417566355955.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=209"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods0" data-lazyload="images/201412/thumb_img/209_thumb_G_1417566362626.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=197"  target="_blank" title="日康RK-3307吸水嘴">日康RK-3307吸水嘴</a>
-                        <span class="main_2_left_price1">￥7.11</span>
-                        <span class="main_2_left_price2">￥7.90</span>
+                        <a href="goods.php?id=209"  target="_blank" title="小白熊HL-0609便携式电动搅奶棒">小白熊HL-0609便携式电动搅奶棒</a>
+                        <span class="main_2_left_price1">￥23.20</span>
+                        <span class="main_2_left_price2">￥29.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=305"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods1" data-lazyload="images/201412/thumb_img/305_thumb_G_1417566430506.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=198"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods1" data-lazyload="images/201412/thumb_img/198_thumb_G_1417566356617.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=305"  target="_blank" title="小白熊09602/09102鸭嘴训练杯">小白熊09602/09102鸭嘴训练杯</a>
-                        <span class="main_2_left_price1">￥47.20</span>
-                        <span class="main_2_left_price2">￥59.00</span>
+                        <a href="goods.php?id=198"  target="_blank" title="日康RK-3309标准口径奶嘴（S）">日康RK-3309标准口径奶嘴（S）</a>
+                        <span class="main_2_left_price1">￥9.18</span>
+                        <span class="main_2_left_price2">￥10.20</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=613"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods2" data-lazyload="images/201412/thumb_img/613_thumb_G_1417566648353.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=450"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods2" data-lazyload="images/201412/thumb_img/450_thumb_G_1417566507423.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=613"  target="_blank" title="日康 宝宝两用起步杯RK-3428(颜色随机）">日康 宝宝两用起步杯RK-3428(颜色随机）</a>
-                        <span class="main_2_left_price1">￥35.10</span>
-                        <span class="main_2_left_price2">￥39.00</span>
+                        <a href="goods.php?id=450"  target="_blank" title="日康婴儿吮食器新鲜果蔬训练袋吮食网兜宝宝食物辅食器 RK-3341">日康婴儿吮食器新鲜果蔬训练袋吮食网兜宝宝食物辅食器 RK-3341</a>
+                        <span class="main_2_left_price1">￥19.71</span>
+                        <span class="main_2_left_price2">￥21.90</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1355"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods3" data-lazyload="images/201412/thumb_img/1355_thumb_G_1417567225143.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=458"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods3" data-lazyload="images/201412/thumb_img/458_thumb_G_1417566328806.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1355"  target="_blank" title="爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器">爱得利F70 PP喂药器/无毒/无味/防呛/药匙/婴儿专用/宝宝喂药器</a>
-                        <span class="main_2_left_price1">￥14.25</span>
-                        <span class="main_2_left_price2">￥15.00</span>
+                        <a href="goods.php?id=458"  target="_blank" title="日康丽宝晶畅标口十字孔奶嘴RK-3350">日康丽宝晶畅标口十字孔奶嘴RK-3350</a>
+                        <span class="main_2_left_price1">￥9.00</span>
+                        <span class="main_2_left_price2">￥10.00</span>
                       </dd>
                     </dl>
                                   <dl>
@@ -3468,8 +3468,20 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
+                        <a href="goods.php?id=403"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods5" data-lazyload="images/201412/thumb_img/403_thumb_G_1417566484864.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=403"  target="_blank" title="爱得利标准口PES奶瓶120ml /A46 ">爱得利标准口PES奶瓶120ml /A46 </a>
+                        <span class="main_2_left_price1">￥57.00</span>
+                        <span class="main_2_left_price2">￥60.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
                         <a href="goods.php?id=384"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods5" data-lazyload="images/201412/thumb_img/384_thumb_G_1417566265364.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods6" data-lazyload="images/201412/thumb_img/384_thumb_G_1417566265364.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3480,50 +3492,38 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=209"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods6" data-lazyload="images/201412/thumb_img/209_thumb_G_1417566362626.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=119"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods7" data-lazyload="images/201412/thumb_img/119_thumb_G_1417566309022.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=209"  target="_blank" title="小白熊HL-0609便携式电动搅奶棒">小白熊HL-0609便携式电动搅奶棒</a>
-                        <span class="main_2_left_price1">￥23.20</span>
-                        <span class="main_2_left_price2">￥29.00</span>
+                        <a href="goods.php?id=119"  target="_blank" title="婴之侣ID-F006安全训练勺叉组">婴之侣ID-F006安全训练勺叉组</a>
+                        <span class="main_2_left_price1">￥15.30</span>
+                        <span class="main_2_left_price2">￥18.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1798"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods7" data-lazyload="images/201412/thumb_img/1798_thumb_G_1417567685434.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=309"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods8" data-lazyload="images/201412/thumb_img/309_thumb_G_1417566433923.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1798"  target="_blank" title="NUK专用奶嘴刷(带海绵头)">NUK专用奶嘴刷(带海绵头)</a>
-                        <span class="main_2_left_price1">￥31.50</span>
-                        <span class="main_2_left_price2">￥35.00</span>
+                        <a href="goods.php?id=309"  target="_blank" title="小白熊09106万用杯座">小白熊09106万用杯座</a>
+                        <span class="main_2_left_price1">￥47.20</span>
+                        <span class="main_2_left_price2">￥59.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=450"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods8" data-lazyload="images/201412/thumb_img/450_thumb_G_1417566507423.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=204"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods9" data-lazyload="images/201412/thumb_img/204_thumb_G_1417566359241.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=450"  target="_blank" title="日康婴儿吮食器新鲜果蔬训练袋吮食网兜宝宝食物辅食器 RK-3341">日康婴儿吮食器新鲜果蔬训练袋吮食网兜宝宝食物辅食器 RK-3341</a>
-                        <span class="main_2_left_price1">￥19.71</span>
-                        <span class="main_2_left_price2">￥21.90</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=311"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby4_pergood2_goods9" data-lazyload="images/201412/thumb_img/311_thumb_G_1417566434518.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=311"  target="_blank" title="小白熊09115不锈钢多功能双头保温水瓶">小白熊09115不锈钢多功能双头保温水瓶</a>
-                        <span class="main_2_left_price1">￥71.20</span>
-                        <span class="main_2_left_price2">￥89.00</span>
+                        <a href="goods.php?id=204"  target="_blank" title="小白熊HL-0600奶瓶消毒器">小白熊HL-0600奶瓶消毒器</a>
+                        <span class="main_2_left_price1">￥463.20</span>
+                        <span class="main_2_left_price2">￥579.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -3539,12 +3539,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo0" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo1" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo2" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=879&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo5" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo0" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=879&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo1" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=879&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo2" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=879&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo3" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=879&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=879&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby4_pergood2_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>
@@ -3572,104 +3572,32 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_5_0">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2664"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods0" data-lazyload="images/201412/thumb_img/2664_thumb_G_1417568498228.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=991"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods0" data-lazyload="images/201412/thumb_img/991_thumb_G_1417566965511.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2664"  target="_blank" title="minimoto小米米 双层提花 背心3+/草绿/粉红/米白/粉蓝YU07084">minimoto小米米 双层提花 背心3+/草绿/粉红/米白/粉蓝YU07084</a>
-                        <span class="main_2_left_price1">￥62.40</span>
-                        <span class="main_2_left_price2">￥78.00</span>
+                        <a href="goods.php?id=991"  target="_blank" title="贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11">贝亲Little Coro 无捻纱贴锈方巾(3 in 1)LA11</a>
+                        <span class="main_2_left_price1">￥43.20</span>
+                        <span class="main_2_left_price2">￥48.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1575"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods1" data-lazyload="images/201412/thumb_img/1575_thumb_G_1417567463863.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=82"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods1" data-lazyload="images/201412/thumb_img/82_thumb_G_1417566290536.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1575"  target="_blank" title="贝亲-宝宝凉鞋成长舒适型 135MM（军绿色）GB226">贝亲-宝宝凉鞋成长舒适型 135MM（军绿色）GB226</a>
-                        <span class="main_2_left_price1">￥214.20</span>
-                        <span class="main_2_left_price2">￥238.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2865"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods2" data-lazyload="images/201412/thumb_img/2865_thumb_G_1417568707252.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2865"  target="_blank" title="minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102">minimoto小米米 可爱熊 珊瑚绒家居服系列外套YJ130102</a>
-                        <span class="main_2_left_price1">￥190.40</span>
-                        <span class="main_2_left_price2">￥238.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=67"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods3" data-lazyload="images/201412/thumb_img/67_thumb_G_1417566280130.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=67"  target="_blank" title="良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 ">良木 100%纯竹纤维小方巾面巾澡巾小毛巾小方巾 25*25厘米 </a>
-                        <span class="main_2_left_price1">￥12.00</span>
-                        <span class="main_2_left_price2">￥16.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2761"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods4" data-lazyload="images/201412/thumb_img/2761_thumb_G_1417568594902.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2761"  target="_blank" title="minimoto小米米 夹丝 对襟长袍/粉红/粉蓝/米白YU1203">minimoto小米米 夹丝 对襟长袍/粉红/粉蓝/米白YU1203</a>
-                        <span class="main_2_left_price1">￥78.40</span>
-                        <span class="main_2_left_price2">￥98.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2921"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods5" data-lazyload="images/201412/thumb_img/2921_thumb_G_1417568758813.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2921"  target="_blank" title="minimoto小米米 雪人披肩/蓝色/粉色YJ0339">minimoto小米米 雪人披肩/蓝色/粉色YJ0339</a>
-                        <span class="main_2_left_price1">￥254.40</span>
-                        <span class="main_2_left_price2">￥318.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=3168"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods6" data-lazyload="images/201412/thumb_img/3168_thumb_G_1419361769159.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=3168"  target="_blank" title="简叶贝贝棉衣女8002">简叶贝贝棉衣女8002</a>
-                        <span class="main_2_left_price1">￥319.50</span>
-                        <span class="main_2_left_price2">￥426.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1904"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods7" data-lazyload="images/201412/thumb_img/1904_thumb_G_1417567791664.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1904"  target="_blank" title="正品爱得利 DT-109 IVORY BABY 侧开护手衣">正品爱得利 DT-109 IVORY BABY 侧开护手衣</a>
-                        <span class="main_2_left_price1">￥28.50</span>
-                        <span class="main_2_left_price2">￥30.00</span>
+                        <a href="goods.php?id=82"  target="_blank" title="良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 ">良木正品 婴幼儿麻棉环保罩衣 小号 LMY001 LMY002宝宝喂饭衣防水 </a>
+                        <span class="main_2_left_price1">￥51.75</span>
+                        <span class="main_2_left_price2">￥69.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=2853"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods8" data-lazyload="images/201412/thumb_img/2853_thumb_G_1417568695291.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods2" data-lazyload="images/201412/thumb_img/2853_thumb_G_1417568695291.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3680,14 +3608,86 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
+                        <a href="goods.php?id=2778"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods3" data-lazyload="images/201412/thumb_img/2778_thumb_G_1417568611916.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2778"  target="_blank" title="小米米宝宝爬行护膝/粉蓝色YA03241B">小米米宝宝爬行护膝/粉蓝色YA03241B</a>
+                        <span class="main_2_left_price1">￥18.40</span>
+                        <span class="main_2_left_price2">￥23.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
                         <a href="goods.php?id=3027"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods9" data-lazyload="images/201412/thumb_img/3027_thumb_G_1417568870175.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods4" data-lazyload="images/201412/thumb_img/3027_thumb_G_1417568870175.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
                         <a href="goods.php?id=3027"  target="_blank" title="minimoto小米米 欢乐小熊套装 圆领上衣&密裆长裤/粉红/粉蓝YD2043">minimoto小米米 欢乐小熊套装 圆领上衣&密裆长裤/粉红/粉蓝YD2043</a>
                         <span class="main_2_left_price1">￥118.40</span>
                         <span class="main_2_left_price2">￥148.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1547"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods5" data-lazyload="images/201412/thumb_img/1547_thumb_G_1417567438388.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1547"  target="_blank" title="贝亲—第三阶段宝宝学步鞋 13.5CM（绿色）GB183">贝亲—第三阶段宝宝学步鞋 13.5CM（绿色）GB183</a>
+                        <span class="main_2_left_price1">￥214.20</span>
+                        <span class="main_2_left_price2">￥238.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=2641"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods6" data-lazyload="images/201412/thumb_img/2641_thumb_G_1417568474440.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=2641"  target="_blank" title="YU13042 小米米 西瓜小船 印花纱布  和短袍3:6月">YU13042 小米米 西瓜小船 印花纱布  和短袍3:6月</a>
+                        <span class="main_2_left_price1">￥38.40</span>
+                        <span class="main_2_left_price2">￥48.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1070"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods7" data-lazyload="images/201412/thumb_img/1070_thumb_G_1417567016466.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1070"  target="_blank" title="贝亲婴儿袜套LA388-LA392">贝亲婴儿袜套LA388-LA392</a>
+                        <span class="main_2_left_price1">￥25.20</span>
+                        <span class="main_2_left_price2">￥28.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1575"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods8" data-lazyload="images/201412/thumb_img/1575_thumb_G_1417567463863.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1575"  target="_blank" title="贝亲-宝宝凉鞋成长舒适型 135MM（军绿色）GB226">贝亲-宝宝凉鞋成长舒适型 135MM（军绿色）GB226</a>
+                        <span class="main_2_left_price1">￥214.20</span>
+                        <span class="main_2_left_price2">￥238.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=3168"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood0_goods9" data-lazyload="images/201412/thumb_img/3168_thumb_G_1419361769159.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=3168"  target="_blank" title="简叶贝贝棉衣女8002">简叶贝贝棉衣女8002</a>
+                        <span class="main_2_left_price1">￥319.50</span>
+                        <span class="main_2_left_price2">￥426.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -3703,12 +3703,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo0" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
-                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo1" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
-                                  <a href="category.php?id=776&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=776&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo3" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=776&amp;brand=295"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo4" data-lazyload="data/brandlogo/1418941752240578648.jpg"  title="圣婴岛"/></a>
-                                  <a href="category.php?id=776&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo5" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
+                                  <a href="category.php?id=776&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=776&amp;brand=294"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo1" data-lazyload="data/brandlogo/1416432383219016859.jpg"  title="茶香宝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=776&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
+                                  <a href="category.php?id=776&amp;brand=293"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo4" data-lazyload="data/brandlogo/1416432521163415710.jpg"  title="舒雅贝贝"/></a>
+                                  <a href="category.php?id=776&amp;brand=290"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood0_foo5" data-lazyload="data/brandlogo/1416330709624916591.jpg"  title="安宝儿"/></a>
                   
             </div> 
           </div>
@@ -3732,92 +3732,20 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_5_1">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1592"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods0" data-lazyload="images/201412/thumb_img/1592_thumb_G_1417567478092.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=923"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods0" data-lazyload="images/201412/thumb_img/923_thumb_G_1417566919443.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1592"  target="_blank" title="正品Toyroyal皇室附软带三键琴TR3418迷你小钢琴儿童益智音乐玩具">正品Toyroyal皇室附软带三键琴TR3418迷你小钢琴儿童益智音乐玩具</a>
-                        <span class="main_2_left_price1">￥77.44</span>
-                        <span class="main_2_left_price2">￥88.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=86"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods1" data-lazyload="images/201412/thumb_img/86_thumb_G_1417566295970.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=86"  target="_blank" title="婴之侣ID-E001涂鸦彩笔套装">婴之侣ID-E001涂鸦彩笔套装</a>
-                        <span class="main_2_left_price1">￥30.60</span>
-                        <span class="main_2_left_price2">￥36.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1657"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods2" data-lazyload="images/201412/thumb_img/1657_thumb_G_1417567549093.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1657"  target="_blank" title="Toyroyal日本皇室玩具八用床边音乐铃床铃婴幼儿爬行健身架TR3807">Toyroyal日本皇室玩具八用床边音乐铃床铃婴幼儿爬行健身架TR3807</a>
-                        <span class="main_2_left_price1">￥693.44</span>
-                        <span class="main_2_left_price2">￥788.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=443"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods3" data-lazyload="images/201412/thumb_img/443_thumb_G_1417566501630.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=443"  target="_blank" title="小白熊09258海精灵充气式安全游泳池（圆形）">小白熊09258海精灵充气式安全游泳池（圆形）</a>
-                        <span class="main_2_left_price1">￥271.20</span>
-                        <span class="main_2_left_price2">￥339.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=2152"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods4" data-lazyload="images/201412/thumb_img/2152_thumb_G_1417567803525.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=2152"  target="_blank" title="阳光宝贝儿歌小手工-叮咚叮咚我的家">阳光宝贝儿歌小手工-叮咚叮咚我的家</a>
-                        <span class="main_2_left_price1">￥7.04</span>
-                        <span class="main_2_left_price2">￥8.80</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1939"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods5" data-lazyload="images/201412/thumb_img/1939_thumb_G_1417567827734.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1939"  target="_blank" title="汇乐玩具 536梦幻天鹅游乐园灯光 电动万向车 女孩玩具 生日礼物">汇乐玩具 536梦幻天鹅游乐园灯光 电动万向车 女孩玩具 生日礼物</a>
-                        <span class="main_2_left_price1">￥76.00</span>
-                        <span class="main_2_left_price2">￥95.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=1427"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods6" data-lazyload="images/201412/thumb_img/1427_thumb_G_1417567321450.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=1427"  target="_blank" title="銘塔磁性拼拼乐A8077">銘塔磁性拼拼乐A8077</a>
-                        <span class="main_2_left_price1">￥60.35</span>
-                        <span class="main_2_left_price2">￥71.00</span>
+                        <a href="goods.php?id=923"  target="_blank" title="日康丽宝儿童发声椅RK-3698">日康丽宝儿童发声椅RK-3698</a>
+                        <span class="main_2_left_price1">￥80.10</span>
+                        <span class="main_2_left_price2">￥89.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
                         <a href="goods.php?id=1872"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods7" data-lazyload="images/201412/thumb_img/1872_thumb_G_1417567764370.jpg" width="178" height="178"/>
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods1" data-lazyload="images/201412/thumb_img/1872_thumb_G_1417567764370.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
@@ -3828,26 +3756,98 @@ function deleteCartGoodsResponse(res)
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1972"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods8" data-lazyload="images/201412/thumb_img/1972_thumb_G_1417567858804.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1964"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods2" data-lazyload="images/201412/thumb_img/1964_thumb_G_1417567850910.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1972"  target="_blank" title="汇乐玩具 789电动组装拆装工具车 音乐万向卡通工程车 轮子拆卸电动钻">汇乐玩具 789电动组装拆装工具车 音乐万向卡通工程车 轮子拆卸电动钻</a>
-                        <span class="main_2_left_price1">￥108.00</span>
-                        <span class="main_2_left_price2">￥135.00</span>
+                        <a href="goods.php?id=1964"  target="_blank" title="汇乐玩具 汇乐696多功能跳跳椅 带电子琴 婴儿蹦跳椅">汇乐玩具 汇乐696多功能跳跳椅 带电子琴 婴儿蹦跳椅</a>
+                        <span class="main_2_left_price1">￥511.20</span>
+                        <span class="main_2_left_price2">￥639.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1950"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods9" data-lazyload="images/201412/thumb_img/1950_thumb_G_1417567836627.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=1839"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods3" data-lazyload="images/201412/thumb_img/1839_thumb_G_1417567733069.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1950"  target="_blank" title="汇乐玩具 596眩彩智能小乌龟 中英双语早教 手拍鼓儿童益智爬行玩具">汇乐玩具 596眩彩智能小乌龟 中英双语早教 手拍鼓儿童益智爬行玩具</a>
-                        <span class="main_2_left_price1">￥111.20</span>
-                        <span class="main_2_left_price2">￥139.00</span>
+                        <a href="goods.php?id=1839"  target="_blank" title="皇室小鸡不倒翁TR807">皇室小鸡不倒翁TR807</a>
+                        <span class="main_2_left_price1">￥87.12</span>
+                        <span class="main_2_left_price2">￥99.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1378"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods4" data-lazyload="images/201412/thumb_img/1378_thumb_G_1417567274742.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1378"  target="_blank" title="皇室 奇趣足球 铃铛球 滚滚球 TR1040">皇室 奇趣足球 铃铛球 滚滚球 TR1040</a>
+                        <span class="main_2_left_price1">￥28.16</span>
+                        <span class="main_2_left_price2">￥32.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1918"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods5" data-lazyload="images/201412/thumb_img/1918_thumb_G_1417567805936.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1918"  target="_blank" title="NUK层层圈(叠高玩具)">NUK层层圈(叠高玩具)</a>
+                        <span class="main_2_left_price1">￥43.20</span>
+                        <span class="main_2_left_price2">￥48.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1862"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods6" data-lazyload="images/201412/thumb_img/1862_thumb_G_1417567755754.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1862"  target="_blank" title="Toyroyal 日本 皇室玩具 TR838 音乐健身架 健身器">Toyroyal 日本 皇室玩具 TR838 音乐健身架 健身器</a>
+                        <span class="main_2_left_price1">￥263.12</span>
+                        <span class="main_2_left_price2">￥299.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1611"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods7" data-lazyload="images/201412/thumb_img/1611_thumb_G_1417567495145.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1611"  target="_blank" title="正品日本皇室玩具Toyroyal童车玩具风车TR3430">正品日本皇室玩具Toyroyal童车玩具风车TR3430</a>
+                        <span class="main_2_left_price1">￥121.44</span>
+                        <span class="main_2_left_price2">￥138.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1985"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods8" data-lazyload="images/201412/thumb_img/1985_thumb_G_1417567871720.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1985"  target="_blank" title="阳光宝贝 宝宝学习绘本蝴蝶风筝">阳光宝贝 宝宝学习绘本蝴蝶风筝</a>
+                        <span class="main_2_left_price1">￥5.60</span>
+                        <span class="main_2_left_price2">￥7.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=1398"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood1_goods9" data-lazyload="images/201412/thumb_img/1398_thumb_G_1417567294988.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=1398"  target="_blank" title="皇室 过家家玩具 小甜儿创意坊 下午茶组 套装 TR1176">皇室 过家家玩具 小甜儿创意坊 下午茶组 套装 TR1176</a>
+                        <span class="main_2_left_price1">￥191.84</span>
+                        <span class="main_2_left_price2">￥218.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -3861,12 +3861,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=828&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo0" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
-                                  <a href="category.php?id=828&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo1" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
-                                  <a href="category.php?id=828&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo2" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=828&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo3" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
-                                  <a href="category.php?id=828&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo4" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
-                                  <a href="category.php?id=828&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo5" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
+                                  <a href="category.php?id=828&amp;brand=284"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo0" data-lazyload="data/brandlogo/1414015726293595383.jpg"  title="铭塔"/></a>
+                                  <a href="category.php?id=828&amp;brand=286"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo1" data-lazyload="data/brandlogo/1414015031306064169.png"  title="汇乐"/></a>
+                                  <a href="category.php?id=828&amp;brand=287"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo2" data-lazyload="data/brandlogo/1414016058306105696.png"  title="阳光宝贝"/></a>
+                                  <a href="category.php?id=828&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo3" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=828&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=828&amp;brand=285"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood1_foo5" data-lazyload="data/brandlogo/1414015868448202108.jpg"  title="Toyroyal皇室"/></a>
                   
             </div> 
           </div>
@@ -3890,122 +3890,122 @@ function deleteCartGoodsResponse(res)
             <div class="main_2_left over" id="aged_goods_5_2">
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=865"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods0" data-lazyload="images/201412/thumb_img/865_thumb_G_1417566871189.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=844"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods0" data-lazyload="images/201412/thumb_img/844_thumb_G_1417566852717.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=865"  target="_blank" title="贝亲IA36婴儿润唇膏  7g">贝亲IA36婴儿润唇膏  7g</a>
-                        <span class="main_2_left_price1">￥25.20</span>
-                        <span class="main_2_left_price2">￥28.00</span>
+                        <a href="goods.php?id=844"  target="_blank" title="贝亲IA162婴儿防晒露30G">贝亲IA162婴儿防晒露30G</a>
+                        <span class="main_2_left_price1">￥73.80</span>
+                        <span class="main_2_left_price2">￥82.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2478"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods1" data-lazyload="images/201412/thumb_img/2478_thumb_G_1417566402305.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=290"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods1" data-lazyload="images/201412/thumb_img/290_thumb_G_1417566420304.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2478"  target="_blank" title="Pampers帮宝适超薄干爽系列中包装加大号17片">Pampers帮宝适超薄干爽系列中包装加大号17片</a>
-                        <span class="main_2_left_price1">￥47.20</span>
-                        <span class="main_2_left_price2">￥47.20</span>
+                        <a href="goods.php?id=290"  target="_blank" title="小白熊HL-0816多功能空气加湿器">小白熊HL-0816多功能空气加湿器</a>
+                        <span class="main_2_left_price1">￥239.20</span>
+                        <span class="main_2_left_price2">￥299.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=253"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods2" data-lazyload="images/201412/thumb_img/253_thumb_G_1417566392027.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=129"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods2" data-lazyload="images/201412/thumb_img/129_thumb_G_1417566316752.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=253"  target="_blank" title="小白熊HL-0664湿巾加热器">小白熊HL-0664湿巾加热器</a>
+                        <a href="goods.php?id=129"  target="_blank" title="婴之侣ID-H020B降温贴-幼儿型(4片)">婴之侣ID-H020B降温贴-幼儿型(4片)</a>
+                        <span class="main_2_left_price1">￥18.70</span>
+                        <span class="main_2_left_price2">￥22.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=386"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods3" data-lazyload="images/201412/thumb_img/386_thumb_G_1417566262851.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=386"  target="_blank" title="正品 良木 婴儿纯棉可洗纱布尿布 新生儿双层健康尿布8条装LMS001">正品 良木 婴儿纯棉可洗纱布尿布 新生儿双层健康尿布8条装LMS001</a>
+                        <span class="main_2_left_price1">￥73.50</span>
+                        <span class="main_2_left_price2">￥98.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=817"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods4" data-lazyload="images/201412/thumb_img/817_thumb_G_1417566830581.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=817"  target="_blank" title="日康爽身粉盒 RK-3612">日康爽身粉盒 RK-3612</a>
+                        <span class="main_2_left_price1">￥13.50</span>
+                        <span class="main_2_left_price2">￥15.00</span>
+                      </dd>
+                    </dl>
+                                  <dl>
+                      <dt>
+                        <a href="goods.php?id=246"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods5" data-lazyload="images/201412/thumb_img/246_thumb_G_1417566386211.jpg" width="178" height="178"/>
+                        </a>
+                      </dt>
+                      <dd>
+                        <a href="goods.php?id=246"  target="_blank" title="小白熊HL-0657防水型婴童理发器">小白熊HL-0657防水型婴童理发器</a>
                         <span class="main_2_left_price1">￥175.20</span>
                         <span class="main_2_left_price2">￥219.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=41"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods3" data-lazyload="images/201412/thumb_img/41_thumb_G_1417566265854.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=487"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods6" data-lazyload="images/201412/thumb_img/487_thumb_G_1417566537335.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=41"  target="_blank" title="婴之侣ID-S011婴幼儿多用洗头帽">婴之侣ID-S011婴幼儿多用洗头帽</a>
-                        <span class="main_2_left_price1">￥13.60</span>
-                        <span class="main_2_left_price2">￥16.00</span>
+                        <a href="goods.php?id=487"  target="_blank" title="小白熊09017变形虫多功能坐便器">小白熊09017变形虫多功能坐便器</a>
+                        <span class="main_2_left_price1">￥175.20</span>
+                        <span class="main_2_left_price2">￥219.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=851"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods4" data-lazyload="images/201412/thumb_img/851_thumb_G_1417566858842.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=906"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods7" data-lazyload="images/201412/thumb_img/906_thumb_G_1417566905547.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=851"  target="_blank" title="贝亲—动物别针6个卡装10827">贝亲—动物别针6个卡装10827</a>
-                        <span class="main_2_left_price1">￥27.00</span>
-                        <span class="main_2_left_price2">￥30.00</span>
+                        <a href="goods.php?id=906"  target="_blank" title="日康新生儿喂哺礼盒多功能喂哺套装8件装宝宝礼盒装RK-3678">日康新生儿喂哺礼盒多功能喂哺套装8件装宝宝礼盒装RK-3678</a>
+                        <span class="main_2_left_price1">￥233.10</span>
+                        <span class="main_2_left_price2">￥259.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=2475"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods5" data-lazyload="images/201412/thumb_img/2475_thumb_G_1417566870419.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=439"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods8" data-lazyload="images/201412/thumb_img/439_thumb_G_1417566325916.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=2475"  target="_blank" title="Pampers帮宝适超薄干爽系列分销商渠道中包装小号26片">Pampers帮宝适超薄干爽系列分销商渠道中包装小号26片</a>
-                        <span class="main_2_left_price1">￥47.20</span>
-                        <span class="main_2_left_price2">￥47.20</span>
+                        <a href="goods.php?id=439"  target="_blank" title="小白熊09256果果婴儿浴盆">小白熊09256果果婴儿浴盆</a>
+                        <span class="main_2_left_price1">￥239.20</span>
+                        <span class="main_2_left_price2">￥299.00</span>
                       </dd>
                     </dl>
                                   <dl>
                       <dt>
-                        <a href="goods.php?id=1126"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods6" data-lazyload="images/201412/thumb_img/1126_thumb_G_1417567056092.jpg" width="178" height="178"/>
+                        <a href="goods.php?id=909"  target="_blank">
+                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods9" data-lazyload="images/201412/thumb_img/909_thumb_G_1417566908800.jpg" width="178" height="178"/>
                         </a>
                       </dt>
                       <dd>
-                        <a href="goods.php?id=1126"  target="_blank" title="贝亲MA35婴儿纸尿裤NB 36P">贝亲MA35婴儿纸尿裤NB 36P</a>
-                        <span class="main_2_left_price1">￥64.80</span>
-                        <span class="main_2_left_price2">￥72.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=30"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods7" data-lazyload="images/201412/thumb_img/30_thumb_G_1417566250361.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=30"  target="_blank" title="婴之侣ID-S001C球形弹性桌角（无痕型）">婴之侣ID-S001C球形弹性桌角（无痕型）</a>
-                        <span class="main_2_left_price1">￥12.33</span>
-                        <span class="main_2_left_price2">￥14.50</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=330"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods8" data-lazyload="images/201412/thumb_img/330_thumb_G_1417566445304.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=330"  target="_blank" title="小白熊09190婴儿护肤柔湿巾80抽">小白熊09190婴儿护肤柔湿巾80抽</a>
-                        <span class="main_2_left_price1">￥14.40</span>
-                        <span class="main_2_left_price2">￥18.00</span>
-                      </dd>
-                    </dl>
-                                  <dl>
-                      <dt>
-                        <a href="goods.php?id=39"  target="_blank">
-                          <img src="" class="lazyload"  id="index_goodsbaby5_pergood2_goods9" data-lazyload="images/201501/thumb_img/39_thumb_G_1420414734783.jpg" width="178" height="178"/>
-                        </a>
-                      </dt>
-                      <dd>
-                        <a href="goods.php?id=39"  target="_blank" title="婴之侣ID-S009洗澡温度计">婴之侣ID-S009洗澡温度计</a>
-                        <span class="main_2_left_price1">￥10.20</span>
-                        <span class="main_2_left_price2">￥12.00</span>
+                        <a href="goods.php?id=909"  target="_blank" title="贝亲儿童透明香皂IA95/IA96/IA97/IA98 ">贝亲儿童透明香皂IA95/IA96/IA97/IA98 </a>
+                        <span class="main_2_left_price1">￥28.80</span>
+                        <span class="main_2_left_price2">￥32.00</span>
                       </dd>
                     </dl>
                           </div>
@@ -4023,12 +4023,12 @@ function deleteCartGoodsResponse(res)
                           </div>
             <h3>推荐品牌</h3>
             <div class="main_2_right_b">
-                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo0" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
-                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo1" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
-                                  <a href="category.php?id=657&amp;brand=250"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo2" data-lazyload="data/brandlogo/1414342289343391389.jpg"  title="Pampers帮宝适"/></a>
-                                  <a href="category.php?id=657&amp;brand=133"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo3" data-lazyload="data/brandlogo/1414014807653554912.jpg"  title="小白熊"/></a>
-                                  <a href="category.php?id=657&amp;brand=184"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo4" data-lazyload="data/brandlogo/1406075514410434685.jpg"  title="Minimoto（小米米）"/></a>
-                                  <a href="category.php?id=657&amp;brand=221"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo5" data-lazyload="data/brandlogo/1414014216546775367.jpg"  title="日康"/></a>
+                                  <a href="category.php?id=657&amp;brand=291"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo0" data-lazyload="data/brandlogo/1416273421867950706.jpg"  title="贝诺蒂"/></a>
+                                  <a href="category.php?id=657&amp;brand=141"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo1" data-lazyload="data/brandlogo/1414014723726516887.jpg"  title="婴之侣"/></a>
+                                  <a href="category.php?id=657&amp;brand=283"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo2" data-lazyload="data/brandlogo/1414013986030745620.jpg"  title="爱得利"/></a>
+                                  <a href="category.php?id=657&amp;brand=282"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo3" data-lazyload="data/brandlogo/1414342997812101241.jpg"  title="良木"/></a>
+                                  <a href="category.php?id=657&amp;brand=128"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo4" data-lazyload="data/brandlogo/1414013156012886360.jpg"  title="NUK"/></a>
+                                  <a href="category.php?id=657&amp;brand=125"  target="_blank"><img src="" class="lazyload"  id="index_goodsbaby5_pergood2_foo5" data-lazyload="data/brandlogo/1405898304724054177.jpg"  title="Pigeon贝亲"/></a>
                   
             </div> 
           </div>

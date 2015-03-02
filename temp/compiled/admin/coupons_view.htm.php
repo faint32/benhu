@@ -89,7 +89,7 @@
   <!--<?php else: ?>-->
         <div id="coupons_empty" class="row panel panel-default" style="margin:20px 10px">
           <div class="alert alert-warning" role="alert" style="margin:0px 0px;">
-            <strong>无购物券！</strong> 去添加购物券吧。
+            <strong>没有用户获得过该购物券！</strong> 
           </div>
         </div>
   <!--<?php endif; ?>-->

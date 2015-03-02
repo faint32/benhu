@@ -35,7 +35,7 @@ define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '2015-02-28 13:30:42');
+define('API_TIME', '2015-03-02 10:52:16');
 
 define('DEFAULT_PAYID','4'); //alipay,Á¢¼´Ö§¸¶Ìø×ªºóÄ¬ÈÏµÄÖ§¸¶·½Ê½
 
