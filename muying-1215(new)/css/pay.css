@@ -1,0 +1,65 @@
+@charset "utf-8";
+.pay_logo{ width:1200px; margin:0 auto; overflow:hidden;}
+.pay_logo_1{ float:left; display:block; width:256px; height:100px;}
+.pay_logo_2{ float:left; display:block;  height:60px; line-height:60px; border-left:1px #c7c7c7 dotted; font-size:30px; color:#5fbeb4;font-family:'微软雅黑',sans-serif; padding-left:20px; margin:40px 0 0px 0;}
+.pay_logo_3{ width:500px; height:60px; float:right; background:url(../images/shopingcar.gif) no-repeat -700px -320px; display:block; margin-top:30px;}
+
+.pay{ width:1200px; background:#fff; margin:0 auto; padding-bottom:20px; overflow:hidden; border-top:3px #fe7ba3 solid; margin-top:20px;}
+
+.pay_1{ width:1100px; margin:0px auto; padding:30px 0; overflow:hidden;}
+.pay_1 span{ width:40px; height:40px; display:block; background:url(../images/shopingcar.gif) no-repeat 0 -472px; margin:10px auto;}
+.pay_1 p{ text-align:center;font-family:'微软雅黑',sans-serif; color:#7abd54; font-size:18px;}
+.pay_1 p b{ color:#ff875a; font-size:14px;}
+
+.pay_2{width:1100px; margin:0px auto; border:1px #c8c8c8 dashed; font-size:14px; overflow:hidden;}
+.pay_2 table{ margin:10px 20px;}
+.pay_2 table td{ padding:5px;}
+.pay_2_a input{ width:80px; height:25px; border:1px #c7c7c7 solid;}
+.pay_2_b{ color:#f13d6d; font-weight:bold; font-size:16px;}
+.pay_2 table a{ color:#f13d6d; font-size:14px;}
+.pay_2_c{ height:25px; line-height:25px; padding-left:35px; display:inline-block; float:left; background:url(../images/shopingcar.gif) no-repeat -50px -480px;}
+
+.pay_3{ width:1100px;margin:0px auto; line-height:60px; font-size:20px; font-weight:bold;}
+.pay_3 span{ color:#f13d6d; font-size:28px;}
+
+.pay_main{width:1100px;voice-family:"\"}\""; width:1060px; margin:0px auto; border:1px #f13d6d dashed; padding:20px; font-size:14px; overflow:hidden;}
+
+.pay_4{width:1060px; margin:0px auto;overflow:hidden;}
+.pay_4 h3{ width:1060px; line-height:40px; font-size:18px; border-bottom:1px #c7c7c7 solid; font-weight:normal;font-family:'微软雅黑',sans-serif;}
+.pay_4 dl{ width:175px;padding:20px 0; overflow:hidden;}
+.pay_4 dl dt{ width:30px; padding-top:9px; float:left;}
+.pay_4 dl dd{ width:140px;padding-top:9px;float:left;}
+.pay_4_table{ width:1060px; display:block; border:#c8c8c8 solid; border-width:1px 1px 0 0; float:none;}
+.pay_4_table td{ line-height:30px;border:#c8c8c8 solid; border-width:0 0 1px 1px; text-align:center;}
+.pay_4_table_title{ background:#f0f0f0;}
+
+
+
+.pay_5{width:1060px; margin:0 auto; overflow:hidden;}
+/*-----------滑动门---------------*/
+.pay_5_title {width:1060px; height:40px;border-bottom:1px #c7c7c7 solid;overflow:hidden;}
+.pay_5_title p{ width:120px; float:left;line-height:40px; font-size:18px;  font-weight:normal;font-family:'微软雅黑',sans-serif;}
+.pay_5_title LI {FLOAT: left;HEIGHT: 30px; width:120px; margin-top:10px; text-align:center;overflow:hidden;}
+.pay_5_title LI A {COLOR: #323232; height:30px; line-height:30px; width:120px;font-family:'微软雅黑',sans-serif; font-size:15px; border:0;}
+.pay_5_title LI.pay_5_tab {width:120px; HEIGHT:30px; line-height:30px;text-align:center; background:#dcdcdc;overflow:hidden;}
+.pay_5_title LI.pay_5_tab A { width:120px;HEIGHT:34px; text-align:center;color:#333; font-size:16px; border:0; text-decoration:none;}
+.pay_5_main {DISPLAY:none;WIDTH: 1060px;HEIGHT:auto; padding:10px 0;}
+#pay_5_main DIV.group_tab {DISPLAY: block;}
+
+.pay_5_main dl{ width:175px; float:left; padding:10px 0; overflow:hidden;}
+.pay_5_main dl dt{ width:20px; padding-top:9px; float:left;}
+.pay_5_main dl dd{ width:135px; float:left; border:1px #ccc solid; text-align:center; padding:5px 0;}
+
+.pay_6{ width:1060px; margin:20px auto; overflow:hidden;}
+
+.pay_help{ width:1100px; margin:0px auto; line-height:26px;}
+.pay_help h4{ width:1100px;line-height:40px;border-bottom:1px #c7c7c7 solid; font-size:18px; font-weight:normal;font-family:'微软雅黑',sans-serif;}
+.pay_help b{ width:1100px;line-height:35px;}
+.pay_help p{ text-indent:24px;line-height:26px;}
+
+.payok_1{ width:350px; margin:20px auto; line-height:30px; text-align:center; display:block; font-weight:normal; font-size:14px; overflow:hidden}
+.payok_1_a{ float:left; color:#ff875a; display:block; font-size:14px; line-height:40px; padding-left:15px;}
+
+.payok_2{ margin:0 auto; font-size:14px; } 
+
+/*--------------*/

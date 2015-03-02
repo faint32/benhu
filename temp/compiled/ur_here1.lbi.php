@@ -1,0 +1,1 @@
+<ul><li  class="category_site"><?php echo $this->_var['ur_here']; ?><li><li class="category_right_1_tote">共<?php echo $this->_var['pager']['record_count']; ?>件宝贝</li></ul>

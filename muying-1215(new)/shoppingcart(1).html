@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品详情</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/shoppingcart.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<script>
+$(function(){
+ $('.autoCenter').each(function(){
+     var $parentDiv = $(this).parent();
+	 $(this).css('margin-top', ( $parentDiv.height()- 4*$('.titleDiv').height())/2)
+  });
+});
+ 
+</script>
+<body>
+    <p class="sc_step"></p>
+    <div class="sc_box">
+    	<div class="sc_title">
+        	<div class="sc_a"><input name="" type="checkbox" value="" /></div>
+            <div class="sc_f">全选</div>
+            <div class="sc_e">商品信息</div>
+            <div class="sc_c">单价</div>
+            <div class="sc_c">数量</div>
+            <div class="sc_c">金额</div>
+            <div class="sc_d">操作</div>
+        </div>
+        <div class="sc_goods">
+        	<div class="sc_a"><input name="" type="checkbox" value="" />&nbsp;&nbsp;</div>
+            <div class="sc_b">
+            	<dl class="sc_goods_1">
+                	<dt><a href="#"><img src="images/img/5.gif" width="80" height="80" /></a></dt>
+                    <dd><a href="#">Dumex 多美滋 精确优蕴 孕妇及哺乳期养奶粉奶粉</a><span>颜色：绿色<br />规格：32X54</span></dd>
+                </dl>
+            </div>
+            <div class="sc_c">
+            	<ul class="sc_goods_2">
+                    <li class="sc_goods_2_1">¥3001.20 </li>
+                    <li class="sc_goods_2_2">¥3251.20 </li>
+                    <li class="sc_goods_2_3">+1000积分</li>
+                </ul>
+            </div>
+            <div class="sc_c">
+            	<span class="sc_goods_3">
+            <form id="form1" runat="server">
+<script>
+    function funnum(type) { //减少购买数量
+        var vnum = Number(document.getElementById("num").value);
+        if (type == "down") {
+            if (vnum != 1) {
+                document.getElementById("num").value = vnum - 1;
+            }
+        }
+        if (type == "up") {
+            var vbignum = 20;//这是库存数量
+            if (vnum < vbignum) {
+                if (vnum < 10) {//允许最大购买量
+                    document.getElementById("num").value = vnum + 1;
+                }
+                else {
+                    alert("每人每次最多可购买10件商品！");
+                }
+            }
+            //            else {不能展现给用户
+            //                alert("库存不足！");
+            //            }
+        }
+    }
+</script>
+    <input id="num" value="1" type=text /><div class="sc_goods_3_1"><a onClick="funnum('up')"></a><a onClick="funnum('down')"></a></div>
+
+</form>
+			</span>
+            </div>
+            <div class="sc_c">
+            <span class="sc_goods_4">¥3251.20</span>
+            <span class="huiyuan"><img src="images/huiyuan_1.png" /></span>
+            </div>
+            <div class="sc_d"><span class="sc_goods_5"><a href="#">移入收藏夹</a><a class="sc_goods_5_1" href="#">删除</a></span></div>
+        </div>
+        <div class="sc_goods">
+        	<div class="sc_a"><input name="" type="checkbox" value="" />&nbsp;&nbsp;</div>
+            <div class="sc_b">
+            	<dl class="sc_goods_1">
+                	<dt><a href="#"><img src="images/img/5.gif" width="80" height="80" /></a></dt>
+                    <dd><a href="#">Dumex 多美滋 精确优蕴 孕妇及哺乳期养奶粉奶粉</a><span>颜色：绿色<br />规格：32X54</span></dd>
+                </dl>
+            </div>
+            <div class="sc_c">
+            	<ul class="sc_goods_2">
+                    <li class="sc_goods_2_1">¥3001.20 </li>
+                    <li class="sc_goods_2_2">¥3251.20 </li>
+                    <li class="sc_goods_2_3">+1000积分</li>
+                </ul>
+            </div>
+            <div class="sc_c">
+            	<span class="sc_goods_3">
+            <form id="form1" runat="server">
+<script>
+    function funnum(type) { //减少购买数量
+        var vnum = Number(document.getElementById("num").value);
+        if (type == "down") {
+            if (vnum != 1) {
+                document.getElementById("num").value = vnum - 1;
+            }
+        }
+        if (type == "up") {
+            var vbignum = 20;//这是库存数量
+            if (vnum < vbignum) {
+                if (vnum < 10) {//允许最大购买量
+                    document.getElementById("num").value = vnum + 1;
+                }
+                else {
+                    alert("每人每次最多可购买10件商品！");
+                }
+            }
+            //            else {不能展现给用户
+            //                alert("库存不足！");
+            //            }
+        }
+    }
+</script>
+    <input id="num" value="1" type=text /><div class="sc_goods_3_1"><a onClick="funnum('up')"></a><a onClick="funnum('down')"></a></div>
+
+</form>
+			</span>
+            </div>
+            <div class="sc_c">
+            <span class="sc_goods_4">¥3251.20</span>
+            <span class="huiyuan"><img src="images/huiyuan_1.png" /></span>
+            </div>
+            <div class="sc_d"><span class="sc_goods_5"><a href="#">移入收藏夹</a><a class="sc_goods_5_1" href="#">删除</a></span></div>
+        </div>
+        <div class="shoppingcatr_taocan">
+        	<div class="shoppingcatr_taocan_title titleDiv">
+            	推荐搭配套餐1
+            </div>
+        	<div class="sc_a_1 shoppingcatr_taocan_padding  autoCenter"><input name="" type="checkbox" value="" />&nbsp;&nbsp;</div>
+            <div class="shoppingcatr_taocan_goods">
+					<div class="shoppingcatr_taocan_goods_box">
+					<div class="sc_b">
+					<dl class="sc_goods_1">
+						<dt><a href="#"><img src="images/img/5.gif" width="80" height="80" /></a></dt>
+						<dd><a href="#">Dumex 多美滋 精确优蕴 孕妇及哺乳期养奶粉奶粉</a><span>颜色：绿色<br />规格：32X54</span></dd>
+					</dl>
+				</div>
+				<div class="sc_c">
+					<ul class="sc_goods_2">
+						<li class="sc_goods_2_1">¥3001.20 </li>
+						<li class="sc_goods_2_2">¥3251.20 </li>
+						<li class="sc_goods_2_3">+1000积分</li>
+					</ul>
+				</div>
+				</div>
+				<div class="shoppingcatr_taocan_goods_box">
+					<div class="sc_b">
+					<dl class="sc_goods_1">
+						<dt><a href="#"><img src="images/img/5.gif" width="80" height="80" /></a></dt>
+						<dd><a href="#">Dumex 多美滋 精确优蕴 孕妇及哺乳期养奶粉奶粉</a><span>颜色：绿色<br />规格：32X54</span></dd>
+					</dl>
+				</div>
+				<div class="sc_c">
+					<ul class="sc_goods_2">
+						<li class="sc_goods_2_1">¥3001.20 </li>
+						<li class="sc_goods_2_2">¥3251.20 </li>
+						<li class="sc_goods_2_3">+1000积分</li>
+					</ul>
+				</div>
+				</div>
+				<div class="shoppingcatr_taocan_goods_box">
+					<div class="sc_b">
+					<dl class="sc_goods_1">
+						<dt><a href="#"><img src="images/img/5.gif" width="80" height="80" /></a></dt>
+						<dd><a href="#">Dumex 多美滋 精确优蕴 孕妇及哺乳期养奶粉奶粉</a><span>颜色：绿色<br />规格：32X54</span></dd>
+					</dl>
+				</div>
+				<div class="sc_c">
+					<ul class="sc_goods_2">
+						<li class="sc_goods_2_1">¥3001.20 </li>
+						<li class="sc_goods_2_2">¥3251.20 </li>
+						<li class="sc_goods_2_3">+1000积分</li>
+					</ul>
+				</div>
+				</div>
+			   
+		   </div>    
+			<div class="autoCenter">
+				  <div class="sc_c shoppingcatr_taocan_padding">
+					<span class="sc_goods_3">
+			  
+
+						<input id="num" value="1" type=text />
+						<div class="sc_goods_3_1">
+						<a onClick="funnum('up')"></a>
+						<a onClick="funnum('down')"></a>
+						</div>
+
+
+				</span>
+				</div>
+				<div class="sc_c shoppingcatr_taocan_padding">
+				<span class="sc_goods_4">¥3251.20</span>
+				<span class="huiyuan"><img src="images/huiyuan_1.png" /></span>
+				</div>
+				<div class="sc_d shoppingcatr_taocan_padding"><span class="sc_goods_5"><a class="sc_goods_5_1" href="#">删除</a></span></div>
+			</div>
+        </div>
+</div>
+<div class="sc_price">
+       	  <div class="sc_a">
+        	  <table width="50" border="0" cellspacing="0" cellpadding="0">
+        	    <tr>
+        	      <td height="50" align="right"><input name="" type="checkbox" value="" /></td>
+      	      </tr>
+      	    </table>
+        	</div>
+            <div class="sc_f"><a href="#">全选</a></div>
+            <div class="sc_c"><a href="#">删除</a></div>
+            <div class="sc_c"><a href="#">移入收藏夹</a></div>
+            <table class="sc_price_1" width="550" border="0" align="right" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="149">已选商品<span>12</span>件</td>
+    <td width="42">合计：</td>
+    <td width="196"><b>¥5454.00</b></td>
+    <td width="163"><input type="button" value="结&nbsp;&nbsp;算" 结算="结算" /></td>
+  </tr>
+</table>
+        </div>
+       
+
+
+
+<!-- 回顶部 -->
+    <div id="tbox">
+        <a class="tbox_1" target="_blank" href="#"></a>
+        <a class="tbox_2" target="_blank" href="#"></a>
+        <a id="gotop" href="javascript:void(0)"></a>
+	</div>
+<!-- 回顶部END -->
+<script type="text/javascript" src="js/all_top_nav.js"></script>
+</body>
+</html>

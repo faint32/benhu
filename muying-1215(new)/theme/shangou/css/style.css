@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:url(../images/titlebj.jpg) repeat-x 0 208px;}
+.titlebigpic{ width:1200px; height:300px; background:url(../images/titlebigpic.jpg) no-repeat; margin:0 auto; overflow:hidden;}
+.shangoubox{ background:#faf0ef; padding-bottom:20px; overflow:hidden;} 
+.shangou_time{ width:1200px; margin:15px auto; height:71px; background:url(../images/shangou1.jpg) no-repeat left; overflow:hidden;}
+.shangou_time span{ display:block; width:120px;height:32px; font-size:20px; color:#fff;font-family:'微软雅黑',sans-serif; line-height:32px; margin-top:22px; margin-left:100px;}
+
+.main{ width:1180px; margin:0 auto; background:#fff; padding:10px; overflow:hidden;}
+.main dl{ width:273px; height:405px; border:1px #c4c4c4 solid; float:left; margin:10px; overflow:hidden;}
+.main dl dt{ width:273px; height:273px; overflow:hidden;}
+.main dl dt img {max-width:273px; max-height:273px; scale:expression((this.offsetWidth > this.offsetHeight)?(this.style.width = this.offsetWidth >= 273 ? "273px" : "auto"):(this.style.height = this.offsetHeight >= 273 ? "273px" : "auto")); display:inline !important;}
+.main dl dd{ width:253px; padding:0 10px; overflow:hidden;}
+.main dl dd .name{ width:253px; height:40px; display:block; line-height:20px; margin:10px 0; overflow:hidden;}
+.main dl dd p{ width:145px; float:left; display:block; overflow:hidden;}
+.main dl dd p span{ width:145px; height:30px; display:block; color:#f13d6d;font-size:24px;font-family:'微软雅黑',sans-serif; font-weight:bold;}
+.main dl dd p b{ width:145px; line-height:30px; display:block; color:#7d7d7d; font-weight:normal; text-decoration:line-through; font-size:14px;}
+.main dl dd .button{ width:100px; height:42px; line-height:42px; text-align:center; color:#fff;font-family:'微软雅黑',sans-serif; background:#f13d6d; display:block; float:right; font-size:20px; cursor:pointer;}
+.main dl dd .button:hover{ text-decoration:none; background:#e51e53}
+
+.main dl dd .button_1{ width:100px; height:42px; line-height:42px; text-align:center; color:#fff;font-family:'微软雅黑',sans-serif; background:#787878; display:block; float:right; font-size:20px; cursor:pointer;}
+.main dl dd .button_1:hover{ text-decoration:none; background:#787878}
+
+.main_down{ width:1200px; height:25px; background:url(../images/maindown.jpg) no-repeat; margin:0 auto; overflow:hidden;}
+
+.fenlei{ width:1200px; height:163px; background:url(../images/fenlei1.jpg) no-repeat top center;margin:0 auto; overflow:hidden;}
+.wanjumore{ width:1100px; height:40px; line-height:40px; background:#bf043d; text-align:center; color:#fff;font-family:'微软雅黑',sans-serif; display:block; margin:0 auto; font-size:18px;}
+.wanjumore:hover{ color:#FFC;}
+
+.gototop{ width:280px; height:100px; display:block; background:url(../images/gotop.jpg) no-repeat; margin:30px auto;}
+.down{ width:641px; height:114px; background:url(../images/down.jpg) no-repeat; margin:10px auto 50px auto; overflow:hidden;}
+
+.maiguang{ width:273px; height:405px; position:absolute; margin:0; background:url(../images/maiguang.png) no-repeat; z-index:999}
+.zhekou{ width:49px; height:49px; position:absolute;  margin:0; z-index:999}
+
+.grouptab_time{  width:273px; height:30px; line-height:30px; color:#fff; position:absolute; margin-top:243px; text-align:center; overflow:hidden;background-color:rgba(0, 0, 0, 0.7)!important;
+ filter:Alpha(opacity=80); background:#000; font-size:14px;font-family:'微软雅黑',sans-serif;}
+.kaishi_time{width:273px; height:405px;position:absolute;background-color:rgba(0, 0, 0, 0.3)!important;
+ filter:Alpha(opacity=30); background:#000;font-size:16px;font-family:'微软雅黑',sans-serif;text-align:center; color:#fff; }
+.kaishi_time span{ display:block;width:273px; line-height:30px; padding:15px 0; margin-top:90px;position:absolute;background-color:rgba(0, 0, 0, 0.3)!important;
+ filter:Alpha(opacity=30); background:#000;font-size:20px;font-family:'微软雅黑',sans-serif;text-align:center; color:#fff; }

@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* 登录 */
+.user_title{ width:100%; border-bottom:5px #f13d6d solid; height:90px;}
+.user_title div{ width:1200px; height:90px; margin:0px auto; overflow:hidden;}
+.user_title_logo{ float:left;}
+.user_title p{ float:right; line-height:35px;}
+.user_title p a{ padding:0 20px;}
+.user_title p span{ color:#f13d6d;}
+.login_box{ width:1200px; margin:0 auto; background:url(../images/user_bj.gif) no-repeat top center; overflow:hidden;}
+
+.login{
+	width: 680px;
+	border: 10px #ebe6e6 solid;
+	background: #fff;
+	margin: 90px auto; padding:20px 0;
+	overflow: hidden;
+}
+.login_left{ width:310px; float:left; margin:60px 0 0 60px;}
+.login_left h1{ font-size:20px;font-family:'微软雅黑',sans-serif; font-weight:normal;}
+
+.login_left span{width:308px;voice-family:"\"}\""; width:257px; height:40px;voice-family:"\"}\""; height:20px; border:1px #c8c8c8 solid; display:block; padding:10px 10px 10px 40px;}
+.login_left_a{ background:url(../images/user_allbj.gif) no-repeat 10px 8px;}
+.login_left_a input,.login_left_b input{ border:0px; width:255px; height:20px; color:#999; line-height:20px; font-size:14px;}
+.login_left_b{ background:url(../images/user_allbj.gif) no-repeat 10px -52px;}
+.login_left_c{width:308px; height:42px; }
+.login_left_c input{width:308px; height:42px; background:url(../images/user_allbj.gif) no-repeat 0 -151px; border:0; cursor:pointer;}
+
+.login_right{ width:200px; float:right;margin:60px 40px 0 0px;}
+.login_right h4{font-size:14px;font-family:'微软雅黑',sans-serif; font-weight:normal;}
+.login_right_a{ width:200px; margin-top:20px; background:url(../images/user_allbj.gif) no-repeat 0 -200px;}
+.login_right_a a{ height:40px; padding-left:60px; display:block; margin-bottom:12px; line-height:40px; font-size:14px;font-family:'微软雅黑',sans-serif;}
+
+.user_point{ width:100%; height:30px;voice-family:"\"}\""; height:20px; padding:5px 0; overflow:hidden;}
+.user_point b{ height:20px; background:url(../images/user_bj_1.gif) no-repeat 0 0; padding-left:25px; line-height:20px; font-weight:normal; display:block; color:#ff875a;}
+
+ /* ----------------注册--------------- */
+ 
+/*main*/
+.register{ width:600px;margin:20px auto;background:#fff;}
+.register .title{height:20px;border-bottom: 3px solid #e7e7e7;padding-bottom:10px;}
+.register .title-list{ position: relative; top: 6px;}
+.register .title-list li{ width: 300px; line-height: 20px; text-align: center; float: left; display: inline;font-size:18px;font-family:'微软雅黑',sans-serif; cursor:pointer;}
+.register .title-list li.on{ font-size:18px; color: #f13d6d;}
+.register .title-list p{position:absolute;top:24px;left:0px;width:300px;height:7px;border-top: 3px solid #ff6600; overflow: hidden; text-align: center;}
+.register .title-list b{display:inline-block;width:0;height:0;margin-top:-3px;border-style:solid dashed dashed dashed;border-width:9px;border-color: #ff6600 #fff #fff #fff;overflow: hidden;zoom: 1;font-size: 0;}
+.register_box .show{ display: block;}
+.register_main{ width:350px; margin:5px auto; position: relative; overflow: hidden; display: none;}
+
+.register_main span{height:40px;voice-family:"\"}\""; height:20px; line-height:20px; border:1px #c8c8c8 solid; display:block; padding:14px 10px; font-size:14px; overflow:hidden;}
+.register_main h4{ font-weight:normal; width:70px; float:left; display:block;}
+.register_input_1{ width:328px;}
+.register_input_1 input{ width:250px; float:left; border:0px;color:#999; line-height:20px; font-size:14px;font-family:'微软雅黑',sans-serif;}
+.register_input_2_box{ width:350px; overflow:hidden;}
+.register_input_2{ width:160px; float:left;}
+.register_input_2 input{ width:50px; float:left;border:0px;color:#999; line-height:20px; font-size:14px;font-family:'微软雅黑',sans-serif;}
+.register_input_3{ width:80px;voice-family:"\"}\""; width:68px;border:1px #c8c8c8 solid; height:49px;voice-family:"\"}\""; height:37px; padding:5px; float:left;  margin-left:10px; overflow:hidden;}
+.register_input_3 img{ width:68px; height:37px;}
+.register_input_4{height:50px; margin:0px 0 0 10px; float:left; font-size:14px; line-height:50px; display:block;}
+.register_input_5{ width:350px;height:42px; display:block; overflow:hidden;}
+.register_input_5 input{width:350px; height:42px; background:url(../images/user_allbj.gif) no-repeat 0 -354px; border:0; cursor:pointer; font-size:20px;font-family:'微软雅黑',sans-serif; line-height:36px; text-align:center; color:#fff;}
+.only{ color:#f13d6d}
+.register_input_6{ width:136px; text-align:center; float:left;  margin-left:10px;}
+/* ----------------注册成功--------------- */
+.register_1_tixing{ width:200px; height:54px; margin:50px auto 20px auto;  background:url(../images/user_allbj.gif) no-repeat -238px -400px; font-size:20px;font-family:'微软雅黑',sans-serif; line-height:50px; padding-left:60px;}
+.register_1_tixing_2{ width:600px; margin:0 auto; text-align:center; color:#787878; display:block; font-size:14px; line-height:30px;}
+.register_1_tixing_2 span{ color:#ff875a;}
+.register_1_tixing_botton{ width:430px; margin:50px auto; overflow:hidden;}
+.register_1_tixing_botton a{height:42px;font-size:20px;font-family:'微软雅黑',sans-serif; line-height:40px; text-align:center;  display:block;}
+.register_1_tixing_botton_1:hover{color:#fff; text-decoration:none;}
+.register_1_tixing_botton_1{ width:234px;  background:url(../images/user_allbj.gif) no-repeat 0 -404px;color:#fff;  float:left;}
+.register_1_tixing_botton_2{ width:175px; color:#787878; background:url(../images/user_allbj.gif) no-repeat 0 -453px;  float:right;}
+.register_1_tixing_botton_2:hover{color:#787878;text-decoration:none; }
+
+/*--------------找回密码---------------*/
+.findpassword{width:980px; border:10px #ebe6e6 solid; background:#fff; margin:90px auto; padding-bottom:15px; overflow:hidden;}
+.findpassword_1{ width:905px; height:88px; margin:40px auto 20px auto; background:url(../images/findpassword_1.gif) no-repeat 0 0; overflow:hidden;}
+.findpassword_1_a{ width:905px; height:88px; margin:40px auto 20px auto; background:url(../images/findpassword_1.gif) no-repeat 0 -95px; overflow:hidden;}
+.findpassword_1_b{ width:905px; height:88px; margin:40px auto 20px auto; background:url(../images/findpassword_1.gif) no-repeat 0 -188px; overflow:hidden;}
+.findpassword_1_c{ width:905px; height:88px; margin:40px auto 20px auto; background:url(../images/findpassword_1.gif) no-repeat 0 -278px; overflow:hidden;}
+.findpassword_2{ width:350px; margin:10px auto; overflow: hidden; }
+.findpassword_2 span{height:40px;voice-family:"\"}\""; height:20px; line-height:20px; border:1px #c8c8c8 solid; display:block; padding:14px 10px; font-size:14px; overflow:hidden;}
+.findpassword_2 h4{ font-weight:normal; width:70px; float:left; display:block;}
+.findpassword_2 .mt{ margin-top:20px;}
+.findpassword_2_select_a{ width:250px; float:left; border:0px;color:#999; line-height:20px; font-size:14px;font-family:'微软雅黑',sans-serif;}
+.findpassword_2_input_1{width:220px; float:left;}
+.findpassword_2_input_1 h4{font-weight:normal; width:100px; float:left; display:block;}
+.findpassword_2_input_1 input{ width:120px; float:left; border:0px;color:#999; line-height:20px; font-size:14px;font-family:'微软雅黑',sans-serif;}
+.findpassword_2_input_2{ float:left;height:50px; margin:0px 0 0 5px; float:left; font-size:14px; line-height:50px; display:block;}
+.findpassword_2_word{ font-size:16px; line-height:30px; padding:20px 0; text-align:center;}
+.findpassword_2_word_2{ width:300px; margin:20px auto; font-size:12px; line-height:24px; color:#777;}
+.findpassword_2_four_1{width:200px; height:54px;  background:url(../images/user_allbj.gif) no-repeat -238px -400px; font-size:20px;font-family:'微软雅黑',sans-serif; line-height:50px; padding-left:60px; display:block; margin:40px auto;}
+.findpassword .mb{ margin-bottom:50px;}
+
+
+
+/*反馈*/
+.feedback{ width:1200px; height:886px; background:url(../images/feedback.gif) no-repeat 0 0; margin:0 auto;font-family:'微软雅黑',sans-serif; overflow:hidden;}
+.feedback_1{ width:860px; height:515px; margin:220px auto auto auto;}
+.feedback_1 span{ display:block; text-align:center; font-size:24px; margin-bottom:20px;overflow:hidden;}
+.feedback_1 textarea{ width:838px; height:300px; border:1px #e6e6e6 solid; margin:20px 0; line-height:25px; font-size:14px; color:#555; padding:10px;}
+.feedback_1 strong{ font-size:18px; font-weight:normal;}
+.feedback_2{ width:860px;}
+.feedback_2 a{ float:right; margin-right:20px;}
+.feedback_2_a{ color:#ff875a; font-size:18px; line-height:35px;}

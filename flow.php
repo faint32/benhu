@@ -1529,6 +1529,7 @@ elseif ($_REQUEST['step'] == 'checkout')
         $smarty->assign('your_integral',      $user_info['pay_points']); // 用户积分
     }
 
+    var_dump($total);
     /* 使用购物券 */
     include_once('includes/lib_transaction.php');
    
